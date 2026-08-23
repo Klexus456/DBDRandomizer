@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Perk de Trapper 1",
+    "characterId": 1,
+    "description": "Descripción de prueba.",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Perk de Trapper 2",
+    "characterId": 1,
+    "description": "Descripción de prueba.",
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Perk de Trapper 3",
+    "characterId": 1,
+    "description": "Descripción de prueba.",
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Perk de Wraith 1",
+    "characterId": 2,
+    "description": "Descripción de prueba.",
+    "image": ""
+  },
+  {
+    "id": 5,
+    "name": "Perk de Wraith 2",
+    "characterId": 2,
+    "description": "Descripción de prueba.",
+    "image": ""
+  },
+  {
+    "id": 6,
+    "name": "Perk de Wraith 3",
+    "characterId": 2,
+    "description": "Descripción de prueba.",
+    "image": ""
+  }
+]

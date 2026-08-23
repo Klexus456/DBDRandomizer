@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Perk de Dwight 1",
+    "characterId": 1,
+    "description": "Descripción de prueba.",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Perk de Dwight 2",
+    "characterId": 1,
+    "description": "Otra descripción de prueba.",
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Perk de Meg 1",
+    "characterId": 2,
+    "description": "Descripción de prueba.",
+    "image": ""
+  },
+  {
+      "id": 10,
+      "name": "Perk General 1",
+      "characterId": null,
+      "description": "...",
+      "image": ""
+  },
+  {
+      "id": 11,
+      "name": "Perk General 2",
+      "characterId": null,
+      "description": "...",
+      "image": ""
+  },
+  {
+      "id": 12,
+      "name": "Perk General 3",
+      "characterId": null,
+      "description": "...",
+      "image": ""
+  }
+]

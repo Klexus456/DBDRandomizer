@@ -1,0 +1,164 @@
+[
+  {
+      "id": 1,
+      "name": "Batería",
+      "characterId": null,
+      "itemId": 1,
+      "rarity": "Common",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 2,
+      "name": "Lente",
+      "characterId": null,
+      "itemId": 1,
+      "rarity": "Common",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 3,
+      "name": "Batería 2",
+      "characterId": null,
+      "itemId": 1,
+      "rarity": "Common",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 4,
+      "name": "Lente 2",
+      "characterId": null,
+      "itemId": 1,
+      "rarity": "Common",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 5,
+      "name": "Vendas",
+      "characterId": null,
+      "itemId": 2,
+      "rarity": "Common",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 6,
+      "name": "Jeringa",
+      "characterId": null,
+      "itemId": 2,
+      "rarity": "Common",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 7,
+      "name": "Vendas 2",
+      "characterId": null,
+      "itemId": 2,
+      "rarity": "Common",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 8,
+      "name": "Jeringa 2",
+      "characterId": null,
+      "itemId": 2,
+      "rarity": "Common",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 9,
+      "name": "Tuerquita",
+      "characterId": null,
+      "itemId": 3,
+      "rarity": "Common",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 10,
+      "name": "Ehhh si",
+      "characterId": null,
+      "itemId": 3,
+      "rarity": "Common",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 11,
+      "name": "Tuerquita 2",
+      "characterId": null,
+      "itemId": 3,
+      "rarity": "Common",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 12,
+      "name": "Ehhh si 2",
+      "characterId": null,
+      "itemId": 3,
+      "rarity": "Common",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 20,
+      "name": "Addon del Trapper 1",
+      "characterId": 1,
+      "itemId": null,
+      "rarity": "Rare",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 21,
+      "name": "Addon del Trapper 2",
+      "characterId": 1,
+      "itemId": null,
+      "rarity": "Rare",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 22,
+      "name": "Addon del espectro 1",
+      "characterId": 2,
+      "itemId": null,
+      "rarity": "Rare",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 23,
+      "name": "Addon del espectro 2",
+      "characterId": 2,
+      "itemId": null,
+      "rarity": "Rare",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 24,
+      "name": "Addon del espectro 3",
+      "characterId": 2,
+      "itemId": null,
+      "rarity": "Rare",
+      "image": "",
+      "description":""
+  },
+  {
+      "id": 25,
+      "name": "Addon del trampero 3",
+      "characterId": 1,
+      "itemId": null,
+      "rarity": "Rare",
+      "image": "",
+      "description":""
+  }
+]

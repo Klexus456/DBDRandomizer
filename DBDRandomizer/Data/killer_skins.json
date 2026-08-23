@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Cabeza Trapper Outfit 1",
+    "characterId": 1,
+    "outfitId": 10,
+    "part": "Head",
+    "image": "images/skins/1.png"
+  },
+  {
+    "id": 2,
+    "name": "Torso Trapper Outfit 1",
+    "characterId": 1,
+    "outfitId": 10,
+    "part": "Torso",
+    "image": "images/skins/2.png"
+  },
+  {
+    "id": 3,
+    "name": "Arma Trapper Outfit 1",
+    "characterId": 1,
+    "outfitId": 10,
+    "part": "Weapon",
+    "image": "images/skins/3.png"
+  }
+]

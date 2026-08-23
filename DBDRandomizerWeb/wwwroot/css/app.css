@@ -1,0 +1,549 @@
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1:focus {
+    outline: none;
+}
+
+a, .btn-link {
+    color: #0071c1;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+.blazor-error-boundary {
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJoaWRkZW4iPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHg9IjIzNSIgeT0iNTEiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzUgLTUxKSI+PHBhdGggZD0iTTI2My41MDYgNTFDMjY0LjcxNyA1MSAyNjUuODEzIDUxLjQ4MzcgMjY2LjYwNiA1Mi4yNjU4TDI2Ny4wNTIgNTIuNzk4NyAyNjcuNTM5IDUzLjYyODMgMjkwLjE4NSA5Mi4xODMxIDI5MC41NDUgOTIuNzk1IDI5MC42NTYgOTIuOTk2QzI5MC44NzcgOTMuNTEzIDI5MSA5NC4wODE1IDI5MSA5NC42NzgyIDI5MSA5Ny4wNjUxIDI4OS4wMzggOTkgMjg2LjYxNyA5OUwyNDAuMzgzIDk5QzIzNy45NjMgOTkgMjM2IDk3LjA2NTEgMjM2IDk0LjY3ODIgMjM2IDk0LjM3OTkgMjM2LjAzMSA5NC4wODg2IDIzNi4wODkgOTMuODA3MkwyMzYuMzM4IDkzLjAxNjIgMjM2Ljg1OCA5Mi4xMzE0IDI1OS40NzMgNTMuNjI5NCAyNTkuOTYxIDUyLjc5ODUgMjYwLjQwNyA1Mi4yNjU4QzI2MS4yIDUxLjQ4MzcgMjYyLjI5NiA1MSAyNjMuNTA2IDUxWk0yNjMuNTg2IDY2LjAxODNDMjYwLjczNyA2Ni4wMTgzIDI1OS4zMTMgNjcuMTI0NSAyNTkuMzEzIDY5LjMzNyAyNTkuMzEzIDY5LjYxMDIgMjU5LjMzMiA2OS44NjA4IDI1OS4zNzEgNzAuMDg4N0wyNjEuNzk1IDg0LjAxNjEgMjY1LjM4IDg0LjAxNjEgMjY3LjgyMSA2OS43NDc1QzI2Ny44NiA2OS43MzA5IDI2Ny44NzkgNjkuNTg3NyAyNjcuODc5IDY5LjMxNzkgMjY3Ljg3OSA2Ny4xMTgyIDI2Ni40NDggNjYuMDE4MyAyNjMuNTg2IDY2LjAxODNaTTI2My41NzYgODYuMDU0N0MyNjEuMDQ5IDg2LjA1NDcgMjU5Ljc4NiA4Ny4zMDA1IDI1OS43ODYgODkuNzkyMSAyNTkuNzg2IDkyLjI4MzcgMjYxLjA0OSA5My41Mjk1IDI2My41NzYgOTMuNTI5NSAyNjYuMTE2IDkzLjUyOTUgMjY3LjM4NyA5Mi4yODM3IDI2Ny4zODcgODkuNzkyMSAyNjcuMzg3IDg3LjMwMDUgMjY2LjExNiA4Ni4wNTQ3IDI2My41NzYgODYuMDU0N1oiIGZpbGw9IiNGRkU1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4=) no-repeat 1rem/1.8rem, #b32121;
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: white;
+}
+
+    .blazor-error-boundary::after {
+        content: "An error has occurred."
+    }
+
+.loading-progress {
+    position: relative;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    margin: 20vh auto 1rem auto;
+}
+
+    .loading-progress circle {
+        fill: none;
+        stroke: #e0e0e0;
+        stroke-width: 0.6rem;
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg);
+    }
+
+        .loading-progress circle:last-child {
+            stroke: #1b6ec2;
+            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+            transition: stroke-dasharray 0.05s ease-in-out;
+        }
+
+.loading-progress-text {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+}
+
+    .loading-progress-text:after {
+        content: var(--blazor-load-percentage-text, "Loading");
+    }
+
+code {
+    color: #c02d76;
+}
+
+/* =========================================================
+   DBD RANDOMIZER
+   ========================================================= */
+
+html,
+body {
+    background-color: #111111;
+    color: #e6e6e6;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+
+.randomizer-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 25px 60px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.randomizer-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.randomizer-header h1 {
+    margin: 0;
+    color: #eeeeee;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.randomizer-header p {
+    margin-top: 8px;
+    color: #888888;
+    font-size: 15px;
+}
+
+/* =========================================================
+   SELECTOR SURVIVOR / KILLER
+   ========================================================= */
+
+.mode-selector {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.mode-button {
+    min-width: 180px;
+    padding: 14px 25px;
+
+    border: 1px solid #444;
+    background-color: #1c1c1c;
+    color: #aaaaaa;
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.mode-button:hover {
+    background-color: #292929;
+    color: #ffffff;
+    border-color: #666;
+    transform: translateY(-1px);
+}
+
+.mode-button.active {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #888888;
+}
+
+/* =========================================================
+   RESULTADO
+   ========================================================= */
+
+.result-container {
+    background-color: #181818;
+    border: 1px solid #333333;
+
+    padding: 30px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+.result-container > h2 {
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 35px;
+
+    font-size: 30px;
+    color: #eeeeee;
+}
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.result-section {
+    margin-bottom: 30px;
+}
+
+.result-section h3 {
+    margin-bottom: 12px;
+
+    color: #999999;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid #333333;
+    padding-bottom: 8px;
+}
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 70px;
+
+    padding: 12px 15px;
+
+    background-color: #222222;
+    border: 1px solid #383838;
+
+    box-sizing: border-box;
+
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.result-card:hover {
+    background-color: #292929;
+    border-color: #555555;
+}
+
+.result-card strong {
+    color: #dddddd;
+    font-size: 14px;
+}
+
+.card-type {
+    color: #777777;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+/* =========================================================
+   SKINS
+   ========================================================= */
+
+.skin-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skin-container .result-card {
+    width: 100%;
+    min-height: 65px;
+}
+
+/* =========================================================
+   PERKS
+   ========================================================= */
+
+.perk-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+.perk-card {
+    min-height: 80px;
+}
+
+/* =========================================================
+   ITEM / ADDONS
+   ========================================================= */
+
+.equipment-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.addon-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+/* =========================================================
+   OFFERING
+   ========================================================= */
+
+.offering-section {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================================================
+   BOTON RANDOMIZAR
+   ========================================================= */
+
+.randomize-button {
+    display: block;
+
+    margin: 35px auto 0;
+
+    padding: 15px 35px;
+
+    border: 1px solid #555555;
+
+    background-color: #252525;
+    color: #eeeeee;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.randomize-button:hover {
+    background-color: #363636;
+    border-color: #777777;
+
+    transform: translateY(-2px);
+}
+
+.randomize-button:active {
+    transform: translateY(0);
+}
+
+/* =========================================================
+   CARGANDO
+   ========================================================= */
+
+.loading {
+    text-align: center;
+
+    padding: 50px;
+
+    color: #888888;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .randomizer-page {
+        padding: 25px 15px 40px;
+    }
+
+    .randomizer-header h1 {
+        font-size: 30px;
+    }
+
+    .mode-selector {
+        flex-direction: column;
+    }
+
+    .mode-button {
+        width: 100%;
+    }
+
+    .result-container {
+        padding: 20px;
+    }
+
+    .perk-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .offering-section {
+        max-width: none;
+    }
+}
+
+/* =========================================================
+   REROLL
+   ========================================================= */
+
+.result-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-header h3 {
+    flex: 1;
+}
+
+.reroll-button {
+    flex-shrink: 0;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+
+    border: 1px solid #444444;
+    background-color: #242424;
+    color: #aaaaaa;
+
+    font-size: 17px;
+    line-height: 30px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.reroll-button:hover {
+    background-color: #363636;
+    border-color: #777777;
+    color: #ffffff;
+}
+
+.reroll-all-button {
+    padding: 6px 10px;
+
+    border: 1px solid #444444;
+    background-color: #242424;
+    color: #aaaaaa;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.reroll-all-button:hover {
+    background-color: #363636;
+    border-color: #777777;
+    color: #ffffff;
+}
+
+.perk-card,
+.addon-container .result-card {
+    position: relative;
+}
+
+/*
+==============================================================
+                           SETTINGS 
+==============================================================
+ */
+
+.settings-section {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.settings-section-summary {
+    cursor: pointer;
+    padding: 20px;
+    list-style: none;
+}
+
+.settings-section-summary::-webkit-details-marker {
+    display: none;
+}
+
+.settings-section-summary::after {
+    content: "▼";
+    float: right;
+    transition: transform 0.2s ease;
+}
+
+.settings-section[open] .settings-section-summary::after {
+    transform: rotate(180deg);
+}
+
+.settings-section-content {
+    padding: 0 20px 20px 20px;
+}

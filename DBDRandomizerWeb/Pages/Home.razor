@@ -1,0 +1,697 @@
+﻿@page "/"
+
+@using DBDRandomizer.Models
+@using DBDRandomizer.Data
+@using DBDRandomizer.Randomizer
+@using DBDRandomizerWeb.Services
+
+<div class="randomizer-page">
+
+    <header class="randomizer-header">
+        <h1>DBD RANDOMIZER</h1>
+        <p>Randomizador de Dead by Daylight</p>
+    </header>
+
+    @if (randomizer == null)
+    {
+        <div class="loading">
+            <p>Cargando datos...</p>
+        </div>
+    }
+    else
+    {
+        <div class="mode-selector">
+
+            <button
+                class="mode-button @(survivorResult != null ? "active" : "")"
+                @onclick="RandomizarSurvivor">
+
+                SURVIVOR
+
+            </button>
+
+            <button
+                class="mode-button @(killerResult != null ? "active" : "")"
+                @onclick="RandomizarKiller">
+
+                KILLER
+
+            </button>
+
+        </div>
+
+        @if (survivorResult != null)
+        {
+            <div class="result-container">
+
+                <div class="result-title">
+
+                    <h2>
+                        @survivorResult.Survivor!.Name
+                    </h2>
+
+                    <button
+                        class="reroll-button"
+                        title="Randomizar nuevamente el Survivor"
+                        @onclick="RerollSurvivor">
+
+                        ↻
+
+                    </button>
+
+                </div>
+
+                <section class="result-section">
+
+                    <div class="section-header">
+
+                    <h3>SKIN</h3>
+
+                        <button
+                            class="reroll-button"
+                            title="Randomizar skin"
+                            @onclick="RerollSurvivorSkin">
+
+                            ↻
+
+                        </button>
+
+                    </div>
+
+                    @if (survivorResult.SurvivorSkin.Count == 0)
+                    {
+                        <p>No hay skin disponible.</p>
+                    }
+                    else
+                    {
+                        <div class="skin-container">
+
+                            @foreach (SkinPiece skin in survivorResult.SurvivorSkin)
+                            {
+                                <div class="result-card">
+                                    <span class="card-type">
+                                        @skin.Part
+                                    </span>
+
+                                    <strong>
+                                        @skin.Name
+                                    </strong>
+                                </div>
+                            }
+
+                        </div>
+                    }
+
+                </section>
+
+                <section class="result-section">
+
+                    <div class="section-header">
+
+                    <h3>PERKS</h3>
+
+                        <button
+                            class="reroll-all-button"
+                            title="Randomizar las 4 perks"
+                            @onclick="RerollSurvivorPerks">
+
+                            ↻ TODAS
+
+                        </button>
+
+                    </div>
+
+                    <div class="perk-container">
+
+                        @for (int i = 0; i < survivorResult.SurvivorPerks.Count; i++)
+                        {
+                            int index = i;
+                            Perk perk = survivorResult.SurvivorPerks[i];
+
+                            <div class="result-card perk-card">
+                                <strong>
+                                    @perk.Name
+                                </strong>
+
+                                <button
+                                    class="reroll-button"
+                                    title="Randomizar esta perk"
+                                    @onclick="() => RerollSurvivorPerk(index)">
+                                    ↻
+                                </button>
+                            </div>
+                        }
+
+                    </div>
+
+                </section>
+
+                <div class="equipment-grid">
+
+                    <section class="result-section">
+
+                        <div class="section-header">
+
+                            <h3>ITEM</h3>
+
+                                <button
+                                    class="reroll-button"
+                                    title="Randomizar item y addons"
+                                    @onclick="RerollSurvivorItem">
+
+                                    ↻
+
+                                </button>
+
+                        </div>
+
+                        @if (survivorResult.SurvivorItem == null)
+                        {
+                            <p>Ninguno</p>
+                        }
+                        else
+                        {
+                            <div class="result-card">
+                                <strong>
+                                    @survivorResult.SurvivorItem.Name
+                                </strong>
+                            </div>
+                        }
+
+                    </section>
+
+                    <section class="result-section">
+
+                        <h3>ADDONS</h3>
+
+                        <div class="addon-container">
+
+                            @for (int i = 0; i < survivorResult.SurvivorAddons.Count; i++)
+                            {
+                                int index = i;
+                                Addon addon = survivorResult.SurvivorAddons[i];
+
+                                <div class="result-card">
+                                    <strong>
+                                        @addon.Name
+                                    </strong>
+
+                                    <button
+                                        class="reroll-button"
+                                        title="Randomizar este addon"
+                                        @onclick="() => RerollSurvivorAddon(index)">
+                                        ↻
+                                    </button>
+                                </div>
+                            }
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+                <section class="result-section offering-section">
+
+                    <div class="section-header">
+
+                        <h3>OFFERING</h3>
+
+                            <button
+                                class="reroll-button"
+                                title="Randomizar offering"
+                                @onclick="RerollSurvivorOffering">
+
+                                ↻
+
+                            </button>
+
+                    </div>
+
+                    @if (survivorResult.SurvivorOffering == null)
+                    {
+                        <p>Ninguna</p>
+                    }
+                    else
+                    {
+                        <div class="result-card">
+                            <strong>
+                                @survivorResult.SurvivorOffering.Name
+                            </strong>
+                        </div>
+                    }
+
+                </section>
+
+                <button
+                    class="randomize-button"
+                    @onclick="RandomizarSurvivor">
+
+                    🎲 RANDOMIZAR SURVIVOR
+
+                </button>
+
+            </div>
+        }
+
+        @if (killerResult != null)
+        {
+            <div class="result-container">
+
+                <div class="result-title">
+
+                    <h2>
+                        @killerResult.Killer!.Name
+                    </h2>
+
+                    <button
+                        class="reroll-button"
+                        title="Randomizar nuevamente el Killer"
+                        @onclick="RerollKiller">
+
+                        ↻
+
+                    </button>
+
+                </div>
+
+                <section class="result-section">
+
+                    <div class="section-header">
+
+                        <h3>SKIN</h3>
+
+                            <button
+                                class="reroll-button"
+                                title="Randomizar skin"
+                                @onclick="RerollKillerSkin">
+
+                                ↻
+
+                            </button>
+
+                    </div>
+
+                    @if (killerResult.KillerSkin.Count == 0)
+                    {
+                        <p>No hay skin disponible.</p>
+                    }
+                    else
+                    {
+                        <div class="skin-container">
+
+                            @foreach (SkinPiece skin in killerResult.KillerSkin)
+                            {
+                                <div class="result-card">
+                                    <span class="card-type">
+                                        @skin.Part
+                                    </span>
+
+                                    <strong>
+                                        @skin.Name
+                                    </strong>
+                                </div>
+                            }
+
+                        </div>
+                    }
+
+                </section>
+
+                <section class="result-section">
+
+                    <div class="section-header">
+
+                        <h3>PERKS</h3>
+
+                        <button
+                            class="reroll-all-button"
+                            title="Randomizar las 4 perks"
+                            @onclick="RerollKillerPerks">
+
+                            ↻ TODAS
+
+                        </button>
+
+                    </div>
+
+                    <div class="perk-container">
+
+                        @for (int i = 0; i < killerResult.KillerPerks.Count; i++)
+                        {
+                            int index = i;
+                            Perk perk = killerResult.KillerPerks[i];
+
+                            <div class="result-card perk-card">
+                                <strong>
+                                    @perk.Name
+                                </strong>
+
+                                <button
+                                    class="reroll-button"
+                                    title="Randomizar esta perk"
+                                    @onclick="() => RerollKillerPerk(index)">
+                                    ↻
+                                </button>
+                            </div>
+                        }
+
+                    </div>
+
+                </section>
+
+                <section class="result-section">
+
+                    <h3>ADDONS</h3>
+
+                    <div class="addon-container">
+
+                       @for (int i = 0; i < killerResult.KillerAddons.Count; i++)
+                        {
+                            int index = i;
+                            Addon addon = killerResult.KillerAddons[i];
+
+                            <div class="result-card">
+                                <strong>
+                                    @addon.Name
+                                </strong>
+
+                                <button
+                                    class="reroll-button"
+                                    title="Randomizar este addon"
+                                    @onclick="() => RerollKillerAddon(index)">
+                                    ↻
+                                </button>
+                            </div>
+                        }
+
+                    </div>
+
+                </section>
+
+                <section class="result-section offering-section">
+
+                    <div class="section-header">
+
+                        <h3>OFFERING</h3>
+
+                        <button
+                            class="reroll-button"
+                            title="Randomizar offering"
+                            @onclick="RerollKillerOffering">
+
+                            ↻
+
+                        </button>
+
+                    </div>
+
+                    @if (killerResult.KillerOffering == null)
+                    {
+                        <p>Ninguna</p>
+                    }
+                    else
+                    {
+                        <div class="result-card">
+                            <strong>
+                                @killerResult.KillerOffering.Name
+                            </strong>
+                        </div>
+                    }
+
+                </section>
+
+                <button
+                    class="randomize-button"
+                    @onclick="RandomizarKiller">
+
+                    🎲 RANDOMIZAR KILLER
+
+                </button>
+
+            </div>
+        }
+    }
+
+</div>
+
+@code
+{
+    [Inject]
+    private LocalStorageService LocalStorage { get; set; } = default!;
+
+    [Inject]
+    private HttpClient Http { get; set; } = default!;
+
+    private RandomizerEngine? randomizer;
+
+    private RandomizerResult? survivorResult;
+
+    private RandomizerResult? killerResult;
+
+    protected override async Task OnInitializedAsync()
+    {
+        WebDataLoader loader = new(Http);
+
+        var survivors =
+            await loader.LoadSurvivors();
+
+        var killers =
+            await loader.LoadKillers();
+
+        var survivorSkins =
+            await loader.LoadSurvivorSkins();
+
+        var killerSkins =
+            await loader.LoadKillerSkins();
+
+        var defaultConfig =
+            await loader.LoadConfig();
+
+        var savedConfig =
+            await LocalStorage.LoadConfig();
+
+        RandomizerConfig config;
+
+        if (savedConfig != null)
+        {
+            // Existe una configuración guardada.
+            config = savedConfig;
+        }
+        else
+        {
+            // No existe configuración guardada.
+            // Usamos la configuración por defecto
+            // y la guardamos para futuras visitas.
+            config = defaultConfig;
+
+            await LocalStorage.SaveConfig(config);
+        }
+
+        var survivorPerks =
+            await loader.LoadSurvivorPerks();
+
+        var killerPerks =
+            await loader.LoadKillerPerks();
+
+        var items =
+            await loader.LoadItems();
+
+        var addons =
+            await loader.LoadAddons();
+
+        var offerings =
+            await loader.LoadOfferings();
+
+        randomizer = new RandomizerEngine(
+            survivors,
+            killers,
+            survivorSkins,
+            killerSkins,
+            survivorPerks,
+            killerPerks,
+            items,
+            addons,
+            offerings,
+            config
+        );
+    }
+
+    private void RandomizarSurvivor()
+    {
+        if (randomizer == null)
+        {
+            return;
+        }
+
+        killerResult = null;
+
+        survivorResult =
+            randomizer.RandomizeSurvivorResult();
+    }
+
+    private void RandomizarKiller()
+    {
+        if (randomizer == null)
+        {
+            return;
+        }
+
+        survivorResult = null;
+
+        killerResult =
+            randomizer.RandomizeKillerResult();
+    }
+
+    private void RerollSurvivor()
+    {
+        if (randomizer == null || survivorResult == null)
+        {
+            return;
+        }
+
+        randomizer.RerollSurvivor(survivorResult);
+    }
+
+    private void RerollSurvivorSkin()
+    {
+        if (randomizer == null || survivorResult == null)
+        {
+            return;
+        }
+
+        randomizer.RerollSurvivorSkin(survivorResult);
+    }
+
+    private void RerollSurvivorPerk(int index)
+    {
+        if (randomizer == null || survivorResult == null)
+        {
+            return;
+        }
+
+        randomizer.RerollSurvivorPerk(
+            survivorResult,
+            index
+        );
+    }
+
+    private void RerollSurvivorPerks()
+    {
+        if (randomizer == null || survivorResult == null)
+        {
+            return;
+        }
+
+        randomizer.RerollSurvivorPerks(
+            survivorResult
+        );
+    }
+
+    private void RerollSurvivorItem()
+    {
+        if (randomizer == null || survivorResult == null)
+        {
+            return;
+        }
+
+        randomizer.RerollSurvivorItem(
+            survivorResult
+        );
+    }
+
+    private void RerollSurvivorAddon(int index)
+    {
+        if (randomizer == null || survivorResult == null)
+        {
+            return;
+        }
+
+        randomizer.RerollSurvivorAddon(
+            survivorResult,
+            index
+        );
+    }
+
+    private void RerollSurvivorOffering()
+    {
+        if (randomizer == null || survivorResult == null)
+        {
+            return;
+        }
+
+        randomizer.RerollSurvivorOffering(
+            survivorResult
+        );
+    }
+
+    private void RerollKiller()
+    {
+        if (randomizer == null || killerResult == null)
+        {
+            return;
+        }
+
+        randomizer.RerollKiller(killerResult);
+    }
+
+    private void RerollKillerSkin()
+    {
+        if (randomizer == null || killerResult == null)
+        {
+            return;
+        }
+
+        randomizer.RerollKillerSkin(killerResult);
+    }
+
+    private void RerollKillerPerk(int index)
+    {
+        if (randomizer == null || killerResult == null)
+        {
+            return;
+        }
+
+        randomizer.RerollKillerPerk(
+            killerResult,
+            index
+        );
+    }
+
+    private void RerollKillerPerks()
+    {
+        if (randomizer == null || killerResult == null)
+        {
+            return;
+        }
+
+        randomizer.RerollKillerPerks(
+            killerResult
+        );
+    }
+
+    private void RerollKillerAddon(int index)
+    {
+        if (randomizer == null || killerResult == null)
+        {
+            return;
+        }
+
+        randomizer.RerollKillerAddon(
+            killerResult,
+            index
+        );
+    }
+
+    private void RerollKillerOffering()
+    {
+        if (randomizer == null || killerResult == null)
+        {
+            return;
+        }
+
+        randomizer.RerollKillerOffering(
+            killerResult
+        );
+    }
+}

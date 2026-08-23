@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "name": "Cabeza Dwight Outfit 1",
+    "characterId": 1,
+    "outfitId": 1,
+    "part": "Head",
+    "image": "images/skins/1.png"
+  },
+  {
+    "id": 2,
+    "name": "Torso Dwight Outfit 1",
+    "characterId": 1,
+    "outfitId": 1,
+    "part": "Torso",
+    "image": "images/skins/2.png"
+  },
+  {
+    "id": 3,
+    "name": "Piernas Dwight Outfit 1",
+    "characterId": 1,
+    "outfitId": 1,
+    "part": "Legs",
+    "image": "images/skins/3.png"
+  },
+  {
+    "id": 4,
+    "name": "Cabeza Dwight Outfit 2",
+    "characterId": 1,
+    "outfitId": 2,
+    "part": "Head",
+    "image": "images/skins/4.png"
+  },
+  {
+    "id": 5,
+    "name": "Torso Dwight Outfit 2",
+    "characterId": 1,
+    "outfitId": 2,
+    "part": "Torso",
+    "image": "images/skins/5.png"
+  },
+  {
+    "id": 6,
+    "name": "Piernas Dwight Outfit 2",
+    "characterId": 1,
+    "outfitId": 2,
+    "part": "Legs",
+    "image": "images/skins/6.png"
+  },
+  {
+      "id": 100,
+      "name": "Chris Redfield",
+      "characterId": 1,
+      "outfitId": 20,
+      "part": "Head",
+      "isSeparable": false,
+      "image": ""
+  },
+  {
+      "id": 101,
+      "name": "Chris Redfield",
+      "characterId": 1,
+      "outfitId": 20,
+      "part": "Torso",
+      "isSeparable": false,
+      "image": ""
+  },
+  {
+      "id": 102,
+      "name": "Chris Redfield",
+      "characterId": 1,
+      "outfitId": 20,
+      "part": "Legs",
+      "isSeparable": false,
+      "image": ""
+  }
+]

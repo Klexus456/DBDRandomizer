@@ -1,0 +1,17 @@
+{
+    "disabledSurvivors": [],
+    "disabledKillers": [],
+
+    "disabledSurvivorSkins": [],
+    "disabledKillerSkins": [],
+
+    "disabledSurvivorPerks": [],
+    "disabledKillerPerks": [],
+
+    "disabledItems": [],
+    "disabledAddons": [],
+    "disabledOfferings": [],
+
+    "survivorSkinMode": "Parts",
+    "killerSkinMode": "Parts"
+}

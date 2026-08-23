@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Offering de prueba 1",
+    "description": "Descripción de prueba.",
+    "rarity": "Common",
+    "image":""
+  },
+  {
+    "id": 2,
+    "name": "Offering de prueba 2",
+    "description": "Descripción de prueba.",
+    "rarity": "Rare",
+    "image":""
+  }
+]

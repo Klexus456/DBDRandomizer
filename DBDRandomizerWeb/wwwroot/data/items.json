@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Flashlight",
+        "rarity": "Common",
+        "image": ""
+    },
+    {
+        "id": 2,
+        "name": "First Aid Kit",
+        "rarity": "Common",
+        "image": ""
+    },
+    {
+        "id": 3,
+        "name": "Toolbox",
+        "rarity": "Common",
+        "image": ""
+    }
+]

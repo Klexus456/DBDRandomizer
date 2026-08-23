@@ -1,0 +1,1975 @@
+@page "/settings"
+
+@using DBDRandomizer.Models
+@using DBDRandomizer.Data
+@using DBDRandomizerWeb.Services
+
+<h1>CONFIGURACIÓN</h1>
+
+<p class="settings-description">
+    Desde aquí puedes configurar qué elementos puede utilizar
+    el randomizador.
+</p>
+
+@if (loading)
+{
+    <div class="settings-loading">
+        <p>Cargando configuración...</p>
+    </div>
+}
+else
+{
+    <div class="settings-container">
+
+        <!-- ========================= -->
+        <!-- SURVIVORS -->
+        <!-- ========================= -->
+
+        <details class="settings-section">
+
+            <summary class="settings-section-summary">
+                <div>
+                    <h2>Survivors</h2>
+                    <p>
+                        @EnabledSurvivorsCount de @survivors.Count habilitados
+                    </p>
+                </div>
+            </summary>
+
+            <div class="settings-section-content">
+
+                <div class="settings-actions">
+
+                    <button
+                        class="settings-button"
+                        @onclick="EnableAllSurvivors">
+                        HABILITAR TODOS
+                    </button>
+
+                    <button
+                        class="settings-button"
+                        @onclick="DisableAllSurvivors">
+                        DESHABILITAR TODOS
+                    </button>
+
+                </div>
+
+                <div class="item-search">
+                    <input
+                        type="text"
+                        placeholder="Buscar Survivor..."
+                        @bind="survivorSearch"
+                        @bind:event="oninput" />
+                </div>
+
+                <div class="settings-list">
+
+                    @foreach (Survivor survivor in FilteredSurvivors)
+                    {
+                        <label class="settings-item">
+
+                            <input
+                                type="checkbox"
+                                checked="@IsSurvivorEnabled(survivor.Id)"
+                                @onchange="() => ToggleSurvivor(survivor.Id)" />
+
+                            <span>
+                                @survivor.Name
+                            </span>
+
+                        </label>
+                    }
+
+                </div>
+
+            </div>
+
+        </details>
+
+        <!-- ========================= -->
+        <!-- KILLERS -->
+        <!-- ========================= -->
+
+        <details class="settings-section">
+
+            <summary class="settings-section-summary">
+                <div>
+                    <h2>Killers</h2>
+                    <p>
+                        @EnabledKillersCount de @killers.Count habilitados
+                    </p>
+                </div>
+            </summary>
+
+            <div class="settings-section-content">
+
+                <div class="settings-actions">
+
+                    <button
+                        class="settings-button"
+                        @onclick="EnableAllKillers">
+                        HABILITAR TODOS
+                    </button>
+
+                    <button
+                        class="settings-button"
+                        @onclick="DisableAllKillers">
+                        DESHABILITAR TODOS
+                    </button>
+
+                </div>
+
+                <div class="item-search">
+                    <input
+                        type="text"
+                        placeholder="Buscar Killer..."
+                        @bind="killerSearch"
+                        @bind:event="oninput" />
+                </div>
+
+                <div class="settings-list">
+
+                    @foreach (Killer killer in FilteredKillers)
+                    {
+                        <label class="settings-item">
+
+                            <input
+                                type="checkbox"
+                                checked="@IsKillerEnabled(killer.Id)"
+                                @onchange="() => ToggleKiller(killer.Id)" />
+
+                            <span>
+                                @killer.Name
+                            </span>
+
+                        </label>
+                    }
+
+                </div>
+
+            </div>
+
+        </details>
+        
+        <details class="settings-section">
+
+            <summary class="settings-section-summary">
+
+                <div>
+                    <h2>Survivor Skins</h2>
+
+                    <p>
+                        Configura qué skins pueden utilizarse.
+                    </p>
+                </div>
+
+            </summary>
+
+
+            <div class="settings-section-content">
+
+                <div class="settings-actions">
+
+                    <button
+                        class="settings-button"
+                        @onclick="EnableAllSurvivorSkins">
+                        HABILITAR TODOS
+                    </button>
+
+                    <button
+                        class="settings-button"
+                        @onclick="DisableAllSurvivorSkins">
+                        DESHABILITAR TODOS
+                    </button>
+
+                </div>
+
+                <div class="skin-search">
+
+                    <input
+                        type="text"
+                        placeholder="Buscar Survivor o skin..."
+                        @bind="survivorSkinSearch"
+                        @bind:event="oninput" />
+
+                </div>
+
+
+                <div class="skin-list">
+
+                    @foreach (Survivor survivor in FilteredSurvivorsForSkins)
+                    {
+                        <details class="skin-character">
+
+                            <summary>
+                                <strong>@survivor.Name</strong>
+                            </summary>
+
+                            <div class="skin-character-content">
+
+                                @{
+                                    IEnumerable<IGrouping<int, SkinPiece>> outfits =
+                                        GetVisibleOutfits(survivor.Id);
+
+                                    IEnumerable<IGrouping<int, SkinPiece>> separableOutfits =
+                                        outfits.Where(outfit =>
+                                            outfit.All(skin => skin.IsSeparable));
+
+                                    IEnumerable<IGrouping<int, SkinPiece>> inseparableOutfits =
+                                        outfits.Where(outfit =>
+                                            outfit.All(skin => !skin.IsSeparable));
+                                }
+
+
+                                @if (separableOutfits.Any())
+                                {
+                                    <div class="skin-category">
+
+                                        <h4>Piezas separables</h4>
+
+                                        @foreach (var outfitGroup in separableOutfits)
+                                        {
+                                            <div class="skin-outfit">
+
+                                                <h5>
+                                                    @GetOutfitName(outfitGroup)
+                                                </h5>
+
+                                                @foreach (
+                                                    SkinPart part in GetAvailableParts(outfitGroup)
+                                                )
+                                                {
+                                                    <div class="skin-part">
+
+                                                        <strong>@part</strong>
+
+                                                        @foreach (
+                                                            SkinPiece skin in GetSkinsForPart(
+                                                                outfitGroup,
+                                                                part
+                                                            )
+                                                        )
+                                                        {
+                                                            <label class="settings-item">
+
+                                                                <input
+                                                                    type="checkbox"
+                                                                    checked="@IsSkinEnabled(skin.Id)"
+                                                                    @onchange="
+                                                                        () => ToggleSkin(skin.Id)" />
+
+                                                                <span>
+                                                                    @skin.Name
+                                                                </span>
+
+                                                            </label>
+                                                        }
+
+                                                    </div>
+                                                }
+
+                                            </div>
+                                        }
+
+                                    </div>
+                                }
+
+
+                                @if (inseparableOutfits.Any())
+                                {
+                                    <div class="skin-category">
+
+                                        <h4>Outfits completos</h4>
+
+                                        @foreach (var outfitGroup in inseparableOutfits)
+                                        {
+                                            <div class="skin-outfit">
+
+                                                <label class="settings-item">
+
+                                                    <input
+                                                        type="checkbox"
+                                                        checked="@IsOutfitEnabled(outfitGroup)"
+                                                        @onchange="
+                                                            () => ToggleOutfit(outfitGroup)" />
+
+                                                    <span>
+                                                        @GetOutfitName(outfitGroup)
+                                                    </span>
+
+                                                </label>
+
+                                            </div>
+                                        }
+
+                                    </div>
+                                }
+
+                            </div>
+
+                        </details>
+                    }
+
+                </div>
+
+            </div>
+
+        </details>
+
+        <details class="settings-section">
+
+            <summary class="settings-section-summary">
+
+                <div>
+                    <h2>Killer Skins</h2>
+
+                    <p>
+                        Configura qué skins pueden utilizarse.
+                    </p>
+                </div>
+
+            </summary>
+
+
+            <div class="settings-section-content">
+
+                <div class="settings-actions">
+
+                    <button
+                        class="settings-button"
+                        @onclick="EnableAllKillerSkins">
+                        HABILITAR TODOS
+                    </button>
+
+                    <button
+                        class="settings-button"
+                        @onclick="DisableAllKillerSkins">
+                        DESHABILITAR TODOS
+                    </button>
+
+                </div>
+
+                <div class="skin-search">
+
+                    <input
+                        type="text"
+                        placeholder="Buscar Killer o skin..."
+                        @bind="killerSkinSearch"
+                        @bind:event="oninput" />
+
+                </div>
+
+
+                <div class="skin-list">
+
+                    @foreach (Killer killer in FilteredKillersForSkins)
+                    {
+                        <details class="skin-character">
+
+                            <summary>
+                                <strong>@killer.Name</strong>
+                            </summary>
+
+                            <div class="skin-character-content">
+
+                                @{
+                                    IEnumerable<IGrouping<int, SkinPiece>> outfits =
+                                        GetVisibleKillerOutfits(killer.Id);
+
+                                    IEnumerable<IGrouping<int, SkinPiece>> separableOutfits =
+                                        outfits.Where(outfit =>
+                                            outfit.All(skin => skin.IsSeparable));
+
+                                    IEnumerable<IGrouping<int, SkinPiece>> inseparableOutfits =
+                                        outfits.Where(outfit =>
+                                            outfit.All(skin => !skin.IsSeparable));
+                                }
+
+
+                                @if (separableOutfits.Any())
+                                {
+                                    <div class="skin-category">
+
+                                        <h4>Piezas separables</h4>
+
+                                        @foreach (var outfitGroup in separableOutfits)
+                                        {
+                                            <div class="skin-outfit">
+
+                                                <h5>
+                                                    @GetOutfitName(outfitGroup)
+                                                </h5>
+
+                                                @foreach (
+                                                    SkinPart part in GetAvailableParts(outfitGroup)
+                                                )
+                                                {
+                                                    <div class="skin-part">
+
+                                                        <strong>@part</strong>
+
+                                                        @foreach (
+                                                            SkinPiece skin in GetSkinsForPart(
+                                                                outfitGroup,
+                                                                part
+                                                            )
+                                                        )
+                                                        {
+                                                            <label class="settings-item">
+
+                                                                <input
+                                                                    type="checkbox"
+                                                                    checked="@IsKillerSkinEnabled(skin.Id)"
+                                                                    @onchange="
+                                                                        () => ToggleKillerSkin(skin.Id)" />
+
+                                                                <span>
+                                                                    @skin.Name
+                                                                </span>
+
+                                                            </label>
+                                                        }
+
+                                                    </div>
+                                                }
+
+                                            </div>
+                                        }
+
+                                    </div>
+                                }
+
+
+                                @if (inseparableOutfits.Any())
+                                {
+                                    <div class="skin-category">
+
+                                        <h4>Outfits completos</h4>
+
+                                        @foreach (var outfitGroup in inseparableOutfits)
+                                        {
+                                            <div class="skin-outfit">
+
+                                                <label class="settings-item">
+
+                                                    <input
+                                                        type="checkbox"
+                                                        checked="@IsKillerOutfitEnabled(outfitGroup)"
+                                                        @onchange="
+                                                            () => ToggleKillerOutfit(outfitGroup)" />
+
+                                                    <span>
+                                                        @GetOutfitName(outfitGroup)
+                                                    </span>
+
+                                                </label>
+
+                                            </div>
+                                        }
+
+                                    </div>
+                                }
+
+                            </div>
+
+                        </details>
+                    }
+
+                </div>
+
+            </div>
+
+        </details>
+
+
+
+        <details class="settings-section">
+
+            <summary class="settings-section-summary">
+
+                <div>
+
+                    <h2>Survivor Perks</h2>
+
+                    <p>
+                        @EnabledSurvivorPerksCount de @survivorPerks.Count habilitadas
+                    </p>
+
+                </div>
+
+            </summary>
+
+            <div class="settings-section-content">
+
+                <div class="settings-actions">
+
+                    <button
+                        class="settings-button"
+                        @onclick="EnableAllSurvivorPerks">
+                        HABILITAR TODOS
+                    </button>
+
+                    <button
+                        class="settings-button"
+                        @onclick="DisableAllSurvivorPerks">
+                        DESHABILITAR TODOS
+                    </button>
+
+                </div>
+
+                <div class="perk-search">
+                    <input
+                        type="text"
+                        placeholder="Buscar Survivor o perk..."
+                        @bind="survivorPerkSearch"
+                        @bind:event="oninput" />
+                </div>
+
+                <div class="settings-list">
+
+                    @foreach (Perk perk in FilteredSurvivorPerks)
+                    {
+                        <label class="settings-item">
+
+                            <input
+                                type="checkbox"
+                                checked="@IsSurvivorPerkEnabled(perk.Id)"
+                                @onchange="() => ToggleSurvivorPerk(perk.Id)" />
+
+                            <span>
+                                @perk.Name
+                            </span>
+
+                        </label>
+                    }
+
+                </div>
+
+            </div>
+
+        </details>
+
+        <details class="settings-section">
+
+            <summary class="settings-section-summary">
+
+                <div>
+
+                    <h2>Killer Perks</h2>
+
+                    <p>
+                        @EnabledKillerPerksCount de @killerPerks.Count habilitadas
+                    </p>
+
+                </div>
+
+            </summary>
+
+            <div class="settings-section-content">
+
+                <div class="settings-actions">
+
+                    <button
+                        class="settings-button"
+                        @onclick="EnableAllKillerPerks">
+                        HABILITAR TODOS
+                    </button>
+
+                    <button
+                        class="settings-button"
+                        @onclick="DisableAllKillerPerks">
+                        DESHABILITAR TODOS
+                    </button>
+
+                </div>
+
+                <div class="perk-search">
+
+                    <input
+                        type="text"
+                        placeholder="Buscar Killer o perk..."
+                        @bind="killerPerkSearch"
+                        @bind:event="oninput" />
+
+                </div>
+
+                <div class="settings-list">
+
+                    @foreach (Perk perk in FilteredKillerPerks)
+                    {
+                        <label class="settings-item">
+
+                            <input
+                                type="checkbox"
+                                checked="@IsKillerPerkEnabled(perk.Id)"
+                                @onchange="() => ToggleKillerPerk(perk.Id)" />
+
+                            <span>
+                                @perk.Name
+                            </span>
+
+                        </label>
+                    }
+
+                </div>
+
+            </div>
+
+        </details>
+
+        <!-- *=========================* -->
+        <!-- SURVIVOR ADD-ONS -->
+        <!-- *=========================* -->
+
+        <details class="settings-section">
+
+            <summary class="settings-section-summary">
+
+                <div>
+
+                    <h2>Survivor Add-ons</h2>
+
+                    <p>
+                        @EnabledSurvivorAddonsCount de @SurvivorAddons.Count() habilitados
+                    </p>
+
+                </div>
+
+            </summary>
+
+            <div class="settings-section-content">
+
+                <div class="settings-actions">
+
+                    <button
+                        class="settings-button"
+                        @onclick="EnableAllSurvivorAddons">
+
+                        HABILITAR TODOS
+
+                    </button>
+
+                    <button
+                        class="settings-button"
+                        @onclick="DisableAllSurvivorAddons">
+
+                        DESHABILITAR TODOS
+
+                    </button>
+
+                </div>
+
+                <div class="skin-search">
+
+                    <input
+                        type="text"
+                        placeholder="Buscar Item o addon..."
+                        @bind="survivorAddonSearch"
+                        @bind:event="oninput" />
+
+                </div>
+
+                <div class="skin-list">
+
+                    @foreach (Item item in FilteredItemsForSurvivorAddons)
+                    {
+                        IEnumerable<Addon> itemAddons =
+                            GetVisibleSurvivorAddons(item.Id);
+
+                        @if (itemAddons.Any())
+                        {
+                            <details class="skin-character">
+
+                                <summary>
+
+                                    <strong>@item.Name</strong>
+
+                                </summary>
+
+                                <div class="skin-character-content">
+
+                                    @foreach (Addon addon in itemAddons)
+                                    {
+                                        <label class="settings-item">
+
+                                            <input
+                                                type="checkbox"
+                                                checked="@IsAddonEnabled(addon.Id)"
+                                                @onchange="
+                                                    () => ToggleAddon(addon.Id)" />
+
+                                            <span>
+                                                @addon.Name
+                                            </span>
+
+                                        </label>
+                                    }
+
+                                </div>
+
+                            </details>
+                        }
+                    }
+
+                </div>
+
+            </div>
+
+        </details>
+
+        <!-- *=========================* -->
+        <!-- KILLER ADD-ONS -->
+        <!-- *=========================* -->
+
+        <details class="settings-section">
+
+            <summary class="settings-section-summary">
+
+                <div>
+
+                    <h2>Killer Add-ons</h2>
+
+                    <p>
+                        @EnabledKillerAddonsCount de @KillerAddons.Count() habilitados
+                    </p>
+
+                </div>
+
+            </summary>
+
+            <div class="settings-section-content">
+
+                <div class="settings-actions">
+
+                    <button
+                        class="settings-button"
+                        @onclick="EnableAllKillerAddons">
+
+                        HABILITAR TODOS
+
+                    </button>
+
+                    <button
+                        class="settings-button"
+                        @onclick="DisableAllKillerAddons">
+
+                        DESHABILITAR TODOS
+
+                    </button>
+
+                </div>
+
+                <div class="skin-search">
+
+                    <input
+                        type="text"
+                        placeholder="Buscar Killer o addon..."
+                        @bind="killerAddonSearch"
+                        @bind:event="oninput" />
+
+                </div>
+
+                <div class="skin-list">
+
+                    @foreach (Killer killer in FilteredKillersForAddons)
+                    {
+                        IEnumerable<Addon> killerAddons =
+                            GetVisibleKillerAddons(killer.Id);
+
+                        @if (killerAddons.Any())
+                        {
+                            <details class="skin-character">
+
+                                <summary>
+
+                                    <strong>@killer.Name</strong>
+
+                                </summary>
+
+                                <div class="skin-character-content">
+
+                                    @foreach (Addon addon in killerAddons)
+                                    {
+                                        <label class="settings-item">
+
+                                            <input
+                                                type="checkbox"
+                                                checked="@IsAddonEnabled(addon.Id)"
+                                                @onchange="
+                                                    () => ToggleAddon(addon.Id)" />
+
+                                            <span>
+                                                @addon.Name
+                                            </span>
+
+                                        </label>
+                                    }
+
+                                </div>
+
+                            </details>
+                        }
+                    }
+
+                </div>
+
+            </div>
+
+        </details>
+
+        <details class="settings-section">
+
+            <summary class="settings-section-summary">
+
+                <div>
+
+                    <h2>Items</h2>
+
+                    <p>
+                        @EnabledItemsCount de @items.Count habilitados
+                    </p>
+
+                </div>
+
+            </summary>
+
+            <div class="settings-section-content">
+
+                <div class="settings-actions">
+
+                    <button
+                        class="settings-button"
+                        @onclick="EnableAllItems">
+
+                        HABILITAR TODOS
+
+                    </button>
+
+                    <button
+                        class="settings-button"
+                        @onclick="DisableAllItems">
+
+                        DESHABILITAR TODOS
+
+                    </button>
+
+                </div>
+
+                <div class="item-search">
+
+                    <input
+                        type="text"
+                        placeholder="Buscar item..."
+                        @bind="itemSearch"
+                        @bind:event="oninput" />
+
+                </div>
+
+                <div class="settings-list">
+
+                    @foreach (Item item in FilteredItems)
+                    {
+                        <label class="settings-item">
+
+                            <input
+                                type="checkbox"
+                                checked="@IsItemEnabled(item.Id)"
+                                @onchange="() => ToggleItem(item.Id)" />
+
+                            <span>
+                                @item.Name
+                            </span>
+
+                        </label>
+                    }
+
+                </div>
+
+            </div>
+
+        </details>
+
+        <!-- ========================= -->
+        <!-- OFFERINGS -->
+        <!-- ========================= -->
+
+        <details class="settings-section">
+
+            <summary class="settings-section-summary">
+
+                <div>
+
+                    <h2>Offerings</h2>
+
+                    <p>
+                        @EnabledOfferingsCount de @offerings.Count habilitados
+                    </p>
+
+                </div>
+
+            </summary>
+
+            <div class="settings-section-content">
+
+                <div class="settings-actions">
+
+                    <button
+                        class="settings-button"
+                        @onclick="EnableAllOfferings">
+
+                        HABILITAR TODOS
+
+                    </button>
+
+                    <button
+                        class="settings-button"
+                        @onclick="DisableAllOfferings">
+
+                        DESHABILITAR TODOS
+
+                    </button>
+
+                </div>
+
+                <div class="item-search">
+
+                    <input
+                        type="text"
+                        placeholder="Buscar offering..."
+                        @bind="offeringSearch"
+                        @bind:event="oninput" />
+
+                </div>
+
+                <div class="settings-list">
+
+                    @foreach (Offering offering in FilteredOfferings)
+                    {
+
+                        <label class="settings-item">
+
+                            <input
+                                type="checkbox"
+                                checked="@IsOfferingEnabled(offering.Id)"
+                                @onchange="() => ToggleOffering(offering.Id)" />
+
+                            <span>
+                                @offering.Name
+                            </span>
+
+                        </label>
+
+                    }
+
+                </div>
+
+            </div>
+
+        </details>
+
+        <div class="settings-save-container">
+
+            <button
+                class="settings-save-button"
+                @onclick="SaveConfig">
+
+                GUARDAR CAMBIOS
+
+            </button>
+
+        </div>
+
+    </div>
+}
+
+
+@code
+{
+    [Inject]
+    private LocalStorageService LocalStorage { get; set; } = default!;
+
+    [Inject]
+    private HttpClient Http { get; set; } = default!;
+    private List<Survivor> survivors = new();
+    private List<Killer> killers = new();
+    private RandomizerConfig config = new();
+    private bool loading = true;
+    private List<SkinPiece> survivorSkins = new();
+    private List<SkinPiece> killerSkins = new();
+    private string survivorSkinSearch = "";
+    private string killerSkinSearch = "";
+    private List<Perk> survivorPerks = new();
+    private List<Perk> killerPerks = new();
+    private string survivorPerkSearch = "";
+    private string killerPerkSearch = "";
+    private List<Item> items = new();
+    private string itemSearch = "";
+    private List<Addon> addons = new();
+    private string survivorAddonSearch = "";
+    private string killerAddonSearch = "";
+    private List<Offering> offerings = new();
+    private string offeringSearch = "";
+    private string survivorSearch = "";
+    private string killerSearch = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        WebDataLoader loader = new(Http);
+
+        survivors = await loader.LoadSurvivors();
+
+        survivorSkins = await loader.LoadSurvivorSkins();
+
+        survivorPerks = await loader.LoadSurvivorPerks();
+
+        killers = await loader.LoadKillers();
+
+        killerSkins = await loader.LoadKillerSkins();
+           
+        killerPerks = await loader.LoadKillerPerks();
+
+        items = await loader.LoadItems();
+
+        config = await loader.LoadConfig();
+
+        addons = await loader.LoadAddons();
+
+        offerings = await loader.LoadOfferings();
+
+        loading = false;
+
+        // Intentar cargar configuración guardada
+        RandomizerConfig? savedConfig = await LocalStorage.LoadConfig();
+
+        if (savedConfig != null)
+        {
+            config = savedConfig;
+        }   
+
+    }
+
+
+    // =========================================================
+    // SURVIVORS
+    // =========================================================
+
+    private bool IsSurvivorEnabled(int id)
+    {
+        return !config.DisabledSurvivors.Contains(id);
+    }
+
+
+    private void ToggleSurvivor(int id)
+    {
+        if (config.DisabledSurvivors.Contains(id))
+        {
+            config.DisabledSurvivors.Remove(id);
+        }
+        else
+        {
+            config.DisabledSurvivors.Add(id);
+        }
+
+    }
+
+
+    private void EnableAllSurvivors()
+    {
+        config.DisabledSurvivors.Clear();
+    }
+
+
+    private void DisableAllSurvivors()
+    {
+        config.DisabledSurvivors = survivors
+            .Select(survivor => survivor.Id)
+            .ToList();
+    }
+
+
+    private int EnabledSurvivorsCount =>
+        survivors.Count(survivor =>
+            !config.DisabledSurvivors.Contains(survivor.Id));
+
+
+    // =========================================================
+    // KILLERS
+    // =========================================================
+
+    private bool IsKillerEnabled(int id)
+    {
+        return !config.DisabledKillers.Contains(id);
+    }
+
+
+    private void ToggleKiller(int id)
+    {
+        if (config.DisabledKillers.Contains(id))
+        {
+            config.DisabledKillers.Remove(id);
+        }
+        else
+        {
+            config.DisabledKillers.Add(id);
+        }
+    }
+
+
+    private void EnableAllKillers()
+    {
+        config.DisabledKillers.Clear();
+    }
+
+
+    private void DisableAllKillers()
+    {
+        config.DisabledKillers = killers
+            .Select(killer => killer.Id)
+            .ToList();
+    }
+
+
+    private int EnabledKillersCount =>
+        killers.Count(killer =>
+            !config.DisabledKillers.Contains(killer.Id));
+
+    // =========================================================
+    // SURVIVOR SKINS
+    // =========================================================
+
+    private IEnumerable<Survivor> FilteredSurvivorsForSkins
+    {
+        get
+        {
+            string search = survivorSkinSearch.Trim();
+
+            if (string.IsNullOrWhiteSpace(search))
+            {
+                return survivors;
+            }
+
+            return survivors.Where(survivor =>
+                survivor.Name.Contains(
+                    search,
+                    StringComparison.OrdinalIgnoreCase
+                )
+                ||
+                survivorSkins.Any(skin =>
+                    skin.CharacterId == survivor.Id &&
+                    skin.Name.Contains(
+                        search,
+                        StringComparison.OrdinalIgnoreCase
+                    )
+                )
+            );
+        }
+    }
+
+    private IEnumerable<Killer> FilteredKillersForSkins
+    {
+        get
+        {
+            string search = killerSkinSearch.Trim();
+
+            if (string.IsNullOrWhiteSpace(search))
+            {
+                return killers;
+            }
+
+            return killers.Where(killer =>
+                killer.Name.Contains(
+                    search,
+                    StringComparison.OrdinalIgnoreCase
+                )
+                ||
+                killerSkins.Any(skin =>
+                    skin.CharacterId == killer.Id &&
+                    skin.Name.Contains(
+                        search,
+                        StringComparison.OrdinalIgnoreCase
+                    )
+                )
+            );
+        }
+    }
+
+    private IEnumerable<IGrouping<int, SkinPiece>> GetVisibleKillerOutfits(
+        int killerId)
+    {
+        IEnumerable<SkinPiece> skins = killerSkins
+            .Where(skin => skin.CharacterId == killerId);
+
+        string search = killerSkinSearch.Trim();
+
+        if (!string.IsNullOrWhiteSpace(search))
+        {
+            bool characterMatches = killers
+                .First(k => k.Id == killerId)
+                .Name
+                .Contains(
+                    search,
+                    StringComparison.OrdinalIgnoreCase
+                );
+
+            if (!characterMatches)
+            {
+                List<int> matchingOutfitIds = skins
+                    .Where(skin =>
+                        skin.Name.Contains(
+                            search,
+                            StringComparison.OrdinalIgnoreCase
+                        )
+                    )
+                    .Select(skin => skin.OutfitId)
+                    .Distinct()
+                    .ToList();
+
+                skins = skins.Where(skin =>
+                    matchingOutfitIds.Contains(skin.OutfitId)
+                );
+            }
+        }
+
+        return skins
+            .GroupBy(skin => skin.OutfitId)
+            .OrderBy(group => group.Key);
+    }
+
+    private bool IsKillerSkinEnabled(int id)
+    {
+        return !config.DisabledKillerSkins.Contains(id);
+    }
+
+    private void ToggleKillerSkin(int id)
+    {
+        if (config.DisabledKillerSkins.Contains(id))
+        {
+            config.DisabledKillerSkins.Remove(id);
+        }
+        else
+        {
+            config.DisabledKillerSkins.Add(id);
+        }
+    }
+
+    private bool IsKillerOutfitEnabled(
+        IGrouping<int, SkinPiece> outfit)
+    {
+        return outfit.All(skin =>
+            !config.DisabledKillerSkins.Contains(skin.Id));
+    }
+
+    private void ToggleKillerOutfit(
+        IGrouping<int, SkinPiece> outfit)
+    {
+        bool enabled = IsKillerOutfitEnabled(outfit);
+
+        foreach (SkinPiece skin in outfit)
+        {
+            if (enabled)
+            {
+                if (!config.DisabledKillerSkins.Contains(skin.Id))
+                {
+                    config.DisabledKillerSkins.Add(skin.Id);
+                }
+            }
+            else
+            {
+                config.DisabledKillerSkins.Remove(skin.Id);
+            }
+        }
+    }
+
+    private IEnumerable<IGrouping<int, SkinPiece>> GetVisibleOutfits(int survivorId)
+    {
+        IEnumerable<SkinPiece> skins = survivorSkins
+            .Where(skin => skin.CharacterId == survivorId);
+
+        string search = survivorSkinSearch.Trim();
+
+        if (!string.IsNullOrWhiteSpace(search))
+        {
+            bool characterMatches = survivors
+                .First(s => s.Id == survivorId)
+                .Name
+                .Contains(
+                    search,
+                    StringComparison.OrdinalIgnoreCase
+                );
+
+            if (!characterMatches)
+            {
+                // Primero encontramos los outfits que tienen
+                // al menos una pieza que coincide con la búsqueda.
+                List<int> matchingOutfitIds = skins
+                    .Where(skin =>
+                        skin.Name.Contains(
+                            search,
+                            StringComparison.OrdinalIgnoreCase
+                        )
+                    )
+                    .Select(skin => skin.OutfitId)
+                    .Distinct()
+                    .ToList();
+
+                // Después mostramos TODAS las piezas
+                // pertenecientes a esos outfits.
+                skins = skins.Where(skin =>
+                    matchingOutfitIds.Contains(skin.OutfitId)
+                );
+            }
+        }
+
+        return skins
+            .GroupBy(skin => skin.OutfitId)
+            .OrderBy(group => group.Key);
+    }
+
+    private IEnumerable<SkinPart> GetAvailableParts(IGrouping<int, SkinPiece> outfit)
+    {
+        return outfit
+            .Select(skin => skin.Part)
+            .Distinct()
+            .OrderBy(part => part);
+    }
+
+    private IEnumerable<SkinPiece> GetSkinsForPart(IGrouping<int, SkinPiece> outfit, SkinPart part)
+    {
+        return outfit.Where(skin =>
+            skin.Part == part);
+    }
+
+    private bool IsSkinEnabled(int id)
+    {
+        return !config.DisabledSurvivorSkins.Contains(id);
+    }
+
+
+    private void ToggleSkin(int id)
+    {
+        if (config.DisabledSurvivorSkins.Contains(id))
+        {
+            config.DisabledSurvivorSkins.Remove(id);
+        }
+        else
+        {
+            config.DisabledSurvivorSkins.Add(id);
+        }
+    }
+
+    private bool IsOutfitEnabled(
+        IGrouping<int, SkinPiece> outfit)
+    {
+        return outfit.All(skin =>
+            !config.DisabledSurvivorSkins.Contains(skin.Id));
+    }
+
+    private void ToggleOutfit(
+        IGrouping<int, SkinPiece> outfit)
+    {
+        bool enabled = IsOutfitEnabled(outfit);
+
+        foreach (SkinPiece skin in outfit)
+        {
+            if (enabled)
+            {
+                if (!config.DisabledSurvivorSkins.Contains(skin.Id))
+                {
+                    config.DisabledSurvivorSkins.Add(skin.Id);
+                }
+            }
+            else
+            {
+                config.DisabledSurvivorSkins.Remove(skin.Id);
+            }
+        }
+    }
+
+//s
+    private string GetOutfitName(
+        IGrouping<int, SkinPiece> outfit)
+    {
+        return outfit
+            .Select(skin => skin.Name)
+            .FirstOrDefault()
+            ?? $"Outfit {outfit.Key}";
+    }
+
+    private void EnableAllSurvivorSkins()
+    {
+        config.DisabledSurvivorSkins.Clear();
+    }
+
+    private void DisableAllSurvivorSkins()
+    {
+        config.DisabledSurvivorSkins = survivorSkins
+            .Select(skin => skin.Id)
+            .ToList();
+    }
+
+    private void EnableAllKillerSkins()
+    {
+        config.DisabledKillerSkins.Clear();
+    }
+
+    private void DisableAllKillerSkins()
+    {
+        config.DisabledKillerSkins = killerSkins
+            .Select(skin => skin.Id)
+            .ToList();
+    }
+
+    // =========================================================
+    // SURVIVOR PERKS
+    // =========================================================
+
+    private bool IsSurvivorPerkEnabled(int id)
+    {
+        return !config.DisabledSurvivorPerks.Contains(id);
+    }
+
+    private void ToggleSurvivorPerk(int id)
+    {
+        if (config.DisabledSurvivorPerks.Contains(id))
+        {
+            config.DisabledSurvivorPerks.Remove(id);
+        }
+        else
+        {
+            config.DisabledSurvivorPerks.Add(id);
+        }
+    }
+
+    private void EnableAllSurvivorPerks()
+    {
+        config.DisabledSurvivorPerks.Clear();
+    }
+
+    private void DisableAllSurvivorPerks()
+    {
+        config.DisabledSurvivorPerks = survivorPerks
+            .Select(perk => perk.Id)
+            .ToList();
+    }
+
+    private int EnabledSurvivorPerksCount =>
+        survivorPerks.Count(perk =>
+            !config.DisabledSurvivorPerks.Contains(perk.Id));
+
+    // =========================================================
+    // KILLER PERKS
+    // =========================================================
+
+    private bool IsKillerPerkEnabled(int id)
+    {
+        return !config.DisabledKillerPerks.Contains(id);
+    }
+
+    private void ToggleKillerPerk(int id)
+    {
+        if (config.DisabledKillerPerks.Contains(id))
+        {
+            config.DisabledKillerPerks.Remove(id);
+        }
+        else
+        {
+            config.DisabledKillerPerks.Add(id);
+        }
+    }
+
+    private void EnableAllKillerPerks()
+    {
+        config.DisabledKillerPerks.Clear();
+    }
+
+    private void DisableAllKillerPerks()
+    {
+        config.DisabledKillerPerks = killerPerks
+            .Select(perk => perk.Id)
+            .ToList();
+    }
+
+    private int EnabledKillerPerksCount =>
+        killerPerks.Count(perk =>
+            !config.DisabledKillerPerks.Contains(perk.Id));
+
+    // =========================================================
+    // SURVIVOR PERKS - BÚSQUEDA
+    // =========================================================
+
+    private IEnumerable<Perk> FilteredSurvivorPerks
+    {
+        get
+        {
+            string search = survivorPerkSearch.Trim();
+
+            if (string.IsNullOrWhiteSpace(search))
+            {
+                return survivorPerks;
+            }
+
+            return survivorPerks.Where(perk =>
+            {
+                // Buscar por nombre de perk
+                if (perk.Name.Contains(
+                    search,
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+
+                // Buscar por nombre del Survivor
+                if (perk.CharacterId.HasValue)
+                {
+                    Survivor? survivor = survivors.FirstOrDefault(s =>
+                        s.Id == perk.CharacterId.Value);
+
+                    if (survivor != null &&
+                        survivor.Name.Contains(
+                            search,
+                            StringComparison.OrdinalIgnoreCase))
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            });
+        }
+    }
+
+    // =========================================================
+    // KILLER PERKS - BÚSQUEDA
+    // =========================================================
+
+    private IEnumerable<Perk> FilteredKillerPerks
+    {
+        get
+        {
+            string search = killerPerkSearch.Trim();
+
+            if (string.IsNullOrWhiteSpace(search))
+            {
+                return killerPerks;
+            }
+
+            return killerPerks.Where(perk =>
+            {
+                // Buscar por nombre de perk
+                if (perk.Name.Contains(
+                    search,
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+
+                // Buscar por nombre del Killer
+                if (perk.CharacterId.HasValue)
+                {
+                    Killer? killer = killers.FirstOrDefault(k =>
+                        k.Id == perk.CharacterId.Value);
+
+                    if (killer != null &&
+                        killer.Name.Contains(
+                            search,
+                            StringComparison.OrdinalIgnoreCase))
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            });
+        }
+    }
+
+    // =========================================================
+    // ITEMS
+    // =========================================================
+
+    private bool IsItemEnabled(int id)
+    {
+        return !config.DisabledItems.Contains(id);
+    }
+
+    private void ToggleItem(int id)
+    {
+        if (config.DisabledItems.Contains(id))
+        {
+            config.DisabledItems.Remove(id);
+        }
+        else
+        {
+            config.DisabledItems.Add(id);
+        }
+    }
+
+    private void EnableAllItems()
+    {
+        config.DisabledItems.Clear();
+    }
+
+    private void DisableAllItems()
+    {
+        config.DisabledItems = items
+            .Select(item => item.Id)
+            .ToList();
+    }
+
+    private int EnabledItemsCount =>
+        items.Count(item =>
+            !config.DisabledItems.Contains(item.Id));
+
+
+    // =========================================================
+    // ITEMS - BÚSQUEDA
+    // =========================================================
+
+    private IEnumerable<Item> FilteredItems
+    {
+        get
+        {
+            string search = itemSearch.Trim();
+
+            if (string.IsNullOrWhiteSpace(search))
+            {
+                return items;
+            }
+
+            return items.Where(item =>
+                item.Name.Contains(
+                    search,
+                    StringComparison.OrdinalIgnoreCase
+                )
+            );
+        }
+    }
+
+    private IEnumerable<Addon> SurvivorAddons =>
+        addons.Where(addon =>
+            addon.ItemId.HasValue &&
+            !addon.CharacterId.HasValue);
+
+    private IEnumerable<Addon> KillerAddons =>
+        addons.Where(addon =>
+            addon.CharacterId.HasValue &&
+            !addon.ItemId.HasValue);
+    
+    private IEnumerable<Item> FilteredItemsForSurvivorAddons
+    {
+        get
+        {
+            string search = survivorAddonSearch.Trim();
+
+            IEnumerable<Item> availableItems = items
+                .Where(item =>
+                    SurvivorAddons.Any(addon =>
+                        addon.ItemId == item.Id
+                    )
+                );
+
+            if (string.IsNullOrWhiteSpace(search))
+            {
+                return availableItems;
+            }
+
+            return availableItems.Where(item =>
+                item.Name.Contains(
+                    search,
+                    StringComparison.OrdinalIgnoreCase
+                )
+                ||
+                SurvivorAddons.Any(addon =>
+                    addon.ItemId == item.Id &&
+                    addon.Name.Contains(
+                        search,
+                        StringComparison.OrdinalIgnoreCase
+                    )
+                )
+            );
+        }
+    }
+
+    private IEnumerable<Addon> GetVisibleSurvivorAddons(int itemId)
+    {
+        IEnumerable<Addon> result = SurvivorAddons
+            .Where(addon => addon.ItemId == itemId);
+
+        string search = survivorAddonSearch.Trim();
+
+        if (string.IsNullOrWhiteSpace(search))
+        {
+            return result;
+        }
+
+        Item item = items.First(i => i.Id == itemId);
+
+        bool itemMatches = item.Name.Contains(
+            search,
+            StringComparison.OrdinalIgnoreCase
+        );
+
+        if (itemMatches)
+        {
+            return result;
+        }
+
+        return result.Where(addon =>
+            addon.Name.Contains(
+                search,
+                StringComparison.OrdinalIgnoreCase
+            )
+        );
+    }
+
+    private IEnumerable<Killer> FilteredKillersForAddons
+    {
+        get
+        {
+            string search = killerAddonSearch.Trim();
+
+            IEnumerable<Killer> availableKillers = killers
+                .Where(killer =>
+                    KillerAddons.Any(addon =>
+                        addon.CharacterId == killer.Id
+                    )
+                );
+
+            if (string.IsNullOrWhiteSpace(search))
+            {
+                return availableKillers;
+            }
+
+            return availableKillers.Where(killer =>
+                killer.Name.Contains(
+                    search,
+                    StringComparison.OrdinalIgnoreCase
+                )
+                ||
+                KillerAddons.Any(addon =>
+                    addon.CharacterId == killer.Id &&
+                    addon.Name.Contains(
+                        search,
+                        StringComparison.OrdinalIgnoreCase
+                    )
+                )
+            );
+        }
+    }
+
+    private IEnumerable<Addon> GetVisibleKillerAddons(int killerId)
+    {
+        IEnumerable<Addon> result = KillerAddons
+            .Where(addon => addon.CharacterId == killerId);
+
+        string search = killerAddonSearch.Trim();
+
+        if (string.IsNullOrWhiteSpace(search))
+        {
+            return result;
+        }
+
+        Killer killer = killers.First(k => k.Id == killerId);
+
+        bool killerMatches = killer.Name.Contains(
+            search,
+            StringComparison.OrdinalIgnoreCase
+        );
+
+        if (killerMatches)
+        {
+            return result;
+        }
+
+        return result.Where(addon =>
+            addon.Name.Contains(
+                search,
+                StringComparison.OrdinalIgnoreCase
+            )
+        );
+    }
+
+    private bool IsAddonEnabled(int id)
+    {
+        return !config.DisabledAddons.Contains(id);
+    }
+
+    private void ToggleAddon(int id)
+    {
+        if (config.DisabledAddons.Contains(id))
+        {
+            config.DisabledAddons.Remove(id);
+        }
+        else
+        {
+            config.DisabledAddons.Add(id);
+        }
+    }
+
+    private void EnableAllSurvivorAddons()
+    {
+        foreach (Addon addon in SurvivorAddons)
+        {
+            config.DisabledAddons.Remove(addon.Id);
+        }
+    }
+
+    private void DisableAllSurvivorAddons()
+    {
+        foreach (Addon addon in SurvivorAddons)
+        {
+            if (!config.DisabledAddons.Contains(addon.Id))
+            {
+                config.DisabledAddons.Add(addon.Id);
+            }
+        }
+    }
+
+    private void EnableAllKillerAddons()
+    {
+        foreach (Addon addon in KillerAddons)
+        {
+            config.DisabledAddons.Remove(addon.Id);
+        }
+    }
+
+    private void DisableAllKillerAddons()
+    {
+        foreach (Addon addon in KillerAddons)
+        {
+            if (!config.DisabledAddons.Contains(addon.Id))
+            {
+                config.DisabledAddons.Add(addon.Id);
+            }
+        }
+    }
+
+    private int EnabledSurvivorAddonsCount =>
+    SurvivorAddons.Count(addon =>
+        !config.DisabledAddons.Contains(addon.Id));
+    
+    private int EnabledKillerAddonsCount =>
+    KillerAddons.Count(addon =>
+        !config.DisabledAddons.Contains(addon.Id));
+    
+    // =========================================================
+    // OFFERINGS
+    // =========================================================
+
+    private bool IsOfferingEnabled(int id)
+    {
+        return !config.DisabledOfferings.Contains(id);
+    }
+
+    private void ToggleOffering(int id)
+    {
+        if (config.DisabledOfferings.Contains(id))
+        {
+            config.DisabledOfferings.Remove(id);
+        }
+        else
+        {
+            config.DisabledOfferings.Add(id);
+        }
+    }
+
+    private void EnableAllOfferings()
+    {
+        config.DisabledOfferings.Clear();
+    }
+
+    private void DisableAllOfferings()
+    {
+        config.DisabledOfferings = offerings
+            .Select(offering => offering.Id)
+            .ToList();
+    }
+
+    private int EnabledOfferingsCount =>
+        offerings.Count(offering =>
+            !config.DisabledOfferings.Contains(offering.Id));
+
+    // =========================================================
+    // OFFERINGS - BÚSQUEDA
+    // =========================================================
+
+    private IEnumerable<Offering> FilteredOfferings
+    {
+        get
+        {
+            string search = offeringSearch.Trim();
+
+            if (string.IsNullOrWhiteSpace(search))
+            {
+                return offerings;
+            }
+
+            return offerings.Where(offering =>
+                offering.Name.Contains(
+                    search,
+                    StringComparison.OrdinalIgnoreCase
+                )
+            );
+        }
+    }
+
+    // =========================================================
+    // SURVIVORS - BÚSQUEDA
+    // =========================================================
+
+    private IEnumerable<Survivor> FilteredSurvivors
+    {
+        get
+        {
+            string search = survivorSearch.Trim();
+
+            if (string.IsNullOrWhiteSpace(search))
+            {
+                return survivors;
+            }
+
+            return survivors.Where(survivor =>
+                survivor.Name.Contains(
+                    search,
+                    StringComparison.OrdinalIgnoreCase
+                )
+            );
+        }
+    }
+
+    // =========================================================
+    // KILLERS - BÚSQUEDA
+    // =========================================================
+
+    private IEnumerable<Killer> FilteredKillers
+    {
+        get
+        {
+            string search = killerSearch.Trim();
+
+            if (string.IsNullOrWhiteSpace(search))
+            {
+                return killers;
+            }
+
+            return killers.Where(killer =>
+                killer.Name.Contains(
+                    search,
+                    StringComparison.OrdinalIgnoreCase
+                )
+            );
+        }
+    }
+
+    /* 
+    ===================================================================
+    LOCALSTORAGE
+    ===================================================================
+    */
+    private async Task SaveConfig()
+    {
+        await LocalStorage.SaveConfig(config);
+    }
+
+
+}

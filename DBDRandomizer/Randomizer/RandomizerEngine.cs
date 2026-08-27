@@ -233,12 +233,16 @@ public class RandomizerEngine
         List<Item> availableItems = _items
             .Where(item =>
                 !_config.DisabledItems.Contains(item.Id))
+            .Where(item =>
+                _addons.Count(addon =>
+                    addon.ItemId == item.Id &&
+                    !_config.DisabledAddons.Contains(addon.Id)) >= 2)
             .ToList();
 
         if (availableItems.Count == 0)
         {
             throw new InvalidOperationException(
-                "No hay Items disponibles en la configuración."
+                "No hay Items disponibles con suficientes addons."
             );
         }
 
@@ -306,13 +310,17 @@ public class RandomizerEngine
     {
         List<Offering> availableOfferings = _offerings
             .Where(offering =>
-                !_config.DisabledOfferings.Contains(offering.Id))
+                !_config.DisabledOfferings.Contains(offering.Id) &&
+                (
+                    offering.Role == "Survivor" ||
+                    offering.Role == "Both"
+                ))
             .ToList();
 
         if (availableOfferings.Count == 0)
         {
             throw new InvalidOperationException(
-                "No hay Offerings disponibles en la configuración."
+                "No hay Offerings de Survivor disponibles en la configuración."
             );
         }
 
@@ -489,9 +497,13 @@ public class RandomizerEngine
     public Killer RandomizeKiller()
     {
         List<Killer> availableKillers = _killers
-            .Where(killer =>
-                !_config.DisabledKillers.Contains(killer.Id))
-            .ToList();
+        .Where(killer =>
+            !_config.DisabledKillers.Contains(killer.Id))
+        .Where(killer =>
+            _addons.Count(addon =>
+                addon.CharacterId == killer.Id &&
+                !_config.DisabledAddons.Contains(addon.Id)) >= 2)
+        .ToList();
 
         if (availableKillers.Count == 0)
         {
@@ -697,13 +709,17 @@ public class RandomizerEngine
     {
         List<Offering> availableOfferings = _offerings
             .Where(offering =>
-                !_config.DisabledOfferings.Contains(offering.Id))
+                !_config.DisabledOfferings.Contains(offering.Id) &&
+                (
+                    offering.Role == "Killer" ||
+                    offering.Role == "Both"
+                ))
             .ToList();
 
         if (availableOfferings.Count == 0)
         {
             throw new InvalidOperationException(
-                "No hay Offerings disponibles en la configuración."
+                "No hay Offerings de Killer disponibles en la configuración."
             );
         }
 

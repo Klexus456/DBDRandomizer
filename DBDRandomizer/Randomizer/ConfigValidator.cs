@@ -13,6 +13,7 @@ public class ConfigValidator
     private readonly RandomizerConfig _config;
     private readonly List<SkinPiece> _survivorSkins;
     private readonly List<SkinPiece> _killerSkins;
+    private readonly List<Offering> _offerings;
 
     public ConfigValidator(
         List<Survivor> survivors,
@@ -23,6 +24,7 @@ public class ConfigValidator
         List<Addon> addons,
         List<Perk> survivorPerks,
         List<Perk> killerPerks,
+        List<Offering> offerings,
         RandomizerConfig config)
     {
         _survivors = survivors;
@@ -33,6 +35,7 @@ public class ConfigValidator
 
         _items = items;
         _addons = addons;
+        _offerings = offerings;
 
         _survivorPerks = survivorPerks;
         _killerPerks = killerPerks;
@@ -51,6 +54,9 @@ public class ConfigValidator
         ValidateKillerPerks(errors);
 
         ValidateSurvivorItems(errors);
+        ValidateOfferings(errors);
+
+        ValidateKillerAddons(errors);
 
         ValidateSurvivorSkins(errors);
         ValidateKillerSkins(errors);
@@ -185,6 +191,13 @@ public class ConfigValidator
             "Addons",
             errors
         );
+
+        ValidateExistingIds(
+        _config.DisabledOfferings,
+        _offerings.Select(o => o.Id),
+        "Offerings",
+        errors
+        );
     }
 
 
@@ -261,10 +274,11 @@ public class ConfigValidator
             .Count(killer =>
                 !_config.DisabledKillers.Contains(killer.Id));
 
-        if (availableKillers < 1)
+        if (availableKillers < 2)
         {
             errors.Add(
-                "Debe haber al menos 1 Killer disponible."
+                $"Hay solamente {availableKillers} Killers disponibles. " +
+                "Debe haber al menos 2."
             );
         }
     }
@@ -333,10 +347,11 @@ public class ConfigValidator
                 !_config.DisabledItems.Contains(item.Id))
             .ToList();
 
-        if (availableItems.Count == 0)
+        if (availableItems.Count < 2)
         {
             errors.Add(
-                "No hay ningún Item disponible."
+                $"Hay solamente {availableItems.Count} Items disponibles. " +
+                "Debe haber al menos 2."
             );
 
             return;
@@ -349,17 +364,77 @@ public class ConfigValidator
                     addon.ItemId == item.Id &&
                     !_config.DisabledAddons.Contains(addon.Id));
 
-            if (availableAddons < 2)
+            if (availableAddons < 3)
             {
                 errors.Add(
                     $"El Item '{item.Name}' tiene solamente " +
-                    $"{availableAddons} addon(s) disponibles. " +
-                    "Debe tener al menos 2."
+                    $"{availableAddons} Add-on(s) disponibles. " +
+                    "Debe tener al menos 3."
                 );
             }
         }
     }
 
+    private void ValidateKillerAddons(List<string> errors)
+    {
+        List<Killer> availableKillers = _killers
+            .Where(killer =>
+                !_config.DisabledKillers.Contains(killer.Id))
+            .ToList();
+
+        foreach (Killer killer in availableKillers)
+        {
+            int availableAddons = _addons
+                .Count(addon =>
+                    addon.CharacterId == killer.Id &&
+                    !_config.DisabledAddons.Contains(addon.Id));
+
+            if (availableAddons < 3)
+            {
+                errors.Add(
+                    $"El Killer '{killer.Name}' tiene solamente " +
+                    $"{availableAddons} Add-on(s) disponibles. " +
+                    "Debe tener al menos 3."
+                );
+            }
+        }
+    }
+
+    private void ValidateOfferings(List<string> errors)
+    {
+        int availableSurvivorOfferings = _offerings
+            .Count(offering =>
+                !_config.DisabledOfferings.Contains(offering.Id) &&
+                (
+                    offering.Role == "Survivor" ||
+                    offering.Role == "Both"
+                ));
+
+        if (availableSurvivorOfferings < 3)
+        {
+            errors.Add(
+                $"Hay solamente {availableSurvivorOfferings} Offerings de Survivor disponibles. " +
+                "Debe haber al menos 3."
+            );
+        }
+
+
+        int availableKillerOfferings = _offerings
+            .Count(offering =>
+                !_config.DisabledOfferings.Contains(offering.Id) &&
+                (
+                    offering.Role == "Killer" ||
+                    offering.Role == "Both"
+                ));
+
+        if (availableKillerOfferings < 3)
+        {
+            errors.Add(
+                $"Hay solamente {availableKillerOfferings} Offerings de Killer disponibles. " +
+                "Debe haber al menos 3."
+            );
+        }
+    }
 
     // =========================================================
     // SURVIVOR SKINS
@@ -380,6 +455,12 @@ public class ConfigValidator
                     !_config.DisabledSurvivorSkins.Contains(skin.Id))
                 .ToList();
 
+            if (availableSkins.Count == 0)
+            {
+                continue;
+            }
+
+            // Validar outfits inseparables
             List<int> inseparableOutfits = availableSkins
                 .Where(skin => !skin.IsSeparable)
                 .Select(skin => skin.OutfitId)
@@ -419,6 +500,13 @@ public class ConfigValidator
 
     private void ValidateKillerSkins(List<string> errors)
     {
+
+        if (!HasValidKillerOutfit())
+        {
+            errors.Add(
+                "Debe haber al menos 1 outfit de Killer disponible."
+            );
+        }
         List<Killer> availableKillers = _killers
             .Where(killer =>
                 !_config.DisabledKillers.Contains(killer.Id))
@@ -463,4 +551,41 @@ public class ConfigValidator
             }
         }
     }
+
+    private bool HasValidKillerOutfit()
+    {
+        foreach (Killer killer in _killers)
+        {
+            if (_config.DisabledKillers.Contains(killer.Id))
+                continue;
+
+            List<SkinPiece> availableSkins = _killerSkins
+                .Where(skin =>
+                    skin.CharacterId == killer.Id &&
+                    !_config.DisabledKillerSkins.Contains(skin.Id))
+                .ToList();
+
+            IEnumerable<IGrouping<int, SkinPiece>> outfits =
+                availableSkins.GroupBy(skin => skin.OutfitId);
+
+            foreach (IGrouping<int, SkinPiece> outfit in outfits)
+            {
+                if (outfit.All(skin => skin.IsSeparable))
+                {
+                    if (outfit.Any())
+                        return true;
+                }
+
+                bool hasHead = outfit.Any(skin => skin.Part == SkinPart.Head);
+                bool hasTorso = outfit.Any(skin => skin.Part == SkinPart.Torso);
+                bool hasWeapon = outfit.Any(skin => skin.Part == SkinPart.Weapon);
+
+                if (hasHead && hasTorso && hasWeapon)
+                    return true;
+            }
+        }
+
+        return false;
+    }
+
 }

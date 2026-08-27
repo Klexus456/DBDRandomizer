@@ -3,6 +3,7 @@
 @using DBDRandomizer.Models
 @using DBDRandomizer.Data
 @using DBDRandomizerWeb.Services
+@using DBDRandomizer.Randomizer
 
 <h1>CONFIGURACIÓN</h1>
 
@@ -20,6 +21,81 @@
 else
 {
     <div class="settings-container">
+
+    <!-- ========================= -->
+    <!-- SKIN RANDOMIZATION -->
+    <!-- ========================= -->
+
+    <details class="settings-section">
+        <summary class="settings-section-summary">
+            <div>
+                <h2>Skin Randomization</h2>
+                <p>
+                    Elige cómo se randomizarán las skins.
+                </p>
+            </div>
+        </summary>
+
+        <div class="settings-section-content">
+
+            <div class="skin-randomization-setting">
+
+                <h3>Survivor</h3>
+
+                <label class="settings-item">
+                    <input
+                        type="radio"
+                        name="survivor-skin-mode"
+                        checked="@(config.SurvivorSkinMode == SkinRandomizationMode.Parts)"
+                        @onchange="() => config.SurvivorSkinMode = SkinRandomizationMode.Parts" />
+
+                    <span>
+                        Piezas separadas
+                    </span>
+                </label>
+
+                <label class="settings-item">
+                    <input
+                        type="radio"
+                        name="survivor-skin-mode"
+                        checked="@(config.SurvivorSkinMode == SkinRandomizationMode.Outfit)"
+                        @onchange="() => config.SurvivorSkinMode = SkinRandomizationMode.Outfit" />
+
+                    <span>
+                        Outfit completo
+                    </span>
+                </label>
+
+                <h3>Killer</h3>
+
+                <label class="settings-item">
+                    <input
+                        type="radio"
+                        name="killer-skin-mode"
+                        checked="@(config.KillerSkinMode == SkinRandomizationMode.Parts)"
+                        @onchange="() => config.KillerSkinMode = SkinRandomizationMode.Parts" />
+
+                    <span>
+                        Piezas separadas
+                    </span>
+                </label>
+
+                <label class="settings-item">
+                    <input
+                        type="radio"
+                        name="killer-skin-mode"
+                        checked="@(config.KillerSkinMode == SkinRandomizationMode.Outfit)"
+                        @onchange="() => config.KillerSkinMode = SkinRandomizationMode.Outfit" />
+
+                    <span>
+                        Outfit completo
+                    </span>
+                </label>
+
+            </div>
+
+        </div>
+    </details>
 
         <!-- ========================= -->
         <!-- SURVIVORS -->
@@ -967,6 +1043,27 @@ else
 
         </details>
 
+        @if (validationErrors.Count > 0)
+        {
+            <div class="settings-validation-errors">
+
+                <h3>CONFIGURACIÓN INVÁLIDA</h3>
+
+                <p>
+                    No se pueden guardar los cambios porque
+                    el randomizador no podría funcionar correctamente.
+                </p>
+
+                <ul>
+                    @foreach (string error in validationErrors)
+                    {
+                        <li>@error</li>
+                    }
+                </ul>
+
+            </div>
+        }
+
         <div class="settings-save-container">
 
             <button
@@ -1011,6 +1108,7 @@ else
     private string offeringSearch = "";
     private string survivorSearch = "";
     private string killerSearch = "";
+    private List<string> validationErrors = new();
 
     protected override async Task OnInitializedAsync()
     {
@@ -1968,8 +2066,37 @@ else
     */
     private async Task SaveConfig()
     {
+        ValidateConfig();
+
+        if (validationErrors.Count > 0)
+        {
+            return;
+        }
+
         await LocalStorage.SaveConfig(config);
     }
 
+/* 
+===========================================================
+Validaciones
+===========================================================
+*/
+    private void ValidateConfig()
+    {
+        ConfigValidator validator = new(
+            survivors,
+            survivorSkins,
+            killers,
+            killerSkins,
+            items,
+            addons,
+            survivorPerks,
+            killerPerks,
+            offerings,
+            config
+        );
+
+        validationErrors = validator.Validate();
+    }
 
 }

@@ -1,21 +1,21 @@
 [
   {
     "id": 1,
-    "name": "Perk de Dwight 1",
+    "name": "Bond",
     "characterId": 1,
-    "description": "Descripción de prueba.",
+    "description": "Unlocks potential in your Aura-reading ability: \nThe Auras of all other Survivors are revealed to you within 20/28/36 metres. \n'We have to work as a team, I need you to survive so that I can survive!' — Dwight Fairfield",
     "image": ""
   },
   {
     "id": 2,
-    "name": "Perk de Dwight 2",
+    "name": "Leader",
     "characterId": 1,
     "description": "Otra descripción de prueba.",
     "image": ""
   },
   {
     "id": 3,
-    "name": "Perk de Meg 1",
+    "name": "Prove Thyself",
     "characterId": 2,
     "description": "Descripción de prueba.",
     "image": ""

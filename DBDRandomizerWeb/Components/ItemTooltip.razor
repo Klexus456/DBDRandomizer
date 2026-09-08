@@ -1,0 +1,39 @@
+<div class="item-tooltip-container">
+
+    <img
+        src="@Image"
+        alt="@Name"
+        class="item-tooltip-image"
+        style="width: @(ImageSize)px; height: @(ImageSize)px;" />
+
+    <strong class="item-tooltip-name">
+        @Name
+    </strong>
+
+    @if (!string.IsNullOrWhiteSpace(Description))
+    {
+        <div class="item-tooltip-content">
+
+            <strong>@Name</strong>
+
+            <p>@((MarkupString)Description)</p>
+
+        </div>
+    }
+
+</div>
+
+@code {
+
+    [Parameter]
+    public string Image { get; set; } = "";
+
+    [Parameter]
+    public string Name { get; set; } = "";
+
+    [Parameter]
+    public string Description { get; set; } = "";
+
+    [Parameter]
+    public int ImageSize { get; set; } = 110;
+}

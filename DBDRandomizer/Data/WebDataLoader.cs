@@ -85,4 +85,19 @@ public class WebDataLoader
     {
         return LoadJson<List<Item>>("items.json");
     }
+
+    public Task<List<TwoV8Class>> LoadTwoV8Classes()
+    {
+        return LoadJson<List<TwoV8Class>>("two_v8_classes.json");
+    }
+
+    public Task<List<TwoV8Skill>> LoadTwoV8Skills()
+    {
+        return LoadJson<List<TwoV8Skill>>("two_v8_skills.json");
+    }
+
+    public Task<TwoV8Config> LoadTwoV8Config()
+    {
+        return LoadJson<TwoV8Config>("two_v8_config.json");
+    }
 }

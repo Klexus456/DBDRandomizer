@@ -1,0 +1,56 @@
+[
+  {
+    "Id": 1,
+    "Name": "Escapista",
+    "Role": "Survivor",
+    "Image": "images/2v8/survivors/escapista.webp"
+  },
+  {
+    "Id": 2,
+    "Name": "Guía",
+    "Role": "Survivor",
+    "Image": "images/2v8/survivors/guia.webp"
+  },
+  {
+    "Id": 3,
+    "Name": "Médico",
+    "Role": "Survivor",
+    "Image": "images/2v8/survivors/medico.webp"
+  },
+  {
+    "Id": 4,
+    "Name": "Alma Exploradora",
+    "Role": "Survivor",
+    "Image": "images/2v8/survivors/almaexploradora.webp"
+  },
+  {
+    "Id": 5,
+    "Name": "Portador de Antorcha",
+    "Role": "Survivor",
+    "Image": "images/2v8/survivors/portadordelaantorcha.webp"
+  },
+  {
+    "Id": 6,
+    "Name": "Salvaje",
+    "Role": "Killer",
+    "Image": "images/2v8/killers/salvaje.webp"
+  },
+  {
+    "Id": 7,
+    "Name": "Ejecutor",
+    "Role": "Killer",
+    "Image": "images/2v8/killers/ejecutor.webp"
+  },
+  {
+    "Id": 8,
+    "Name": "Traficante del Terror",
+    "Role": "Killer",
+    "Image": "images/2v8/killers/traficantedelterror.webp"
+  },
+  {
+    "Id": 9,
+    "Name": "Sombra",
+    "Role": "Killer",
+    "Image": "images/2v8/killers/sombra.webp"
+  }
+]

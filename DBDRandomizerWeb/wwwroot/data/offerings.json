@@ -1,34 +1,682 @@
 [
   {
-    "id": 1,
-    "name": "Offering de prueba 1",
-    "description": "Descripción de prueba.",
-    "rarity": "Common",
-    "image":"",
-    "role":"Both"
+  "Id": 1,
+  "Name": "Serpentinas de Fiesta Ensangrentadas",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en todas las Categor\u00EDas de Puntuaci\u00F3n a todos los Jugadores de esta Partida.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Bloody Party Streamers.webp",
+  "Role": "Both"
   },
   {
-    "id": 2,
-    "name": "Offering de prueba 2",
-    "description": "Descripción de prueba.",
-    "rarity": "Rare",
-    "image":"",
-    "role":"Both"
+  "Id": 2,
+  "Name": "Reactivo Turbio",
+  "Description": "Espesa moderadamente la \u003Cspan style=\u0022color: #e8c252;\u0022\u003EBruma oscura\u003C/span\u003E",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Hazy Reagent.webp",
+  "Role": "Both"
   },
   {
-    "id": 3,
-    "name": "Offering de prueba 3",
-    "description": "Descripción de prueba.",
-    "rarity": "Rare",
-    "image":"",
-    "role":"Both"
+  "Id": 3,
+  "Name": "Offering de prueba 3",
+  "Description": "Descripci\u00F3n de prueba.",
+  "Rarity": "Rare",
+  "Image": "",
+  "Role": "Both"
   },
   {
-    "id": 4,
-    "name": "Memento mori",
-    "description": "Descripción de prueba.",
-    "rarity": "Rare",
-    "image":"",
-    "role":"Killer"
+  "Id": 4,
+  "Name": "Memento Mori de \u00C9bano",
+  "Description": "Permite matar a \u003Cspan style=\u0022color: #e8c252;\u0022\u003Etodos los sobrevivientes \u003C/span\u003Eque hayas colgado de un Gancho \u003Cspan style=\u0022color: #ff8800;\u0022\u003E2 \u003C/span\u003E veces t\u00FA mismo durante la Partida.",
+  "Rarity": "UltraRare",
+  "Image": "images/offerings/Ebony Memento Mori.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 5,
+  "Name": "Corona de Cuervo Ardiente",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EEngaño\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Ardent Raven Wreath.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 6,
+  "Name": "Corona de Alcaudón Ardiente",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ESacrificio\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Ardent Shrike Wreath.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 7,
+  "Name": "Corona de Mochuelo Ardiente",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ECazador\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Ardent Spotted Owl Wreath.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 8,
+  "Name": "Corona de Tángara Ardiente",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EBrutalidad\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Ardent Tanager Wreath.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 9,
+  "Name": "Llave de Azarov",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EDepósito de Chatarra de Autohaven\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Azarov's Key.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 10,
+  "Name": "Defensa Negra",
+  "Description": "Protege tus Accesorios para que no se pierdan al finalizar la Partida.",
+  "Rarity": "VeryRare",
+  "Image": "images/offerings/Black Ward.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 11,
+  "Name": "Plano Ensangrentado",
+  "Description": "Revela el Aura de los Ganchos del Sótano durante \u003Cspan style=\u0022color: #e8c252;\u0022\u003E20 segundos\u003C/span\u003E al comienzo de la Partida. Aumenta las probabilidades de que el Sótano aparezca en la Cabaña del Asesino, si está disponible.",
+  "Rarity": "Common",
+  "Image": "images/offerings/Bloodied Blueprint.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 12,
+  "Name": "Serpentinas de Fiesta Ensangrentadas",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en todas las Categor\u00EDas de Puntuaci\u00F3n a todos los Jugadores de esta Partida.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Bloody Party Streamers.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 13,
+  "Name": "Sobre Atado",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B25% \u003C/span\u003E de Puntos de Sangre adicionales en todas las Categor\u00EDas de Puntuaci\u00F3n a todos los Sobrevivientes.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Bound Envelope.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 14,
+  "Name": "Saquito de Laurel de Pantano",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B50% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EObjetivos\u003C/span\u003E.",
+  "Rarity": "Common",
+  "Image": "images/offerings/Bog Laurel Sachet.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 15,
+  "Name": "Saquito de Tiza",
+  "Description": "Aumenta tu \u003Cspan style=\u0022color: #e8c252;\u0022\u003ESuerte\u003C/span\u003E en un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E+1%\u003C/span\u003E.",
+  "Rarity": "Common",
+  "Image": "images/offerings/Chalk Pouch.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 16,
+  "Name": "Fotografía de Boda Carbonizada",
+  "Description": "Aumenta las probabilidades de ser enviado al Reino del \u003Cspan style=\u0022color: #e8c252;\u0022\u003EAsilo Crotus Prenn\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Charred Wedding Photograph.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 17,
+  "Name": "Reactivo Claro",
+  "Description": "Reduce el espesor de la \u003Cspan style=\u0022color: #e8c252;\u0022\u003ENiebla Oscura\u003C/span\u003E en un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E50%\u003C/span\u003E.",
+  "Rarity": "Common",
+  "Image": "images/offerings/Clear Reagent.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 18,
+  "Name": "Saquito de Tiza Crema",
+  "Description": "Aumenta tu \u003Cspan style=\u0022color: #e8c252;\u0022\u003ESuerte\u003C/span\u003E en un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E+2%\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Cream Chalk Pouch.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 19,
+  "Name": "Saquito de Amaranto Crispleaf",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B50% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ESupervivencia\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Crispleaf Amaranth Sachet.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 20,
+  "Name": "Ojo de Cuervo",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ELas Ruinas Olvidadas\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Crow's Eye.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 21,
+  "Name": "Moneda Cortada",
+  "Description": "Reduce el número de Cofres que aparecen en el Reino.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Cut Coin.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 22,
+  "Name": "Fotografía Dañada",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EOrmond\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Damaged Photo.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 23,
+  "Name": "Corona de Cuervo Devota",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EEngaño\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Devout Raven Wreath.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 24,
+  "Name": "Corona de Alcaudón Devota",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ESacrificio\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Devout Shrike Wreath.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 25,
+  "Name": "Corona de Mochuelo Devota",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ECazador\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Devout Spotted Owl Wreath.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 26,
+  "Name": "Corona de Tángara Devota",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EBrutalidad\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Devout Tanager Wreath.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 27,
+  "Name": "Lazo Polvoriento",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ELa Hacienda de la Muerte\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Dusty Noose.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 28,
+  "Name": "Memento Mori de Ébano",
+  "Description": "Permite matar a \u003Cspan style=\u0022color: #e8c252;\u0022\u003Etodos los sobrevivientes \u003C/span\u003Eque hayan alcanzado \u003Cspan style=\u0022color: #ff8800;\u0022\u003E2 \u003C/span\u003E Etapas de Gancho durante la Partida.",
+  "Rarity": "UltraRare",
+  "Image": "images/offerings/Ebony Memento Mori.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 29,
+  "Name": "Torta de Escape",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en todas las Categorías de Puntuación.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Escape! Cake.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 30,
+  "Name": "Reactivo Tenue",
+  "Description": "Reduce ligeramente el espesor de la \u003Cspan style=\u0022color: #e8c252;\u0022\u003ENiebla Oscura\u003C/span\u003E.",
+  "Rarity": "Common",
+  "Image": "images/offerings/Faint Reagent.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 31,
+  "Name": "Laurel de Pantano Fragante",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EObjetivos\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Fragrant Bog Laurel.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 32,
+  "Name": "Amaranto Crispleaf Fragante",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ESupervivencia\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Fragrant Crispleaf Amaranth.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 33,
+  "Name": "Prímula Fragante",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EAltruismo\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Fragrant Primrose Blossom.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 34,
+  "Name": "Guillermo Dulce Fragante",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EValentía\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Fragrant Sweet William.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 35,
+  "Name": "Laurel de Pantano Fresco",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B50% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EObjetivos\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Fresh Bog Laurel.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 36,
+  "Name": "Amaranto Crispleaf Fresco",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B50% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ESupervivencia\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Fresh Crispleaf Amaranth.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 37,
+  "Name": "Prímula Fresca",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B50% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EAltruismo\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Fresh Primrose Blossom.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 38,
+  "Name": "Guillermo Dulce Fresco",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B50% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EValentía\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Fresh Sweet William.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 39,
+  "Name": "Reactivo Nebuloso",
+  "Description": "Aumenta el espesor de la \u003Cspan style=\u0022color: #e8c252;\u0022\u003ENiebla Oscura\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Hazy Reagent.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 40,
+  "Name": "Medallón de Corazón",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EGranja Coldwind\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Heart Locket.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 41,
+  "Name": "Caparazón Hueco",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en todas las Categorías de Puntuación.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Hollow Shell.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 42,
+  "Name": "Limo Icoroso",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EIsla Marchita\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Ichorous Loam.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 43,
+  "Name": "Saquito de Tiza Marfil",
+  "Description": "Aumenta tu \u003Cspan style=\u0022color: #e8c252;\u0022\u003ESuerte\u003C/span\u003E en un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E+3%\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Ivory Chalk Pouch.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 44,
+  "Name": "Memento Mori de Marfil",
+  "Description": "Permite matar a \u003Cspan style=\u0022color: #e8c252;\u0022\u003E1 Sobreviviente\u003C/span\u003E que haya alcanzado \u003Cspan style=\u0022color: #ff8800;\u0022\u003E2 \u003C/span\u003E Etapas de Gancho durante la Partida.",
+  "Rarity": "VeryRare",
+  "Image": "images/offerings/Ivory Memento Mori.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 45,
+  "Name": "Pieza de Rompecabezas",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EPlanta de Carne Gideon\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Jigsaw Piece.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 46,
+  "Name": "Hueso de Falange de MacMillan",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ELa Hacienda MacMillan\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/MacMillan's Phalanx Bone.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 47,
+  "Name": "Carta de Mary",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ESilent Hill\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Mary's Letter.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 48,
+  "Name": "Roble Mohoso",
+  "Description": "Reduce la distancia mínima entre los lugares de aparición de los Ganchos en \u003Cspan style=\u0022color: #e8c252;\u0022\u003E1,5 metros\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Mouldy Oak.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 49,
+  "Name": "Reactivo Turbio",
+  "Description": "Aumenta el espesor de la \u003Cspan style=\u0022color: #e8c252;\u0022\u003ENiebla Oscura\u003C/span\u003E en un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E75%\u003C/span\u003E.",
+  "Rarity": "VeryRare",
+  "Image": "images/offerings/Murky Reagent.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 50,
+  "Name": "Roble Petrificado",
+  "Description": "Aumenta la distancia mínima entre los lugares de aparición de los Ganchos en \u003Cspan style=\u0022color: #e8c252;\u0022\u003E1 metro\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Petrified Oak.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 51,
+  "Name": "Saquito de Prímula",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B25% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EAltruismo\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Primrose Blossom Sachet.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 52,
+  "Name": "Roble Pútrido",
+  "Description": "Reduce la distancia mínima entre los lugares de aparición de los Ganchos en \u003Cspan style=\u0022color: #e8c252;\u0022\u003E3,5 metros\u003C/span\u003E.",
+  "Rarity": "VeryRare",
+  "Image": "images/offerings/Putrid Oak.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 53,
+  "Name": "Roble Podrido",
+  "Description": "Reduce la distancia mínima entre los lugares de aparición de los Ganchos en \u003Cspan style=\u0022color: #e8c252;\u0022\u003E2,5 metros\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Rotten Oak.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 54,
+  "Name": "Corona de Cuervo",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B50% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EEngaño\u003C/span\u003E.",
+  "Rarity": "Common",
+  "Image": "images/offerings/Raven Wreath.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 55,
+  "Name": "Guardián Sacrificial",
+  "Description": "Impide que la Ofrenda utilizada por otro Jugador que seleccione un Reino tenga efecto.",
+  "Rarity": "Common",
+  "Image": "images/offerings/Sacrificial Ward.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 56,
+  "Name": "Saquito de Sal",
+  "Description": "Aumenta la \u003Cspan style=\u0022color: #e8c252;\u0022\u003ESuerte\u003C/span\u003E de todos los Sobrevivientes en un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E+1%\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Salt Pouch.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 57,
+  "Name": "Moneda Rayada",
+  "Description": "Reduce el número de Cofres que aparecen en el Reino.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Tarnished Coin.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 58,
+  "Name": "Sobre Sellado",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B25% \u003C/span\u003E de Puntos de Sangre adicionales en todas las Categorías de Puntuación para ti.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Sealed Envelope.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 59,
+  "Name": "Vidrios Rotos",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EInstituto Memorial Léry\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Shattered Glasses.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 60,
+  "Name": "Moneda Brillante",
+  "Description": "Aumenta el número de Cofres que aparecen en el Reino.",
+  "Rarity": "VeryRare",
+  "Image": "images/offerings/Shiny Coin.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 61,
+  "Name": "Corona de Alcaudón",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B50% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ESacrificio\u003C/span\u003E.",
+  "Rarity": "Common",
+  "Image": "images/offerings/Shrike Wreath.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 62,
+  "Name": "Sudario de Vinculación",
+  "Description": "Hace que todos los Sobrevivientes aparezcan juntos al comienzo de la Partida.",
+  "Rarity": "VeryRare",
+  "Image": "images/offerings/Shroud of Binding.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 63,
+  "Name": "Sudario de Separación",
+  "Description": "Hace que los Sobrevivientes aparezcan separados al comienzo de la Partida.",
+  "Rarity": "VeryRare",
+  "Image": "images/offerings/Shroud of Separation.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 64,
+  "Name": "Sudario de Unión",
+  "Description": "Hace que los Sobrevivientes aparezcan juntos en parejas al comienzo de la Partida.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Shroud of Union.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 65,
+  "Name": "Corona de Mochuelo",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B50% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ECazador\u003C/span\u003E.",
+  "Rarity": "Common",
+  "Image": "images/offerings/Spotted Owl Wreath.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 66,
+  "Name": "Llave Inmobiliaria Strode",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EHaddonfield\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Strode Realty Key.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 67,
+  "Name": "Pudin de Sobreviviente",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en todas las Categorías de Puntuación.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Survivor Pudding.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 68,
+  "Name": "Saquito de Guillermo Dulce",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B25% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EValentía\u003C/span\u003E.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Sweet William Sachet.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 69,
+  "Name": "Corona de Tángara",
+  "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B50% \u003C/span\u003E de Puntos de Sangre adicionales en la categoría de Puntuación de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EBrutalidad\u003C/span\u003E.",
+  "Rarity": "Common",
+  "Image": "images/offerings/Tanager Wreath.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 70,
+  "Name": "Moneda Oxidada",
+  "Description": "Aumenta el número de Cofres que aparecen en el Reino.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Tarnished Coin.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 71,
+  "Name": "La Última Máscara",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EBosque Rojo\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/The Last Mask.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 72,
+  "Name": "El Flautista",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ESpringwood\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/The Pied Piper.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 73,
+  "Name": "Plano Rasgado",
+  "Description": "Revela el Aura de los Ganchos del Sótano durante \u003Cspan style=\u0022color: #e8c252;\u0022\u003E20 segundos\u003C/span\u003E al comienzo de la Partida. Aumenta las probabilidades de que el Sótano aparezca en el edificio principal, si está disponible.",
+  "Rarity": "Common",
+  "Image": "images/offerings/Torn Blueprint.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 74,
+  "Name": "Plano de Vigo",
+  "Description": "Aumenta las probabilidades de que la Escotilla aparezca en el edificio principal del mapa, si está disponible.",
+  "Rarity": "Common",
+  "Image": "images/offerings/Vigo's Blueprint.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 75,
+  "Name": "Frasco de Labios Salados de Vigo",
+  "Description": "Aumenta la \u003Cspan style=\u0022color: #e8c252;\u0022\u003ESuerte\u003C/span\u003E de todos los Sobrevivientes en un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E+3%\u003C/span\u003E.",
+  "Rarity": "VeryRare",
+  "Image": "images/offerings/Vigo's Jar of Salty Lips.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 76,
+  "Name": "Sudario de Vigo",
+  "Description": "Hace que aparezcas lo más lejos posible de los demás Sobrevivientes al comienzo de la Partida.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Vigo's Shroud.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 77,
+  "Name": "Guardián Blanco",
+  "Description": "Protege tus Objetos y Accesorios para que no se pierdan al finalizar la Partida.",
+  "Rarity": "VeryRare",
+  "Image": "images/offerings/White Ward.webp",
+  "Role": "Survivor"
+  },
+  {
+  "Id": 78,
+  "Name": "Puertas de Bloqueo",
+  "Description": "Aumenta las probabilidades de ser enviado al mapa \u003Cspan style=\u0022color: #e8c252;\u0022\u003ENaufragio Nostromo\u003C/span\u003E del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EBosque Profundo Dvarka\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Airlock Doors.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 79,
+  "Name": "Flora Alienígena",
+  "Description": "Aumenta las probabilidades de ser enviado al mapa \u003Cspan style=\u0022color: #e8c252;\u0022\u003EToba Landing\u003C/span\u003E del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EBosque Profundo Dvarka\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Alien Flora.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 80,
+  "Name": "Mezcla de Sebo de Res",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EBorgo Decimado\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Beef Tallow Mixture.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 81,
+  "Name": "Sudario de Desaparición",
+  "Description": "Hace que todos los Sobrevivientes aparezcan separados al comienzo de la Partida.",
+  "Rarity": "Uncommon",
+  "Image": "images/offerings/Shroud of Vanishing.webp",
+  "Role": "Killer"
+  },
+  {
+  "Id": 82,
+  "Name": "Botella Rota",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ELa Hacienda de la Muerte\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Shattered Bottle.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 83,
+  "Name": "Insignia de RPD",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EComisaría de Policía de Raccoon City\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/RPD Badge.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 84,
+  "Name": "Pulsera VIP",
+  "Description": "Aumenta las probabilidades de ser enviado al mapa \u003Cspan style=\u0022color: #e8c252;\u0022\u003EIlusión del Tramposo\u003C/span\u003E del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EDistrito Sin Sueño\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/VIP Wristband.webp",
+  "Role": "Both"
+  },
+  {
+  "Id": 85,
+  "Name": "Cresta de la Familia Yamaoka",
+  "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003EPropiedad Yamaoka\u003C/span\u003E.",
+  "Rarity": "Rare",
+  "Image": "images/offerings/Yamaoka Family Crest.webp",
+  "Role": "Both"
   }
 ]

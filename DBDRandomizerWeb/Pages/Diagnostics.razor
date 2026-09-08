@@ -1,0 +1,2711 @@
+@page "/diagnostico"
+
+@using System.Net.Http.Json
+@using System.Text
+@using System.Text.Json
+@using System.Text.Json.Serialization
+@using DBDRandomizer.Models
+
+
+@inject HttpClient Http
+
+<PageTitle>Diagnóstico</PageTitle>
+
+<div class="diagnostics-page">
+
+    <h1>Diagnóstico de datos</h1>
+
+    @if (IsLoading)
+    {
+        <p>Cargando datos...</p>
+    }
+    else if (!string.IsNullOrEmpty(LoadError))
+    {
+        <div class="diagnostics-error">
+            <strong>Error al cargar los datos:</strong>
+            <p>@LoadError</p>
+        </div>
+    }
+    else
+    {
+        <div class="diagnostics-summary">
+
+            <div class="summary-box">
+                <span class="summary-number">@TotalRecords</span>
+                <span class="summary-label">Registros</span>
+            </div>
+
+            <div class="summary-box">
+                <span class="summary-number">@TotalProblems</span>
+                <span class="summary-label">Problemas</span>
+            </div>
+
+            <div class="summary-box">
+                <span class="summary-number">@MissingImages</span>
+                <span class="summary-label">Imágenes con error</span>
+            </div>
+
+            <div class="summary-box">
+                <span class="summary-number">@EmptyDescriptions</span>
+                <span class="summary-label">Descripciones vacías</span>
+            </div>
+
+        </div>
+
+        <div class="diagnostics-tabs">
+
+            <button class="@GetTabClass("survivors")"
+                    @onclick='() => SelectedTab = "survivors"'>
+                Survivors (@Survivors.Count)
+            </button>
+
+            <button class="@GetTabClass("killers")"
+                    @onclick='() => SelectedTab = "killers"'>
+                Killers (@Killers.Count)
+            </button>
+
+            <button class="@GetTabClass("survivorperks")"
+                    @onclick='() => SelectedTab = "survivorperks"'>
+                Survivor Perks (@SurvivorPerks.Count)
+            </button>
+
+            <button class="@GetTabClass("killerperks")"
+                    @onclick='() => SelectedTab = "killerperks"'>
+                Killer Perks (@KillerPerks.Count)
+            </button>
+
+            <button class="@GetTabClass("items")"
+                    @onclick='() => SelectedTab = "items"'>
+                Items (@Items.Count)
+            </button>
+
+            <button class="@GetTabClass("addons")"
+                    @onclick='() => SelectedTab = "addons"'>
+                Addons (@Addons.Count)
+            </button>
+
+            <button class="@GetTabClass("offerings")"
+                    @onclick='() => SelectedTab = "offerings"'>
+                Offerings (@Offerings.Count)
+            </button>
+
+            <button class="@GetTabClass("survivorskins")"
+                    @onclick='() => SelectedTab = "survivorskins"'>
+                Survivor Skins (@SurvivorSkins.Count)
+            </button>
+
+            <button class="@GetTabClass("killerskins")"
+                    @onclick='() => SelectedTab = "killerskins"'>
+                Killer Skins (@KillerSkins.Count)
+            </button>
+
+            <button class="@GetTabClass("twov8classes")"
+                    @onclick='() => SelectedTab = "twov8classes"'>
+                2v8 Classes (@TwoV8Classes.Count)
+            </button>
+
+            <button class="@GetTabClass("twov8skills")"
+                    @onclick='() => SelectedTab = "twov8skills"'>
+                2v8 Skills (@TwoV8Skills.Count)
+            </button>
+
+            <button class="@GetTabClass("twov8config")"
+                    @onclick='() => SelectedTab = "twov8config"'>
+                2v8 Config
+            </button>
+
+        </div>
+
+        <div class="diagnostics-toolbar">
+
+            <input type="text"
+                   placeholder="Buscar por nombre, ID o imagen..."
+                   @bind="SearchText"
+                   @bind:event="oninput" />
+
+        </div>
+
+            @if (SelectedTab == "survivors")
+            {
+                <h2>Survivors</h2>
+
+                <div class="diagnostics-grid">
+
+                    @foreach (var survivor in FilterSurvivors())
+                    {
+                        <div class="diagnostic-card">
+
+                            @if (EditingItem == survivor)
+                            {
+                                <div class="diagnostic-info">
+
+                                    <h3>Editar Survivor</h3>
+
+                                    <p>
+                                        <strong>ID:</strong> @survivor.Id
+                                    </p>
+
+                                    <label>
+                                        Nombre:
+                                    </label>
+
+                                    <input type="text"
+                                        @bind="survivor.Name" />
+
+                                    <label>
+                                        Imagen:
+                                    </label>
+
+                                    <input type="text"
+                                        @bind="survivor.Image" />
+
+                                    @if (!string.IsNullOrEmpty(survivor.Image))
+                                    {
+                                        <img src="@GetImagePath(survivor.Image)"
+                                            alt="@survivor.Name"
+                                            class="diagnostic-image"
+                                            @onerror="() => RegisterImageError(survivor.Image)" />
+                                    }
+
+                                    <div class="diagnostic-edit-buttons">
+
+                                        <button @onclick="SaveCurrentItem"
+                                                disabled="@IsSaving">
+
+                                            @(IsSaving ? "Guardando..." : "Guardar")
+
+                                        </button>
+
+                                        <button @onclick="CancelEditing"
+                                                disabled="@IsSaving">
+
+                                            Cancelar
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            }
+                            else
+                            {
+                                <img src="@GetImagePath(survivor.Image)"
+                                    alt="@survivor.Name"
+                                    class="diagnostic-image"
+                                    @onerror="() => RegisterImageError(survivor.Image)" />
+
+                                <div class="diagnostic-info">
+
+                                    <h3>@survivor.Name</h3>
+
+                                    <p>
+                                        <strong>ID:</strong> @survivor.Id
+                                    </p>
+
+                                    <p>
+                                        <strong>Imagen:</strong><br />
+                                        @survivor.Image
+                                    </p>
+
+                                    @if (string.IsNullOrWhiteSpace(survivor.Name))
+                                    {
+                                        <p class="problem">
+                                            ⚠ Nombre vacío
+                                        </p>
+                                    }
+
+                                    @if (string.IsNullOrWhiteSpace(survivor.Image))
+                                    {
+                                        <p class="problem">
+                                            ⚠ Imagen vacía
+                                        </p>
+                                    }
+                                    else if (ImageErrors.Contains(survivor.Image))
+                                    {
+                                        <p class="problem">
+                                            ❌ Imagen no encontrada
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        <p class="success">
+                                            ✓ Imagen cargada
+                                        </p>
+                                    }
+
+                                    <button @onclick='() => StartEditing(survivor, "survivors")'>
+                                        Editar
+                                    </button>
+
+                                </div>
+                            }
+
+                        </div>
+                    }
+
+                </div>
+            }
+            else if (SelectedTab == "killers")
+            {
+                <h2>Killers</h2>
+
+                <div class="diagnostics-grid">
+
+                    @foreach (var killer in FilterKillers())
+                    {
+                        <div class="diagnostic-card">
+
+                            @if (EditingItem == killer)
+                            {
+                                <div class="diagnostic-info">
+
+                                    <h3>Editar Killer</h3>
+
+                                    <p>
+                                        <strong>ID:</strong> @killer.Id
+                                    </p>
+
+                                    <label>
+                                        Nombre:
+                                    </label>
+
+                                    <input type="text"
+                                        @bind="killer.Name" />
+
+                                    <label>
+                                        Imagen:
+                                    </label>
+
+                                    <input type="text"
+                                        @bind="killer.Image" />
+
+                                    @if (!string.IsNullOrEmpty(killer.Image))
+                                    {
+                                        <img src="@GetImagePath(killer.Image)"
+                                            alt="@killer.Name"
+                                            class="diagnostic-image"
+                                            @onerror="() => RegisterImageError(killer.Image)" />
+                                    }
+
+                                    <div class="diagnostic-edit-buttons">
+
+                                        <button @onclick="SaveCurrentItem"
+                                                disabled="@IsSaving">
+
+                                            @(IsSaving ? "Guardando..." : "Guardar")
+
+                                        </button>
+
+                                        <button @onclick="CancelEditing"
+                                                disabled="@IsSaving">
+
+                                            Cancelar
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            }
+                            else
+                            {
+                                <img src="@GetImagePath(killer.Image)"
+                                    alt="@killer.Name"
+                                    class="diagnostic-image"
+                                    @onerror="() => RegisterImageError(killer.Image)" />
+
+                                <div class="diagnostic-info">
+
+                                    <h3>@killer.Name</h3>
+
+                                    <p>
+                                        <strong>ID:</strong> @killer.Id
+                                    </p>
+
+                                    <p>
+                                        <strong>Imagen:</strong><br />
+                                        @killer.Image
+                                    </p>
+
+                                    @if (string.IsNullOrWhiteSpace(killer.Name))
+                                    {
+                                        <p class="problem">
+                                            ⚠ Nombre vacío
+                                        </p>
+                                    }
+
+                                    @if (string.IsNullOrWhiteSpace(killer.Image))
+                                    {
+                                        <p class="problem">
+                                            ⚠ Imagen vacía
+                                        </p>
+                                    }
+                                    else if (ImageErrors.Contains(killer.Image))
+                                    {
+                                        <p class="problem">
+                                            ❌ Imagen no encontrada
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        <p class="success">
+                                            ✓ Imagen cargada
+                                        </p>
+                                    }
+
+                                    <button @onclick='() => StartEditing(killer, "killers")'>
+                                        Editar
+                                    </button>
+
+                                </div>
+                            }
+
+                        </div>
+                    }
+
+                </div>
+            }
+            else if (SelectedTab == "survivorperks")
+            {
+                <h2>Survivor Perks</h2>
+
+                <div class="diagnostics-grid">
+
+                    @foreach (var perk in FilterSurvivorPerks())
+                    {
+                        <div class="diagnostic-card">
+
+                            @if (EditingItem == perk)
+                            {
+                                <div class="diagnostic-info">
+
+                                    <h3>Editar Survivor Perk</h3>
+
+                                    <p>
+                                        <strong>ID:</strong> @perk.Id
+                                    </p>
+
+                                    <label>
+                                        Nombre:
+                                    </label>
+
+                                    <input type="text"
+                                        @bind="perk.Name" />
+
+                                    <label>
+                                        CharacterId:
+                                    </label>
+
+                                    <input type="number"
+                                        @bind="perk.CharacterId" />
+                                    
+                                    @if (perk.CharacterId.HasValue)
+                                    {
+                                        <p>
+                                            <strong>Personaje:</strong>
+                                            @GetCharacterName(perk.CharacterId, false)
+                                        </p>
+                                    }
+
+                                    <label>
+                                        Descripción:
+                                    </label>
+
+                                    <textarea @bind="perk.Description"></textarea>
+
+                                    <div class="diagnostic-description-preview">
+
+                                        <strong>Vista previa:</strong>
+
+                                        <div class="diagnostic-description-content">
+                                            @((MarkupString)perk.Description)
+                                        </div>
+
+                                    </div>
+
+                                    <label>
+                                        Imagen:
+                                    </label>
+
+                                    <input type="text"
+                                        @bind="perk.Image" />
+
+                                    @if (!string.IsNullOrEmpty(perk.Image))
+                                    {
+                                        <img src="@GetImagePath(perk.Image)"
+                                            alt="@perk.Name"
+                                            class="diagnostic-image"
+                                            @onerror="() => RegisterImageError(perk.Image)" />
+                                    }
+
+                                    <div class="diagnostic-edit-buttons">
+
+                                        <button @onclick="SaveCurrentItem"
+                                                disabled="@IsSaving">
+
+                                            @(IsSaving ? "Guardando..." : "Guardar")
+
+                                        </button>
+
+                                        <button @onclick="CancelEditing"
+                                                disabled="@IsSaving">
+
+                                            Cancelar
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            }
+                            else
+                            {
+                                <img src="@GetImagePath(perk.Image)"
+                                    alt="@perk.Name"
+                                    class="diagnostic-image"
+                                    @onerror="() => RegisterImageError(perk.Image)" />
+
+                                <div class="diagnostic-info">
+
+                                    <h3>@perk.Name</h3>
+
+                                    <p>
+                                        <strong>ID:</strong> @perk.Id
+                                    </p>
+
+                                    <p>
+                                        <strong>CharacterId:</strong>
+                                        @(perk.CharacterId?.ToString() ?? "Ninguno")
+
+                                        @if (perk.CharacterId.HasValue)
+                                        {
+                                            <span>
+                                                — @GetCharacterName(perk.CharacterId,false)
+                                            </span>
+                                        }
+                                    </p>
+
+                                    <p>
+                                        <strong>Descripción:</strong>
+                                    </p>
+
+                                    @if (string.IsNullOrWhiteSpace(perk.Description))
+                                    {
+                                        <p class="problem">
+                                            ⚠ Descripción vacía
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        <div class="diagnostic-description-content">
+                                            @((MarkupString)perk.Description)
+                                        </div>
+                                    }
+
+                                    <p>
+                                        <strong>Imagen:</strong><br />
+                                        @perk.Image
+                                    </p>
+
+                                    @if (string.IsNullOrWhiteSpace(perk.Image))
+                                    {
+                                        <p class="problem">
+                                            ⚠ Imagen vacía
+                                        </p>
+                                    }
+                                    else if (ImageErrors.Contains(perk.Image))
+                                    {
+                                        <p class="problem">
+                                            ❌ Imagen no encontrada
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        <p class="success">
+                                            ✓ Imagen cargada
+                                        </p>
+                                    }
+
+                                    @if (perk.CharacterId.HasValue &&
+                                        !SurvivorIds.Contains(perk.CharacterId.Value))
+                                    {
+                                        <p class="problem">
+                                            ❌ CharacterId no existe
+                                        </p>
+                                    }
+
+                                    <button @onclick='() => StartEditing(perk, "survivorperks")'>
+                                        Editar
+                                    </button>
+
+                                </div>
+                            }
+
+                        </div>
+                    }
+                </div>
+            }
+        else if (SelectedTab == "killerperks")
+        {
+            <h2>Killer Perks</h2>
+
+            <div class="diagnostics-grid">
+
+                @foreach (var perk in FilterKillerPerks())
+                {
+                    <div class="diagnostic-card">
+
+                        @if (EditingItem == perk)
+                        {
+                            <div class="diagnostic-info">
+
+                                <h3>Editar Killer Perk</h3>
+
+                                <p>
+                                    <strong>ID:</strong> @perk.Id
+                                </p>
+
+                                <label>
+                                    Nombre:
+                                </label>
+
+                                <input type="text"
+                                    @bind="perk.Name" />
+
+                                <label>
+                                    CharacterId:
+                                </label>
+
+                                <input type="number"
+                                    @bind="perk.CharacterId" />
+                                
+                                @if (perk.CharacterId.HasValue)
+                                {
+                                    <p>
+                                        <strong>Personaje:</strong>
+                                        @GetCharacterName(perk.CharacterId, true)
+                                    </p>
+                                }
+
+                                <label>
+                                    Descripción:
+                                </label>
+
+                                <textarea @bind="perk.Description"></textarea>
+
+                                <div class="diagnostic-description-preview">
+
+                                    <strong>Vista previa:</strong>
+
+                                    <div class="diagnostic-description-content">
+                                        @((MarkupString)perk.Description)
+                                    </div>
+
+                                </div>
+
+                                <label>
+                                    Imagen:
+                                </label>
+
+                                <input type="text"
+                                    @bind="perk.Image" />
+
+                                @if (!string.IsNullOrEmpty(perk.Image))
+                                {
+                                    <img src="@GetImagePath(perk.Image)"
+                                        alt="@perk.Name"
+                                        class="diagnostic-image"
+                                        @onerror="() => RegisterImageError(perk.Image)" />
+                                }
+
+                                <div class="diagnostic-edit-buttons">
+
+                                    <button @onclick="SaveCurrentItem"
+                                            disabled="@IsSaving">
+
+                                        @(IsSaving ? "Guardando..." : "Guardar")
+
+                                    </button>
+
+                                    <button @onclick="CancelEditing"
+                                            disabled="@IsSaving">
+
+                                        Cancelar
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+                        }
+                        else
+                        {
+                            <img src="@GetImagePath(perk.Image)"
+                                alt="@perk.Name"
+                                class="diagnostic-image"
+                                @onerror="() => RegisterImageError(perk.Image)" />
+
+                            <div class="diagnostic-info">
+
+                                <h3>@perk.Name</h3>
+
+                                <p>
+                                    <strong>ID:</strong> @perk.Id
+                                </p>
+
+                                <p>
+                                    <strong>CharacterId:</strong>
+                                    @(perk.CharacterId?.ToString() ?? "Ninguno")
+
+                                    @if (perk.CharacterId.HasValue)
+                                    {
+                                        <span>
+                                            — @GetCharacterName(perk.CharacterId, true)
+                                        </span>
+                                    }
+                                </p>
+
+                                <p>
+                                    <strong>Descripción:</strong>
+                                </p>
+
+                                @if (string.IsNullOrWhiteSpace(perk.Description))
+                                {
+                                    <p class="problem">
+                                        ⚠ Descripción vacía
+                                    </p>
+                                }
+                                else
+                                {
+                                    <div class="diagnostic-description-content">
+                                        @((MarkupString)perk.Description)
+                                    </div>
+                                }
+
+                                <p>
+                                    <strong>Imagen:</strong><br />
+                                    @perk.Image
+                                </p>
+
+                                @if (string.IsNullOrWhiteSpace(perk.Image))
+                                {
+                                    <p class="problem">
+                                        ⚠ Imagen vacía
+                                    </p>
+                                }
+                                else if (ImageErrors.Contains(perk.Image))
+                                {
+                                    <p class="problem">
+                                        ❌ Imagen no encontrada
+                                    </p>
+                                }
+                                else
+                                {
+                                    <p class="success">
+                                        ✓ Imagen cargada
+                                    </p>
+                                }
+
+                                @if (perk.CharacterId.HasValue &&
+                                    !KillerIds.Contains(perk.CharacterId.Value))
+                                {
+                                    <p class="problem">
+                                        ❌ CharacterId no existe
+                                    </p>
+                                }
+
+                                <button @onclick='() => StartEditing(perk, "killerperks")'>
+                                    Editar
+                                </button>
+
+                            </div>
+                        }
+
+                    </div>
+                }
+            </div>
+        }
+        else if (SelectedTab == "items")
+        {
+            <h2>Items</h2>
+
+            <div class="diagnostics-grid">
+
+                @foreach (var item in FilterItems())
+                {
+                    <div class="diagnostic-card">
+
+                        @if (EditingItem == item)
+                        {
+                            <div class="diagnostic-info">
+
+                                <h3>Editar Item</h3>
+
+                                <p>
+                                    <strong>ID:</strong> @item.Id
+                                </p>
+
+                                <label>
+                                    Nombre:
+                                </label>
+
+                                <input type="text"
+                                       @bind="item.Name" />
+
+                                <label>
+                                    Rareza:
+                                </label>
+
+                                <select @bind="item.Rarity">
+                                    @foreach (var rarity in Enum.GetValues<Rarity>())
+                                    {
+                                        <option value="@rarity">
+                                            @rarity
+                                        </option>
+                                    }
+                                </select>
+
+                                <label>
+                                    Descripción:
+                                </label>
+
+                                <textarea @bind="item.Description"></textarea>
+
+                                <div class="diagnostic-description-preview">
+                                    <strong>Vista previa:</strong>
+
+                                    <div class="diagnostic-description-content">
+                                        @((MarkupString)item.Description)
+                                    </div>
+                                </div>
+
+                                <label>
+                                    Imagen:
+                                </label>
+
+                                <input type="text"
+                                       @bind="item.Image" />
+
+                                @if (!string.IsNullOrEmpty(item.Image))
+                                {
+                                    <img src="@GetImagePath(item.Image)"
+                                         alt="@item.Name"
+                                         class="diagnostic-image"
+                                         @onerror="() => RegisterImageError(item.Image)" />
+                                }
+
+                                <div class="diagnostic-edit-buttons">
+
+                                    <button @onclick="SaveCurrentItem"
+                                            disabled="@IsSaving">
+
+                                        @(IsSaving
+                                            ? "Guardando..."
+                                            : "Guardar")
+
+                                    </button>
+
+                                    <button @onclick="CancelEditing"
+                                            disabled="@IsSaving">
+
+                                        Cancelar
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+                        }
+                        else
+                        {
+                            <img src="@GetImagePath(item.Image)"
+                                 alt="@item.Name"
+                                 class="diagnostic-image"
+                                 @onerror="() => RegisterImageError(item.Image)" />
+
+                            <div class="diagnostic-info">
+
+                                <h3>@item.Name</h3>
+
+                                <p>
+                                    <strong>ID:</strong> @item.Id
+                                </p>
+
+                                <p>
+                                    <strong>Rarity:</strong> @item.Rarity
+                                </p>
+
+                                <p>
+                                    <strong>Descripción:</strong>
+                                </p>
+
+                                @if (string.IsNullOrWhiteSpace(item.Description))
+                                {
+                                    <p class="problem">
+                                        ⚠ Descripción vacía
+                                    </p>
+                                }
+                                else
+                                {
+                                    <div class="diagnostic-description-content">
+                                        @((MarkupString)item.Description)
+                                    </div>
+                                }
+
+                                <p>
+                                    <strong>Imagen:</strong><br />
+                                    @item.Image
+                                </p>
+
+                                @if (string.IsNullOrWhiteSpace(item.Image))
+                                {
+                                    <p class="problem">
+                                        ⚠ Imagen vacía
+                                    </p>
+                                }
+                                else if (ImageErrors.Contains(item.Image))
+                                {
+                                    <p class="problem">
+                                        ❌ Imagen no encontrada
+                                    </p>
+                                }
+                                else
+                                {
+                                    <p class="success">
+                                        ✓ Imagen cargada
+                                    </p>
+                                }
+
+                                <button @onclick='() => StartEditing(item, "items")'>
+                                    Editar
+                                </button>
+
+                            </div>
+                        }
+
+                    </div>
+                }
+
+            </div>
+        }
+        else if (SelectedTab == "addons")
+        {
+            <h2>Addons</h2>
+
+            <div class="diagnostics-grid">
+
+                @foreach (var addon in FilterAddons())
+                {
+                    <div class="diagnostic-card">
+
+                        @if (EditingItem == addon)
+                        {
+                            <div class="diagnostic-info">
+
+                                <h3>Editar Addon</h3>
+
+                                <p>
+                                    <strong>ID:</strong> @addon.Id
+                                </p>
+
+                                <label>
+                                    Nombre:
+                                </label>
+
+                                <input type="text"
+                                       @bind="addon.Name" />
+
+                                <label>
+                                    CharacterId:
+                                </label>
+
+                                <input type="number"
+                                       @bind="addon.CharacterId" />
+                                
+                                @if (addon.CharacterId.HasValue)
+                                {
+                                    <p>
+                                        <strong>Personaje:</strong>
+                                        @GetCharacterName(
+                                            addon.CharacterId,
+                                            KillerIds.Contains(addon.CharacterId.Value)
+                                        )
+                                    </p>
+                                }
+
+                                <label>
+                                    AddonGroupId:
+                                </label>
+
+                                <input type="number"
+                                    @bind="addon.AddonGroupId" />
+
+                                <label>
+                                    Rareza:
+                                </label>
+
+                                <select @bind="addon.Rarity">
+                                    @foreach (var rarity in Enum.GetValues<Rarity>())
+                                    {
+                                        <option value="@rarity">
+                                            @rarity
+                                        </option>
+                                    }
+                                </select>
+
+                                <label>
+                                    Descripción:
+                                </label>
+
+                                <textarea @bind="addon.Description"></textarea>
+
+                                <div class="diagnostic-description-preview">
+                                    <strong>Vista previa:</strong>
+
+                                    <div class="diagnostic-description-content">
+                                        @((MarkupString)addon.Description)
+                                    </div>
+                                </div>
+
+                                <label>
+                                    Imagen:
+                                </label>
+
+                                <input type="text"
+                                       @bind="addon.Image" />
+
+                                @if (!string.IsNullOrEmpty(addon.Image))
+                                {
+                                    <img src="@GetImagePath(addon.Image)"
+                                         alt="@addon.Name"
+                                         class="diagnostic-image"
+                                         @onerror="() => RegisterImageError(addon.Image)" />
+                                }
+
+                                <div class="diagnostic-edit-buttons">
+
+                                    <button @onclick="SaveCurrentItem"
+                                            disabled="@IsSaving">
+
+                                        @(IsSaving
+                                            ? "Guardando..."
+                                            : "Guardar")
+
+                                    </button>
+
+                                    <button @onclick="CancelEditing"
+                                            disabled="@IsSaving">
+
+                                        Cancelar
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+                        }
+                        else
+                        {
+                            <img src="@GetImagePath(addon.Image)"
+                                 alt="@addon.Name"
+                                 class="diagnostic-image"
+                                 @onerror="() => RegisterImageError(addon.Image)" />
+
+                            <div class="diagnostic-info">
+
+                                <h3>@addon.Name</h3>
+
+                                <p>
+                                    <strong>ID:</strong> @addon.Id
+                                </p>
+
+                                <p>
+                                    <strong>CharacterId:</strong>
+                                    @(addon.CharacterId?.ToString() ?? "Ninguno")
+
+                                    @if (addon.CharacterId.HasValue)
+                                    {
+                                        <span>
+                                            —
+                                            @GetCharacterName(
+                                                addon.CharacterId,
+                                                KillerIds.Contains(addon.CharacterId.Value)
+                                            )
+                                        </span>
+                                    }
+                                </p>
+
+                                @if (addon.AddonGroupId.HasValue)
+                                {
+                                    var groupItems = Items
+                                        .Where(x => x.AddonGroupId == addon.AddonGroupId.Value)
+                                        .ToList();
+
+                                    <p>
+                                        <strong>AddonGroupId:</strong>
+                                        @addon.AddonGroupId
+                                    </p>
+
+                                    <p>
+                                        <strong>Grupo:</strong>
+                                        @(groupItems.Any()
+                                            ? string.Join(", ", groupItems.Select(x => x.Name))
+                                            : "Grupo inexistente")
+                                    </p>
+                                }
+                                else
+                                {
+                                    <p>
+                                        <strong>AddonGroupId:</strong> Ninguno
+                                    </p>
+                                }
+
+                                <p>
+                                    <strong>Rarity:</strong> @addon.Rarity
+                                </p>
+
+                                <p>
+                                    <strong>Descripción:</strong>
+                                </p>
+
+                                @if (string.IsNullOrWhiteSpace(addon.Description))
+                                {
+                                    <p class="problem">
+                                        ⚠ Descripción vacía
+                                    </p>
+                                }
+                                else
+                                {
+                                    <div class="diagnostic-description-content">
+                                        @((MarkupString)addon.Description)
+                                    </div>
+                                }
+
+                                <p>
+                                    <strong>Imagen:</strong><br />
+                                    @addon.Image
+                                </p>
+
+                                @if (string.IsNullOrWhiteSpace(addon.Image))
+                                {
+                                    <p class="problem">
+                                        ⚠ Imagen vacía
+                                    </p>
+                                }
+                                else if (ImageErrors.Contains(addon.Image))
+                                {
+                                    <p class="problem">
+                                        ❌ Imagen no encontrada
+                                    </p>
+                                }
+                                else
+                                {
+                                    <p class="success">
+                                        ✓ Imagen cargada
+                                    </p>
+                                }
+
+                                @if (addon.CharacterId.HasValue &&
+                                     !AllCharacterIds.Contains(addon.CharacterId.Value))
+                                {
+                                    <p class="problem">
+                                        ❌ CharacterId no existe
+                                    </p>
+                                }
+
+                                @if (addon.AddonGroupId.HasValue &&
+                                    !Items.Any(x => x.AddonGroupId == addon.AddonGroupId.Value))
+                                {
+                                    <p class="problem">
+                                        ❌ AddonGroupId no existe
+                                    </p>
+                                }
+
+                                <button @onclick='() => StartEditing(addon, "addons")'>
+                                    Editar
+                                </button>
+
+                            </div>
+                        }
+
+                    </div>
+                }
+
+            </div>
+        }
+        else if (SelectedTab == "offerings")
+        {
+            <h2>Offerings</h2>
+
+            <div class="diagnostics-grid">
+
+                @foreach (var offering in FilterOfferings())
+                {
+                    <div class="diagnostic-card">
+
+                        @if (EditingItem == offering)
+                        {
+                            <div class="diagnostic-info">
+
+                                <h3>Editar Offering</h3>
+
+                                <p>
+                                    <strong>ID:</strong> @offering.Id
+                                </p>
+
+                                <label>
+                                    Nombre:
+                                </label>
+
+                                <input type="text"
+                                       @bind="offering.Name" />
+
+                                <label>
+                                    Rareza:
+                                </label>
+
+                                <select @bind="offering.Rarity">
+                                    @foreach (var rarity in Enum.GetValues<Rarity>())
+                                    {
+                                        <option value="@rarity">
+                                            @rarity
+                                        </option>
+                                    }
+                                </select>
+
+                                <label>
+                                    Role:
+                                </label>
+
+                                <select @bind="offering.Role">
+                                    <option value="Survivor">
+                                        Survivor
+                                    </option>
+
+                                    <option value="Killer">
+                                        Killer
+                                    </option>
+
+                                    <option value="Both">
+                                        Both
+                                    </option>
+                                </select>
+
+                                <label>
+                                    Descripción:
+                                </label>
+
+                                <textarea @bind="offering.Description"></textarea>
+
+                                <div class="diagnostic-description-preview">
+                                    <strong>Vista previa:</strong>
+
+                                    <div class="diagnostic-description-content">
+                                        @((MarkupString)offering.Description)
+                                    </div>
+                                </div>
+
+                                <label>
+                                    Imagen:
+                                </label>
+
+                                <input type="text"
+                                       @bind="offering.Image" />
+
+                                @if (!string.IsNullOrEmpty(offering.Image))
+                                {
+                                    <img src="@GetImagePath(offering.Image)"
+                                         alt="@offering.Name"
+                                         class="diagnostic-image"
+                                         @onerror="() => RegisterImageError(offering.Image)" />
+                                }
+
+                                <div class="diagnostic-edit-buttons">
+
+                                    <button @onclick="SaveCurrentItem"
+                                            disabled="@IsSaving">
+
+                                        @(IsSaving
+                                            ? "Guardando..."
+                                            : "Guardar")
+
+                                    </button>
+
+                                    <button @onclick="CancelEditing"
+                                            disabled="@IsSaving">
+
+                                        Cancelar
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+                        }
+                        else
+                        {
+                            <img src="@GetImagePath(offering.Image)"
+                                 alt="@offering.Name"
+                                 class="diagnostic-image"
+                                 @onerror="() => RegisterImageError(offering.Image)" />
+
+                            <div class="diagnostic-info">
+
+                                <h3>@offering.Name</h3>
+
+                                <p>
+                                    <strong>ID:</strong> @offering.Id
+                                </p>
+
+                                <p>
+                                    <strong>Rarity:</strong> @offering.Rarity
+                                </p>
+
+                                <p>
+                                    <strong>Role:</strong> @offering.Role
+                                </p>
+
+                                <p>
+                                    <strong>Descripción:</strong>
+                                </p>
+
+                                @if (string.IsNullOrWhiteSpace(offering.Description))
+                                {
+                                    <p class="problem">
+                                        ⚠ Descripción vacía
+                                    </p>
+                                }
+                                else
+                                {
+                                    <div class="diagnostic-description-content">
+                                        @((MarkupString)offering.Description)
+                                    </div>
+                                }
+
+                                <p>
+                                    <strong>Imagen:</strong><br />
+                                    @offering.Image
+                                </p>
+
+                                @if (string.IsNullOrWhiteSpace(offering.Image))
+                                {
+                                    <p class="problem">
+                                        ⚠ Imagen vacía
+                                    </p>
+                                }
+                                else if (ImageErrors.Contains(offering.Image))
+                                {
+                                    <p class="problem">
+                                        ❌ Imagen no encontrada
+                                    </p>
+                                }
+                                else
+                                {
+                                    <p class="success">
+                                        ✓ Imagen cargada
+                                    </p>
+                                }
+
+                                @if (offering.Role != "Survivor" &&
+                                     offering.Role != "Killer" &&
+                                     offering.Role != "Both")
+                                {
+                                    <p class="problem">
+                                        ❌ Role inválido
+                                    </p>
+                                }
+
+                                <button @onclick='() => StartEditing(offering, "offerings")'>
+                                    Editar
+                                </button>
+
+                            </div>
+                        }
+
+                    </div>
+                }
+
+            </div>
+        }
+        else if (SelectedTab == "survivorskins")
+        {
+            <h2>Survivor Skins</h2>
+
+            @if (!SurvivorSkins.Any())
+            {
+                <p class="empty-state">
+                    No hay Survivor Skins cargadas.
+                </p>
+            }
+            else
+            {
+                <div class="diagnostics-grid">
+
+                    @foreach (var skin in FilterSurvivorSkins())
+                    {
+                        <div class="diagnostic-card">
+
+                            @if (EditingItem == skin)
+                            {
+                                <div class="diagnostic-info">
+
+                                    <h3>Editar Survivor Skin</h3>
+
+                                    <p>
+                                        <strong>ID:</strong> @skin.Id
+                                    </p>
+
+                                    <label>
+                                        Nombre:
+                                    </label>
+
+                                    <input type="text"
+                                        @bind="skin.Name" />
+
+                                    <label>
+                                        CharacterId:
+                                    </label>
+
+                                    <input type="number"
+                                        @bind="skin.CharacterId" />
+
+                                    <label>
+                                        OutfitId:
+                                    </label>
+
+                                    <input type="number"
+                                        @bind="skin.OutfitId" />
+
+                                    <label>
+                                        Parte:
+                                    </label>
+
+                                    <select @bind="skin.Part">
+                                        @foreach (var part in Enum.GetValues<SkinPart>())
+                                        {
+                                            <option value="@part">
+                                                @part
+                                            </option>
+                                        }
+                                    </select>
+
+                                    <label>
+                                        Imagen:
+                                    </label>
+
+                                    <input type="text"
+                                        @bind="skin.Image" />
+
+                                    @if (!string.IsNullOrEmpty(skin.Image))
+                                    {
+                                        <img src="@GetImagePath(skin.Image)"
+                                            alt="@skin.Name"
+                                            class="diagnostic-image"
+                                            @onerror="() => RegisterImageError(skin.Image)" />
+                                    }
+
+                                    <label>
+                                        ¿Es separable?
+                                    </label>
+
+                                    <input type="checkbox"
+                                        @bind="skin.IsSeparable" />
+
+                                    <div class="diagnostic-edit-buttons">
+
+                                        <button @onclick="SaveCurrentItem"
+                                                disabled="@IsSaving">
+
+                                            @(IsSaving
+                                                ? "Guardando..."
+                                                : "Guardar")
+
+                                        </button>
+
+                                        <button @onclick="CancelEditing"
+                                                disabled="@IsSaving">
+
+                                            Cancelar
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            }
+                            else
+                            {
+                                <img src="@GetImagePath(skin.Image)"
+                                    alt="@skin.Name"
+                                    class="diagnostic-image"
+                                    @onerror="() => RegisterImageError(skin.Image)" />
+
+                                <div class="diagnostic-info">
+
+                                    <h3>@skin.Name</h3>
+
+                                    <p>
+                                        <strong>ID:</strong> @skin.Id
+                                    </p>
+
+                                    <p>
+                                        <strong>CharacterId:</strong>
+                                        @skin.CharacterId
+                                    </p>
+
+                                    @if (!SurvivorIds.Contains(skin.CharacterId))
+                                    {
+                                        <p class="problem">
+                                            ❌ CharacterId no existe
+                                        </p>
+                                    }
+
+                                    <p>
+                                        <strong>OutfitId:</strong>
+                                        @skin.OutfitId
+                                    </p>
+
+                                    <p>
+                                        <strong>Parte:</strong>
+                                        @skin.Part
+                                    </p>
+
+                                    <p>
+                                        <strong>Es separable:</strong>
+                                        @(skin.IsSeparable ? "Sí" : "No")
+                                    </p>
+
+                                    <p>
+                                        <strong>Imagen:</strong><br />
+                                        @skin.Image
+                                    </p>
+
+                                    @if (string.IsNullOrWhiteSpace(skin.Image))
+                                    {
+                                        <p class="problem">
+                                            ⚠ Imagen vacía
+                                        </p>
+                                    }
+                                    else if (ImageErrors.Contains(skin.Image))
+                                    {
+                                        <p class="problem">
+                                            ❌ Imagen no encontrada
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        <p class="success">
+                                            ✓ Imagen cargada
+                                        </p>
+                                    }
+
+                                    <button @onclick='() => StartEditing(skin, "survivorskins")'>
+                                        Editar
+                                    </button>
+
+                                </div>
+                            }
+
+                        </div>
+                    }
+
+                </div>
+            }
+        }
+        else if (SelectedTab == "killerskins")
+        {
+            <h2>Killer Skins</h2>
+
+            @if (!KillerSkins.Any())
+            {
+                <p class="empty-state">
+                    No hay Killer Skins cargadas.
+                </p>
+            }
+            else
+            {
+                <div class="diagnostics-grid">
+
+                    @foreach (var skin in FilterKillerSkins())
+                    {
+                        <div class="diagnostic-card">
+
+                            @if (EditingItem == skin)
+                            {
+                                <div class="diagnostic-info">
+
+                                    <h3>Editar Killer Skin</h3>
+
+                                    <p>
+                                        <strong>ID:</strong> @skin.Id
+                                    </p>
+
+                                    <label>
+                                        Nombre:
+                                    </label>
+
+                                    <input type="text"
+                                        @bind="skin.Name" />
+
+                                    <label>
+                                        CharacterId:
+                                    </label>
+
+                                    <input type="number"
+                                        @bind="skin.CharacterId" />
+
+                                    <label>
+                                        OutfitId:
+                                    </label>
+
+                                    <input type="number"
+                                        @bind="skin.OutfitId" />
+
+                                    <label>
+                                        Parte:
+                                    </label>
+
+                                    <select @bind="skin.Part">
+                                        @foreach (var part in Enum.GetValues<SkinPart>())
+                                        {
+                                            <option value="@part">
+                                                @part
+                                            </option>
+                                        }
+                                    </select>
+
+                                    <label>
+                                        Imagen:
+                                    </label>
+
+                                    <input type="text"
+                                        @bind="skin.Image" />
+
+                                    @if (!string.IsNullOrEmpty(skin.Image))
+                                    {
+                                        <img src="@GetImagePath(skin.Image)"
+                                            alt="@skin.Name"
+                                            class="diagnostic-image"
+                                            @onerror="() => RegisterImageError(skin.Image)" />
+                                    }
+
+                                    <label>
+                                        ¿Es separable?
+                                    </label>
+
+                                    <input type="checkbox"
+                                        @bind="skin.IsSeparable" />
+
+                                    <div class="diagnostic-edit-buttons">
+
+                                        <button @onclick="SaveCurrentItem"
+                                                disabled="@IsSaving">
+
+                                            @(IsSaving
+                                                ? "Guardando..."
+                                                : "Guardar")
+
+                                        </button>
+
+                                        <button @onclick="CancelEditing"
+                                                disabled="@IsSaving">
+
+                                            Cancelar
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            }
+                            else
+                            {
+                                <img src="@GetImagePath(skin.Image)"
+                                    alt="@skin.Name"
+                                    class="diagnostic-image"
+                                    @onerror="() => RegisterImageError(skin.Image)" />
+
+                                <div class="diagnostic-info">
+
+                                    <h3>@skin.Name</h3>
+
+                                    <p>
+                                        <strong>ID:</strong> @skin.Id
+                                    </p>
+
+                                    <p>
+                                        <strong>CharacterId:</strong>
+                                        @skin.CharacterId
+                                    </p>
+
+                                    @if (!KillerIds.Contains(skin.CharacterId))
+                                    {
+                                        <p class="problem">
+                                            ❌ CharacterId no existe
+                                        </p>
+                                    }
+
+                                    <p>
+                                        <strong>OutfitId:</strong>
+                                        @skin.OutfitId
+                                    </p>
+
+                                    <p>
+                                        <strong>Parte:</strong>
+                                        @skin.Part
+                                    </p>
+
+                                    <p>
+                                        <strong>Es separable:</strong>
+                                        @(skin.IsSeparable ? "Sí" : "No")
+                                    </p>
+
+                                    <p>
+                                        <strong>Imagen:</strong><br />
+                                        @skin.Image
+                                    </p>
+
+                                    @if (string.IsNullOrWhiteSpace(skin.Image))
+                                    {
+                                        <p class="problem">
+                                            ⚠ Imagen vacía
+                                        </p>
+                                    }
+                                    else if (ImageErrors.Contains(skin.Image))
+                                    {
+                                        <p class="problem">
+                                            ❌ Imagen no encontrada
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        <p class="success">
+                                            ✓ Imagen cargada
+                                        </p>
+                                    }
+
+                                    <button @onclick='() => StartEditing(skin, "killerskins")'>
+                                        Editar
+                                    </button>
+
+                                </div>
+                            }
+
+                        </div>
+                    }
+
+                </div>
+            }
+        }
+
+        else if (SelectedTab == "twov8classes")
+        {
+            <h2>2v8 Classes</h2>
+
+            <div class="diagnostics-grid">
+
+                @foreach (var twoV8Class in FilterTwoV8Classes())
+                {
+                    <div class="diagnostic-card">
+
+                        @if (EditingItem == twoV8Class)
+                        {
+                            <div class="diagnostic-info">
+
+                                <h3>Editar 2v8 Class</h3>
+
+                                <p>
+                                    <strong>ID:</strong> @twoV8Class.Id
+                                </p>
+
+                                <label>
+                                    Nombre:
+                                </label>
+
+                                <input type="text"
+                                    @bind="twoV8Class.Name" />
+
+                                <label>
+                                    Role:
+                                </label>
+
+                                <select @bind="twoV8Class.Role">
+                                    <option value="Survivor">
+                                        Survivor
+                                    </option>
+
+                                    <option value="Killer">
+                                        Killer
+                                    </option>
+                                </select>
+
+                                <label>
+                                    Imagen:
+                                </label>
+
+                                <input type="text"
+                                    @bind="twoV8Class.Image" />
+
+                                @if (!string.IsNullOrEmpty(twoV8Class.Image))
+                                {
+                                    <img src="@GetImagePath(twoV8Class.Image)"
+                                        alt="@twoV8Class.Name"
+                                        class="diagnostic-image"
+                                        @onerror="() => RegisterImageError(twoV8Class.Image)" />
+                                }
+
+                                <div class="diagnostic-edit-buttons">
+
+                                    <button @onclick="SaveCurrentItem"
+                                            disabled="@IsSaving">
+
+                                        @(IsSaving
+                                            ? "Guardando..."
+                                            : "Guardar")
+
+                                    </button>
+
+                                    <button @onclick="CancelEditing"
+                                            disabled="@IsSaving">
+
+                                        Cancelar
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+                        }
+                        else
+                        {
+                            <img src="@GetImagePath(twoV8Class.Image)"
+                                alt="@twoV8Class.Name"
+                                class="diagnostic-image"
+                                @onerror="() => RegisterImageError(twoV8Class.Image)" />
+
+                            <div class="diagnostic-info">
+
+                                <h3>@twoV8Class.Name</h3>
+
+                                <p>
+                                    <strong>ID:</strong> @twoV8Class.Id
+                                </p>
+
+                                <p>
+                                    <strong>Role:</strong> @twoV8Class.Role
+                                </p>
+
+                                <p>
+                                    <strong>Imagen:</strong><br />
+                                    @twoV8Class.Image
+                                </p>
+
+                                @if (twoV8Class.Role != "Survivor" &&
+                                    twoV8Class.Role != "Killer")
+                                {
+                                    <p class="problem">
+                                        ❌ Role inválido
+                                    </p>
+                                }
+
+                                @if (string.IsNullOrWhiteSpace(twoV8Class.Name))
+                                {
+                                    <p class="problem">
+                                        ⚠ Nombre vacío
+                                    </p>
+                                }
+
+                                @if (string.IsNullOrWhiteSpace(twoV8Class.Image))
+                                {
+                                    <p class="problem">
+                                        ⚠ Imagen vacía
+                                    </p>
+                                }
+                                else if (ImageErrors.Contains(twoV8Class.Image))
+                                {
+                                    <p class="problem">
+                                        ❌ Imagen no encontrada
+                                    </p>
+                                }
+                                else
+                                {
+                                    <p class="success">
+                                        ✓ Imagen cargada
+                                    </p>
+                                }
+
+                                <button @onclick='() => StartEditing(twoV8Class, "twov8classes")'>
+                                    Editar
+                                </button>
+
+                            </div>
+                        }
+
+                    </div>
+                }
+
+            </div>
+        }
+
+        else if (SelectedTab == "twov8skills")
+        {
+            <h2>2v8 Skills</h2>
+
+            <div class="diagnostics-grid">
+
+                @foreach (var skill in FilterTwoV8Skills())
+                {
+                    <div class="diagnostic-card">
+
+                        @if (EditingItem == skill)
+                        {
+                            <div class="diagnostic-info">
+
+                                <h3>Editar 2v8 Skill</h3>
+
+                                <p>
+                                    <strong>ID:</strong> @skill.Id
+                                </p>
+
+                                <label>
+                                    Role:
+                                </label>
+
+                                <select @bind="skill.Role">
+                                    <option value="Survivor">
+                                        Survivor
+                                    </option>
+
+                                    <option value="Killer">
+                                        Killer
+                                    </option>
+                                </select>
+
+                                <label>
+                                    ClassId:
+                                </label>
+
+                                <input type="number"
+                                    @bind="skill.ClassId" />
+
+                                @if (skill.ClassId.HasValue)
+                                {
+                                    <p>
+                                        <strong>Clase:</strong>
+                                        @GetTwoV8ClassName(skill.ClassId.Value)
+                                    </p>
+                                }
+
+                                <label>
+                                    CharacterId:
+                                </label>
+
+                                <input type="number"
+                                    @bind="skill.CharacterId" />
+
+                                @if (skill.CharacterId.HasValue)
+                                {
+                                    <p>
+                                        <strong>Personaje:</strong>
+                                        @GetCharacterName(
+                                            skill.CharacterId,
+                                            true
+                                        )
+                                    </p>
+                                }
+
+                                <label>
+                                    Type:
+                                </label>
+
+                                <input type="text"
+                                    @bind="skill.Type" />
+
+                                <label>
+                                    Nombre:
+                                </label>
+
+                                <input type="text"
+                                    @bind="skill.Name" />
+
+                                <label>
+                                    Descripción:
+                                </label>
+
+                                <textarea @bind="skill.Description"></textarea>
+
+                                <div class="diagnostic-description-preview">
+
+                                    <strong>Vista previa:</strong>
+
+                                    <div class="diagnostic-description-content">
+                                        @((MarkupString)skill.Description)
+                                    </div>
+
+                                </div>
+
+                                <label>
+                                    Imagen:
+                                </label>
+
+                                <input type="text"
+                                    @bind="skill.Image" />
+
+                                @if (!string.IsNullOrEmpty(skill.Image))
+                                {
+                                    <img src="@GetImagePath(skill.Image)"
+                                        alt="@skill.Name"
+                                        class="diagnostic-image"
+                                        @onerror="() => RegisterImageError(skill.Image)" />
+                                }
+
+                                <label>
+                                    Slot:
+                                </label>
+
+                                <input type="number"
+                                    @bind="skill.Slot" />
+
+                                <div class="diagnostic-edit-buttons">
+
+                                    <button @onclick="SaveCurrentItem"
+                                            disabled="@IsSaving">
+
+                                        @(IsSaving
+                                            ? "Guardando..."
+                                            : "Guardar")
+
+                                    </button>
+
+                                    <button @onclick="CancelEditing"
+                                            disabled="@IsSaving">
+
+                                        Cancelar
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+                        }
+                        else
+                        {
+                            <img src="@GetImagePath(skill.Image)"
+                                alt="@skill.Name"
+                                class="diagnostic-image"
+                                @onerror="() => RegisterImageError(skill.Image)" />
+
+                            <div class="diagnostic-info">
+
+                                <h3>@skill.Name</h3>
+
+                                <p>
+                                    <strong>ID:</strong> @skill.Id
+                                </p>
+
+                                <p>
+                                    <strong>Role:</strong> @skill.Role
+                                </p>
+
+                                <p>
+                                    <strong>ClassId:</strong>
+                                    @(skill.ClassId?.ToString() ?? "Ninguno")
+
+                                    @if (skill.ClassId.HasValue)
+                                    {
+                                        <span>
+                                            — @GetTwoV8ClassName(skill.ClassId.Value)
+                                        </span>
+                                    }
+                                </p>
+
+                                <p>
+                                    <strong>CharacterId:</strong>
+                                    @(skill.CharacterId?.ToString() ?? "Ninguno")
+
+                                    @if (skill.CharacterId.HasValue)
+                                    {
+                                        <span>
+                                            —
+                                            @GetCharacterName(
+                                                skill.CharacterId,
+                                                true
+                                            )
+                                        </span>
+                                    }
+                                </p>
+
+                                <p>
+                                    <strong>Type:</strong> @skill.Type
+                                </p>
+
+                                <p>
+                                    <strong>Slot:</strong> @skill.Slot
+                                </p>
+
+                                <p>
+                                    <strong>Descripción:</strong>
+                                </p>
+
+                                @if (string.IsNullOrWhiteSpace(skill.Description))
+                                {
+                                    <p class="problem">
+                                        ⚠ Descripción vacía
+                                    </p>
+                                }
+                                else
+                                {
+                                    <div class="diagnostic-description-content">
+                                        @((MarkupString)skill.Description)
+                                    </div>
+                                }
+
+                                <p>
+                                    <strong>Imagen:</strong><br />
+                                    @skill.Image
+                                </p>
+
+                                @if (string.IsNullOrWhiteSpace(skill.Image))
+                                {
+                                    <p class="problem">
+                                        ⚠ Imagen vacía
+                                    </p>
+                                }
+                                else if (ImageErrors.Contains(skill.Image))
+                                {
+                                    <p class="problem">
+                                        ❌ Imagen no encontrada
+                                    </p>
+                                }
+                                else
+                                {
+                                    <p class="success">
+                                        ✓ Imagen cargada
+                                    </p>
+                                }
+
+                                @if (skill.Role != "Survivor" &&
+                                    skill.Role != "Killer")
+                                {
+                                    <p class="problem">
+                                        ❌ Role inválido
+                                    </p>
+                                }
+
+                                @if (skill.ClassId.HasValue &&
+                                    !TwoV8Classes.Any(x =>
+                                        x.Id == skill.ClassId.Value))
+                                {
+                                    <p class="problem">
+                                        ❌ ClassId no existe
+                                    </p>
+                                }
+
+                                @if (skill.CharacterId.HasValue &&
+                                    !AllCharacterIds.Contains(
+                                        skill.CharacterId.Value))
+                                {
+                                    <p class="problem">
+                                        ❌ CharacterId no existe
+                                    </p>
+                                }
+
+                                <button @onclick='() => StartEditing(skill, "twov8skills")'>
+                                    Editar
+                                </button>
+
+                            </div>
+                        }
+
+                    </div>
+                }
+
+            </div>
+        }
+
+        else if (SelectedTab == "twov8config")
+        {
+            <h2>2v8 Config</h2>
+
+            <div class="diagnostic-card">
+
+                <div class="diagnostic-info">
+
+                    <h3>Killers disponibles en 2v8</h3>
+
+                    <p>
+                        Configuración de Killers que pueden aparecer
+                        en el randomizer 2v8.
+                    </p>
+
+                    @foreach (var killerId in TwoV8Config.Killers)
+                    {
+                        <div class="diagnostic-config-row">
+
+                            <span>
+                                <strong>ID:</strong> @killerId
+                            </span>
+
+                            <span>
+                                @GetCharacterName(killerId, true)
+                            </span>
+
+                            @if (!KillerIds.Contains(killerId))
+                            {
+                                <span class="problem">
+                                    ❌ Killer inexistente
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="success">
+                                    ✓ Correcto
+                                </span>
+                            }
+
+                        </div>
+                    }
+
+                    <label>
+                        IDs de Killers (separados por coma):
+                    </label>
+
+                    <input type="text"
+                        value="@string.Join(", ", TwoV8Config.Killers)"
+                        @onchange="UpdateTwoV8KillerConfig" />
+
+                    <div class="diagnostic-edit-buttons">
+
+                        <button @onclick="SaveTwoV8Config"
+                                disabled="@IsSaving">
+
+                            @(IsSaving
+                                ? "Guardando..."
+                                : "Guardar")
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        }
+    }
+
+</div>
+
+@code {
+
+    private bool IsLoading = true;
+    private string? LoadError;
+
+    private string SelectedTab = "survivors";
+    private string SearchText = "";
+
+    private List<Survivor> Survivors = new();
+    private List<Killer> Killers = new();
+
+    private List<Perk> SurvivorPerks = new();
+    private List<Perk> KillerPerks = new();
+
+    private List<Item> Items = new();
+    private List<Addon> Addons = new();
+    private List<Offering> Offerings = new();
+
+    private List<SkinPiece> SurvivorSkins = new();
+    private List<SkinPiece> KillerSkins = new();
+    
+    private List<TwoV8Class> TwoV8Classes = new();
+    private List<TwoV8Skill> TwoV8Skills = new();
+    private TwoV8Config TwoV8Config = new();
+
+    private HashSet<string> ImageErrors = new();
+    private object? EditingItem;
+    private string EditingTab = "";
+    private string SaveMessage = "";
+    private bool IsSaving = false;
+    private string? EditingBackupJson;
+
+    private readonly JsonSerializerOptions JsonOptions = new()
+    {
+        PropertyNameCaseInsensitive = true,
+        Converters =
+        {
+            new JsonStringEnumConverter()
+        }
+    };
+
+    private HashSet<int> SurvivorIds =>
+        Survivors.Select(x => x.Id).ToHashSet();
+
+    private HashSet<int> KillerIds =>
+        Killers.Select(x => x.Id).ToHashSet();
+
+    private HashSet<int> AllCharacterIds =>
+        Survivors
+            .Select(x => x.Id)
+            .Concat(Killers.Select(x => x.Id))
+            .ToHashSet();
+
+    private int TotalRecords =>
+        Survivors.Count +
+        Killers.Count +
+        SurvivorPerks.Count +
+        KillerPerks.Count +
+        Items.Count +
+        Addons.Count +
+        Offerings.Count +
+        SurvivorSkins.Count +
+        KillerSkins.Count +
+        TwoV8Classes.Count +
+        TwoV8Skills.Count +
+        TwoV8Config.Killers.Count;
+
+    private int MissingImages =>
+        ImageErrors.Count;
+
+    private int EmptyDescriptions =>
+        SurvivorPerks.Count(x => string.IsNullOrWhiteSpace(x.Description)) +
+        KillerPerks.Count(x => string.IsNullOrWhiteSpace(x.Description)) +
+        Items.Count(x => string.IsNullOrWhiteSpace(x.Description)) +
+        Addons.Count(x => string.IsNullOrWhiteSpace(x.Description)) +
+        Offerings.Count(x => string.IsNullOrWhiteSpace(x.Description)) +
+        TwoV8Skills.Count(x => string.IsNullOrWhiteSpace(x.Description));
+
+    private int TotalProblems =>
+        MissingImages +
+        EmptyDescriptions +
+        CountDuplicateIds();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Survivors = await LoadJson<List<Survivor>>(
+                "data/survivors.json");
+
+            Killers = await LoadJson<List<Killer>>(
+                "data/killers.json");
+
+            SurvivorPerks = await LoadJson<List<Perk>>(
+                "data/perks_survivor.json");
+
+            KillerPerks = await LoadJson<List<Perk>>(
+                "data/perks_killer.json");
+
+            Items = await LoadJson<List<Item>>(
+                "data/items.json");
+
+            Addons = await LoadJson<List<Addon>>(
+                "data/addons.json");
+
+            Offerings = await LoadJson<List<Offering>>(
+                "data/offerings.json");
+
+            SurvivorSkins = await LoadJson<List<SkinPiece>>(
+                "data/survivor_skins.json");
+
+            KillerSkins = await LoadJson<List<SkinPiece>>(
+                "data/killer_skins.json");
+            
+            TwoV8Classes = await LoadJson<List<TwoV8Class>>(
+                "data/two_v8_classes.json");
+
+            TwoV8Skills = await LoadJson<List<TwoV8Skill>>(
+                "data/two_v8_skills.json");
+
+            TwoV8Config = await LoadJson<TwoV8Config>(
+                "data/two_v8_config.json");
+        }
+        catch (Exception ex)
+        {
+            LoadError = ex.Message;
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+
+    private async Task<T> LoadJson<T>(string path)
+    {
+        return await Http.GetFromJsonAsync<T>(path, JsonOptions)
+               ?? throw new Exception(
+                   $"El archivo {path} está vacío o no pudo ser leído.");
+    }
+
+    private string GetTabClass(string tab)
+    {
+        return SelectedTab == tab
+            ? "diagnostics-tab active"
+            : "diagnostics-tab";
+    }
+
+    private string GetImagePath(string image)
+    {
+        if (string.IsNullOrWhiteSpace(image))
+            return "";
+
+        if (image.StartsWith("/"))
+            return image;
+
+        return "/" + image;
+    }
+
+    private void RegisterImageError(string image)
+    {
+        if (string.IsNullOrWhiteSpace(image))
+            return;
+
+        if (ImageErrors.Add(image))
+        {
+            StateHasChanged();
+        }
+    }
+
+    private void StartEditing(object item, string tab)
+    {
+        EditingItem = item;
+        EditingTab = tab;
+
+        EditingBackupJson = JsonSerializer.Serialize(
+            item,
+            item.GetType(),
+            JsonOptions
+        );
+
+        SaveMessage = "";
+    }
+
+    private void CancelEditing()
+    {
+        if (EditingItem != null && EditingBackupJson != null)
+        {
+            var restored = JsonSerializer.Deserialize(
+                EditingBackupJson,
+                EditingItem.GetType(),
+                JsonOptions
+            );
+
+            if (restored != null)
+            {
+                var properties = EditingItem.GetType().GetProperties();
+
+                foreach (var property in properties)
+                {
+                    if (!property.CanRead || !property.CanWrite)
+                        continue;
+
+                    property.SetValue(
+                        EditingItem,
+                        property.GetValue(restored)
+                    );
+                }
+            }
+        }
+
+        EditingItem = null;
+        EditingTab = "";
+        EditingBackupJson = null;
+        SaveMessage = "";
+    }
+
+    private async Task SaveCurrentItem()
+    {
+        if (EditingItem == null || string.IsNullOrEmpty(EditingTab))
+            return;
+
+        IsSaving = true;
+        SaveMessage = "";
+
+        try
+        {
+            string fileName = EditingTab switch
+            {
+                "survivors" => "survivors.json",
+                "killers" => "killers.json",
+                "survivorperks" => "perks_survivor.json",
+                "killerperks" => "perks_killer.json",
+                "items" => "items.json",
+                "addons" => "addons.json",
+                "offerings" => "offerings.json",
+                "survivorskins" => "survivor_skins.json",
+                "killerskins" => "killer_skins.json",
+                "twov8classes" => "two_v8_classes.json",
+                "twov8skills" => "two_v8_skills.json",
+                _ => throw new InvalidOperationException("Tipo de datos desconocido.")
+            };
+
+            List<object> data = EditingTab switch
+            {
+                "survivors" => Survivors.Cast<object>().ToList(),
+                "killers" => Killers.Cast<object>().ToList(),
+                "survivorperks" => SurvivorPerks.Cast<object>().ToList(),
+                "killerperks" => KillerPerks.Cast<object>().ToList(),
+                "items" => Items.Cast<object>().ToList(),
+                "addons" => Addons.Cast<object>().ToList(),
+                "offerings" => Offerings.Cast<object>().ToList(),
+                "survivorskins" => SurvivorSkins.Cast<object>().ToList(),
+                "killerskins" => KillerSkins.Cast<object>().ToList(),
+                "twov8classes" => TwoV8Classes.Cast<object>().ToList(),
+                "twov8skills" => TwoV8Skills.Cast<object>().ToList(),
+                _ => throw new InvalidOperationException("Tipo de datos desconocido.")
+            };
+
+            var jsonOptions = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                Converters =
+                {
+                    new JsonStringEnumConverter()
+                }
+            };
+
+            string json = JsonSerializer.Serialize(data, jsonOptions);
+
+            using var content = new StringContent(
+                json,
+                Encoding.UTF8,
+                "application/json"
+            );
+
+            var response = await Http.PutAsync(
+                $"api/data/{fileName}",
+                content
+            );
+
+            if (!response.IsSuccessStatusCode)
+            {
+                string error = await response.Content.ReadAsStringAsync();
+
+                SaveMessage =
+                    $"Error al guardar: {error}";
+
+                return;
+            }
+
+            SaveMessage = "✓ Cambios guardados correctamente.";
+
+            EditingItem = null;
+            EditingTab = "";
+            EditingBackupJson = null;
+
+            ImageErrors.Clear();
+        }
+        catch (Exception ex)
+        {
+            SaveMessage = $"Error al guardar: {ex.Message}";
+        }
+        finally
+        {
+            IsSaving = false;
+        }
+    }
+
+    private bool MatchesSearch(
+        int id,
+        string name,
+        string image)
+    {
+        if (string.IsNullOrWhiteSpace(SearchText))
+            return true;
+
+        string search = SearchText.Trim().ToLowerInvariant();
+
+        return id.ToString().Contains(search) ||
+               name.ToLowerInvariant().Contains(search) ||
+               image.ToLowerInvariant().Contains(search);
+    }
+
+    private IEnumerable<Survivor> FilterSurvivors()
+    {
+        return Survivors.Where(x =>
+            MatchesSearch(x.Id, x.Name, x.Image));
+    }
+
+    private IEnumerable<Killer> FilterKillers()
+    {
+        return Killers.Where(x =>
+            MatchesSearch(x.Id, x.Name, x.Image));
+    }
+
+    private IEnumerable<Perk> FilterSurvivorPerks()
+    {
+        return SurvivorPerks.Where(x =>
+            MatchesSearch(x.Id, x.Name, x.Image));
+    }
+
+    private IEnumerable<Perk> FilterKillerPerks()
+    {
+        return KillerPerks.Where(x =>
+            MatchesSearch(x.Id, x.Name, x.Image));
+    }
+
+    private IEnumerable<Item> FilterItems()
+    {
+        return Items.Where(x =>
+            MatchesSearch(x.Id, x.Name, x.Image));
+    }
+
+    private IEnumerable<Addon> FilterAddons()
+    {
+        return Addons.Where(x =>
+            MatchesSearch(x.Id, x.Name, x.Image));
+    }
+
+    private IEnumerable<Offering> FilterOfferings()
+    {
+        return Offerings.Where(x =>
+            MatchesSearch(x.Id, x.Name, x.Image));
+    }
+
+    private IEnumerable<SkinPiece> FilterSurvivorSkins()
+    {
+        return SurvivorSkins.Where(x =>
+            MatchesSearch(x.Id, x.Name, x.Image));
+    }
+
+    private IEnumerable<SkinPiece> FilterKillerSkins()
+    {
+        return KillerSkins.Where(x =>
+            MatchesSearch(x.Id, x.Name, x.Image));
+    }
+
+    private IEnumerable<TwoV8Class> FilterTwoV8Classes()
+    {
+        return TwoV8Classes.Where(x =>
+            MatchesSearch(x.Id, x.Name, x.Image));
+    }
+
+    private IEnumerable<TwoV8Skill> FilterTwoV8Skills()
+    {
+        return TwoV8Skills.Where(x =>
+            MatchesSearch(x.Id, x.Name, x.Image));
+    }
+
+    private int CountDuplicateIds()
+    {
+        int count = 0;
+
+        count += CountDuplicates(Survivors.Select(x => x.Id));
+        count += CountDuplicates(Killers.Select(x => x.Id));
+        count += CountDuplicates(SurvivorPerks.Select(x => x.Id));
+        count += CountDuplicates(KillerPerks.Select(x => x.Id));
+        count += CountDuplicates(Items.Select(x => x.Id));
+        count += CountDuplicates(Addons.Select(x => x.Id));
+        count += CountDuplicates(Offerings.Select(x => x.Id));
+        count += CountDuplicates(SurvivorSkins.Select(x => x.Id));
+        count += CountDuplicates(KillerSkins.Select(x => x.Id));
+        count += CountDuplicates(TwoV8Classes.Select(x => x.Id));
+        count += CountDuplicates(TwoV8Skills.Select(x => x.Id));
+
+        return count;
+    }
+
+    private int CountDuplicates(IEnumerable<int> ids)
+    {
+        return ids
+            .GroupBy(x => x)
+            .Count(x => x.Count() > 1);
+    }
+
+    private string GetCharacterName(int? characterId, bool isKiller)
+    {
+        if (!characterId.HasValue)
+            return "Ninguno";
+
+        if (isKiller)
+        {
+            var killer = Killers.FirstOrDefault(
+                x => x.Id == characterId.Value);
+
+            return killer?.Name ?? "CharacterId no existe";
+        }
+        else
+        {
+            var survivor = Survivors.FirstOrDefault(
+                x => x.Id == characterId.Value);
+
+            return survivor?.Name ?? "CharacterId no existe";
+        }
+    }
+
+    private string GetTwoV8ClassName(int classId)
+    {
+        return TwoV8Classes
+            .FirstOrDefault(x => x.Id == classId)
+            ?.Name
+            ?? "ClassId no existe";
+    }
+
+    private void UpdateTwoV8KillerConfig(ChangeEventArgs e)
+    {
+        string value = e.Value?.ToString() ?? "";
+
+        List<int> ids = new();
+
+        foreach (string part in value.Split(','))
+        {
+            if (int.TryParse(part.Trim(), out int id))
+            {
+                ids.Add(id);
+            }
+        }
+
+        TwoV8Config.Killers = ids;
+    }
+
+    private async Task SaveTwoV8Config()
+    {
+        IsSaving = true;
+        SaveMessage = "";
+
+        try
+        {
+            var jsonOptions = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+
+            string json = JsonSerializer.Serialize(
+                TwoV8Config,
+                jsonOptions
+            );
+
+            using var content = new StringContent(
+                json,
+                Encoding.UTF8,
+                "application/json"
+            );
+
+            var response = await Http.PutAsync(
+                "api/data/two_v8_config.json",
+                content
+            );
+
+            if (!response.IsSuccessStatusCode)
+            {
+                string error =
+                    await response.Content.ReadAsStringAsync();
+
+                SaveMessage =
+                    $"Error al guardar: {error}";
+
+                return;
+            }
+
+            SaveMessage =
+                "✓ Cambios guardados correctamente.";
+        }
+        catch (Exception ex)
+        {
+            SaveMessage =
+                $"Error al guardar: {ex.Message}";
+        }
+        finally
+        {
+            IsSaving = false;
+        }
+    }
+}

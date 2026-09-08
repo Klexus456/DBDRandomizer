@@ -13,5 +13,10 @@
     "disabledOfferings": [],
 
     "survivorSkinMode": "Parts",
-    "killerSkinMode": "Parts"
+    "killerSkinMode": "Parts",
+
+    "perkEmptyChance": 0,
+    "itemEmptyChance": 0,
+    "addonEmptyChance": 0,
+    "offeringEmptyChance": 0
 }

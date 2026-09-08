@@ -15,3 +15,6 @@ publish/
 # OS
 .DS_Store
 Thumbs.db
+
+# Proyecto local de pruebas
+DBDRandomizerLocal/

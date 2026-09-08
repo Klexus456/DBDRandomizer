@@ -7,4 +7,5 @@ public class Item
     public Rarity Rarity { get; set; }
     public string Description { get; set; } = "";
     public string Image { get; set; } = "";
+    public int? AddonGroupId { get; set; }
 }

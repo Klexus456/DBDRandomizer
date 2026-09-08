@@ -55,6 +55,7 @@ public class ConfigValidator
 
         ValidateSurvivorItems(errors);
         ValidateOfferings(errors);
+        ValidateEmptySlotChances(errors);
 
         ValidateKillerAddons(errors);
 
@@ -357,18 +358,31 @@ public class ConfigValidator
             return;
         }
 
-        foreach (Item item in availableItems)
+        // Validar solamente los grupos de addons que realmente existen.
+        List<int> addonGroups = availableItems
+            .Where(item => item.AddonGroupId.HasValue)
+            .Select(item => item.AddonGroupId!.Value)
+            .Distinct()
+            .ToList();
+
+        foreach (int addonGroupId in addonGroups)
         {
             int availableAddons = _addons
                 .Count(addon =>
-                    addon.ItemId == item.Id &&
+                    addon.AddonGroupId == addonGroupId &&
+                    !addon.CharacterId.HasValue &&
                     !_config.DisabledAddons.Contains(addon.Id));
 
             if (availableAddons < 3)
             {
+                List<string> itemNames = availableItems
+                    .Where(item => item.AddonGroupId == addonGroupId)
+                    .Select(item => item.Name)
+                    .ToList();
+
                 errors.Add(
-                    $"El Item '{item.Name}' tiene solamente " +
-                    $"{availableAddons} Add-on(s) disponibles. " +
+                    $"El grupo de Items [{string.Join(", ", itemNames)}] " +
+                    $"tiene solamente {availableAddons} Add-on(s) disponibles. " +
                     "Debe tener al menos 3."
                 );
             }
@@ -586,6 +600,41 @@ public class ConfigValidator
         }
 
         return false;
+    }
+
+    // =========================================================
+    // EMPTY SLOT CHANCES
+    // =========================================================
+
+    private void ValidateEmptySlotChances(List<string> errors)
+    {
+        if (_config.PerkEmptyChance < 0 || _config.PerkEmptyChance > 100)
+        {
+            errors.Add(
+                "La probabilidad de Perks vacías debe estar entre 0 y 100."
+            );
+        }
+
+        if (_config.ItemEmptyChance < 0 || _config.ItemEmptyChance > 100)
+        {
+            errors.Add(
+                "La probabilidad de Item vacío debe estar entre 0 y 100."
+            );
+        }
+
+        if (_config.AddonEmptyChance < 0 || _config.AddonEmptyChance > 100)
+        {
+            errors.Add(
+                "La probabilidad de Add-ons vacíos debe estar entre 0 y 100."
+            );
+        }
+
+        if (_config.OfferingEmptyChance < 0 || _config.OfferingEmptyChance > 100)
+        {
+            errors.Add(
+                "La probabilidad de Offering vacío debe estar entre 0 y 100."
+            );
+        }
     }
 
 }

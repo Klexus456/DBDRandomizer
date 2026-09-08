@@ -1,0 +1,381 @@
+@page "/2v8"
+
+@using DBDRandomizer.Models
+@using DBDRandomizer.Data
+@using DBDRandomizer.Randomizer
+
+@inject HttpClient Http
+
+<PageTitle>2v8 - DBD Randomizer</PageTitle>
+
+
+<div class="randomizer-page">
+
+    <header class="randomizer-header">
+
+        <h1>DBD 2v8 RANDOMIZER</h1>
+
+        <p>Randomizador de Dead by Daylight 2v8</p>
+
+    </header>
+
+
+    @if (randomizer == null)
+    {
+        <div class="loading">
+
+            <p>Cargando datos...</p>
+
+        </div>
+    }
+    else
+    {
+        <!-- ================================= -->
+        <!-- SELECTOR DE MODO                   -->
+        <!-- ================================= -->
+
+        <div class="mode-selector">
+
+            <button
+                class="mode-button survivor @(selectedMode == "Survivor" ? "active" : "")"
+                @onclick="SelectSurvivor">
+
+                SURVIVOR
+
+            </button>
+
+
+            <button
+                class="mode-button killer @(selectedMode == "Killer" ? "active" : "")"
+                @onclick="SelectKiller">
+
+                KILLER
+
+            </button>
+
+        </div>
+
+
+        @if (result != null)
+        {
+            <div class="result-container">
+
+
+                <!-- ================================= -->
+                <!-- PERSONAJE                          -->
+                <!-- ================================= -->
+
+                <div class="result-title">
+
+                    @if (selectedMode == "Survivor" &&
+                         result.Survivor != null)
+                    {
+                        <ItemTooltip
+                            Image="@result.Survivor.Image"
+                            Name="@result.Survivor.Name"
+                            ImageSize="200" />
+                    }
+                    else if (selectedMode == "Killer" &&
+                             result.Killer != null)
+                    {
+                        <ItemTooltip
+                            Image="@result.Killer.Image"
+                            Name="@result.Killer.Name"
+                            ImageSize="200" />
+                    }
+
+
+                    <button
+                        class="reroll-button"
+                        title="Randomizar nuevamente"
+                        @onclick="RerollCharacter">
+
+                        ↻
+
+                    </button>
+
+                </div>
+
+
+                <!-- ================================= -->
+                <!-- CLASE                              -->
+                <!-- ================================= -->
+
+                <section class="result-section">
+
+                    <div class="section-header">
+
+                        <h3>CLASE</h3>
+
+                        <button
+                            class="reroll-button"
+                            title="Randomizar clase"
+                            @onclick="RerollClass">
+
+                            ↻
+
+                        </button>
+
+                    </div>
+
+
+                    @if (result.Class != null)
+                    {
+                        <div class="result-card two-v8-class-card">
+
+                            <ItemTooltip
+                                Image="@result.Class.Image"
+                                Name="@result.Class.Name"
+                                ImageSize="180" />
+
+                        </div>
+                    }
+
+                </section>
+
+
+                <!-- ================================= -->
+                <!-- INNATA - KILLER                   -->
+                <!-- ================================= -->
+
+                @if (selectedMode == "Killer" &&
+                     result.KillerInnateSkill != null)
+                {
+                    <section class="result-section">
+
+                        <div class="section-header">
+
+                            <h3>HABILIDAD INNATA</h3>
+
+                        </div>
+
+
+                        <div class="result-card two-v8-skill-card">
+
+                            <ItemTooltip
+                                Image="@result.KillerInnateSkill.Image"
+                                Name="@result.KillerInnateSkill.Name"
+                                Description="@result.KillerInnateSkill.Description"
+                                ImageSize="120" />
+
+
+                        </div>
+
+                    </section>
+                }
+
+
+                <!-- ================================= -->
+                <!-- HABILIDADES                        -->
+                <!-- ================================= -->
+
+                <section class="result-section">
+
+                    <div class="section-header">
+
+                        @if (selectedMode == "Survivor")
+                        {
+                            <h3>HABILIDADES</h3>
+                        }
+                        else
+                        {
+                            <h3>HABILIDADES DE CLASE</h3>
+                        }
+
+                    </div>
+
+
+                    <div class="two-v8-skill-container @(result.Skills.Count == 2 ? "two-skills" : "")">
+
+                        @foreach (TwoV8Skill skill in result.Skills)
+                        {
+                            <div class="result-card two-v8-skill-card">
+
+                                <ItemTooltip
+                                    Image="@skill.Image"
+                                    Name="@skill.Name"
+                                    Description="@skill.Description"
+                                    ImageSize="120" />
+
+                            </div>
+                        }
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================================= -->
+                <!-- RANDOMIZAR                         -->
+                <!-- ================================= -->
+
+                <button
+                    class="randomize-button"
+                    @onclick="Randomize">
+
+                    🎲 RANDOMIZAR
+                    @(selectedMode == "Survivor"
+                        ? "SURVIVOR"
+                        : "KILLER")
+
+                </button>
+
+            </div>
+        }
+    }
+
+</div>
+
+
+@code
+{
+    private RandomizerEngine? randomizer;
+
+    private TwoV8Result? result;
+
+    private string selectedMode = "Survivor";
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        WebDataLoader loader = new(Http);
+
+
+        var config =
+            await loader.LoadConfig();
+
+        var survivors =
+            await loader.LoadSurvivors();
+
+        var killers =
+            await loader.LoadKillers();
+
+        var survivorSkins =
+            await loader.LoadSurvivorSkins();
+
+        var killerSkins =
+            await loader.LoadKillerSkins();
+
+        var survivorPerks =
+            await loader.LoadSurvivorPerks();
+
+        var killerPerks =
+            await loader.LoadKillerPerks();
+
+        var items =
+            await loader.LoadItems();
+
+        var addons =
+            await loader.LoadAddons();
+
+        var offerings =
+            await loader.LoadOfferings();
+
+        var twoV8Classes =
+            await loader.LoadTwoV8Classes();
+
+        var twoV8Skills =
+            await loader.LoadTwoV8Skills();
+
+        var twoV8Config =
+            await loader.LoadTwoV8Config();
+
+
+        randomizer = new RandomizerEngine(
+            survivors,
+            killers,
+            survivorSkins,
+            killerSkins,
+            survivorPerks,
+            killerPerks,
+            items,
+            addons,
+            offerings,
+            config,
+            twoV8Classes,
+            twoV8Skills,
+            twoV8Config
+        );
+
+
+        Randomize();
+    }
+
+
+    private void SelectSurvivor()
+    {
+        selectedMode = "Survivor";
+
+        Randomize();
+    }
+
+
+    private void SelectKiller()
+    {
+        selectedMode = "Killer";
+
+        Randomize();
+    }
+
+
+    private void Randomize()
+    {
+        if (randomizer == null)
+        {
+            return;
+        }
+
+
+        if (selectedMode == "Survivor")
+        {
+            result =
+                randomizer.RandomizeTwoV8SurvivorResult();
+        }
+        else
+        {
+            result =
+                randomizer.RandomizeTwoV8KillerResult();
+        }
+    }
+
+
+    private void RerollCharacter()
+    {
+        if (randomizer == null ||
+            result == null)
+        {
+            return;
+        }
+
+
+        if (selectedMode == "Survivor")
+        {
+            randomizer.RerollTwoV8Survivor(result);
+        }
+        else
+        {
+            randomizer.RerollTwoV8Killer(result);
+        }
+    }
+
+
+    private void RerollClass()
+    {
+        if (randomizer == null ||
+            result == null)
+        {
+            return;
+        }
+
+
+        if (selectedMode == "Survivor")
+        {
+            randomizer.RerollTwoV8SurvivorClass(result);
+        }
+        else
+        {
+            randomizer.RerollTwoV8KillerClass(result);
+        }
+    }
+
+}

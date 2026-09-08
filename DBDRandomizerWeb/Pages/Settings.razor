@@ -5,12 +5,15 @@
 @using DBDRandomizerWeb.Services
 @using DBDRandomizer.Randomizer
 
-<h1>CONFIGURACIÓN</h1>
+<div class="settings-header">
 
-<p class="settings-description">
-    Desde aquí puedes configurar qué elementos puede utilizar
-    el randomizador.
-</p>
+    <h1>CONFIGURACIÓN</h1>
+
+    <p>
+        Personalizá los elementos que puede utilizar el randomizador.
+    </p>
+
+</div>
 
 @if (loading)
 {
@@ -97,6 +100,156 @@ else
         </div>
     </details>
 
+    <!-- ========================= -->
+    <!-- EMPTY SLOTS -->
+    <!-- ========================= -->
+    <details class="settings-section">
+
+        <summary class="settings-section-summary">
+
+            <div>
+
+                <h2>Empty Slots</h2>
+
+                <p>
+                    Configura la probabilidad de que un elemento salga vacío.
+                </p>
+
+            </div>
+
+        </summary>
+
+        <div class="settings-section-content">
+
+            <div class="empty-slot-settings">
+
+                <div class="empty-slot-setting">
+
+                    <label for="perk-empty-chance">
+                        Perks vacías
+                    </label>
+
+                    <div class="empty-slot-control">
+
+                        <input
+                            id="perk-empty-chance"
+                            type="range"
+                            min="0"
+                            max="100"
+                            step="1"
+                            @bind="config.PerkEmptyChance" />
+
+                        <input
+                            type="number"
+                            min="0"
+                            max="100"
+                            step="1"
+                            @bind="config.PerkEmptyChance" />
+
+                        <span>%</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="empty-slot-setting">
+
+                    <label for="item-empty-chance">
+                        Item vacío
+                    </label>
+
+                    <div class="empty-slot-control">
+
+                        <input
+                            id="item-empty-chance"
+                            type="range"
+                            min="0"
+                            max="100"
+                            step="1"
+                            @bind="config.ItemEmptyChance" />
+
+                        <input
+                            type="number"
+                            min="0"
+                            max="100"
+                            step="1"
+                            @bind="config.ItemEmptyChance" />
+
+                        <span>%</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="empty-slot-setting">
+
+                    <label for="addon-empty-chance">
+                        Add-ons vacíos
+                    </label>
+
+                    <div class="empty-slot-control">
+
+                        <input
+                            id="addon-empty-chance"
+                            type="range"
+                            min="0"
+                            max="100"
+                            step="1"
+                            @bind="config.AddonEmptyChance" />
+
+                        <input
+                            type="number"
+                            min="0"
+                            max="100"
+                            step="1"
+                            @bind="config.AddonEmptyChance" />
+
+                        <span>%</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="empty-slot-setting">
+
+                    <label for="offering-empty-chance">
+                        Offering vacío
+                    </label>
+
+                    <div class="empty-slot-control">
+
+                        <input
+                            id="offering-empty-chance"
+                            type="range"
+                            min="0"
+                            max="100"
+                            step="1"
+                            @bind="config.OfferingEmptyChance" />
+
+                        <input
+                            type="number"
+                            min="0"
+                            max="100"
+                            step="1"
+                            @bind="config.OfferingEmptyChance" />
+
+                        <span>%</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </details>
+
+
+
         <!-- ========================= -->
         <!-- SURVIVORS -->
         <!-- ========================= -->
@@ -138,20 +291,33 @@ else
                         @bind:event="oninput" />
                 </div>
 
-                <div class="settings-list">
+                <div class="settings-character-list">
 
                     @foreach (Survivor survivor in FilteredSurvivors)
                     {
-                        <label class="settings-item">
+                        <label class="settings-character-item">
 
                             <input
                                 type="checkbox"
                                 checked="@IsSurvivorEnabled(survivor.Id)"
                                 @onchange="() => ToggleSurvivor(survivor.Id)" />
 
-                            <span>
-                                @survivor.Name
-                            </span>
+                            <img
+                                class="settings-character-image"
+                                src="@survivor.Image"
+                                alt="@survivor.Name" />
+
+                            <div class="settings-visual-item-info">
+
+                                <span class="settings-visual-item-name">
+                                    @survivor.Name
+                                </span>
+
+                                <span class="settings-visual-item-subtitle">
+                                    Survivor
+                                </span>
+
+                            </div>
 
                         </label>
                     }
@@ -203,20 +369,33 @@ else
                         @bind:event="oninput" />
                 </div>
 
-                <div class="settings-list">
+                <div class="settings-character-list">
 
                     @foreach (Killer killer in FilteredKillers)
                     {
-                        <label class="settings-item">
+                        <label class="settings-character-item">
 
                             <input
                                 type="checkbox"
                                 checked="@IsKillerEnabled(killer.Id)"
                                 @onchange="() => ToggleKiller(killer.Id)" />
 
-                            <span>
-                                @killer.Name
-                            </span>
+                            <img
+                                class="settings-character-image"
+                                src="@killer.Image"
+                                alt="@killer.Name" />
+
+                            <div class="settings-visual-item-info">
+
+                                <span class="settings-visual-item-name">
+                                    @killer.Name
+                                </span>
+
+                                <span class="settings-visual-item-subtitle">
+                                    Killer
+                                </span>
+
+                            </div>
 
                         </label>
                     }
@@ -326,17 +505,29 @@ else
                                                             )
                                                         )
                                                         {
-                                                            <label class="settings-item">
+                                                            <label class="skin-visual-item">
 
                                                                 <input
                                                                     type="checkbox"
                                                                     checked="@IsSkinEnabled(skin.Id)"
-                                                                    @onchange="
-                                                                        () => ToggleSkin(skin.Id)" />
+                                                                    @onchange="() => ToggleSkin(skin.Id)" />
 
-                                                                <span>
-                                                                    @skin.Name
-                                                                </span>
+                                                                <img
+                                                                    class="settings-skin-image"
+                                                                    src="@skin.Image"
+                                                                    alt="@skin.Name" />
+
+                                                                <div class="settings-visual-item-info">
+
+                                                                    <span class="settings-visual-item-name">
+                                                                        @skin.Name
+                                                                    </span>
+
+                                                                    <span class="settings-visual-item-subtitle">
+                                                                        @skin.Part
+                                                                    </span>
+
+                                                                </div>
 
                                                             </label>
                                                         }
@@ -361,17 +552,36 @@ else
                                         {
                                             <div class="skin-outfit">
 
-                                                <label class="settings-item">
+                                                <label class="skin-visual-item">
 
                                                     <input
                                                         type="checkbox"
                                                         checked="@IsOutfitEnabled(outfitGroup)"
-                                                        @onchange="
-                                                            () => ToggleOutfit(outfitGroup)" />
+                                                        @onchange="() => ToggleOutfit(outfitGroup)" />
 
-                                                    <span>
-                                                        @GetOutfitName(outfitGroup)
-                                                    </span>
+                                                    @{
+                                                        SkinPiece? previewSkin = outfitGroup.FirstOrDefault();
+                                                    }
+
+                                                    @if (previewSkin != null)
+                                                    {
+                                                        <img
+                                                            class="settings-skin-image"
+                                                            src="@previewSkin.Image"
+                                                            alt="@GetOutfitName(outfitGroup)" />
+                                                    }
+
+                                                    <div class="settings-visual-item-info">
+
+                                                        <span class="settings-visual-item-name">
+                                                            @GetOutfitName(outfitGroup)
+                                                        </span>
+
+                                                        <span class="settings-visual-item-subtitle">
+                                                            Outfit completo
+                                                        </span>
+
+                                                    </div>
 
                                                 </label>
 
@@ -491,17 +701,28 @@ else
                                                             )
                                                         )
                                                         {
-                                                            <label class="settings-item">
+                                                            <label class="skin-visual-item">
 
                                                                 <input
                                                                     type="checkbox"
                                                                     checked="@IsKillerSkinEnabled(skin.Id)"
-                                                                    @onchange="
-                                                                        () => ToggleKillerSkin(skin.Id)" />
+                                                                    @onchange="() => ToggleKillerSkin(skin.Id)" />
+                                                                <img
+                                                                    class="settings-skin-image"
+                                                                    src="@skin.Image"
+                                                                    alt="@skin.Name" />
 
-                                                                <span>
-                                                                    @skin.Name
-                                                                </span>
+                                                                <div class="settings-visual-item-info">
+
+                                                                    <span class="settings-visual-item-name">
+                                                                        @skin.Name
+                                                                    </span>
+
+                                                                    <span class="settings-visual-item-subtitle">
+                                                                        @skin.Part
+                                                                    </span>
+
+                                                                </div>
 
                                                             </label>
                                                         }
@@ -526,17 +747,36 @@ else
                                         {
                                             <div class="skin-outfit">
 
-                                                <label class="settings-item">
+                                                <label class="skin-visual-item">
 
                                                     <input
                                                         type="checkbox"
                                                         checked="@IsKillerOutfitEnabled(outfitGroup)"
-                                                        @onchange="
-                                                            () => ToggleKillerOutfit(outfitGroup)" />
+                                                        @onchange="() => ToggleKillerOutfit(outfitGroup)" />
 
-                                                    <span>
-                                                        @GetOutfitName(outfitGroup)
-                                                    </span>
+                                                    @{
+                                                        SkinPiece? previewSkin = outfitGroup.FirstOrDefault();
+                                                    }
+
+                                                    @if (previewSkin != null)
+                                                    {
+                                                        <img
+                                                            class="settings-skin-image"
+                                                            src="@previewSkin.Image"
+                                                            alt="@GetOutfitName(outfitGroup)" />
+                                                    }
+
+                                                    <div class="settings-visual-item-info">
+
+                                                        <span class="settings-visual-item-name">
+                                                            @GetOutfitName(outfitGroup)
+                                                        </span>
+
+                                                        <span class="settings-visual-item-subtitle">
+                                                            Outfit completo
+                                                        </span>
+
+                                                    </div>
 
                                                 </label>
 
@@ -601,20 +841,67 @@ else
                         @bind:event="oninput" />
                 </div>
 
-                <div class="settings-list">
+                <div class="settings-perk-list">
 
                     @foreach (Perk perk in FilteredSurvivorPerks)
                     {
-                        <label class="settings-item">
+                        <label class="settings-perk-item">
 
                             <input
                                 type="checkbox"
                                 checked="@IsSurvivorPerkEnabled(perk.Id)"
                                 @onchange="() => ToggleSurvivorPerk(perk.Id)" />
 
-                            <span>
-                                @perk.Name
-                            </span>
+                            <img
+                                class="settings-perk-image"
+                                src="@perk.Image"
+                                alt="@perk.Name" />
+
+                            <div class="settings-visual-item-info">
+
+                                <span class="settings-visual-item-name">
+                                    @perk.Name
+                                </span>
+
+                                @if (perk.CharacterId.HasValue)
+                                {
+                                    Survivor? owner = survivors.FirstOrDefault(
+                                        s => s.Id == perk.CharacterId.Value);
+
+                                    @if (owner != null)
+                                    {
+                                        <span class="settings-visual-item-subtitle">
+                                            @owner.Name
+                                        </span>
+                                    }
+                                }
+
+                            </div>
+
+                            <div class="settings-tooltip">
+
+                                <strong>
+                                    @perk.Name
+                                </strong>
+
+                                @if (perk.CharacterId.HasValue)
+                                {
+                                    Survivor? owner = survivors.FirstOrDefault(
+                                        s => s.Id == perk.CharacterId.Value);
+
+                                    @if (owner != null)
+                                    {
+                                        <span class="settings-tooltip-character">
+                                            @owner.Name
+                                        </span>
+                                    }
+                                }
+
+                                <p>
+                                    @((MarkupString)perk.Description)
+                                </p>
+
+                            </div>
 
                         </label>
                     }
@@ -669,20 +956,67 @@ else
 
                 </div>
 
-                <div class="settings-list">
+                <div class="settings-perk-list">
 
                     @foreach (Perk perk in FilteredKillerPerks)
                     {
-                        <label class="settings-item">
+                        <label class="settings-perk-item">
 
                             <input
                                 type="checkbox"
                                 checked="@IsKillerPerkEnabled(perk.Id)"
                                 @onchange="() => ToggleKillerPerk(perk.Id)" />
 
-                            <span>
-                                @perk.Name
-                            </span>
+                            <img
+                                class="settings-perk-image"
+                                src="@perk.Image"
+                                alt="@perk.Name" />
+
+                            <div class="settings-visual-item-info">
+
+                                <span class="settings-visual-item-name">
+                                    @perk.Name
+                                </span>
+
+                                @if (perk.CharacterId.HasValue)
+                                {
+                                    Killer? owner = killers.FirstOrDefault(
+                                        k => k.Id == perk.CharacterId.Value);
+
+                                    @if (owner != null)
+                                    {
+                                        <span class="settings-visual-item-subtitle">
+                                            @owner.Name
+                                        </span>
+                                    }
+                                }
+
+                            </div>
+
+                            <div class="settings-tooltip">
+
+                                <strong>
+                                    @perk.Name
+                                </strong>
+
+                                @if (perk.CharacterId.HasValue)
+                                {
+                                    Killer? owner = killers.FirstOrDefault(
+                                        k => k.Id == perk.CharacterId.Value);
+
+                                    @if (owner != null)
+                                    {
+                                        <span class="settings-tooltip-character">
+                                            @owner.Name
+                                        </span>
+                                    }
+                                }
+
+                                <p>
+                                    @((MarkupString)perk.Description)
+                                </p>
+
+                            </div>
 
                         </label>
                     }
@@ -766,17 +1100,45 @@ else
 
                                     @foreach (Addon addon in itemAddons)
                                     {
-                                        <label class="settings-item">
+                                        <label class="settings-visual-item">
 
                                             <input
                                                 type="checkbox"
                                                 checked="@IsAddonEnabled(addon.Id)"
-                                                @onchange="
-                                                    () => ToggleAddon(addon.Id)" />
+                                                @onchange="() => ToggleAddon(addon.Id)" />
 
-                                            <span>
-                                                @addon.Name
-                                            </span>
+                                            <img
+                                                class="settings-item-image"
+                                                src="@addon.Image"
+                                                alt="@addon.Name" />
+
+                                            <div class="settings-visual-item-info">
+
+                                                <span class="settings-visual-item-name">
+                                                    @addon.Name
+                                                </span>
+
+                                                <span class="settings-visual-item-subtitle">
+                                                    @addon.Rarity
+                                                </span>
+
+                                            </div>
+
+                                            <div class="settings-tooltip">
+
+                                                <strong>
+                                                    @addon.Name
+                                                </strong>
+
+                                                <span class="settings-tooltip-character">
+                                                    @addon.Rarity
+                                                </span>
+
+                                                <p>
+                                                    @((MarkupString)addon.Description)
+                                                </p>
+
+                                            </div>
 
                                         </label>
                                     }
@@ -866,17 +1228,45 @@ else
 
                                     @foreach (Addon addon in killerAddons)
                                     {
-                                        <label class="settings-item">
+                                        <label class="settings-visual-item">
 
                                             <input
                                                 type="checkbox"
                                                 checked="@IsAddonEnabled(addon.Id)"
-                                                @onchange="
-                                                    () => ToggleAddon(addon.Id)" />
+                                                @onchange="() => ToggleAddon(addon.Id)" />
 
-                                            <span>
-                                                @addon.Name
-                                            </span>
+                                            <img
+                                                class="settings-item-image"
+                                                src="@addon.Image"
+                                                alt="@addon.Name" />
+
+                                            <div class="settings-visual-item-info">
+
+                                                <span class="settings-visual-item-name">
+                                                    @addon.Name
+                                                </span>
+
+                                                <span class="settings-visual-item-subtitle">
+                                                    @addon.Rarity
+                                                </span>
+
+                                            </div>
+
+                                            <div class="settings-tooltip">
+
+                                                <strong>
+                                                    @addon.Name
+                                                </strong>
+
+                                                <span class="settings-tooltip-character">
+                                                    @addon.Rarity
+                                                </span>
+
+                                                <p>
+                                                    @((MarkupString)addon.Description)
+                                                </p>
+
+                                            </div>
 
                                         </label>
                                     }
@@ -945,16 +1335,45 @@ else
 
                     @foreach (Item item in FilteredItems)
                     {
-                        <label class="settings-item">
+                        <label class="settings-visual-item">
 
                             <input
                                 type="checkbox"
                                 checked="@IsItemEnabled(item.Id)"
                                 @onchange="() => ToggleItem(item.Id)" />
 
-                            <span>
-                                @item.Name
-                            </span>
+                            <img
+                                class="settings-item-image"
+                                src="@item.Image"
+                                alt="@item.Name" />
+
+                            <div class="settings-visual-item-info">
+
+                                <span class="settings-visual-item-name">
+                                    @item.Name
+                                </span>
+
+                                <span class="settings-visual-item-subtitle">
+                                    @item.Rarity
+                                </span>
+
+                            </div>
+
+                            <div class="settings-tooltip">
+
+                                <strong>
+                                    @item.Name
+                                </strong>
+
+                                <span class="settings-tooltip-character">
+                                    @item.Rarity
+                                </span>
+
+                                <p>
+                                    @((MarkupString)item.Description)
+                                </p>
+
+                            </div>
 
                         </label>
                     }
@@ -1022,16 +1441,45 @@ else
                     @foreach (Offering offering in FilteredOfferings)
                     {
 
-                        <label class="settings-item">
+                        <label class="settings-visual-item">
 
                             <input
                                 type="checkbox"
                                 checked="@IsOfferingEnabled(offering.Id)"
                                 @onchange="() => ToggleOffering(offering.Id)" />
 
-                            <span>
-                                @offering.Name
-                            </span>
+                            <img
+                                class="settings-item-image"
+                                src="@offering.Image"
+                                alt="@offering.Name" />
+
+                            <div class="settings-visual-item-info">
+
+                                <span class="settings-visual-item-name">
+                                    @offering.Name
+                                </span>
+
+                                <span class="settings-visual-item-subtitle">
+                                    @offering.Rarity
+                                </span>
+
+                            </div>
+
+                            <div class="settings-tooltip">
+
+                                <strong>
+                                    @offering.Name
+                                </strong>
+
+                                <span class="settings-tooltip-character">
+                                    @offering.Role · @offering.Rarity
+                                </span>
+
+                                <p>
+                                    @((MarkupString)offering.Description)
+                                </p>
+
+                            </div>
 
                         </label>
 
@@ -1065,6 +1513,13 @@ else
         }
 
         <div class="settings-save-container">
+
+            @if (configSavedSuccessfully)
+            {
+                <div class="settings-save-success">
+                    ✓ CONFIGURACIÓN GUARDADA CORRECTAMENTE
+                </div>
+            }
 
             <button
                 class="settings-save-button"
@@ -1109,6 +1564,7 @@ else
     private string survivorSearch = "";
     private string killerSearch = "";
     private List<string> validationErrors = new();
+    private bool configSavedSuccessfully = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -1146,6 +1602,24 @@ else
 
     }
 
+    private static string NormalizeSearch(string text)
+    {
+        if (string.IsNullOrWhiteSpace(text))
+        {
+            return "";
+        }
+
+        return string.Concat(
+            text
+                .Normalize(System.Text.NormalizationForm.FormD)
+                .Where(c =>
+                    System.Globalization.CharUnicodeInfo
+                        .GetUnicodeCategory(c)
+                    != System.Globalization.UnicodeCategory.NonSpacingMark)
+        )
+        .Normalize(System.Text.NormalizationForm.FormC)
+        .ToLowerInvariant();
+    }
 
     // =========================================================
     // SURVIVORS
@@ -1239,7 +1713,7 @@ else
     {
         get
         {
-            string search = survivorSkinSearch.Trim();
+            string search = NormalizeSearch(survivorSkinSearch);
 
             if (string.IsNullOrWhiteSpace(search))
             {
@@ -1247,17 +1721,11 @@ else
             }
 
             return survivors.Where(survivor =>
-                survivor.Name.Contains(
-                    search,
-                    StringComparison.OrdinalIgnoreCase
-                )
+                NormalizeSearch(survivor.Name).Contains(search)
                 ||
                 survivorSkins.Any(skin =>
                     skin.CharacterId == survivor.Id &&
-                    skin.Name.Contains(
-                        search,
-                        StringComparison.OrdinalIgnoreCase
-                    )
+                    NormalizeSearch(skin.Name).Contains(search)
                 )
             );
         }
@@ -1267,7 +1735,7 @@ else
     {
         get
         {
-            string search = killerSkinSearch.Trim();
+            string search = NormalizeSearch(killerSkinSearch);
 
             if (string.IsNullOrWhiteSpace(search))
             {
@@ -1275,57 +1743,47 @@ else
             }
 
             return killers.Where(killer =>
-                killer.Name.Contains(
-                    search,
-                    StringComparison.OrdinalIgnoreCase
-                )
+                NormalizeSearch(killer.Name).Contains(search)
                 ||
                 killerSkins.Any(skin =>
                     skin.CharacterId == killer.Id &&
-                    skin.Name.Contains(
-                        search,
-                        StringComparison.OrdinalIgnoreCase
-                    )
+                    NormalizeSearch(skin.Name).Contains(search)
                 )
             );
         }
     }
 
-    private IEnumerable<IGrouping<int, SkinPiece>> GetVisibleKillerOutfits(
-        int killerId)
+    private IEnumerable<IGrouping<int, SkinPiece>> GetVisibleKillerOutfits(int killerId)
     {
         IEnumerable<SkinPiece> skins = killerSkins
             .Where(skin => skin.CharacterId == killerId);
 
-        string search = killerSkinSearch.Trim();
+        string search = NormalizeSearch(killerSkinSearch);
 
-        if (!string.IsNullOrWhiteSpace(search))
+        if (string.IsNullOrWhiteSpace(search))
         {
-            bool characterMatches = killers
-                .First(k => k.Id == killerId)
-                .Name
-                .Contains(
-                    search,
-                    StringComparison.OrdinalIgnoreCase
-                );
+            return skins
+                .GroupBy(skin => skin.OutfitId)
+                .OrderBy(group => group.Key);
+        }
 
-            if (!characterMatches)
-            {
-                List<int> matchingOutfitIds = skins
-                    .Where(skin =>
-                        skin.Name.Contains(
-                            search,
-                            StringComparison.OrdinalIgnoreCase
-                        )
-                    )
-                    .Select(skin => skin.OutfitId)
-                    .Distinct()
-                    .ToList();
+        bool characterMatches = NormalizeSearch(
+            killers.First(k => k.Id == killerId).Name
+        ).Contains(search);
 
-                skins = skins.Where(skin =>
-                    matchingOutfitIds.Contains(skin.OutfitId)
-                );
-            }
+        if (!characterMatches)
+        {
+            List<int> matchingOutfitIds = skins
+                .Where(skin =>
+                    NormalizeSearch(skin.Name).Contains(search)
+                )
+                .Select(skin => skin.OutfitId)
+                .Distinct()
+                .ToList();
+
+            skins = skins.Where(skin =>
+                matchingOutfitIds.Contains(skin.OutfitId)
+            );
         }
 
         return skins
@@ -1378,44 +1836,38 @@ else
         }
     }
 
-    private IEnumerable<IGrouping<int, SkinPiece>> GetVisibleOutfits(int survivorId)
+    private IEnumerable<IGrouping<int, SkinPiece>> GetVisibleOutfits(
+        int survivorId)
     {
         IEnumerable<SkinPiece> skins = survivorSkins
             .Where(skin => skin.CharacterId == survivorId);
 
-        string search = survivorSkinSearch.Trim();
+        string search = NormalizeSearch(survivorSkinSearch);
 
-        if (!string.IsNullOrWhiteSpace(search))
+        if (string.IsNullOrWhiteSpace(search))
         {
-            bool characterMatches = survivors
-                .First(s => s.Id == survivorId)
-                .Name
-                .Contains(
-                    search,
-                    StringComparison.OrdinalIgnoreCase
-                );
+            return skins
+                .GroupBy(skin => skin.OutfitId)
+                .OrderBy(group => group.Key);
+        }
 
-            if (!characterMatches)
-            {
-                // Primero encontramos los outfits que tienen
-                // al menos una pieza que coincide con la búsqueda.
-                List<int> matchingOutfitIds = skins
-                    .Where(skin =>
-                        skin.Name.Contains(
-                            search,
-                            StringComparison.OrdinalIgnoreCase
-                        )
-                    )
-                    .Select(skin => skin.OutfitId)
-                    .Distinct()
-                    .ToList();
+        bool characterMatches = NormalizeSearch(
+            survivors.First(s => s.Id == survivorId).Name
+        ).Contains(search);
 
-                // Después mostramos TODAS las piezas
-                // pertenecientes a esos outfits.
-                skins = skins.Where(skin =>
-                    matchingOutfitIds.Contains(skin.OutfitId)
-                );
-            }
+        if (!characterMatches)
+        {
+            List<int> matchingOutfitIds = skins
+                .Where(skin =>
+                    NormalizeSearch(skin.Name).Contains(search)
+                )
+                .Select(skin => skin.OutfitId)
+                .Distinct()
+                .ToList();
+
+            skins = skins.Where(skin =>
+                matchingOutfitIds.Contains(skin.OutfitId)
+            );
         }
 
         return skins
@@ -1599,7 +2051,7 @@ else
     {
         get
         {
-            string search = survivorPerkSearch.Trim();
+            string search = NormalizeSearch(survivorPerkSearch);
 
             if (string.IsNullOrWhiteSpace(search))
             {
@@ -1608,24 +2060,18 @@ else
 
             return survivorPerks.Where(perk =>
             {
-                // Buscar por nombre de perk
-                if (perk.Name.Contains(
-                    search,
-                    StringComparison.OrdinalIgnoreCase))
+                if (NormalizeSearch(perk.Name).Contains(search))
                 {
                     return true;
                 }
 
-                // Buscar por nombre del Survivor
                 if (perk.CharacterId.HasValue)
                 {
                     Survivor? survivor = survivors.FirstOrDefault(s =>
                         s.Id == perk.CharacterId.Value);
 
                     if (survivor != null &&
-                        survivor.Name.Contains(
-                            search,
-                            StringComparison.OrdinalIgnoreCase))
+                        NormalizeSearch(survivor.Name).Contains(search))
                     {
                         return true;
                     }
@@ -1644,7 +2090,7 @@ else
     {
         get
         {
-            string search = killerPerkSearch.Trim();
+            string search = NormalizeSearch(killerPerkSearch);
 
             if (string.IsNullOrWhiteSpace(search))
             {
@@ -1653,24 +2099,18 @@ else
 
             return killerPerks.Where(perk =>
             {
-                // Buscar por nombre de perk
-                if (perk.Name.Contains(
-                    search,
-                    StringComparison.OrdinalIgnoreCase))
+                if (NormalizeSearch(perk.Name).Contains(search))
                 {
                     return true;
                 }
 
-                // Buscar por nombre del Killer
                 if (perk.CharacterId.HasValue)
                 {
                     Killer? killer = killers.FirstOrDefault(k =>
                         k.Id == perk.CharacterId.Value);
 
                     if (killer != null &&
-                        killer.Name.Contains(
-                            search,
-                            StringComparison.OrdinalIgnoreCase))
+                        NormalizeSearch(killer.Name).Contains(search))
                     {
                         return true;
                     }
@@ -1727,7 +2167,7 @@ else
     {
         get
         {
-            string search = itemSearch.Trim();
+            string search = NormalizeSearch(itemSearch);
 
             if (string.IsNullOrWhiteSpace(search))
             {
@@ -1735,34 +2175,32 @@ else
             }
 
             return items.Where(item =>
-                item.Name.Contains(
-                    search,
-                    StringComparison.OrdinalIgnoreCase
-                )
+                NormalizeSearch(item.Name).Contains(search)
             );
         }
     }
 
     private IEnumerable<Addon> SurvivorAddons =>
-        addons.Where(addon =>
-            addon.ItemId.HasValue &&
-            !addon.CharacterId.HasValue);
+    addons.Where(addon =>
+        addon.AddonGroupId.HasValue &&
+        !addon.CharacterId.HasValue);
 
     private IEnumerable<Addon> KillerAddons =>
-        addons.Where(addon =>
-            addon.CharacterId.HasValue &&
-            !addon.ItemId.HasValue);
+    addons.Where(addon =>
+        addon.CharacterId.HasValue &&
+        !addon.AddonGroupId.HasValue);
     
     private IEnumerable<Item> FilteredItemsForSurvivorAddons
     {
         get
         {
-            string search = survivorAddonSearch.Trim();
+            string search = NormalizeSearch(survivorAddonSearch);
 
             IEnumerable<Item> availableItems = items
                 .Where(item =>
+                    item.AddonGroupId.HasValue &&
                     SurvivorAddons.Any(addon =>
-                        addon.ItemId == item.Id
+                        addon.AddonGroupId == item.AddonGroupId
                     )
                 );
 
@@ -1772,17 +2210,11 @@ else
             }
 
             return availableItems.Where(item =>
-                item.Name.Contains(
-                    search,
-                    StringComparison.OrdinalIgnoreCase
-                )
+                NormalizeSearch(item.Name).Contains(search)
                 ||
                 SurvivorAddons.Any(addon =>
-                    addon.ItemId == item.Id &&
-                    addon.Name.Contains(
-                        search,
-                        StringComparison.OrdinalIgnoreCase
-                    )
+                    addon.AddonGroupId == item.AddonGroupId &&
+                    NormalizeSearch(addon.Name).Contains(search)
                 )
             );
         }
@@ -1790,22 +2222,25 @@ else
 
     private IEnumerable<Addon> GetVisibleSurvivorAddons(int itemId)
     {
-        IEnumerable<Addon> result = SurvivorAddons
-            .Where(addon => addon.ItemId == itemId);
+        Item item = items.First(i => i.Id == itemId);
 
-        string search = survivorAddonSearch.Trim();
+        if (!item.AddonGroupId.HasValue)
+        {
+            return Enumerable.Empty<Addon>();
+        }
+
+        IEnumerable<Addon> result = SurvivorAddons
+            .Where(addon => addon.AddonGroupId == item.AddonGroupId);
+
+        string search = NormalizeSearch(survivorAddonSearch);
 
         if (string.IsNullOrWhiteSpace(search))
         {
             return result;
         }
 
-        Item item = items.First(i => i.Id == itemId);
-
-        bool itemMatches = item.Name.Contains(
-            search,
-            StringComparison.OrdinalIgnoreCase
-        );
+        bool itemMatches =
+            NormalizeSearch(item.Name).Contains(search);
 
         if (itemMatches)
         {
@@ -1813,10 +2248,7 @@ else
         }
 
         return result.Where(addon =>
-            addon.Name.Contains(
-                search,
-                StringComparison.OrdinalIgnoreCase
-            )
+            NormalizeSearch(addon.Name).Contains(search)
         );
     }
 
@@ -1824,7 +2256,7 @@ else
     {
         get
         {
-            string search = killerAddonSearch.Trim();
+            string search = NormalizeSearch(killerAddonSearch);
 
             IEnumerable<Killer> availableKillers = killers
                 .Where(killer =>
@@ -1839,17 +2271,11 @@ else
             }
 
             return availableKillers.Where(killer =>
-                killer.Name.Contains(
-                    search,
-                    StringComparison.OrdinalIgnoreCase
-                )
+                NormalizeSearch(killer.Name).Contains(search)
                 ||
                 KillerAddons.Any(addon =>
                     addon.CharacterId == killer.Id &&
-                    addon.Name.Contains(
-                        search,
-                        StringComparison.OrdinalIgnoreCase
-                    )
+                    NormalizeSearch(addon.Name).Contains(search)
                 )
             );
         }
@@ -1860,7 +2286,7 @@ else
         IEnumerable<Addon> result = KillerAddons
             .Where(addon => addon.CharacterId == killerId);
 
-        string search = killerAddonSearch.Trim();
+        string search = NormalizeSearch(killerAddonSearch);
 
         if (string.IsNullOrWhiteSpace(search))
         {
@@ -1869,10 +2295,8 @@ else
 
         Killer killer = killers.First(k => k.Id == killerId);
 
-        bool killerMatches = killer.Name.Contains(
-            search,
-            StringComparison.OrdinalIgnoreCase
-        );
+        bool killerMatches =
+            NormalizeSearch(killer.Name).Contains(search);
 
         if (killerMatches)
         {
@@ -1880,10 +2304,7 @@ else
         }
 
         return result.Where(addon =>
-            addon.Name.Contains(
-                search,
-                StringComparison.OrdinalIgnoreCase
-            )
+            NormalizeSearch(addon.Name).Contains(search)
         );
     }
 
@@ -1995,7 +2416,7 @@ else
     {
         get
         {
-            string search = offeringSearch.Trim();
+            string search = NormalizeSearch(offeringSearch);
 
             if (string.IsNullOrWhiteSpace(search))
             {
@@ -2003,10 +2424,7 @@ else
             }
 
             return offerings.Where(offering =>
-                offering.Name.Contains(
-                    search,
-                    StringComparison.OrdinalIgnoreCase
-                )
+                NormalizeSearch(offering.Name).Contains(search)
             );
         }
     }
@@ -2019,7 +2437,7 @@ else
     {
         get
         {
-            string search = survivorSearch.Trim();
+            string search = NormalizeSearch(survivorSearch);
 
             if (string.IsNullOrWhiteSpace(search))
             {
@@ -2027,10 +2445,7 @@ else
             }
 
             return survivors.Where(survivor =>
-                survivor.Name.Contains(
-                    search,
-                    StringComparison.OrdinalIgnoreCase
-                )
+                NormalizeSearch(survivor.Name).Contains(search)
             );
         }
     }
@@ -2043,7 +2458,7 @@ else
     {
         get
         {
-            string search = killerSearch.Trim();
+            string search = NormalizeSearch(killerSearch);
 
             if (string.IsNullOrWhiteSpace(search))
             {
@@ -2051,10 +2466,7 @@ else
             }
 
             return killers.Where(killer =>
-                killer.Name.Contains(
-                    search,
-                    StringComparison.OrdinalIgnoreCase
-                )
+                NormalizeSearch(killer.Name).Contains(search)
             );
         }
     }
@@ -2066,6 +2478,8 @@ else
     */
     private async Task SaveConfig()
     {
+        configSavedSuccessfully = false;
+
         ValidateConfig();
 
         if (validationErrors.Count > 0)
@@ -2074,6 +2488,8 @@ else
         }
 
         await LocalStorage.SaveConfig(config);
+
+        configSavedSuccessfully = true;
     }
 
 /* 

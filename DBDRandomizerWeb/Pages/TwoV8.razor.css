@@ -1,0 +1,541 @@
+/* =========================================================
+   PÁGINA PRINCIPAL
+   ========================================================= */
+
+.randomizer-page {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 40px 35px 60px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.randomizer-header {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    padding: 20px 0 25px;
+    text-align: center;
+    border-bottom: 1px solid #2f2f2f;
+}
+
+.randomizer-header h1 {
+    margin: 0;
+    color: #eeeeee;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.randomizer-header p {
+    margin: 8px 0 0;
+    color: #777777;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.loading {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    background: #171717;
+    border: 1px solid #303030;
+    color: #888888;
+}
+
+.loading p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SELECTOR DE MODO
+   ========================================================= */
+
+.mode-selector {
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    display: flex;
+    gap: 10px;
+}
+
+.mode-button {
+    flex: 1;
+    min-height: 52px;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    border: 1px solid #383838;
+
+    background:
+        linear-gradient(
+            145deg,
+            #202020,
+            #161616
+        );
+
+    color: #888888;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.mode-button:hover {
+    background: #292929;
+    border-color: #555555;
+    color: #eeeeee;
+    transform: translateY(-1px);
+}
+
+
+/* Survivor */
+
+.mode-button.survivor.active {
+    background:
+        linear-gradient(
+            145deg,
+            #164a52,
+            #102f34
+        );
+
+    border-color: #3fa9b8;
+    color: #8de8f5;
+
+    box-shadow:
+        0 0 15px rgba(63, 169, 184, 0.15);
+}
+
+
+/* Killer */
+
+.mode-button.killer.active {
+    background:
+        linear-gradient(
+            145deg,
+            #521d1d,
+            #321313
+        );
+
+    border-color: #a83b3b;
+    color: #ef7777;
+
+    box-shadow:
+        0 0 15px rgba(168, 59, 59, 0.15);
+}
+
+
+/* =========================================================
+   CONTENEDOR DEL RESULTADO
+   ========================================================= */
+
+.result-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            #191919,
+            #121212
+        );
+
+    border: 1px solid #333333;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.45);
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   TÍTULO / PERSONAJE
+   ========================================================= */
+
+.result-title {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 220px;
+
+    margin-bottom: 30px;
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            180deg,
+            #202020,
+            #171717
+        );
+
+    border: 1px solid #303030;
+}
+
+.result-title > .reroll-button {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.result-section {
+    margin-bottom: 25px;
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    background: #171717;
+    border: 1px solid #2d2d2d;
+
+    overflow: visible;
+}
+
+.result-section:last-child {
+    margin-bottom: 0;
+}
+
+.result-section h3 {
+    margin: 0;
+
+    color: #dddddd;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   HEADER DE SECCIÓN
+   ========================================================= */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.section-header h3 {
+    margin: 0;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.result-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100px;
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            #222222,
+            #1a1a1a
+        );
+
+    border: 1px solid #353535;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+
+    z-index: 1;
+}
+
+.result-card:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #292929,
+            #1f1f1f
+        );
+
+    border-color: #505050;
+
+    transform: translateY(-1px);
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   2v8 CLASE
+   ========================================================= */
+
+.two-v8-class-card {
+    max-width: 250px;
+    min-height: 210px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   2v8 HABILIDADES
+   ========================================================= */
+
+.two-v8-skill-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+
+    overflow: visible;
+}
+
+.two-v8-skill-container.two-skills {
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+}
+
+.two-v8-skill-card {
+    min-height: 180px;
+}
+
+.two-v8-skill-card .reroll-button {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+}
+
+
+/* =========================================================
+   BOTÓN REROLL
+   ========================================================= */
+
+.reroll-button {
+    width: 30px;
+    height: 30px;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    border: 1px solid #444444;
+    background: #222222;
+
+    color: #aaaaaa;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.reroll-button:hover {
+    background: #303030;
+    border-color: #666666;
+    color: #ffffff;
+
+    transform: rotate(20deg);
+}
+
+
+/* =========================================================
+   BOTÓN RANDOMIZAR
+   ========================================================= */
+
+.randomize-button {
+    display: block;
+
+    width: 100%;
+    min-height: 55px;
+
+    margin-top: 25px;
+    padding: 0 20px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #555555;
+
+    background:
+        linear-gradient(
+            145deg,
+            #292929,
+            #1b1b1b
+        );
+
+    color: #eeeeee;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.randomize-button:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #353535,
+            #222222
+        );
+
+    border-color: #777777;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.randomize-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .two-v8-skill-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .randomizer-page {
+        padding: 25px 20px 40px;
+    }
+
+    .randomizer-header h1 {
+        font-size: 32px;
+        letter-spacing: 3px;
+    }
+
+    .randomizer-header p {
+        font-size: 12px;
+    }
+
+    .result-container {
+        padding: 20px;
+    }
+
+    .result-title {
+        min-height: 190px;
+    }
+
+    .two-v8-skill-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .randomizer-page {
+        padding: 20px 12px 30px;
+    }
+
+    .mode-selector {
+        flex-direction: column;
+    }
+
+    .mode-button {
+        min-height: 48px;
+    }
+
+    .result-container {
+        padding: 12px;
+    }
+
+    .result-section {
+        padding: 15px;
+    }
+
+    .result-title {
+        min-height: 170px;
+    }
+
+    .randomizer-header h1 {
+        font-size: 26px;
+    }
+
+}
+
+.randomize-button,
+.mode-button,
+.reroll-button {
+    position: relative;
+    z-index: 9999;
+    pointer-events: auto;
+}
+.randomize-button {
+    isolation: isolate;
+}

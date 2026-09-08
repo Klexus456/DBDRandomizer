@@ -1,12 +1,272 @@
 [
   {
-    "id": 1,
-    "name": "Dwight Fairfield",
-    "image": ""
+    "Id": 1,
+    "Name": "Dwight Fairfield",
+    "Image": "images/survivors/dwightfairfield.webp"
   },
   {
-    "id": 2,
-    "name": "Meg Thomas",
-    "image": ""
+    "Id": 2,
+    "Name": "Meg Thomas",
+    "Image": "images/survivors/megthomas.webp"
+  },
+  {
+    "Id": 3,
+    "Name": "Claudette Morel",
+    "Image": "images/survivors/claudettemorel.webp"
+  },
+  {
+    "Id": 4,
+    "Name": "Jake Park",
+    "Image": "images/survivors/jakepark.webp"
+  },
+  {
+    "Id": 5,
+    "Name": "Nea Karlsson",
+    "Image": "images/survivors/neakarlsson.webp"
+  },
+  {
+    "Id": 6,
+    "Name": "Laurie Strode",
+    "Image": "images/survivors/lauriestrode.webp"
+  },
+  {
+    "Id": 7,
+    "Name": "Ace Visconti",
+    "Image": "images/survivors/acevisconti.webp"
+  },
+  {
+    "Id": 8,
+    "Name": "Bill Overbeck",
+    "Image": "images/survivors/billoverbeck.webp"
+  },
+  {
+    "Id": 9,
+    "Name": "Feng Min",
+    "Image": "images/survivors/fengmin.webp"
+  },
+  {
+    "Id": 10,
+    "Name": "David King",
+    "Image": "images/survivors/davidking.webp"
+  },
+  {
+    "Id": 11,
+    "Name": "Quentin Smith",
+    "Image": "images/survivors/quentinsmith.webp"
+  },
+  {
+    "Id": 12,
+    "Name": "David Tapp",
+    "Image": "images/survivors/davidtapp.webp"
+  },
+  {
+    "Id": 13,
+    "Name": "Kate Denson",
+    "Image": "images/survivors/katedenson.webp"
+  },
+  {
+    "Id": 14,
+    "Name": "Adam Francis",
+    "Image": "images/survivors/adamfrancis.webp"
+  },
+  {
+    "Id": 15,
+    "Name": "Jeff Johansen",
+    "Image": "images/survivors/jeffjohansen.webp"
+  },
+  {
+    "Id": 16,
+    "Name": "Jane Romero",
+    "Image": "images/survivors/janeromero.webp"
+  },
+  {
+    "Id": 17,
+    "Name": "Ash Williams",
+    "Image": "images/survivors/ashwilliams.webp"
+  },
+  {
+    "Id": 18,
+    "Name": "Nancy Wheeler",
+    "Image": "images/survivors/nancywheeler.webp"
+  },
+  {
+    "Id": 19,
+    "Name": "Steve Harrington",
+    "Image": "images/survivors/steveharrington.webp"
+  },
+  {
+    "Id": 20,
+    "Name": "Yui Kimura",
+    "Image": "images/survivors/yuikimura.webp"
+  },
+  {
+    "Id": 21,
+    "Name": "Zarina Kassir",
+    "Image": "images/survivors/zarinakassir.webp"
+  },
+  {
+    "Id": 22,
+    "Name": "Cheryl Mason",
+    "Image": "images/survivors/cherylmason.webp"
+  },
+  {
+    "Id": 23,
+    "Name": "Felix Richter",
+    "Image": "images/survivors/felixrichter.webp"
+  },
+  {
+    "Id": 24,
+    "Name": "\u00C9lodie Rakoto",
+    "Image": "images/survivors/elodierakoto.webp"
+  },
+  {
+    "Id": 25,
+    "Name": "Lee Yun-jin",
+    "Image": "images/survivors/leeyunjin.webp"
+  },
+  {
+    "Id": 26,
+    "Name": "Jill Valentine",
+    "Image": "images/survivors/jillvalentine.webp"
+  },
+  {
+    "Id": 27,
+    "Name": "Leon Scott Kennedy",
+    "Image": "images/survivors/leonskennedy.webp"
+  },
+  {
+    "Id": 28,
+    "Name": "Mikaela Reid",
+    "Image": "images/survivors/mikaelareid.webp"
+  },
+  {
+    "Id": 29,
+    "Name": "Jonah Vasquez",
+    "Image": "images/survivors/jonahvasquez.webp"
+  },
+  {
+    "Id": 30,
+    "Name": "Yoichi Asakawa",
+    "Image": "images/survivors/yoichiasakawa.webp"
+  },
+  {
+    "Id": 31,
+    "Name": "Haddie Kaur",
+    "Image": "images/survivors/haddiekaur.webp"
+  },
+  {
+    "Id": 32,
+    "Name": "Ada Wong",
+    "Image": "images/survivors/adawong.webp"
+  },
+  {
+    "Id": 33,
+    "Name": "Rebecca Chambers",
+    "Image": "images/survivors/rebeccachambers.webp"
+  },
+  {
+    "Id": 34,
+    "Name": "Vittorio Toscano",
+    "Image": "images/survivors/vittoriotoscano.webp"
+  },
+  {
+    "Id": 35,
+    "Name": "Thalita Lyra",
+    "Image": "images/survivors/thalitalyra.webp"
+  },
+  {
+    "Id": 36,
+    "Name": "Renato Lyra",
+    "Image": "images/survivors/renatolyra.webp"
+  },
+  {
+    "Id": 37,
+    "Name": "Gabriel Soma",
+    "Image": "images/survivors/gabrielsoma.webp"
+  },
+  {
+    "Id": 38,
+    "Name": "Nicolas Cage",
+    "Image": "images/survivors/nicolascage.webp"
+  },
+  {
+    "Id": 39,
+    "Name": "Ellen Ripley",
+    "Image": "images/survivors/ellenripley.webp"
+  },
+  {
+    "Id": 40,
+    "Name": "Alan Wake",
+    "Image": "images/survivors/alanwake.webp"
+  },
+  {
+    "Id": 41,
+    "Name": "Sable Ward",
+    "Image": "images/survivors/sableward.webp"
+  },
+  {
+    "Id": 42,
+    "Name": "Aestri Yazar \u0026 Baermar Uraz",
+    "Image": "images/survivors/aestriyazar.webp"
+  },
+  {
+    "Id": 43,
+    "Name": "Lara Croft",
+    "Image": "images/survivors/laracroft.webp"
+  },
+  {
+    "Id": 44,
+    "Name": "Trevor Belmont",
+    "Image": "images/survivors/trevorbelmont.webp"
+  },
+  {
+    "Id": 45,
+    "Name": "Taurie Cain",
+    "Image": "images/survivors/tauriecain.webp"
+  },
+  {
+    "Id": 46,
+    "Name": "Orela Rose",
+    "Image": "images/survivors/orelarose.webp"
+  },
+  {
+    "Id": 47,
+    "Name": "Rick Grimes",
+    "Image": "images/survivors/rickgrimes.webp"
+  },
+  {
+    "Id": 48,
+    "Name": "Michonne Grimes",
+    "Image": "images/survivors/michonnegrimes.webp"
+  },
+  {
+    "Id": 49,
+    "Name": "Vee Boonyasak",
+    "Image": "images/survivors/veeboonyasak.webp"
+  },
+  {
+    "Id": 50,
+    "Name": "Dustin Henderson",
+    "Image": "images/survivors/dustinhenderson.webp"
+  },
+  {
+    "Id": 51,
+    "Name": "Once",
+    "Image": "images/survivors/once.webp"
+  },
+  {
+    "Id": 52,
+    "Name": "Kwon Tae-young",
+    "Image": "images/survivors/kwontaeyoung.webp"
+  },
+  {
+    "Id": 53,
+    "Name": "Shane Wiigwaas",
+    "Image": "images/survivors/shanewiigwaas.webp"
+  },
+  {
+    "Id": 54,
+    "Name": "Aurora Stardotter",
+    "Image": "images/survivors/aurorastardotter.webp"
   }
 ]

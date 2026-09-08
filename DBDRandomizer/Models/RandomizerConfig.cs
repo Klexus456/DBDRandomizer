@@ -59,4 +59,13 @@ public class RandomizerConfig
 
     public SkinRandomizationMode KillerSkinMode { get; set; }
         = SkinRandomizationMode.Parts;
+
+    // ============================
+    // CONFIGURACION SLOTS VACIOS
+    // ============================
+
+    public int PerkEmptyChance { get; set; } = 0;
+    public int ItemEmptyChance { get; set; } = 0;
+    public int AddonEmptyChance { get; set; } = 0;
+    public int OfferingEmptyChance { get; set; } = 0;
 }

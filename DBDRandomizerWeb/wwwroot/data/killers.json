@@ -1,12 +1,222 @@
 [
   {
-    "id": 1,
-    "name": "The Trapper",
-    "image": ""
+    "Id": 1,
+    "Name": "El Trampero",
+    "Image": "images/killers/trampero.webp"
   },
   {
-    "id": 2,
-    "name": "The Wraith",
-    "image": ""
+    "Id": 2,
+    "Name": "El Espectro",
+    "Image": "images/killers/espectro.webp"
+  },
+  {
+    "Id": 3,
+    "Name": "El Pueblerino",
+    "Image": "images/killers/pueblerino.webp"
+  },
+  {
+    "Id": 4,
+    "Name": "La Enfermera",
+    "Image": "images/killers/enfermera.webp"
+  },
+  {
+    "Id": 5,
+    "Name": "La Forma",
+    "Image": "images/killers/forma.webp"
+  },
+  {
+    "Id": 6,
+    "Name": "La Bruja",
+    "Image": "images/killers/bruja.webp"
+  },
+  {
+    "Id": 7,
+    "Name": "El Doctor",
+    "Image": "images/killers/doctor.webp"
+  },
+  {
+    "Id": 8,
+    "Name": "La Cazadora",
+    "Image": "images/killers/cazadora.webp"
+  },
+  {
+    "Id": 9,
+    "Name": "El Can\u00EDbal",
+    "Image": "images/killers/canibal.webp"
+  },
+  {
+    "Id": 10,
+    "Name": "La Pesadilla",
+    "Image": "images/killers/pesadilla.webp"
+  },
+  {
+    "Id": 11,
+    "Name": "La Cerda",
+    "Image": "images/killers/cerda.webp"
+  },
+  {
+    "Id": 12,
+    "Name": "El Payaso",
+    "Image": "images/killers/payaso.webp"
+  },
+  {
+    "Id": 13,
+    "Name": "El Esp\u00EDritu",
+    "Image": "images/killers/espiritu.webp"
+  },
+  {
+    "Id": 14,
+    "Name": "La Legi\u00F3n",
+    "Image": "images/killers/legion.webp"
+  },
+  {
+    "Id": 15,
+    "Name": "La Plaga",
+    "Image": "images/killers/plaga.webp"
+  },
+  {
+    "Id": 16,
+    "Name": "Ghost Face",
+    "Image": "images/killers/ghostface.webp"
+  },
+  {
+    "Id": 17,
+    "Name": "El Demogorgon",
+    "Image": "images/killers/demogorgon.webp"
+  },
+  {
+    "Id": 18,
+    "Name": "El Oni",
+    "Image": "images/killers/oni.webp"
+  },
+  {
+    "Id": 19,
+    "Name": "El Arponero de la Muerte",
+    "Image": "images/killers/arponerodelamuerte.webp"
+  },
+  {
+    "Id": 20,
+    "Name": "El Ejecutor",
+    "Image": "images/killers/ejecutor.webp"
+  },
+  {
+    "Id": 21,
+    "Name": "El Deterioro",
+    "Image": "images/killers/deterioro.webp"
+  },
+  {
+    "Id": 22,
+    "Name": "Los Gemelos",
+    "Image": "images/killers/gemelos.webp"
+  },
+  {
+    "Id": 23,
+    "Name": "El Embaucador",
+    "Image": "images/killers/embaucador.webp"
+  },
+  {
+    "Id": 24,
+    "Name": "N\u00E9mesis",
+    "Image": "images/killers/nemesis.webp"
+  },
+  {
+    "Id": 25,
+    "Name": "El Cenobita",
+    "Image": "images/killers/cenobita.webp"
+  },
+  {
+    "Id": 26,
+    "Name": "La Artista",
+    "Image": "images/killers/artista.webp"
+  },
+  {
+    "Id": 27,
+    "Name": "La Onry\u014D",
+    "Image": "images/killers/onryo.webp"
+  },
+  {
+    "Id": 28,
+    "Name": "La Draga",
+    "Image": "images/killers/draga.webp"
+  },
+  {
+    "Id": 29,
+    "Name": "La Mente Maestra",
+    "Image": "images/killers/mentemaestra.webp"
+  },
+  {
+    "Id": 30,
+    "Name": "El Caballero",
+    "Image": "images/killers/caballero.webp"
+  },
+  {
+    "Id": 31,
+    "Name": "La Comerciante de Calaveras",
+    "Image": "images/killers/comerciantedecalaberas.webp"
+  },
+  {
+    "Id": 32,
+    "Name": "La Singularidad",
+    "Image": "images/killers/singularidad.webp"
+  },
+  {
+    "Id": 33,
+    "Name": "El Xenomorfo",
+    "Image": "images/killers/xenomorfo.webp"
+  },
+  {
+    "Id": 34,
+    "Name": "El Chico Bueno",
+    "Image": "images/killers/chicobueno.webp"
+  },
+  {
+    "Id": 35,
+    "Name": "Lo Desconocido",
+    "Image": "images/killers/desconocido.webp"
+  },
+  {
+    "Id": 36,
+    "Name": "El Liche",
+    "Image": "images/killers/liche.webp"
+  },
+  {
+    "Id": 37,
+    "Name": "El Se\u00F1or Oscuro",
+    "Image": "images/killers/senioroscuro.webp"
+  },
+  {
+    "Id": 38,
+    "Name": "La Se\u00F1ora de los Sabuesos",
+    "Image": "images/killers/senioradelossabuesos.webp"
+  },
+  {
+    "Id": 39,
+    "Name": "El Ghoul",
+    "Image": "images/killers/ghoul.webp"
+  },
+  {
+    "Id": 40,
+    "Name": "El Animatr\u00F3nico",
+    "Image": "images/killers/animatronico.webp"
+  },
+  {
+    "Id": 41,
+    "Name": "La Krasue",
+    "Image": "images/killers/krasue.webp"
+  },
+  {
+    "Id": 42,
+    "Name": "El Primero",
+    "Image": "images/killers/primero.webp"
+  },
+  {
+    "Id": 43,
+    "Name": "El Acuchillador",
+    "Image": "images/killers/acuchillador.webp"
+  },
+  {
+    "Id": 44,
+    "Name": "El Juicio",
+    "Image": "images/killers/juicio.webp"
   }
 ]

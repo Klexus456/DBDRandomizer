@@ -4,6 +4,7 @@
 @using DBDRandomizer.Data
 @using DBDRandomizer.Randomizer
 @using DBDRandomizerWeb.Services
+@using DBDRandomizerWeb.Components
 
 <div class="randomizer-page">
 
@@ -22,20 +23,14 @@
     {
         <div class="mode-selector">
 
-            <button
-                class="mode-button @(survivorResult != null ? "active" : "")"
-                @onclick="RandomizarSurvivor">
-
+            <button class="mode-button survivor @(survivorResult != null ? "active" : "")"
+                    @onclick="RandomizarSurvivor">
                 SURVIVOR
-
             </button>
 
-            <button
-                class="mode-button @(killerResult != null ? "active" : "")"
-                @onclick="RandomizarKiller">
-
+            <button class="mode-button killer @(killerResult != null ? "active" : "")"
+                    @onclick="RandomizarKiller">
                 KILLER
-
             </button>
 
         </div>
@@ -45,20 +40,17 @@
             <div class="result-container">
 
                 <div class="result-title">
-
-                    <h2>
-                        @survivorResult.Survivor!.Name
-                    </h2>
+                    <ItemTooltip
+                        Image="@survivorResult.Survivor!.Image"
+                        Name="@survivorResult.Survivor!.Name"
+                        ImageSize="200" />
 
                     <button
                         class="reroll-button"
                         title="Randomizar nuevamente el Survivor"
                         @onclick="RerollSurvivor">
-
                         ↻
-
                     </button>
-
                 </div>
 
                 <section class="result-section">
@@ -85,20 +77,21 @@
                     else
                     {
                         <div class="skin-container">
-
                             @foreach (SkinPiece skin in survivorResult.SurvivorSkin)
                             {
                                 <div class="result-card">
+
                                     <span class="card-type">
                                         @skin.Part
                                     </span>
 
-                                    <strong>
-                                        @skin.Name
-                                    </strong>
+                                    <ItemTooltip
+                                        Image="@skin.Image"
+                                        Name="@skin.Name"
+                                        ImageSize="180" />
+
                                 </div>
                             }
-
                         </div>
                     }
 
@@ -126,19 +119,27 @@
                         @for (int i = 0; i < survivorResult.SurvivorPerks.Count; i++)
                         {
                             int index = i;
-                            Perk perk = survivorResult.SurvivorPerks[i];
+                            Perk? perk = survivorResult.SurvivorPerks[i];
 
                             <div class="result-card perk-card">
-                                <strong>
-                                    @perk.Name
-                                </strong>
+                                    @if (perk == null)
+                                    {
+                                        <strong>Ninguna</strong>
+                                    }
+                                    else
+                                    {
+                                        <ItemTooltip
+                                            Image="@perk.Image"
+                                            Name="@perk.Name"
+                                            Description="@perk.Description" />
+                                    }
 
-                                <button
-                                    class="reroll-button"
-                                    title="Randomizar esta perk"
-                                    @onclick="() => RerollSurvivorPerk(index)">
-                                    ↻
-                                </button>
+                                    <button
+                                        class="reroll-button"
+                                        title="Randomizar esta perk"
+                                        @onclick="() => RerollSurvivorPerk(index)">
+                                        ↻
+                                    </button>
                             </div>
                         }
 
@@ -172,9 +173,12 @@
                         else
                         {
                             <div class="result-card">
-                                <strong>
-                                    @survivorResult.SurvivorItem.Name
-                                </strong>
+
+                                <ItemTooltip
+                                    Image="@survivorResult.SurvivorItem.Image"
+                                    Name="@survivorResult.SurvivorItem.Name"
+                                    Description="@survivorResult.SurvivorItem.Description" />
+
                             </div>
                         }
 
@@ -189,19 +193,30 @@
                             @for (int i = 0; i < survivorResult.SurvivorAddons.Count; i++)
                             {
                                 int index = i;
-                                Addon addon = survivorResult.SurvivorAddons[i];
+                                Addon? addon = survivorResult.SurvivorAddons[i];
 
                                 <div class="result-card">
-                                    <strong>
-                                        @addon.Name
-                                    </strong>
+                                    @if (addon == null)
+                                    {
+                                        <strong>Ninguno</strong>
+                                    }
+                                    else
+                                    {
+                                        <ItemTooltip
+                                            Image="@addon.Image"
+                                            Name="@addon.Name"
+                                            Description="@addon.Description" />
+                                    }
 
-                                    <button
-                                        class="reroll-button"
-                                        title="Randomizar este addon"
-                                        @onclick="() => RerollSurvivorAddon(index)">
-                                        ↻
-                                    </button>
+                                    @if (survivorResult.SurvivorItem?.AddonGroupId != null)
+                                    {
+                                        <button
+                                            class="reroll-button"
+                                            title="Randomizar este addon"
+                                            @onclick="() => RerollSurvivorAddon(index)">
+                                            ↻
+                                        </button>
+                                    }
                                 </div>
                             }
 
@@ -235,9 +250,12 @@
                     else
                     {
                         <div class="result-card">
-                            <strong>
-                                @survivorResult.SurvivorOffering.Name
-                            </strong>
+
+                            <ItemTooltip
+                                Image="@survivorResult.SurvivorOffering.Image"
+                                Name="@survivorResult.SurvivorOffering.Name"
+                                Description="@survivorResult.SurvivorOffering.Description" />
+
                         </div>
                     }
 
@@ -259,20 +277,17 @@
             <div class="result-container">
 
                 <div class="result-title">
-
-                    <h2>
-                        @killerResult.Killer!.Name
-                    </h2>
+                    <ItemTooltip
+                        Image="@killerResult.Killer!.Image"
+                        Name="@killerResult.Killer!.Name"
+                        ImageSize="200" />
 
                     <button
                         class="reroll-button"
                         title="Randomizar nuevamente el Killer"
                         @onclick="RerollKiller">
-
                         ↻
-
                     </button>
-
                 </div>
 
                 <section class="result-section">
@@ -303,13 +318,16 @@
                             @foreach (SkinPiece skin in killerResult.KillerSkin)
                             {
                                 <div class="result-card">
+
                                     <span class="card-type">
                                         @skin.Part
                                     </span>
 
-                                    <strong>
-                                        @skin.Name
-                                    </strong>
+                                    <ItemTooltip
+                                        Image="@skin.Image"
+                                        Name="@skin.Name"
+                                        ImageSize="180" />
+
                                 </div>
                             }
 
@@ -340,12 +358,20 @@
                         @for (int i = 0; i < killerResult.KillerPerks.Count; i++)
                         {
                             int index = i;
-                            Perk perk = killerResult.KillerPerks[i];
+                            Perk? perk = killerResult.KillerPerks[i];
 
                             <div class="result-card perk-card">
-                                <strong>
-                                    @perk.Name
-                                </strong>
+                                @if (perk == null)
+                                {
+                                    <strong>Ninguna</strong>
+                                }
+                                else
+                                {
+                                    <ItemTooltip
+                                        Image="@perk.Image"
+                                        Name="@perk.Name"
+                                        Description="@perk.Description" />
+                                }
 
                                 <button
                                     class="reroll-button"
@@ -369,12 +395,20 @@
                        @for (int i = 0; i < killerResult.KillerAddons.Count; i++)
                         {
                             int index = i;
-                            Addon addon = killerResult.KillerAddons[i];
+                            Addon? addon = killerResult.KillerAddons[i];
 
                             <div class="result-card">
-                                <strong>
-                                    @addon.Name
-                                </strong>
+                                @if (addon == null)
+                                {
+                                    <strong>Ninguno</strong>
+                                }
+                                else
+                                {
+                                    <ItemTooltip
+                                        Image="@addon.Image"
+                                        Name="@addon.Name"
+                                        Description="@addon.Description" />
+                                }
 
                                 <button
                                     class="reroll-button"
@@ -413,9 +447,10 @@
                     else
                     {
                         <div class="result-card">
-                            <strong>
-                                @killerResult.KillerOffering.Name
-                            </strong>
+                            <ItemTooltip
+                                Image="@killerResult.KillerOffering.Image"
+                                Name="@killerResult.KillerOffering.Name"
+                                Description="@killerResult.KillerOffering.Description" />
                         </div>
                     }
 
@@ -502,6 +537,15 @@
 
         var offerings =
             await loader.LoadOfferings();
+        
+        var twoV8Classes =
+            await loader.LoadTwoV8Classes();
+
+        var twoV8Skills =
+            await loader.LoadTwoV8Skills();
+
+        var twoV8Config =
+            await loader.LoadTwoV8Config();
 
         randomizer = new RandomizerEngine(
             survivors,
@@ -513,7 +557,10 @@
             items,
             addons,
             offerings,
-            config
+            config,
+            twoV8Classes,
+            twoV8Skills,
+            twoV8Config
         );
     }
 

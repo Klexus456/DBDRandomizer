@@ -1,20 +1,296 @@
 [
-    {
-        "id": 1,
-        "name": "Flashlight",
-        "rarity": "Common",
-        "image": ""
-    },
-    {
-        "id": 2,
-        "name": "First Aid Kit",
-        "rarity": "Common",
-        "image": ""
-    },
-    {
-        "id": 3,
-        "name": "Toolbox",
-        "rarity": "Common",
-        "image": ""
-    }
+  {
+    "Id": 1,
+    "Name": "Linterna",
+    "Rarity": "Uncommon",
+    "Description": "",
+    "Image": "images/items/linterna.webp",
+    "AddonGroupId": 1
+  },
+  {
+    "Id": 2,
+    "Name": "Linterna de Aniversario",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Una linterna festiva que hace estallar confeti al cegar al Asesino.",
+    "Image": "images/items/linternadeaniversario.webp",
+    "AddonGroupId": 1
+  },
+  {
+    "Id": 3,
+    "Name": "Linterna de Banquete",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Una linterna festiva del Banquete Negro. Puede utilizarse para cegar al Asesino durante un máximo de 8 segundos.",
+    "Image": "images/items/linternadebanquete.webp",
+    "AddonGroupId": 1
+  },
+  {
+    "Id": 4,
+    "Name": "Linterna deportiva",
+    "Rarity": "Rare",
+    "Description": "Una linterna muy portátil con un buen agarre. Tiene una precisión de apuntado aumentada un 20% y una velocidad de consumo reducida un 11%.",
+    "Image": "images/items/linternadeportiva.webp",
+    "AddonGroupId": 1
+  },
+  {
+    "Id": 5,
+    "Name": "Linterna de utilidad",
+    "Rarity": "VeryRare",
+    "Description": "Una linterna resistente y pesada con una gran potencia. Tiene un brillo aumentado un 30%, una duración de Ceguera aumentada un 15% y una precisión de apuntado reducida un 20%.",
+    "Image": "images/items/linternadeutilidad.webp",
+    "AddonGroupId": 1
+  },
+  {
+    "Id": 6,
+    "Name": "Linterna de Mascarada",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Una linterna festiva de la Mascarada. Puede utilizarse para iluminar el camino y cegar al Asesino durante un máximo de 8 segundos.",
+    "Image": "images/items/linternademascarada.webp",
+    "AddonGroupId": 1
+  },
+  {
+    "Id": 7,
+    "Name": "Will O' Wisp",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Una linterna equipada con una lente especial que añade un tono anaranjado al haz y un pequeño fantasma a la luz.",
+    "Image": "images/items/willowwisp.webp",
+    "AddonGroupId": 1
+  },
+
+  {
+    "Id": 8,
+    "Name": "Botiquin de primeros auxilios de acampada",
+    "Rarity": "Common",
+    "Description": "",
+    "Image": "images/items/botiquindeprimerosauxiliosdeacampada.webp",
+    "AddonGroupId": 2
+  },
+  {
+    "Id": 9,
+    "Name": "Botiquín de Aniversario",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Un botiquín festivo que hace estallar confeti al curar completamente a un Superviviente. Aumenta un 40% la velocidad de curación altruista, pero reduce un 33% la velocidad de autocuración y la eficiencia del objeto.",
+    "Image": "images/items/botiquindeaniversario.webp",
+    "AddonGroupId": 2
+  },
+  {
+    "Id": 10,
+    "Name": "Botiquín de Banquete",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Un botiquín festivo del Banquete Negro. Aumenta un 40% la velocidad de curación altruista, pero reduce un 33% la velocidad de autocuración y la eficiencia del objeto.",
+    "Image": "images/items/botiquindebanquete.webp",
+    "AddonGroupId": 2
+  },
+  {
+    "Id": 11,
+    "Name": "Lonchera de Halloween",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Una lonchera de plástico decorada con pegatinas fosforescentes de Halloween. Aumenta considerablemente tu visibilidad y permite curar a otros Supervivientes.",
+    "Image": "images/items/loncheradehalloween.webp",
+    "AddonGroupId": 2
+  },
+  {
+    "Id": 12,
+    "Name": "Botiquín de emergencia",
+    "Rarity": "Rare",
+    "Description": "Un botiquín resistente y bien organizado equipado con suministros de emergencia en buen estado.",
+    "Image": "images/items/botiquindeemergencia.webp",
+    "AddonGroupId": 2
+  },
+  {
+    "Id": 13,
+    "Name": "Botiquín de Mascarada",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Un botiquín festivo que hace estallar confeti al curar completamente a un Superviviente. Aumenta un 40% la velocidad de curación altruista, pero reduce un 33% la velocidad de autocuración y la eficiencia del objeto.",
+    "Image": "images/items/botiquindemascarada.webp",
+    "AddonGroupId": 2
+  },
+  {
+    "Id": 14,
+    "Name": "Botiquín de guardabosques",
+    "Rarity": "VeryRare",
+    "Description": "Una gran caja metálica que contiene suministros médicos destinados a rescates de emergencia en lugares aislados.",
+    "Image": "images/items/botiquindeguardabosques.webp",
+    "AddonGroupId": 2
+  },
+
+  {
+    "Id": 15,
+    "Name": "Herramientas desgastadas",
+    "Rarity": "Common",
+    "Description": "",
+    "Image": "images/items/herramientasdesgastadas.webp",
+    "AddonGroupId": 3
+  },
+  {
+    "Id": 16,
+    "Name": "Caja de herramientas de Aniversario",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Una caja de herramientas festiva con 32 cargas. Aumenta un 50% la velocidad de reparación, permite sabotear Ganchos y aumenta un 50% la velocidad de sabotaje. Hace estallar un fuego artificial al agotarse.",
+    "Image": "images/items/cajadeherramientasdeaniversario.webp",
+    "AddonGroupId": 3
+  },
+  {
+    "Id": 17,
+    "Name": "Caja de herramientas de Banquete",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Una caja de herramientas festiva del Banquete Negro con 32 cargas. Aumenta un 50% la velocidad de reparación, permite sabotear Ganchos y aumenta un 50% la velocidad de sabotaje.",
+    "Image": "images/items/cajadeherramientasdebanquete.webp",
+    "AddonGroupId": 3
+  },
+  {
+    "Id": 18,
+    "Name": "Caja de herramientas de Alex",
+    "Rarity": "VeryRare",
+    "Description": "Una caja metálica que contiene principalmente sierras y tenazas de distintos tamaños. Tiene 18 cargas y aumenta un 10% la velocidad de reparación.",
+    "Image": "images/items/cajadeherramientasdealex.webp",
+    "AddonGroupId": 3
+  },
+  {
+    "Id": 19,
+    "Name": "Caja de herramientas de gran capacidad",
+    "Rarity": "Rare",
+    "Description": "Una caja de herramientas con 32 cargas. Aumenta un 50% la velocidad de reparación, permite sabotear Ganchos y aumenta un 50% la velocidad de sabotaje.",
+    "Image": "images/items/cajadeherramientasdegrancapacidad.webp",
+    "AddonGroupId": 3
+  },
+  {
+    "Id": 20,
+    "Name": "Caja de herramientas festiva",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Una caja de herramientas repleta de fuegos artificiales. Tiene 32 cargas, aumenta un 50% la velocidad de reparación, permite sabotear Ganchos y aumenta un 50% la velocidad de sabotaje.",
+    "Image": "images/items/cajadeherramientasfestiva.webp",
+    "AddonGroupId": 3
+  },
+  {
+    "Id": 21,
+    "Name": "Caja de herramientas de ingeniero",
+    "Rarity": "VeryRare",
+    "Description": "Una caja de herramientas especializada que permite reparar y sabotear con mayor eficacia.",
+    "Image": "images/items/cajadeherramientasdeingeniero.webp",
+    "AddonGroupId": 3
+  },
+  {
+    "Id": 22,
+    "Name": "Caja de herramientas de Mascarada",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Una caja de herramientas festiva con 32 cargas. Aumenta un 50% la velocidad de reparación, permite sabotear Ganchos y aumenta un 50% la velocidad de sabotaje. Hace estallar un fuego artificial al agotarse.",
+    "Image": "images/items/cajadeherramientasdemascarada.webp",
+    "AddonGroupId": 3
+  },
+  {
+    "Id": 23,
+    "Name": "Caja de herramientas de mecánico",
+    "Rarity": "Rare",
+    "Description": "Una caja metálica con herramientas mecánicas especializadas. Tiene 16 cargas, aumenta un 75% la velocidad de reparación y permite sabotear Ganchos con un aumento del 25% en la velocidad de sabotaje.",
+    "Image": "images/items/cajadeherramientasdemecanico.webp",
+    "AddonGroupId": 3
+  },
+  {
+    "Id": 24,
+    "Name": "Caja de herramientas",
+    "Rarity": "Uncommon",
+    "Description": "Una caja metálica que contiene un conjunto de herramientas básicas. Tiene 20 cargas y permite reparar y sabotear elementos mecánicos.",
+    "Image": "images/items/cajadeherramientas.webp",
+    "AddonGroupId": 3
+  },
+
+  {
+    "Id": 25,
+    "Name": "Llave rota",
+    "Rarity": "Common",
+    "Description": "Una llave rota que ya no puede abrir la Escotilla, pero que puede utilizarse para leer Auras.",
+    "Image": "images/items/llaverota.webp",
+    "AddonGroupId": 4
+  },
+  {
+    "Id": 26,
+    "Name": "Llave opaca",
+    "Rarity": "Uncommon",
+    "Description": "Una llave gastada capaz de revelar Auras cercanas y abrir la Escotilla cuando está disponible.",
+    "Image": "images/items/llaveopaca.webp",
+    "AddonGroupId": 4
+  },
+  {
+    "Id": 27,
+    "Name": "Llave esquelética",
+    "Rarity": "Rare",
+    "Description": "Una llave extremadamente versátil capaz de revelar Auras y abrir la Escotilla cuando está disponible.",
+    "Image": "images/items/llaveesqueletica.webp",
+    "AddonGroupId": 4
+  },
+
+  {
+    "Id": 28,
+    "Name": "Mapa anotado",
+    "Rarity": "Rare",
+    "Description": "Un mapa que puede utilizarse para revelar durante un tiempo las Auras de elementos del entorno cercanos, incluyendo Palés y Ventanas.",
+    "Image": "images/items/mapaanotado.webp",
+    "AddonGroupId": 5
+  },
+  {
+    "Id": 29,
+    "Name": "Mapa de percepción de sangre",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Un fragmento de pergamino manchado de sangre que permite revelar las Auras de Supervivientes heridos, Palés y Ventanas cercanos mientras se utiliza.",
+    "Image": "images/items/mapadepercepciondesangre.webp",
+    "AddonGroupId": 5
+  },
+  {
+    "Id": 30,
+    "Name": "Mapa críptico",
+    "Rarity": "Common",
+    "Description": "Un mapa cuyas indicaciones parecen no tener sentido. Puede utilizarse para revelar las Auras de elementos del entorno cercanos.",
+    "Image": "images/items/mapacrip­tico.webp",
+    "AddonGroupId": 5
+  },
+  {
+    "Id": 31,
+    "Name": "Mapa garabateado",
+    "Rarity": "Uncommon",
+    "Description": "Un mapa cubierto de anotaciones que puede utilizarse para revelar las Auras de elementos del entorno cercanos.",
+    "Image": "images/items/mapagarabateado.webp",
+    "AddonGroupId": 5
+  },
+
+  {
+    "Id": 32,
+    "Name": "Petardo chino",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Un pequeño dispositivo explosivo envuelto en papel grueso. Puede utilizarse como distracción o para cegar y aturdir brevemente al Asesino.",
+    "Image": "images/items/petardochino.webp",
+    "AddonGroupId": null
+  },
+  {
+    "Id": 33,
+    "Name": "Petardo de Invierno",
+    "Rarity": "UltraRare",
+    "Description": "[EVENTO] Un pequeño adorno de mesa altamente explosivo. Puede utilizarse como distracción o para cegar y aturdir brevemente al Asesino.",
+    "Image": "images/items/petardodeinvierno.webp",
+    "AddonGroupId": null
+  },
+
+  {
+    "Id": 34,
+    "Name": "Vial de Niebla de Aprendiz",
+    "Rarity": "Common",
+    "Description": "Comienza la Partida con 4 cargas. Al utilizarlo, libera una Nube de Niebla que se expande hasta 8 metros, dura 8 segundos y oculta las Auras y las Marcas de Arañazos dentro de su área.",
+    "Image": "images/items/vialdeniebladeaprendiz.webp",
+    "AddonGroupId": 6
+  },
+  {
+    "Id": 35,
+    "Name": "Vial de Niebla de Artesano",
+    "Rarity": "Uncommon",
+    "Description": "Comienza la Partida con 4 cargas. Al utilizarlo, libera una Nube de Niebla que se expande hasta 8 metros, dura 10 segundos y oculta las Auras y las Marcas de Arañazos dentro de su área.",
+    "Image": "images/items/vialdeniebladeartesano.webp",
+    "AddonGroupId": 6
+  },
+  {
+    "Id": 36,
+    "Name": "Vial de Niebla de Vigo",
+    "Rarity": "Rare",
+    "Description": "Comienza la Partida con 4 cargas. Libera una Nube de Niebla que se expande hasta 8 metros, dura 12 segundos y oculta las Auras y las Marcas de Arañazos dentro de su área.",
+    "Image": "images/items/vialdeniebladevigo.webp",
+    "AddonGroupId": 6
+  }
 ]

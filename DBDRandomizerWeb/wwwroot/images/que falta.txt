@@ -1,0 +1,5 @@
+killer addons: 
+* judgment (todo)
+* uno/vecna (todo)
+* myers (revisar rarezas de addons)
+* trickster (revisar rarezas de addons)

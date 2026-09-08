@@ -6,6 +6,11 @@ public class RandomizerEngine
 {
     private readonly Random _random = new();
 
+    private bool ShouldBeEmpty(int chance)
+    {
+        return _random.Next(100) < chance;
+    }
+
     private readonly List<Survivor> _survivors;
     private readonly List<SkinPiece> _survivorSkins;
     private readonly RandomizerConfig _config;
@@ -16,6 +21,9 @@ public class RandomizerEngine
     private readonly List<Killer> _killers;
     private readonly List<SkinPiece> _killerSkins;
     private readonly List<Perk> _killerPerks;
+    private readonly List<TwoV8Class> _twoV8Classes;
+    private readonly List<TwoV8Skill> _twoV8Skills;
+    private readonly TwoV8Config _twoV8Config;
 
     public RandomizerEngine(
         List<Survivor> survivors,
@@ -27,7 +35,10 @@ public class RandomizerEngine
         List<Item> items,
         List<Addon> addons,
         List<Offering> offerings,
-        RandomizerConfig config)
+        RandomizerConfig config,
+        List<TwoV8Class> twoV8Classes,
+        List<TwoV8Skill> twoV8Skills,
+        TwoV8Config twoV8Config)
     {
         _survivors = survivors;
         _killers = killers;
@@ -43,6 +54,10 @@ public class RandomizerEngine
         _offerings = offerings;
 
         _config = config;
+
+        _twoV8Classes = twoV8Classes;
+        _twoV8Skills = twoV8Skills;
+        _twoV8Config = twoV8Config;
     }
 
 
@@ -169,7 +184,7 @@ public class RandomizerEngine
     // SURVIVOR PERKS
     // =========================================================
 
-    public List<Perk> RandomizeSurvivorPerks(int amount)
+    public List<Perk?> RandomizeSurvivorPerks(int amount)
     {
         List<Perk> availablePerks = _survivorPerks
             .Where(perk =>
@@ -189,10 +204,21 @@ public class RandomizerEngine
             );
         }
 
-        return availablePerks
+        List<Perk?> result = availablePerks
             .OrderBy(_ => _random.Next())
             .Take(amount)
+            .Cast<Perk?>()
             .ToList();
+
+        for (int i = 0; i < result.Count; i++)
+        {
+            if (ShouldBeEmpty(_config.PerkEmptyChance))
+            {
+                result[i] = null;
+            }
+        }
+
+        return result;
     }
 
 
@@ -234,15 +260,17 @@ public class RandomizerEngine
             .Where(item =>
                 !_config.DisabledItems.Contains(item.Id))
             .Where(item =>
+                item.AddonGroupId == null ||
                 _addons.Count(addon =>
-                    addon.ItemId == item.Id &&
+                    addon.AddonGroupId == item.AddonGroupId &&
+                    addon.CharacterId == null &&
                     !_config.DisabledAddons.Contains(addon.Id)) >= 2)
             .ToList();
 
         if (availableItems.Count == 0)
         {
             throw new InvalidOperationException(
-                "No hay Items disponibles con suficientes addons."
+                "No hay Items disponibles."
             );
         }
 
@@ -256,25 +284,48 @@ public class RandomizerEngine
     // SURVIVOR ADDONS
     // =========================================================
 
-    public List<Addon> RandomizeSurvivorAddons(Item item)
+    public List<Addon?> RandomizeSurvivorAddons(Item item)
     {
+        // El Item no tiene addons.
+        if (item.AddonGroupId == null)
+        {
+            return new List<Addon?>
+            {
+                null,
+                null
+            };
+        }
+
         List<Addon> availableAddons = _addons
             .Where(addon =>
-                addon.ItemId == item.Id &&
+                addon.AddonGroupId == item.AddonGroupId &&
+                addon.CharacterId == null &&
                 !_config.DisabledAddons.Contains(addon.Id))
             .ToList();
 
         if (availableAddons.Count < 2)
         {
             throw new InvalidOperationException(
-                $"El Item '{item.Name}' no tiene al menos 2 addons disponibles."
+                $"El grupo de addons del Item '{item.Name}' " +
+                "no tiene al menos 2 addons disponibles."
             );
         }
 
-        return availableAddons
+        List<Addon?> result = availableAddons
             .OrderBy(_ => _random.Next())
             .Take(2)
+            .Cast<Addon?>()
             .ToList();
+
+        for (int i = 0; i < result.Count; i++)
+        {
+            if (ShouldBeEmpty(_config.AddonEmptyChance))
+            {
+                result[i] = null;
+            }
+        }
+
+        return result;
     }
 
 
@@ -282,9 +333,17 @@ public class RandomizerEngine
         Item item,
         IEnumerable<int> excludedAddonIds)
     {
+        if (item.AddonGroupId == null)
+        {
+            throw new InvalidOperationException(
+                $"El Item '{item.Name}' no tiene addons."
+            );
+        }
+
         List<Addon> availableAddons = _addons
             .Where(addon =>
-                addon.ItemId == item.Id &&
+                addon.AddonGroupId == item.AddonGroupId &&
+                addon.CharacterId == null &&
                 !_config.DisabledAddons.Contains(addon.Id) &&
                 !excludedAddonIds.Contains(addon.Id))
             .ToList();
@@ -306,7 +365,7 @@ public class RandomizerEngine
     // SURVIVOR OFFERING
     // =========================================================
 
-    public Offering RandomizeSurvivorOffering()
+    public Offering? RandomizeSurvivorOffering()
     {
         List<Offering> availableOfferings = _offerings
             .Where(offering =>
@@ -322,6 +381,11 @@ public class RandomizerEngine
             throw new InvalidOperationException(
                 "No hay Offerings de Survivor disponibles en la configuración."
             );
+        }
+
+        if (ShouldBeEmpty(_config.OfferingEmptyChance))
+        {
+            return null;
         }
 
         return availableOfferings[
@@ -379,9 +443,16 @@ public class RandomizerEngine
             );
         }
 
+        if (ShouldBeEmpty(_config.PerkEmptyChance))
+        {
+            result.SurvivorPerks[perkIndex] = null;
+            return;
+        }
+
         List<int> excludedPerkIds =
             result.SurvivorPerks
-                .Select(perk => perk.Id)
+                .Where(perk => perk != null)
+                .Select(perk => perk!.Id)
                 .ToList();
 
         Perk newPerk =
@@ -399,15 +470,20 @@ public class RandomizerEngine
     }
 
 
-    public void RerollSurvivorItem(
-        RandomizerResult result)
+    public void RerollSurvivorItem(RandomizerResult result)
     {
+        if (ShouldBeEmpty(_config.ItemEmptyChance))
+        {
+            result.SurvivorItem = null;
+            result.SurvivorAddons = new List<Addon?> { null, null };
+            return;
+        }
+
         Item item = RandomizeSurvivorItem();
 
         result.SurvivorItem = item;
 
-        result.SurvivorAddons =
-            RandomizeSurvivorAddons(item);
+        result.SurvivorAddons = RandomizeSurvivorAddons(item);
     }
 
 
@@ -431,9 +507,16 @@ public class RandomizerEngine
             );
         }
 
+        if (ShouldBeEmpty(_config.AddonEmptyChance))
+        {
+            result.SurvivorAddons[addonIndex] = null;
+            return;
+        }
+
         List<int> excludedAddonIds =
             result.SurvivorAddons
-                .Select(addon => addon.Id)
+                .Where(addon => addon != null)
+                .Select(addon => addon!.Id)
                 .ToList();
 
         Addon newAddon =
@@ -475,13 +558,21 @@ public class RandomizerEngine
         result.SurvivorPerks =
             RandomizeSurvivorPerks(4);
 
-        result.SurvivorItem =
-            RandomizeSurvivorItem();
+        if (ShouldBeEmpty(_config.ItemEmptyChance))
+        {
+            result.SurvivorItem = null;
+            result.SurvivorAddons = new List<Addon?> { null, null };
+        }
+        else
+        {
+            result.SurvivorItem =
+                RandomizeSurvivorItem();
 
-        result.SurvivorAddons =
-            RandomizeSurvivorAddons(
-                result.SurvivorItem
-            );
+            result.SurvivorAddons =
+                RandomizeSurvivorAddons(
+                    result.SurvivorItem
+                );
+        }
 
         result.SurvivorOffering =
             RandomizeSurvivorOffering();
@@ -595,7 +686,7 @@ public class RandomizerEngine
     // KILLER PERKS
     // =========================================================
 
-    public List<Perk> RandomizeKillerPerks(int amount)
+    public List<Perk?> RandomizeKillerPerks(int amount)
     {
         List<Perk> availablePerks = _killerPerks
             .Where(perk =>
@@ -615,10 +706,21 @@ public class RandomizerEngine
             );
         }
 
-        return availablePerks
+        List<Perk?> result = availablePerks
             .OrderBy(_ => _random.Next())
             .Take(amount)
+            .Cast<Perk?>()
             .ToList();
+
+        for (int i = 0; i < result.Count; i++)
+        {
+            if (ShouldBeEmpty(_config.PerkEmptyChance))
+            {
+                result[i] = null;
+            }
+        }
+
+        return result;
     }
 
 
@@ -654,8 +756,7 @@ public class RandomizerEngine
     // KILLER ADDONS
     // =========================================================
 
-    public List<Addon> RandomizeKillerAddons(
-        Killer killer)
+    public List<Addon?> RandomizeKillerAddons(Killer killer)
     {
         List<Addon> availableAddons = _addons
             .Where(addon =>
@@ -670,10 +771,21 @@ public class RandomizerEngine
             );
         }
 
-        return availableAddons
+        List<Addon?> result = availableAddons
             .OrderBy(_ => _random.Next())
             .Take(2)
+            .Cast<Addon?>()
             .ToList();
+
+        for (int i = 0; i < result.Count; i++)
+        {
+            if (ShouldBeEmpty(_config.AddonEmptyChance))
+            {
+                result[i] = null;
+            }
+        }
+
+        return result;
     }
 
 
@@ -705,7 +817,7 @@ public class RandomizerEngine
     // KILLER OFFERING
     // =========================================================
 
-    public Offering RandomizeKillerOffering()
+    public Offering? RandomizeKillerOffering()
     {
         List<Offering> availableOfferings = _offerings
             .Where(offering =>
@@ -721,6 +833,11 @@ public class RandomizerEngine
             throw new InvalidOperationException(
                 "No hay Offerings de Killer disponibles en la configuración."
             );
+        }
+
+        if (ShouldBeEmpty(_config.OfferingEmptyChance))
+        {
+            return null;
         }
 
         return availableOfferings[
@@ -795,9 +912,16 @@ public class RandomizerEngine
             );
         }
 
+        if (ShouldBeEmpty(_config.PerkEmptyChance))
+        {
+            result.KillerPerks[perkIndex] = null;
+            return;
+        }
+
         List<int> excludedPerkIds =
             result.KillerPerks
-                .Select(perk => perk.Id)
+                .Where(perk => perk != null)
+                .Select(perk => perk!.Id)
                 .ToList();
 
         Perk newPerk =
@@ -835,9 +959,16 @@ public class RandomizerEngine
             );
         }
 
+        if (ShouldBeEmpty(_config.AddonEmptyChance))
+        {
+            result.KillerAddons[addonIndex] = null;
+            return;
+        }
+
         List<int> excludedAddonIds =
             result.KillerAddons
-                .Select(addon => addon.Id)
+                .Where(addon => addon != null)
+                .Select(addon => addon!.Id)
                 .ToList();
 
         Addon newAddon =
@@ -874,4 +1005,229 @@ public class RandomizerEngine
                 _config.KillerSkinMode
             );
     }
+
+    // =========================================================
+    // 2v8
+    // =========================================================
+
+    public Survivor RandomizeTwoV8Survivor()
+    {
+        List<Survivor> availableSurvivors = _survivors
+            .Where(survivor =>
+                !_config.DisabledSurvivors.Contains(survivor.Id))
+            .ToList();
+
+        if (availableSurvivors.Count == 0)
+        {
+            throw new InvalidOperationException(
+                "No hay Survivors disponibles para 2v8."
+            );
+        }
+
+        return availableSurvivors[
+            _random.Next(availableSurvivors.Count)
+        ];
+    }
+
+    public TwoV8Class RandomizeTwoV8SurvivorClass()
+    {
+        List<TwoV8Class> classes = _twoV8Classes
+            .Where(c => c.Role == "Survivor")
+            .ToList();
+
+        if (classes.Count == 0)
+        {
+            throw new InvalidOperationException(
+                "No hay clases de Survivor disponibles para 2v8."
+            );
+        }
+
+        return classes[
+            _random.Next(classes.Count)
+        ];
+    }
+
+    public List<TwoV8Skill> GetTwoV8Skills(
+        TwoV8Class selectedClass)
+    {
+        return _twoV8Skills
+            .Where(skill => skill.ClassId == selectedClass.Id)
+            .OrderBy(skill => skill.Slot)
+            .ToList();
+    }
+
+    public TwoV8Result RandomizeTwoV8SurvivorResult()
+    {
+        Survivor survivor = RandomizeTwoV8Survivor();
+
+        TwoV8Class selectedClass =
+            RandomizeTwoV8SurvivorClass();
+
+        List<TwoV8Skill> skills =
+            GetTwoV8Skills(selectedClass);
+
+        if (skills.Count != 3)
+        {
+            throw new InvalidOperationException(
+                $"La clase '{selectedClass.Name}' debe tener exactamente 3 habilidades."
+            );
+        }
+
+        return new TwoV8Result
+        {
+            Survivor = survivor,
+            Class = selectedClass,
+            Skills = skills
+        };
+    }
+
+    public Killer RandomizeTwoV8Killer()
+    {
+        List<Killer> availableKillers = _killers
+            .Where(killer =>
+                _twoV8Config.Killers.Contains(killer.Id) &&
+                !_config.DisabledKillers.Contains(killer.Id))
+            .ToList();
+
+        if (availableKillers.Count == 0)
+        {
+            throw new InvalidOperationException(
+                "No hay Killers disponibles para 2v8."
+            );
+        }
+
+        return availableKillers[
+            _random.Next(availableKillers.Count)
+        ];
+    }
+
+    public TwoV8Skill GetTwoV8KillerInnateSkill(
+        Killer killer)
+    {
+        TwoV8Skill? skill = _twoV8Skills
+            .FirstOrDefault(skill =>
+                skill.Role == "Killer" &&
+                skill.Type == "Innate" &&
+                skill.CharacterId == killer.Id);
+
+        if (skill == null)
+        {
+            throw new InvalidOperationException(
+                $"No se encontró la habilidad innata de 2v8 para el Killer '{killer.Name}'."
+            );
+        }
+
+        return skill;
+    }
+
+    public TwoV8Result RandomizeTwoV8KillerResult()
+    {
+        Killer killer = RandomizeTwoV8Killer();
+
+        TwoV8Class selectedClass = _twoV8Classes
+            .Where(c => c.Role == "Killer")
+            .OrderBy(_ => _random.Next())
+            .FirstOrDefault()
+            ?? throw new InvalidOperationException(
+                "No hay clases de Killer disponibles para 2v8."
+            );
+
+        List<TwoV8Skill> classSkills =
+            GetTwoV8Skills(selectedClass);
+
+        if (classSkills.Count != 2)
+        {
+            throw new InvalidOperationException(
+                $"La clase '{selectedClass.Name}' debe tener exactamente 2 habilidades de clase."
+            );
+        }
+
+        TwoV8Skill innateSkill =
+            GetTwoV8KillerInnateSkill(killer);
+
+        return new TwoV8Result
+        {
+            Killer = killer,
+            Class = selectedClass,
+            Skills = classSkills,
+            KillerInnateSkill = innateSkill
+        };
+    }
+
+    public void RerollTwoV8Survivor(TwoV8Result result)
+    {
+        result.Survivor = RandomizeTwoV8Survivor();
+    }
+
+    public void RerollTwoV8SurvivorClass(TwoV8Result result)
+    {
+        result.Class = RandomizeTwoV8SurvivorClass();
+
+        List<TwoV8Skill> skills =
+            GetTwoV8Skills(result.Class);
+
+        if (skills.Count != 3)
+        {
+            throw new InvalidOperationException(
+                $"La clase '{result.Class.Name}' debe tener exactamente 3 habilidades."
+            );
+        }
+
+        result.Skills = skills;
+    }
+
+    public void RerollTwoV8Skill(TwoV8Result result,int index)
+    {
+        if (result.Class == null)
+        {
+            return;
+        }
+
+        List<TwoV8Skill> availableSkills =
+            GetTwoV8Skills(result.Class);
+
+        if (index < 0 || index >= availableSkills.Count)
+        {
+            return;
+        }
+
+        result.Skills[index] =
+            availableSkills[index];
+    }
+
+    public void RerollTwoV8Killer(TwoV8Result result)
+    {
+        Killer killer = RandomizeTwoV8Killer();
+
+        result.Killer = killer;
+
+        result.KillerInnateSkill =
+            GetTwoV8KillerInnateSkill(killer);
+    }
+
+    public void RerollTwoV8KillerClass(TwoV8Result result)
+    {
+        TwoV8Class selectedClass = _twoV8Classes
+            .Where(c => c.Role == "Killer")
+            .OrderBy(_ => _random.Next())
+            .FirstOrDefault()
+            ?? throw new InvalidOperationException(
+                "No hay clases de Killer disponibles para 2v8."
+            );
+
+        List<TwoV8Skill> classSkills =
+            GetTwoV8Skills(selectedClass);
+
+        if (classSkills.Count != 2)
+        {
+            throw new InvalidOperationException(
+                $"La clase '{selectedClass.Name}' debe tener exactamente 2 habilidades de clase."
+            );
+        }
+
+        result.Class = selectedClass;
+        result.Skills = classSkills;
+    }
+
 }
+

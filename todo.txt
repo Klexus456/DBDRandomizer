@@ -1,39 +1,5 @@
-- hacer offerings especificas para survivor y killers
-
-Etapa A — Configuración
-
-Crear Settings.razor.
-Mostrar Survivors disponibles.
-Mostrar Killers disponibles.
-Permitir activar/desactivar.
-Configurar modo de skins.
-Permitir configurar perks.
-Guardar temporalmente la configuración.
-
-Etapa B — Persistencia
-
-Guardar configuración en localStorage.
-Cargarla automáticamente al entrar.
-Agregar botón Restaurar configuración predeterminada.
-
-Etapa C — Mejorar la UI
-
-Imágenes de personajes.
-Imágenes de skins.
-Cards más visuales.
-Tooltips/descripciones.
-Animaciones del randomizador.
-
-Etapa D — Cuentas
-
-Sistema de registro/login.
-Base de datos.
-Guardar configuración por usuario.
-Sincronizar configuración entre dispositivos.
-
-Etapa E — Publicación
-
-Deploy.
-Dominio.
-HTTPS.
-Actualizaciones de datos.
+COLORES DE TEXTO
+<span style=\"color: #ac3ee3;\">36 </span> = violeta
+<span style=\"color: #e7cda2;\">36 </span> = gris claro (quotes)
+e8c252 amarillo addons
+ff8800 naranja addons

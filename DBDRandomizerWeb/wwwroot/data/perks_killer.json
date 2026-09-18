@@ -3,1105 +3,1064 @@
     "Id": 1,
     "Name": "Presencia Perturbadora",
     "CharacterId": 1,
-    "Description": "Tu mera presencia infunde pavor. Los Sobrevivientes que reparan o curan dentro de tu Radio de Terror tienen más probabilidades de activar Pruebas de Habilidad y las zonas de éxito de estas son más pequeñas.",
+    "Description": "Los Sobrevivientes dentro de tu Radio de Terror tienen un {YELLOW}10{RESET}% m\u00E1s de probabilidades de activar Pruebas de Habilidad al reparar o curarse. Las zonas de \u00E9xito de las Pruebas de Habilidad activadas se reducen un {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET}%.",
     "Image": "images/perks/unnervingpresence.webp"
   },
   {
     "Id": 2,
     "Name": "Fuerza Brutal",
     "CharacterId": 1,
-    "Description": "Tu fuerza monstruosa te permite destruir Palés y Generadores más rápidamente.",
+    "Description": "Destruyes Tarimas ca\u00EDdas, Paredes Rompibles y Generadores un {GREEN}10{RESET}/{CYAN}15{RESET}/{PURPLE}20{RESET}% m\u00E1s r\u00E1pido.",
     "Image": "images/perks/brutalstrength.webp"
   },
   {
     "Id": 3,
-    "Name": "Agitación",
+    "Name": "Agitaci\u00F3n",
     "CharacterId": 1,
-    "Description": "Tu intensa energía te hace moverte más rápido mientras transportas a un Sobreviviente y aumenta tu Radio de Terror durante ese tiempo.",
+    "Description": "Mientras transportas a un sobreviviente: \n\u003Cul\u003E\n\u003Cli\u003ETu Radio de Terror aumenta en {YELLOW}12{RESET} metros\u003C/li\u003E\n\u003Cli\u003EObtienes un {GREEN}6{RESET}/{CYAN}12{RESET}/{PURPLE}18{RESET}% de {BLUE}Celeridad{RESET}.\u003C/li\u003E\n\u003C/ul\u003E",
     "Image": "images/perks/agitation.webp"
   },
-
   {
     "Id": 4,
-    "Name": "Depredación",
+    "Name": "Depredaci\u00F3n",
     "CharacterId": 2,
-    "Description": "Gracias a tus sentidos sobrenaturales, puedes detectar las perturbaciones que dejan los Sobrevivientes al correr. Cuando un Sobreviviente escapa de una persecución, su Aura se revela durante unos segundos.",
-    "Image": "images/perks/predation.webp"
+    "Description": "Cuando dejas de perseguir a un Sobreviviente, su Aura se revela durante un {YELLOW}4{RESET} segundos. Tiempo de recuperaci\u00F3n: {GREEN}60{RESET}/{CYAN}50{RESET}/{PURPLE}40{RESET} segundos.",
+    "Image": "images/perks/depredacion.webp"
   },
   {
     "Id": 5,
     "Name": "Hijo de las Sombras",
     "CharacterId": 2,
-    "Description": "Posees una vista aguda incluso en la oscuridad. Cuando te ciegan de cualquier manera, obtienes Celeridad durante un breve período.",
-    "Image": "images/perks/shadowborn.webp"
+    "Description": "Cuando te ciegan, obtienes un {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET}% de {BLUE}Celeridad{RESET} durante {YELLOW}10{RESET} segundos.",
+    "Image": "images/perks/hijodelassombras.webp"
   },
   {
     "Id": 6,
     "Name": "Sabueso de Sangre",
     "CharacterId": 2,
-    "Description": "Tu olfato de sabueso te permite percibir los rastros de sangre a larga distancia. Los Charcos de Sangre se muestran de forma más brillante y permanecen visibles durante más tiempo.",
-    "Image": "images/perks/bloodhound.webp"
+    "Description": "Las marcas de sangre son m\u00E1s brillantes y pueden seguirse durante {GREEN}2{RESET}/{CYAN}3{RESET}/{PURPLE}4{RESET} segundos m\u00E1s de lo normal.",
+    "Image": "images/perks/sabuesodesangre.webp"
   },
-
   {
     "Id": 7,
     "Name": "Resistente",
     "CharacterId": 3,
-    "Description": "Tu cuerpo está acostumbrado al dolor. La velocidad de recuperación de los efectos de los ataques fallidos y otras acciones se ve mejorada.",
-    "Image": "images/perks/enduring.webp"
+    "Description": "Se reduce la duraci\u00F3n de los aturdimientos causados por Tarimas en un {GREEN}40{RESET}/{CYAN}45{RESET}/{PURPLE}50{RESET}%. No tiene efecto mientras transportas a un Sobreviviente.",
+    "Image": "images/perks/resitente.webp"
   },
   {
     "Id": 8,
     "Name": "Hijo de la Luz",
     "CharacterId": 3,
-    "Description": "La luz no puede detenerte durante mucho tiempo. El tiempo que permaneces cegado por las Linternas se reduce considerablemente.",
-    "Image": "images/perks/lightborn.webp"
+    "Description": "Eres inmune a la ceguera. Los Sobrevivientes que intenten cegarte tienen su Aura revelada durante {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} segundos.",
+    "Image": "images/perks/hijodelaluz.webp"
   },
   {
     "Id": 9,
     "Name": "Reparador",
     "CharacterId": 3,
-    "Description": "Tu obsesión por reparar máquinas te permite localizar Generadores con mayor facilidad y obtener beneficios al patearlos.",
-    "Image": "images/perks/tinkerer.webp"
+    "Description": "Cada vez que un Generador alcanza un {YELLOW}70{RESET}% de progreso:\n\u003Cul\u003E\n\u003Cli\u003E Genera una notificaci\u00F3n de ruido fuerte.\u003C/li\u003E \n\u003Cli\u003E Obtienes el efecto de estado Indetectable durante {GREEN}12{RESET}/{CYAN}14{RESET}/{PURPLE}16{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/reparador.webp"
   },
-
   {
     "Id": 10,
     "Name": "Aliento",
     "CharacterId": 4,
-    "Description": "Tus sentidos sobrenaturales te permiten percibir los sonidos de los Sobrevivientes con mayor claridad, incluso cuando intentan ocultarse.",
-    "Image": "images/perks/nursescalling.webp"
+    "Description": "La respiraci\u00F3n de los Sobrevivientes heridos es un {GREEN}30{RESET}/{CYAN}40{RESET}/{PURPLE}50{RESET}% m\u00E1s fuerte y la respiraci\u00F3n normal es un {GREEN}15{RESET}/{CYAN}20{RESET}/{PURPLE}25{RESET}% m\u00E1s fuerte.",
+    "Image": "images/perks/aliento.webp"
   },
   {
     "Id": 11,
     "Name": "Tanatofobia",
     "CharacterId": 4,
-    "Description": "La muerte y las heridas afectan a todos. Por cada Sobreviviente herido, moribundo o enganchado, los demás sufren una penalización a sus velocidades de reparación, sabotaje y curación.",
-    "Image": "images/perks/thanatophobia.webp"
+    "Description": "Por cada Sobreviviente herido, agonizante o colgado, todos los Sobrevivientes reciben una penalizaci\u00F3n del {GREEN}1{RESET}/{CYAN}1,5{RESET}/{PURPLE}2{RESET}% a las velocidades de reparaci\u00F3n, sabotaje y limpieza de T\u00F3tems.\u003Cbr\u003E\u003Cbr\u003E\nSi los cuatro Sobrevivientes est\u00E1n heridos, agonizantes, o colgados, aumenta cada penalizaci\u00F3n en un {YELLOW}12{RESET}%",
+    "Image": "images/perks/tanatofobia.webp"
   },
   {
     "Id": 12,
-    "Name": "Vocación de Enfermera",
+    "Name": "Vocaci\u00F3n de Enfermera",
     "CharacterId": 4,
-    "Description": "Tu capacidad para percibir el dolor de los demás te permite ver las Auras de los Sobrevivientes que se están curando dentro de un determinado alcance.",
-    "Image": "images/perks/nursescalling.webp"
+    "Description": "Las Auras de los Sobrevivientes que est\u00E9n cur\u00E1ndose o siendo curados se revelan cuando te encuentras dentro de un radio de {GREEN}28{RESET}/{CYAN}30{RESET}/{PURPLE}32{RESET} metros de ellos.",
+    "Image": "images/perks/vocaciondeenfermera.webp"
   },
-
   {
     "Id": 13,
-    "Name": "Lo Mejor para el Final",
+    "Name": "Lo Mejor para el Final / Que Sigan Esperando",
     "CharacterId": 5,
-    "Description": "Te obsesionas con un Sobreviviente. Cada vez que golpeas con un Ataque Básico a alguien que no es la Obsesión, acumulas una ficha que reduce el tiempo de recuperación de tus ataques.",
-    "Image": "images/perks/savebestforlast.webp"
+    "Description": "Obtienes {YELLOW}1{RESET} ficha por cada Ataque B\u00E1sico exitoso que no se realice contra la Obsesi\u00F3n hasta un maximo de {GREEN}5{RESET}/{CYAN}7{RESET}/{PURPLE}8{RESET}.\u003Cbr\u003E\u003Cbr\u003E Cada ficha proporciona una reducci\u00F3n acumulable del {YELLOW}5{RESET}% al tiempo de recuperaci\u00F3n de los Ataques B\u00E1sicos.\u003Cbr\u003E\u003Cbr\u003ECuando la Obsesion recibe da\u00F1o, pierdes {YELLOW}2{RESET} fichas.\u003Cbr\u003E\u003Cbr\u003ENo puedes obtener fichas mientras tu Obsesi\u00F3n haya sido sacrificada o asesinada.",
+    "Image": "images/perks/lomejorparaelfinal.webp"
   },
   {
     "Id": 14,
-    "Name": "Jugar con la Comida",
+    "Name": "Jugar con la Comida / Mira C\u00F3mo Corren",
     "CharacterId": 5,
-    "Description": "Te obsesionas con un Sobreviviente. Cuando persigues a tu Obsesión y la dejas escapar, obtienes una ficha que aumenta tu velocidad de movimiento.",
-    "Image": "images/perks/playwithyourfood.webp"
+    "Description": "Cada vez que persigues a tu Obsesi\u00F3n y permites que escape, obtienes {YELLOW}1{RESET} ficha, hasta un m\u00E1ximo de {YELLOW}3{RESET}. Cooldown: {YELLOW}10{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nCada ficha proporciona un {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET}% de {BLUE}Celeridad{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que atacas, pierdes {YELLOW}1{RESET} ficha.",
+    "Image": "images/perks/jugarconlacomida.webp"
   },
   {
     "Id": 15,
-    "Name": "Luz que Agoniza",
+    "Name": "Luz que Agoniza / Sacrifica a los D\u00E9biles",
     "CharacterId": 5,
-    "Description": "Tu Obsesión obtiene una bonificación a determinadas acciones mientras los demás Sobrevivientes sufren una penalización. Cada vez que la Obsesión muere, las penalizaciones aumentan.",
-    "Image": "images/perks/dyinglight.webp"
+    "Description": "Cada vez que enganchas a un Sobreviviente que no sea la Obsesi\u00F3n, obtienes {YELLOW}1{RESET} ficha.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras la Obsesi\u00F3n est\u00E9 viva, por cada ficha los Sobrevivientes: \n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ECuran un {GREEN}2{RESET}/{CYAN}2,5{RESET}/{PURPLE}3{RESET}% mas lento.\u003C/li\u003E\n\u003Cli\u003EReparan un {GREEN}2{RESET}/{CYAN}2,5{RESET}/{PURPLE}3{RESET}% mas lento.\u003C/li\u003E\n\u003Cli\u003ESabotean un {GREEN}2{RESET}/{CYAN}2,5{RESET}/{PURPLE}3{RESET}% mas lento\u003C/li\u003E\n\u003C/ul\u003E\nLa Obsesi\u00F3n: \n\u003Cul\u003E\n\u003Cli\u003ECura un {YELLOW}33{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EDescuelga un {YELLOW}33{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E \n\u003Cul\u003E",
+    "Image": "images/perks/luzqueagoniza.webp"
   },
   {
     "Id": 16,
     "Name": "Maleficio: El Tercer Sello",
     "CharacterId": 6,
-    "Description": "Un Maleficio que oculta la percepción de tus víctimas. Golpear a un Sobreviviente con un ataque aplica el efecto de estado Incapacitado y su Aura deja de poder verse.",
-    "Image": "images/perks/hexthirdseal.webp"
+    "Description": "Cuando comienza la partida, se enciende un T\u00F3tem.\u003Cbr\u003E\u003Cbr\u003E\n\nGolpear a un Sobreviviente con un Ataque B\u00E1sico o un Especial aplica Ceguera.\n\u003Cbr\u003E\u003Cbr\u003E\nEste efecto se aplica a los \u00FAltimos {GREEN}2{RESET}/{CYAN}3{RESET}/{PURPLE}4{RESET} Sobrevivientes golpeados.",
+    "Image": "images/perks/maleficioeltercersello.webp"
   },
   {
     "Id": 17,
     "Name": "Maleficio: Ruina",
     "CharacterId": 6,
-    "Description": "Un Maleficio que afecta a todos los Generadores. Mientras el Tótem de Maleficio siga activo, los Generadores que no estén siendo reparados regresan automáticamente su progreso.",
-    "Image": "images/perks/hexruin.webp"
+    "Description": "Cuando comienza la partida, se enciende un T\u00F3tem.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras un Generador no est\u00E9 siendo reparado, retrocede autom\u00E1ticamente su progreso en un {GREEN}100{RESET}/{CYAN}125{RESET}/{PURPLE}150{RESET}% de velocidad.",
+    "Image": "images/perks/maleficioruina.webp"
   },
   {
     "Id": 18,
     "Name": "Maleficio: Devoradora de Esperanza",
     "CharacterId": 6,
-    "Description": "Un Maleficio que se alimenta de la esperanza de los Sobrevivientes. Cuando un Sobreviviente es rescatado de un Gancho a cierta distancia de ti, obtienes una ficha. Al alcanzar suficientes fichas, obtienes distintos beneficios, incluyendo la posibilidad de matar a los Sobrevivientes.",
-    "Image": "images/perks/hexfireup.webp"
+    "Description": "Cuando comienza la partida, se enciende un T\u00F3tem\n\u003Cbr\u003E\u003Cbr\u003E\nCuando un Sobreviviente es rescatado de un Gancho mientras estas a mas de {YELLOW}24{RESET} metros, consigue {YELLOW}1{RESET} ficha, hasta un maximo de {YELLOW}5{RESET}:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003E2 fichas: obtienes un {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET}% de {BLUE}Celeridad{RESET} {YELLOW}10{RESET} segundos despu\u00E9s de colgar a un Sobreviviente, durante {YELLOW}10{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003E3 fichas: los Sobrevivientes sufren de Vulnerabilidad.\u003C/li\u003E\n\u003Cli\u003E5 fichas: obtienes la capacidad de matar a los Sobrevivientes con tus propias manos.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/maleficiodevoradoradeesperanza.webp"
   },
-
   {
     "Id": 19,
     "Name": "Presencia Abrumadora",
     "CharacterId": 7,
-    "Description": "Tu mera presencia perturba a tus víctimas. Los Sobrevivientes dentro de tu Radio de Terror consumen sus Objetos más rápidamente.",
-    "Image": "images/perks/overwhelmingpresence.webp"
+    "Description": "Cuando un Sobreviviente usa un Objeto a menos de {YELLOW}32{RESET} metros de ti, obtiene Agotado durante {YELLOW}15{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando un Sobreviviente a menos de {YELLOW}32{RESET} metros de ti sufre de Agotado, ves el Aura del Sobreviviente Agotado m\u00E1s cercano durante {GREEN}2{RESET}/{CYAN}3{RESET}/{PURPLE}4{RESET} segundos. Cooldown: {YELLOW}25{RESET} segundos.",
+    "Image": "images/perks/presenciaabrumadora.webp"
   },
   {
     "Id": 20,
-    "Name": "Monitorización y Abuso",
+    "Name": "Monitorizaci\u00F3n y Abuso",
     "CharacterId": 7,
-    "Description": "Tu visión está enfocada y tu método de caza es preciso. Mientras persigues a un Sobreviviente, tu Radio de Terror aumenta; cuando no estás persiguiendo, se reduce y tu campo de visión aumenta.",
-    "Image": "images/perks/monitorandabuse.webp"
+    "Description": "Mientras est\u00E1s en una persecuci\u00F3n, tu Radio de Terror aumenta un {GREEN}5{RESET}/{CYAN}10{RESET}/{PURPLE}15{RESET}%. De lo contrario, tu Radio de Terror disminuye un {GREEN}15{RESET}/{CYAN}20{RESET}/{PURPLE}25{RESET}%",
+    "Image": "images/perks/monitorizacionyabuso.webp"
   },
   {
     "Id": 21,
     "Name": "Sobrecarga",
     "CharacterId": 7,
-    "Description": "Sobrecargas un Generador al dañarlo. El siguiente Sobreviviente que interactúe con él se enfrenta a una Prueba de Habilidad difícil y, si falla, el Generador pierde progreso adicional.",
-    "Image": "images/perks/overcharge.webp"
+    "Description": "Cuando da\u00F1as un generador:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESu velocidad de regresi\u00F3n aumenta del {YELLOW}85{RESET}% al {YELLOW}130{RESET}% durante los siguientes {YELLOW}30{RESET} segundos. \u003C/li\u003E\n\u003Cli\u003EEl siguiente Sobreviviente que comience a repararlo se enfrentar\u00E1 a una Prueba de Habilidad especial. Si falla, perder\u00E1 un {GREEN}2{RESET}/{CYAN}3{RESET}/{PURPLE}4{RESET}% de progreso adicional.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/sobrecarga.webp"
   },
-
   {
     "Id": 22,
     "Name": "Bestia de Presa",
     "CharacterId": 8,
-    "Description": "Cuando alcanzas el estado de Furia del Cazador, obtienes el efecto de estado Indetectable durante un tiempo y dejas de emitir un Radio de Terror.",
-    "Image": "images/perks/beastofprey.webp"
+    "Description": "Cuando obtienes Sed de Sangre, otorga Indetectable durante {GREEN}30{RESET}/{CYAN}35{RESET}/{PURPLE}40{RESET} segundos.",
+    "Image": "images/perks/bestiadepresa.webp"
   },
   {
     "Id": 23,
     "Name": "Instinto Territorial",
     "CharacterId": 8,
-    "Description": "Desbloquea la capacidad de leer Auras. Las Auras de los Sobrevivientes que entren en tu sótano se revelan durante unos segundos.",
-    "Image": "images/perks/territorialimperative.webp"
+    "Description": "Las Auras de los Sobrevivientes se revelan durante {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET} segundos cuando entran en el S\u00F3tano y est\u00E1s a m\u00E1s de {YELLOW}24{RESET} metros. Cooldown: {YELLOW}45{RESET} segundos",
+    "Image": "images/perks/instintoterritorial.webp"
   },
   {
     "Id": 24,
     "Name": "Maleficio: Arrullo de Cazadora",
     "CharacterId": 8,
-    "Description": "Un Maleficio que afecta a los Sobrevivientes cada vez que completan una Prueba de Habilidad. Las penalizaciones aumentan a medida que acumulas fichas.",
-    "Image": "images/perks/hexhuntresslullaby.webp"
+    "Description": "Cuando comienza la partida, se enciende un T\u00F3tem.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando cuelgas a un Sobreviviente, ganas {YELLOW}1{RESET} ficha. Por cada ficha, las advertencias de las Pruebas de Habilidad aparecen m\u00E1s tarde y las zonas de \u00E9xito de las Pruebas de Habilidad son m\u00E1s peque\u00F1as.\n\u003Cbr\u003E\u003Cbr\u003E\nCon 5 fichas, las advertencias de las Pruebas de Habilidad desaparecen por completo.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando un Sobreviviente falla una Prueba de Habilidad, pierden {GREEN}2{RESET}/{CYAN}4{RESET}/{PURPLE}6{RESET}% mas progreso.",
+    "Image": "images/perks/maleficioarrullodecazadora.webp"
   },
-
   {
     "Id": 25,
     "Name": "Noqueo",
     "CharacterId": 9,
-    "Description": "Tus ataques dejan a los Sobrevivientes temporalmente incapaces de percibir las Auras de sus aliados y reducen su campo de visión cuando entran en el Estado Agonizante.",
-    "Image": "images/perks/knockout.webp"
+    "Description": "Cuando un Sobreviviente deja caer una Tarmina, si se aleja {YELLOW}6{RESET} metros de ella durante los siguientes {YELLOW}6{RESET} segundos, obtiene un {YELLOW}5{RESET}% de Entorpecimiento durante {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET} segundos.",
+    "Image": "images/perks/noqueo.webp"
   },
   {
     "Id": 26,
     "Name": "Parrillada y Chile",
     "CharacterId": 9,
-    "Description": "Después de colgar a un Sobreviviente, las Auras de los demás Sobrevivientes que estén lejos del Gancho se revelan durante unos segundos.",
-    "Image": "images/perks/barbecueandchilli.webp"
+    "Description": "Despu\u00E9s de colgar a un Sobreviviente, las Auras de todos los dem\u00E1s Sobrevivientes se revelan durante {YELLOW}5{RESET} segundos si est\u00E1n a m\u00E1s de {GREEN}60{RESET}/{CYAN}50{RESET}/{PURPLE}40{RESET} metros del Gancho.",
+    "Image": "images/perks/parrilladaychile.webp"
   },
   {
     "Id": 27,
     "Name": "Muerte de Franklin",
     "CharacterId": 9,
-    "Description": "Tus ataques básicos hacen que los Sobrevivientes suelten los Objetos que llevan equipados. Las Auras de los Objetos perdidos se revelan durante un tiempo.",
-    "Image": "images/perks/franklinsdemise.webp"
+    "Description": "Tus Ataques B\u00E1sicos hacen que los Sobrevivientes suelten su Objeto al recibir da\u00F1o.\n\u003Cbr\u003E\u003Cbr\u003E\nRevela los Objetos que est\u00E9n en el suelo dentro de un radio de {GREEN}32{RESET}/{CYAN}48{RESET}/{PURPLE}64{RESET} metros.",
+    "Image": "images/perks/muertedefranklin.webp"
   },
-
   {
     "Id": 28,
     "Name": "Enfurecimiento",
     "CharacterId": 10,
-    "Description": "Cada vez que se completa un Generador, Enfurecimiento gana una ficha. Cada ficha aumenta tu velocidad al recoger y soltar Sobrevivientes, romper Palés y Paredes y dañar Generadores.",
-    "Image": "images/perks/fireup.webp"
+    "Description": "Cuando se repara un Generador, acumula {YELLOW}1{RESET} ficha, hasta un m\u00E1ximo de {YELLOW}5{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPor cada ficha:\n\u003Cul\u003E\n\u003Cli\u003ERompes Tarimas y Paredes Rompibles un {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET}% m\u00E1s rapido\u003C/li\u003E\n\u003Cli\u003EDa\u00F1as Generadores un {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET}% m\u00E1s rapido\u003C/li\u003E\n\u003Cli\u003ERecoges y Sueltas Sobrevivientes un {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET}% m\u00E1s rapido\u003C/li\u003E\n\u003Cli\u003ESaltas Ventanas un {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET}% m\u00E1s rapido\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/enfurecimiento.webp"
   },
   {
     "Id": 29,
-    "Name": "Recuérdame",
+    "Name": "Recu\u00E9rdame",
     "CharacterId": 10,
-    "Description": "Te obsesionas con un Sobreviviente. Cada vez que tu Obsesión pierde un estado de salud, aumenta el tiempo necesario para abrir las Puertas de Salida.",
-    "Image": "images/perks/rememberme.webp"
+    "Description": "Cuando la Obsesi\u00F3n recibe da\u00F1o, obtienes {YELLOW}1{RESET} ficha, hasta un m\u00E1ximo de {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPor cada ficha, los Sobrevivientes que no sean la Obsesi\u00F3n abren las Puertas de Salida un {YELLOW}30{RESET}% m\u00E1s lento.",
+    "Image": "images/perks/recuerdame.webp"
   },
   {
     "Id": 30,
-    "Name": "Guardián de Sangre",
+    "Name": "Guardi\u00E1n de Sangre",
     "CharacterId": 10,
-    "Description": "Cuando se abre una Puerta de Salida, puedes ver las Auras de los Sobrevivientes en las zonas de salida. Al colgar a un Sobreviviente mientras está activa, las Puertas de Salida quedan bloqueadas temporalmente.",
-    "Image": "images/perks/bloodwarden.webp"
+    "Description": "En cuanto se abre una Puerta de Salida, una vez por Partida y cuando Cuelgas a un Sobreviviente, se bloquean ambas Puertas de Salida  durante {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nPuedes ver las Auras de los Sobrevivientes que se encuentren dentro de las zonas de salida.",
+    "Image": "images/perks/guardaindesangre.webp"
   },
   {
     "Id": 31,
     "Name": "Gancho Torturador: Truco del Verdugo",
     "CharacterId": 11,
-    "Description": "Tus ganchos están preparados para castigar a quienes intentan sabotear tus planes. Los ganchos destruidos pueden regenerarse y puedes percibir las Auras de los Sobrevivientes que manipulan los ganchos.",
-    "Image": "images/perks/hangmanstrick.webp"
+    "Description": "Al comienzo de la Partida, 4 ganchos aleatorios se convierten en Ganchos Torturadores.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras cargas a un Sobreviviente, puedes ver el Aura de cualquier Sobreviviente que se encuentre a {GREEN}12{RESET}/{CYAN}14{RESET}/{PURPLE}16{RESET} metros de un Gancho Torturador.\n\u003Cbr\u003E\u003Cbr\u003E\nRecibes una notificaci\u00F3n cuando un Sobreviviente comienza a Sabotear un Gancho. ",
+    "Image": "images/perks/ganchotorturadortrucodelverdugo.webp"
   },
   {
     "Id": 32,
-    "Name": "Supervisión",
+    "Name": "Supervisi\u00F3n",
     "CharacterId": 11,
-    "Description": "Tus sentidos están atentos a cualquier alteración en los Generadores. Los Generadores que estén siendo reparados producen notificaciones y puedes percibir mejor los sonidos relacionados con su reparación.",
-    "Image": "images/perks/surveillance.webp"
+    "Description": "Puedes ver el Aura de los generadores que se est\u00E1n revirtiendo.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando un Generador deja de revertirse, ves su Aura durante  {GREEN}8{RESET}/{CYAN}12{RESET}/{PURPLE}16{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nLos sonidos de los Generadores se escuchan {YELLOW}8{RESET} metros mas lejos.",
+    "Image": "images/perks/supervision.webp"
   },
   {
     "Id": 33,
-    "Name": "Toma una Decisión",
+    "Name": "Toma una Decisi\u00F3n",
     "CharacterId": 11,
-    "Description": "Cuando un Sobreviviente rescata a otro de un Gancho mientras estás lejos, el rescatador grita, revela su ubicación y queda expuesto durante un tiempo.",
-    "Image": "images/perks/makeyourchoice.webp"
+    "Description": "Cuando un Sobreviviente rescata a otro de un Gancho o se descuelga solo mientras te encuentras al menos a {YELLOW}32{RESET} metros, este:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EGritar\u00E1\u003C/li\u003E\n\u003Cli\u003ESufrir\u00E1 Vulnerabilidad por {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\nCooldown: {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos.",
+    "Image": "images/perks/tomaunadecision.webp"
   },
-
   {
     "Id": 34,
     "Name": "Desconcierto",
     "CharacterId": 12,
-    "Description": "Cuando un Sobreviviente realiza un Salto Rápido cerca de ti, los demás puntos de salto cercanos quedan bloqueados temporalmente.",
-    "Image": "images/perks/bamboozle.webp"
+    "Description": "Cuando saltas una Ventana, se bloquea por {GREEN}8{RESET}/{CYAN}12{RESET}/{PURPLE}16{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nSaltas Ventanas un {GREEN}5{RESET}/{CYAN}10{RESET}/{PURPLE}15{RESET}% m\u00E1s r\u00E1pido.\n\u003Cbr\u003E\u003Cbr\u003E\nSolo se puede bloquear 1 Ventana a la vez.",
+    "Image": "images/perks/desconcierto.webp"
   },
   {
     "Id": 35,
     "Name": "Coulrofobia",
     "CharacterId": 12,
-    "Description": "Los Sobrevivientes dentro de tu Radio de Terror sufren una penalización a su velocidad de curación y las Pruebas de Habilidad durante la curación son más frecuentes.",
-    "Image": "images/perks/coulrophobia.webp"
+    "Description": "Los Sobrevivientes dentro de tu Radio de Terror:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESe curan un {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET}% mas lento.\u003C/li\u003E\n\u003Cli\u003EMientras se curan, las Pruebas de Habilidad son un {YELLOW}50{RESET}% m\u00E1s r\u00E1pidas.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/coulrofobia.webp"
   },
   {
     "Id": 36,
     "Name": "Pim, Pam, Pum",
     "CharacterId": 12,
-    "Description": "Después de colgar a un Sobreviviente, el siguiente Generador que dañes perderá una parte de su progreso actual.",
-    "Image": "images/perks/popgoestheweasel.webp"
+    "Description": "Cada vez que cuelgas a un Sobreviviente, durante los siguientes {GREEN}35{RESET}/{CYAN}40{RESET}/{PURPLE}45{RESET} segundos, cuando da\u00F1es un Generador, este explota y pierde un {YELLOW}15{RESET}% adicional de progreso.",
+    "Image": "images/perks/pimpampum.webp"
   },
-
   {
     "Id": 37,
     "Name": "Furia Espiritual",
     "CharacterId": 13,
-    "Description": "Cada vez que rompes una Tarima, acumulas energía. Después de destruir suficientes Tarimas, la próxima que te aturda será destruida automáticamente.",
-    "Image": "images/perks/spiritfury.webp"
+    "Description": "Despu\u00E9s de romper {GREEN}4{RESET}/{CYAN}3{RESET}/{PURPLE}2{RESET} Tarimas, la pr\u00F3xima vez que una Tarima te aturda, se romper\u00E1 instant\u00E1neamente.",
+    "Image": "images/perks/furiaespiritual.webp"
   },
   {
     "Id": 38,
     "Name": "Maleficio: Tierra Embrujada",
     "CharacterId": 13,
-    "Description": "Dos Tótems se convierten en Tótems de Maleficio. Cuando uno de ellos es limpiado, todos los Sobrevivientes sufren Vulnerabilidad durante un tiempo.",
-    "Image": "images/perks/hexhauntedground.webp"
+    "Description": "Cuando comienza la partida, se encienden 2 T\u00F3tems.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando cualquiera de los 2 T\u00F3tems sea Bendecido o Purificado:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ETodos los Sobrevivientes sufrir\u00E1n Vulnerabilidad por {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EEl otro T\u00F3tem se extingue.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/maleficiotierraembrujada.webp"
   },
   {
     "Id": 39,
     "Name": "Rencor",
     "CharacterId": 13,
-    "Description": "Cada vez que se completa un Generador, todos los Sobrevivientes pueden ser revelados brevemente. La Obsesión también puede ver tu Aura y, cuando se activan las Puertas de Salida, puedes acabar con ella.",
-    "Image": "images/perks/rancor.webp"
+    "Description": "Cada vez que se completa un Generador:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESe alertar\u00E1 tu posici\u00F3n a todos los Sobrevivientes durante {YELLOW}3{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ELa Obsesion ve tu Aura por {GREEN}5{RESET}/{CYAN}4{RESET}/{PURPLE}3{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\nCuando se completan todos los Generadores:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ELa Obsesion sufrir\u00E1 Vulnerabilidad\u003C/li\u003E\n\u003Cli\u003EPuedes matar a la Obsesion\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/rencor.webp"
   },
-
   {
     "Id": 40,
     "Name": "Discordancia",
     "CharacterId": 14,
-    "Description": "Los Generadores que estén siendo reparados por varios Sobrevivientes se resaltan con un Aura amarilla y producen una notificación de ruido.",
-    "Image": "images/perks/discordance.webp"
+    "Description": "Dentro de un rango de {GREEN}64{RESET}/{CYAN}96{RESET}/{PURPLE}128{RESET} metros de ti, cuando se repara un Generador por al menos 2 Sobrevivientes, recibes una Notificaci\u00F3n.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando el Generador esta siendo reparado por al menos 2 Sobrevivientes, ves su Aura. Si deja de repararse por al menos 2 Sobrevivientes, el efecto terminar\u00E1 luego de {YELLOW}4{RESET} segundos",
+    "Image": "images/perks/discordancia.webp"
   },
   {
     "Id": 41,
     "Name": "Furia Ciega",
     "CharacterId": 14,
-    "Description": "Puedes ver las Auras de los Sobrevivientes cuando transportas a otro. Además, los efectos que podrían aturdirte mientras transportas a un Sobreviviente no tienen efecto.",
-    "Image": "images/perks/madgrit.webp"
+    "Description": "Cuando Cargas a un Sobreviviente:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESi fallas un Ataque B\u00E1sico, el Cooldown se reduce en un {YELLOW}100{RESET}%\u003C/li\u003E\n\u003Cli\u003ESi da\u00F1as a un Sobreviviente con un Ataque B\u00E1sico, el temporizador de forcejeo del Sobreviviente cargado se detiene durante {GREEN}2{RESET}/{CYAN}3{RESET}/{PURPLE}4{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/furiaciega.webp"
   },
   {
     "Id": 42,
     "Name": "Doncella de Hierro",
     "CharacterId": 14,
-    "Description": "Abres las Taquillas más rápido. Cuando un Sobreviviente sale de una Taquilla, grita y queda expuesto durante un tiempo.",
-    "Image": "images/perks/ironmaiden.webp"
+    "Description": "Cuando un Sobreviviente sale de una Taquilla:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESufre de Vulnerable por {YELLOW}30{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EGritar\u00E1 y se alertara su posici\u00F3n por {YELLOW}4{RESET} segundos\u003C/li\u003E\n\u003C/ul\u003E\nAbres Taquillas un {GREEN}30{RESET}/{CYAN}40{RESET}/{PURPLE}50{RESET}% mas r\u00E1pido.",
+    "Image": "images/perks/doncelladehierro.webp"
   },
-
   {
     "Id": 43,
-    "Name": "Intervención Corrupta",
+    "Name": "Intervenci\u00F3n Corrupta",
     "CharacterId": 15,
-    "Description": "Al comienzo de la Partida, los tres Generadores más alejados de ti quedan bloqueados temporalmente. El efecto termina antes si un Sobreviviente entra en el Estado Agonizante.",
-    "Image": "images/perks/corruptintervention.webp"
+    "Description": "Cuando comienza la Partida, los {YELLOW}3{RESET} Generadores m\u00E1s alejados de ti se bloquean durante {GREEN}80{RESET}/{CYAN}100{RESET}/{PURPLE}120{RESET} segundos, o hasta que derribes a un Sobreviviente.",
+    "Image": "images/perks/intervencioncorrupta.webp"
   },
   {
     "Id": 44,
     "Name": "Terror Contagioso",
     "CharacterId": 15,
-    "Description": "Cuando un Sobreviviente entra en el Estado Agonizante, todos los demás Sobrevivientes dentro de tu Radio de Terror gritan y revelan su ubicación durante unos segundos.",
-    "Image": "images/perks/infectiousfright.webp"
+    "Description": "Cuando un Sobreviviente entra en el Estado Agonizante, todos los dem\u00E1s Sobrevivientes dentro de tu Radio de Terror gritaran y revelaran su ubicaci\u00F3n durante {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET} segundos.",
+    "Image": "images/perks/terrorcontagioso.webp"
   },
   {
     "Id": 45,
-    "Name": "Devoción Oscura",
+    "Name": "Devoci\u00F3n Oscura",
     "CharacterId": 15,
-    "Description": "Cuando tu Obsesión pierde un Estado de Salud, tu Radio de Terror se transfiere temporalmente a ella y obtienes el efecto de estado Indetectable.",
-    "Image": "images/perks/darkdevotion.webp"
+    "Description": "Cuando tu Obsesi\u00F3n pierde un Estado de Salud, por {GREEN}35{RESET}/{CYAN}40{RESET}/{PURPLE}45{RESET} segundos:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ETu Radio de Terror se establece a {YELLOW}40{RESET} metros.\u003C/li\u003E\n\u003Cli\u003ELa Obsesi\u00F3n tiene tu Radio de Terror.\u003C/li\u003E\n\u003Cli\u003EObtienes Indetectable.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/devocionoscura.webp"
   },
   {
     "Id": 46,
-    "Name": "Soy Todo Oídos",
+    "Name": "Soy Todo O\u00EDdos",
     "CharacterId": 16,
-    "Description": "Cuando un Sobreviviente realiza un Salto Rápido dentro de 48 metros de ti, su Aura se revela durante unos segundos. Tiene un tiempo de recuperación.",
-    "Image": "images/perks/imall ears.webp"
+    "Description": "Cuando un Sobreviviente entra o sale r\u00E1pidamente de una Taquilla, o salta r\u00E1pidamente una Ventana en un radio de {YELLOW}48{RESET} metros cerca tuyo, puedes ver su aura por {YELLOW}8{RESET} segundos. Cooldown: {GREEN}60{RESET}/{CYAN}45{RESET}/{PURPLE}30{RESET} segundos.",
+    "Image": "images/perks/soytodooidos.webp"
   },
   {
     "Id": 47,
     "Name": "Temblores Trepidantes",
     "CharacterId": 16,
-    "Description": "Después de atrapar a un Sobreviviente, los Generadores que no estén siendo reparados quedan bloqueados temporalmente y sus Auras se revelan.",
-    "Image": "images/perks/thrillingtremors.webp"
+    "Description": "Cuando Cargas un Sobreviviente, todos los Generadores que no est\u00E9n siendo reparados se bloquean por {YELLOW}16{RESET} segundos. Cooldown: {GREEN}40{RESET}/{CYAN}35{RESET}/{PURPLE}30{RESET} segundos.",
+    "Image": "images/perks/temblorestrepidantes.webp"
   },
   {
     "Id": 48,
-    "Name": "Persecución Furtiva",
+    "Name": "Persecuci\u00F3n Furtiva",
     "CharacterId": 16,
-    "Description": "Después de colgar a tu Obsesión, obtienes Indetectable y Celeridad durante un tiempo. Si la Obsesión es rescatada, la Obsesión se transfiere al rescatador.",
-    "Image": "images/perks/furtivechase.webp"
+    "Description": "Cuando Cuelgas a la Obsesi\u00F3n:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EObtienes {YELLOW}10{RESET}% de {BLUE}Celeridad{RESET} por {GREEN}14{RESET}/{CYAN}16{RESET}/{PURPLE}18{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EObtienes Indetectable por {GREEN}14{RESET}/{CYAN}16{RESET}/{PURPLE}18{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\nEl Sobreviviente que Descuelgue a la Obsesi\u00F3n se convertir\u00E1 en la Obsesi\u00F3n.",
+    "Image": "images/perks/persecucionfurtiva.webp"
   },
-
   {
     "Id": 49,
-    "Name": "Sobretensión",
+    "Name": "Sobretensi\u00F3n",
     "CharacterId": 17,
-    "Description": "Dañar un Generador hace que los siguientes Generadores que exploten debido a un ataque básico pierdan progreso adicional.",
-    "Image": "images/perks/surge.webp"
+    "Description": "Cuando dejas a un Sobreviviente en Estado Agonizante con un Ataque B\u00E1sico, los Generadores en un radio de {YELLOW}32{RESET} metros cerca de ti:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EExplotan, pierden un {GREEN}6{RESET}/{CYAN}7{RESET}/{PURPLE}8{RESET}% de progreso y empiezan a revertirse.\u003C/li\u003E\n\u003Cli\u003ELos Sobrevivientes reparando el Generador gritar\u00E1n.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/sobretension.webp"
   },
   {
     "Id": 50,
     "Name": "Quebrantamentes",
     "CharacterId": 17,
-    "Description": "Los Sobrevivientes que reparan Generadores sufren Agotamiento y tienen su campo de visión reducido. El efecto continúa mientras permanezcan reparando.",
-    "Image": "images/perks/mindbreaker.webp"
+    "Description": "Mientras un Sobreviviente este reparando un Generador:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESufriran el Estado Ceguera\u003C/li\u003E\n\u003Cli\u003ESufriran Estado Agotado\u003C/li\u003E\n\u003C/ul\u003E\nLos efectos contin\u00FAan cuando dejan de reparar el Generador durante {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET} segundos.",
+    "Image": "images/perks/qubrantamentes.webp"
   },
   {
     "Id": 51,
-    "Name": "Restricción Cruel",
+    "Name": "Restricci\u00F3n Cruel",
     "CharacterId": 17,
-    "Description": "Cada vez que se completa un Generador, las Ventanas cercanas quedan bloqueadas temporalmente para los Sobrevivientes.",
-    "Image": "images/perks/cruellimits.webp"
+    "Description": "Cuando se repara un Generador:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EPuedes ver el Aura de todas las Ventanas durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ETodas las Ventanas se bloquean durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/restriccioncruel.webp"
   },
-
   {
     "Id": 52,
-    "Name": "Tácticas de Zanshin",
+    "Name": "T\u00E1cticas de Zanshin",
     "CharacterId": 18,
-    "Description": "Puedes ver las Auras de las Tarimas y Ventanas dentro de un radio determinado. Cuando un Sobreviviente deja caer una Tarima, su Aura se revela durante unos segundos.",
-    "Image": "images/perks/zanshintactics.webp"
+    "Description": "En un radio de {YELLOW}32{RESET} metros, puedes ver el Aura de Tarimas y Ventanas.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando un Sobreviviente deja caer una Tarima, puedes ver su Aura durante {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET} segundos.",
+    "Image": "images/perks/tacticasdezanshin.webp"
   },
   {
     "Id": 53,
     "Name": "Eco de Sangre",
     "CharacterId": 18,
-    "Description": "Al colgar a un Sobreviviente, todos los Sobrevivientes heridos sufren Agotamiento y Hemorragia durante un tiempo.",
-    "Image": "images/perks/bloodecho.webp"
+    "Description": "Al colgar a un Sobreviviente, durante  {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos, todos los Sobrevivientes heridos:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESufrir\u00E1n Agotamiento.\u003C/li\u003E\n\u003Cli\u003ESufrir\u00E1n Hemorragia.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/ecodesangre.webp"
   },
   {
     "Id": 54,
-    "Name": "Némesis",
+    "Name": "N\u00E9mesis",
     "CharacterId": 18,
-    "Description": "El Sobreviviente que te ciegue o aturda se convierte en tu Obsesión. Cuando cambia la Obsesión, el nuevo objetivo sufre Inconsciencia y su Aura se revela.",
+    "Description": "Cuando un Sobreviviente te Ciega o aturde con una Tarima o Taquilla, se convierte en la Obsesi\u00F3n.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando un Sobreviviente se convierte en la Obsesi\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003ESufrir\u00E1n Inconsciencia por {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EPuedes ver su Aura por {YELLOW}8{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
     "Image": "images/perks/nemesis.webp"
   },
-
   {
     "Id": 55,
     "Name": "Cabeza Dentada",
     "CharacterId": 19,
-    "Description": "Los Sobrevivientes alcanzados por tu arpón pueden sufrir un efecto que provoca que las acciones de curación y reparación sean más difíciles bajo determinadas condiciones.",
-    "Image": "images/perks/gearhead.webp"
+    "Description": "Cuando un Sobreviviente recibe da\u00F1o, durante los pr\u00F3ximos {YELLOW}30{RESET} segundos, si un Sobreviviente realiza una Prueba de Habilidad buena reparando un Generador, ves su Aura por {GREEN}6{RESET}/{CYAN}7{RESET}/{PURPLE}8{RESET} segundos.",
+    "Image": "images/perks/cabezadentada.webp"
   },
   {
     "Id": 56,
     "Name": "Interruptor del Hombre Muerto",
     "CharacterId": 19,
-    "Description": "Después de colgar a un Sobreviviente, el Ente bloquea temporalmente el primer Generador que un Sobreviviente abandone mientras está siendo reparado.",
-    "Image": "images/perks/deadmansswitch.webp"
+    "Description": "Cuando Cuelgas a un Sobreviviente, la primera vez que un Sobreviviente deje de reparar un Generador, se bloquea por {GREEN}25{RESET}/{CYAN}30{RESET}/{PURPLE}35{RESET} segundos. Cooldown: {GREEN}25{RESET}/{CYAN}30{RESET}/{PURPLE}35{RESET} segundos.",
+    "Image": "images/perks/interruptordelhombremuerto.webp"
   },
   {
     "Id": 57,
-    "Name": "Maleficio: Retribución",
+    "Name": "Maleficio: Retribuci\u00F3n",
     "CharacterId": 19,
-    "Description": "Los Sobrevivientes que limpian un Tótem sufren un efecto que revela su Aura. Cuando se limpia un Tótem de Maleficio, las Auras de todos los Sobrevivientes se revelan durante un tiempo.",
-    "Image": "images/perks/hexretribution.webp"
+    "Description": "Cuando comienza la partida, se enciende un T\u00F3tem.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando un Sobreviviente empieza a Bendecir o Purificar un T\u00F3tem, sufrir\u00E1 el Estado Inconsciencia durante {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nSi un T\u00F3tem de Maleficio es Purificado o Bendecido, podr\u00E1s ver el Aura de todos los Sobrevivientes por {YELLOW}20{RESET} segundos.",
+    "Image": "images/perks/maleficioretribucion.webp"
   },
-
   {
     "Id": 58,
     "Name": "Penitencia Forzada",
     "CharacterId": 20,
-    "Description": "Los Sobrevivientes que reciben protección de otro Sobreviviente durante un ataque sufren Herida Profunda y quedan afectados por Incapacitado durante un tiempo.",
-    "Image": "images/perks/forcedpenance.webp"
+    "Description": "Cuando un Sobreviviente recibe un Golpe Protector, sufrir\u00E1 de Desesperanza por {GREEN}60{RESET}/{CYAN}70{RESET}/{PURPLE}80{RESET} segundos.",
+    "Image": "images/perks/penitenciaforzada.webp"
   },
   {
     "Id": 59,
     "Name": "Senda del Tormento",
     "CharacterId": 20,
-    "Description": "Después de patear un Generador, obtienes Indetectable. El efecto termina cuando el Generador comienza a perder progreso o cuando un Sobreviviente interactúa con él.",
-    "Image": "images/perks/trailof torment.webp"
+    "Description": "Cuando da\u00F1es un Generador, hasta que para de revertirse:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EObtienes Indetectable.\u003C/li\u003E\n\u003Cli\u003ELos Sobrevivientes ven el Aura del Generador.\u003C/li\u003E\n\u003C/ul\u003E\nCooldown: {GREEN}60{RESET}/{CYAN}45{RESET}/{PURPLE}30{RESET} segundos.",
+    "Image": "images/perks/sendadeltormento.webp"
   },
   {
     "Id": 60,
     "Name": "Atadura Mortal",
     "CharacterId": 20,
-    "Description": "Cuando un Sobreviviente cura completamente a otro, ambos sufren el efecto de estado Ceguera y sus Auras quedan vinculadas bajo determinadas condiciones.",
-    "Image": "images/perks/deathbound.webp"
+    "Description": "Cuando un Sobreviviente cura a otro, gritar\u00E1n. Despu\u00E9s, hasta que reciba da\u00F1o, mientras se encuentre al menos a {GREEN}12{RESET}/{CYAN}8{RESET}/{PURPLE}4{RESET} metros de ese Sobreviviente:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESufren el Estado Inconsciencia.\u003C/li\u003E\n\u003Cli\u003EVe el Aura de ese Sobreviviente.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/ataduramortal.webp"
   },
-
   {
     "Id": 61,
-    "Name": "Garra de Dragón",
+    "Name": "Garra de Drag\u00F3n",
     "CharacterId": 21,
-    "Description": "Después de dañar un Generador, Garra de Dragón se activa durante un tiempo. El primer Sobreviviente que interactúe con ese Generador gritará y sufrirá Vulnerabilidad.",
+    "Description": "Cuando da\u00F1as un Generador, durante los pr\u00F3ximos {YELLOW}30{RESET} segundos, el primer Sobreviviente que repara ese generador:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EGritar\u00E1 y se notificara su posici\u00F3n por {YELLOW}4{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ESufrir\u00E1 del Efecto Vulnerable por {YELLOW}60{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\n Cooldown: {GREEN}60{RESET}/{CYAN}45{RESET}/{PURPLE}30{RESET} segundos.",
     "Image": "images/perks/garradedragon.webp"
   },
   {
     "Id": 62,
     "Name": "Maleficio: Favor de Sangre",
     "CharacterId": 21,
-    "Description": "Un Maleficio que se activa cuando un Sobreviviente pierde un Estado de Salud. Mientras esté activo, las Tarimas dentro de su alcance quedan bloqueadas temporalmente.",
+    "Description": "Cuando comienza la partida, se enciende un T\u00F3tem.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando da\u00F1es a un Sobreviviente, las Tarimas levantadas dentro de un radio {GREEN}24{RESET}/{CYAN}28{RESET}/{PURPLE}32{RESET} metros se bloquean por {YELLOW}15{RESET} segundos.",
     "Image": "images/perks/maleficiofavordesangre.webp"
   },
   {
     "Id": 63,
     "Name": "Maleficio: Inmortal",
     "CharacterId": 21,
-    "Description": "Un Maleficio que revela las Auras de los Sobrevivientes cercanos a los Tótems. También permite transferir otro Maleficio a este Tótem cuando es purificado.",
+    "Description": "Cuando comienza la partida, se enciende un T\u00F3tem.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando se Bendice o Purifica un T\u00F3tem, se reemplaza por este y mantienes las fichas que tengas.\n\u003Cbr\u003E\u003Cbr\u003E\nPuedes ver el Aura de los Sobrevivientes en un radio de {GREEN}2{RESET}/{CYAN}3{RESET}/{PURPLE}4{RESET} metros de un T\u00F3tem maldecido.",
     "Image": "images/perks/maleficioinmortal.webp"
   },
-
   {
     "Id": 64,
     "Name": "Acumulador",
     "CharacterId": 22,
-    "Description": "Cuando un Sobreviviente abre un Cofre o recoge un Objeto dentro de un determinado alcance, recibes una Notificación de Ruido Fuerte. Además, aparecen Cofres adicionales en la Partida.",
+    "Description": "Al comienzo de la partida, aparecen {YELLOW}2{RESET} Cofres m\u00E1s.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando un Sobreviviente agarra un Objeto o empieza a abrir un Cofre en un radio de {GREEN}32{RESET}/{CYAN}48{RESET}/{PURPLE}64{RESET} metros de ti, recibes una Notificacion.",
     "Image": "images/perks/acumulador.webp"
   },
   {
     "Id": 65,
-    "Name": "Opresión",
+    "Name": "Opresi\u00F3n",
     "CharacterId": 22,
-    "Description": "Cuando dañas un Generador, otros Generadores seleccionados al azar comienzan a retroceder y los Sobrevivientes que los reparan pueden enfrentarse a una Prueba de Habilidad difícil.",
+    "Description": "Cuando da\u00F1as un Generador, hasta {YELLOW}4{RESET} Generadores empiezan a revertirse. Los Sobrevivientes que los est\u00E1n reparando reciben una Prueba de Habilidad especial.\n\u003Cbr\u003E\u003Cbr\u003E\nCooldown: {GREEN}45{RESET}/{CYAN}40{RESET}/{PURPLE}35{RESET} segundos.",
     "Image": "images/perks/opresion.webp"
   },
   {
     "Id": 66,
     "Name": "Golpe de Gracia",
     "CharacterId": 22,
-    "Description": "Cada vez que se completa un Generador, obtienes fichas. Estas fichas aumentan la distancia de tu próximo ataque de embestida.",
-    "Image": "images/perks/golpedegra cia.webp"
+    "Description": "Cada vez que se completa un Generador, obtienes {YELLOW}2{RESET} fichas, hasta un m\u00E1ximo de {YELLOW}5{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando haces un Ataque con embestida (manteniendo M1) se gasta {YELLOW}1{RESET} ficha para aumentar la distancia en un {GREEN}70{RESET}/{CYAN}75{RESET}/{PURPLE}80{RESET}%.",
+    "Image": "images/perks/golpedegracia.webp"
   },
-
   {
     "Id": 67,
     "Name": "Deslumbrante",
     "CharacterId": 23,
-    "Description": "Después de cargar a un Sobreviviente, los demás Sobrevivientes dentro de tu Radio de Terror sufren Vulnerabilidad durante un tiempo.",
+    "Description": "Cuando cargas un Sobreviviente, los dem\u00E1s dentro de tu Radio de Terror sufren del Estado Expuesto. El efecto continua {GREEN}26{RESET}/{CYAN}28{RESET}/{PURPLE}30{RESET} segundos despu\u00E9s de que:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EAbandonen tu Radio de Terror.\u003C/li\u003E\n\u003Cli\u003ECuelgues o sueltes al Sobreviviente que cargabas.\u003C/li\u003E\n\u003C/ul\u003E\nCooldown: {YELLOW}60{RESET} segundos.",
     "Image": "images/perks/deslumbrante.webp"
   },
   {
     "Id": 68,
-    "Name": "Maleficio: Control de Público",
+    "Name": "Maleficio: Control de P\u00FAblico",
     "CharacterId": 23,
-    "Description": "Un Maleficio que bloquea temporalmente las Ventanas utilizadas por los Sobrevivientes para realizar Saltos Rápidos.",
+    "Description": "La primera vez que un Sobreviviente salte r\u00E1pidamente una Ventana, se enciende un T\u00F3tem.\n\u003Cbr\u003E\u003Cbr\u003E\nLas ultimas {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET} que los Sobrevivientes saltaron r\u00E1pidamente se bloquean.\n\u003Cbr\u003E\u003Cbr\u003E\nSaltas Ventanas bloqueadas un {YELLOW}15{RESET}% m\u00E1s r\u00E1pido.\n\u003Cbr\u003E\u003Cbr\u003E\nVes el Aura de las Ventanas bloqueadas dentro de un radio de {YELLOW}24{RESET} metros.",
     "Image": "images/perks/maleficiocontroldepublico.webp"
   },
   {
     "Id": 69,
     "Name": "Sin Salida",
     "CharacterId": 23,
-    "Description": "Cada vez que cuelgas por primera vez a un Sobreviviente, obtienes una ficha. Cuando se activan las Puertas de Salida, interactuar con sus palancas provoca una notificación y las bloquea durante un tiempo determinado.",
+    "Description": "Cada vez que cuelgas por primera vez a un Sobreviviente, obtienes {YELLOW}1{RESET} ficha.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando se completan todos los Generadores y un Sobreviviente empieza a abrir una Puerta de Salida:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESe bloquea por {YELLOW}12{RESET} segundos, m\u00E1s {GREEN}6{RESET}/{CYAN}9{RESET}/{PURPLE}12{RESET} segundos por cada ficha.\u003C/li\u003E\n\u003Cli\u003ERecibes una Notificaci\u00F3n.\u003C/li\u003E\n\u003C/ul\u003E",
     "Image": "images/perks/sinsalida.webp"
   },
-
   {
     "Id": 70,
     "Name": "Perseguidor Letal",
     "CharacterId": 24,
-    "Description": "Al comienzo de la Partida, las Auras de todos los Sobrevivientes se revelan durante unos segundos. Las revelaciones de Aura posteriores duran un poco más.",
+    "Description": "Al comienzo de la Partida, las Auras de todos los Sobrevivientes se revelan durante {GREEN}7{RESET}/{CYAN}8{RESET}/{PURPLE}9{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nLas revelaciones de Aura posteriores duran {YELLOW}2{RESET} segundos m\u00E1s.",
     "Image": "images/perks/perseguidorletal.webp"
   },
   {
     "Id": 71,
     "Name": "Histeria",
     "CharacterId": 24,
-    "Description": "Cuando hieres a un Sobreviviente, todos los Sobrevivientes heridos sufren Inconsciencia durante un tiempo. Tiene un tiempo de recuperación.",
+    "Description": "Cuando hieres a un Sobreviviente, todos los Sobrevivientes Heridos sufren Inconsciencia durante {GREEN}30{RESET}/{CYAN}35{RESET}/{PURPLE}40{RESET} segundos. Cooldown: {YELLOW}20{RESET} segundos.",
     "Image": "images/perks/histeria.webp"
   },
   {
     "Id": 72,
-    "Name": "Erupción",
+    "Name": "Erupci\u00F3n",
     "CharacterId": 24,
-    "Description": "Después de patear un Generador, su Aura queda resaltada. Cuando un Sobreviviente entra en el Estado Agonizante, los Generadores afectados pierden progreso y los Sobrevivientes que los reparan pueden revelar su ubicación.",
+    "Description": "Despu\u00E9s de da\u00F1ar un Generador, cuando un Sobreviviente entra en el Estado Agonizante, los Generadores afectados:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EExplotan, pierden un {YELLOW}10{RESET}% de progreso y empiezan a revertirse.\u003C/li\u003E\n\u003Cli\u003ELos Sobrevivientes reparando el Generador gritaran y podr\u00E1s ver sus Auras por {GREEN}8{RESET}/{CYAN}10{RESET}/{PURPLE}12{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\nCooldown: {YELLOW}30{RESET} segundos.",
     "Image": "images/perks/erupcion.webp"
   },
-
   {
     "Id": 73,
-    "Name": "Callejón sin Salida",
+    "Name": "Callej\u00F3n sin Salida",
     "CharacterId": 25,
-    "Description": "Después de que se hayan completado suficientes Generadores, cuando se abre una Puerta de Salida, las palancas de ambas puertas quedan bloqueadas temporalmente.",
+    "Description": "Cuando se completa un Generador, el Generador con m\u00E1s progreso se bloquea por {GREEN}15{RESET}/{CYAN}20{RESET}/{PURPLE}25{RESET} segundos.",
     "Image": "images/perks/callejonsinsalida.webp"
   },
   {
     "Id": 74,
     "Name": "Maleficio: Tiempo de Jugar",
     "CharacterId": 25,
-    "Description": "Un Maleficio que aplica un efecto perjudicial a los Sobrevivientes y puede activarse cuando se limpia o bendice un Tótem.",
+    "Description": "La primera vez que cuelgues a un Sobreviviente, son maldecidos y se enciende un T\u00F3tem.\n\u003Cbr\u003E\u003Cbr\u003E\nPor {YELLOW}90{RESET} segundos, el T\u00F3tem se bloquea a otros Sobrevivientes.\n\u003Cbr\u003E\u003Cbr\u003E\nLos Sobrevivientes maldecidos:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESufren Inconsciencia.\u003C/li\u003E\n\u003Cli\u003EEn un radio de {GREEN}24{RESET}/{CYAN}20{RESET}/{PURPLE}16{RESET} metros del T\u00F3tem, pueden ver su Aura.\u003C/li\u003E\n\u003C/ul\u003E",
     "Image": "images/perks/maleficiotiempodejugar.webp"
   },
   {
     "Id": 75,
     "Name": "Gancho Torturador: Obsequio de Dolor",
     "CharacterId": 25,
-    "Description": "Al enganchar por primera vez a un Sobreviviente en determinados Ganchos Torturadores, este sufre efectos negativos al ser desenganchado y durante las acciones de curación.",
+    "Description": "Al comienzo de la Partida, 4 ganchos aleatorios se convierten en Ganchos Torturadores.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando descuelgan al Sobreviviente de un Gancho Torturador:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESufren Hemorragia por {YELLOW}90{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ESufren Destrozado por {YELLOW}90{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EAl ser curado, hasta que reciba da\u00F1o, curar\u00E1 y reparar\u00E1 un {GREEN}10{RESET}/{CYAN}13{RESET}/{PURPLE}16{RESET}% m\u00E1s lento.\u003C/li\u003E\n\u003C/ul\u003E",
     "Image": "images/perks/ganchotorturadorobsequiodedolor.webp"
   },
-
   {
     "Id": 76,
     "Name": "Abrazo de la Muerte",
     "CharacterId": 26,
-    "Description": "Después de enganchar a un Sobreviviente en un Gancho Torturador, el Generador con mayor progreso queda bloqueado temporalmente. Cuando un Sobreviviente es desenganchado de un Gancho Torturador, todos los Sobrevivientes que estén reparando Generadores sufren una penalización a la reparación.",
+    "Description": "Al Colgar a un Sobreviviente por primera vez, ganas {YELLOW}1{RESET} ficha.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando te alejas {YELLOW}16{RESET} metros del Sobreviviente colgado, todos los Generadores se bloquean por {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nSi tienes {YELLOW}4{RESET} fichas y te alejes {YELLOW}16{RESET} metros del Sobreviviente Colgado:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ETodos los Generadores se bloquean por {YELLOW}40{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EVes el Aura de la Obsesi\u00F3n por {YELLOW}10{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
     "Image": "images/perks/abrazodelamuerte.webp"
   },
   {
     "Id": 77,
     "Name": "Gancho Torturador: Dolor Resonante",
     "CharacterId": 26,
-    "Description": "Al enganchar por primera vez a un Sobreviviente en determinados Ganchos Torturadores, el Generador con mayor progreso pierde una cantidad de progreso.",
+    "Description": "Al comienzo de la Partida:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003E4 ganchos aleatorios se convierten en Ganchos Torturadores.\u003C/li\u003E\n\u003Cli\u003EObtienes {YELLOW}4{RESET} fichas.\u003C/li\u003E\n\u003C/ul\u003E\nLa primera vez que cuelgues a cada Sobreviviente en un Gancho Torturador, gasta {YELLOW}1{RESET} ficha para que el Generador que tenga mas progreso:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EExplote, pierda {GREEN}10{RESET}/{CYAN}15{RESET}/{PURPLE}20{RESET}% de progreso y empiece a revertirse.\u003C/li\u003E\n\u003Cli\u003ELos Sobrevivientes repar\u00E1ndolo gritar\u00E1n.\u003C/li\u003E\n\u003C/ul\u003E",
     "Image": "images/perks/ganchotorturadordolorresonante.webp"
   },
   {
     "Id": 78,
     "Name": "Maleficio: Arrepentimiento",
     "CharacterId": 26,
-    "Description": "Cuando un Sobreviviente limpia un Tótem, este Maleficio puede crear un Tótem de Arrepentimiento. Los Sobrevivientes sufren penalizaciones a sus acciones y, cuando quedan pocos Tótems, pueden ser castigados si intentan limpiar el último.",
+    "Description": "Ves las Auras de los T\u00F3tems purificados y puedes reavivar cada uno de ellos una vez.\n\u003Cbr\u003E\u003Cbr\u003E\nLos Sobrevivientes que se encuentren a {YELLOW}16{RESET} metros de los T\u00F3tems reavivados ven sus Auras.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras haya un T\u00F3tem reavivado, los Sobrevivientes curan y reparan un {YELLOW}20{RESET}% m\u00E1s despacio, m\u00E1s un {GREEN}1{RESET}/{CYAN}2{RESET}/{PURPLE}3{RESET}% adicional por cada T\u00F3tem reavivado.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando los {YELLOW}5{RESET} T\u00F3tems est\u00E1n reavivados al mismo tiempo, quedan bloqueados.",
     "Image": "images/perks/maleficioarrepentimiento.webp"
   },
-
   {
     "Id": 79,
     "Name": "Gancho Torturador: Torrente de Ira",
     "CharacterId": 27,
-    "Description": "Al comienzo de la Partida, varios Ganchos son convertidos en Ganchos Torturadores y sus Auras se revelan. Cada vez que un Sobreviviente es desenganchado de uno de ellos, las Auras de los demás Sobrevivientes se revelan durante unos segundos.",
-    "Image": "images/perks/ganchotorturadortorrentedelira.webp"
+    "Description": "Al comienzo de la Partida, 4 ganchos aleatorios se convierten en Ganchos Torturadores.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando descuelgan a un Sobreviviente de un Gancho Torturador, ves el Aura de los otros Sobrevivientes por {GREEN}5{RESET}/{CYAN}6{RESET}/{PURPLE}7{RESET} segundos.",
+    "Image": "images/perks/ganchotorturadortorrentedeira.webp"
   },
   {
     "Id": 80,
     "Name": "Anuncio de Salmuera",
     "CharacterId": 27,
-    "Description": "Después de dañar un Generador, este queda afectado durante un tiempo. Su regresión aumenta y puedes ver su Aura. Cuando un Sobreviviente supera una Prueba de Habilidad en ese Generador, recibes una notificación.",
+    "Description": "Cuando da\u00F1es un Generador, se revierte un {GREEN}30{RESET}/{CYAN}40{RESET}/{PURPLE}50{RESET}% m\u00E1s r\u00E1pido por {YELLOW}90{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nDurante ese tiempo, cuando un Sobreviviente realiza un Prueba de Habilidad buena mientras repara ese Generador, recibes una Notificaci\u00F3n.",
     "Image": "images/perks/anunciodesalmuera.webp"
   },
   {
     "Id": 81,
     "Name": "Tormenta Despiadada",
     "CharacterId": 27,
-    "Description": "Cuando un Generador alcanza un alto porcentaje de progreso, los Sobrevivientes que lo reparan deben superar una serie de Pruebas de Habilidad. Si fallan o dejan de repararlo, el Generador queda bloqueado temporalmente.",
+    "Description": "La primera vez que cada Generador llega al {YELLOW}90{RESET}% de progreso: Los Sobrevivientes que lo est\u00E9n reparando tienen Pruebas de Habilidades especiales. Si fallan una de ellas o dejan de reparar, el Generador se bloquea por {GREEN}16{RESET}/{CYAN}18{RESET}/{PURPLE}20{RESET} segundos.",
     "Image": "images/perks/tormentadespiadada.webp"
   },
-
   {
     "Id": 82,
-    "Name": "Disolución",
+    "Name": "Disoluci\u00F3n",
     "CharacterId": 28,
-    "Description": "Después de herir a un Sobreviviente, la perk se activa durante un tiempo. Si ese Sobreviviente realiza un Salto Rápido sobre una Tarima dentro de tu Radio de Terror, la Tarima se rompe automáticamente.",
+    "Description": "{YELLOW}3{RESET} segundos despu\u00E9s de que un Sobreviviente reciba da\u00F1o, durante {GREEN}12{RESET}/{CYAN}16{RESET}/{PURPLE}20{RESET} segundos, la pr\u00F3xima vez que un Sobreviviente salte r\u00E1pidamente sobre una Tarima mientras se encuentre dentro de tu Radio de Terror, este se destruye.",
     "Image": "images/perks/disolucion.webp"
   },
   {
     "Id": 83,
     "Name": "Oscuridad Revelada",
     "CharacterId": 28,
-    "Description": "Cuando registras un Casillero, puedes ver durante unos segundos las Auras de los Sobrevivientes que se encuentren cerca de otros Casilleros.",
+    "Description": "Cuando registras una Taquilla, puedes ver las Auras de los Sobrevivientes que se encuentren en un radio de {YELLOW}8{RESET} metros de una Taquilla por {GREEN}6{RESET}/{CYAN}7{RESET}/{PURPLE}8{RESET} segundos. Cooldown: {YELLOW}30{RESET} segundos.",
     "Image": "images/perks/oscuridadrevelada.webp"
   },
   {
     "Id": 84,
-    "Name": "Contacto Séptico",
+    "Name": "Contacto S\u00E9ptico",
     "CharacterId": 28,
-    "Description": "Los Sobrevivientes que interrumpan una acción de curación dentro de tu Radio de Terror sufren Ceguera y Agotamiento durante un tiempo.",
+    "Description": "Cuando un Sobreviviente estan curando mientras esta dentro de tu Radio de Terror:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESufren Ceguera\u003C/li\u003E\n\u003Cli\u003ESufren Agotamiento\u003C/li\u003E\n\u003C/ul\u003E\nAl dejar de curar, el efecto termina luego de {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos.",
     "Image": "images/perks/contactoseptico.webp"
   },
-
   {
     "Id": 85,
-    "Name": "Anatomía Superior",
+    "Name": "Anatom\u00EDa Superior",
     "CharacterId": 29,
-    "Description": "Cuando un Sobreviviente realiza un Salto Rápido cerca de ti, la perk se activa. Tu velocidad de Salto aumenta para tu siguiente salto y después se desactiva temporalmente.",
+    "Description": "Cuando un Sobreviviente realiza un Salto R\u00E1pido en un radio de {YELLOW}12{RESET} metros cerca tuyo, la pr\u00F3xima vez que saltes una Ventana, lo har\u00E1s {GREEN}30{RESET}/{CYAN}35{RESET}/{PURPLE}40{RESET}% m\u00E1s r\u00E1pido. Cooldown: {YELLOW}25{RESET} segundos.",
     "Image": "images/perks/anatomiasuperior.webp"
   },
   {
     "Id": 86,
     "Name": "Conciencia de Estar Despiertos",
     "CharacterId": 29,
-    "Description": "Cuando transportas a un Sobreviviente, puedes ver las Auras de otros Sobrevivientes que se encuentren cerca de tu posición.",
+    "Description": "Cuando cargas a un Sobreviviente, en un radio de {GREEN}16{RESET}/{CYAN}18{RESET}/{PURPLE}20{RESET} metros cerca de ti,  puedes ver el Aura de otros Sobrevivientes.",
     "Image": "images/perks/concienciadeestardespiertos.webp"
   },
   {
     "Id": 87,
     "Name": "Terminal",
     "CharacterId": 29,
-    "Description": "Cuando las Puertas de Salida se abren, los Sobrevivientes heridos, moribundos o con ciertos estados sufren efectos negativos. Los efectos persisten mientras las Puertas permanezcan abiertas y durante un breve período posterior.",
+    "Description": "Cuando se completan todos los Generadores: todos los Sobrevivientes heridos, en estado Agonizante o Colgados sufren Desesperanza.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando se abre una Puerta de Salida, el efecto termina luego de {GREEN}35{RESET}/{CYAN}40{RESET}/{PURPLE}45{RESET} segundos.",
     "Image": "images/perks/terminal.webp"
   },
-
   {
     "Id": 88,
-    "Name": "No Hay Dónde Esconderse",
+    "Name": "No Hay D\u00F3nde Esconderse",
     "CharacterId": 30,
-    "Description": "Cada vez que dañas un Generador, las Auras de los Sobrevivientes cercanos a tu posición se revelan durante unos segundos.",
+    "Description": "Cada vez que da\u00F1as un Generador, las Auras de los Sobrevivientes en un radio de {YELLOW}18{RESET} metros se revelan durante {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET} segundos.",
     "Image": "images/perks/nohaydondeesconderse.webp"
   },
   {
     "Id": 89,
     "Name": "Maleficio: Enfrentar a la Oscuridad",
     "CharacterId": 30,
-    "Description": "Al herir a un Sobreviviente, se activa un Tótem de Maleficio que lo maldice. Mientras permanezca activo, los demás Sobrevivientes que estén fuera de tu Radio de Terror gritan periódicamente y revelan su ubicación.",
+    "Description": "La primera vez que da\u00F1es a un Sobreviviente, son maldecidos y se enciende un T\u00F3tem.\n\u003Cbr\u003E\u003Cbr\u003E\nCada  {GREEN}35{RESET}/{CYAN}30{RESET}/{PURPLE}25{RESET} segundos, los otros Sobrevivientes que no est\u00E9n dentro de tu Radio de Terror gritar\u00E1n y veras su Aura por {YELLOW}2{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando el Sobreviviente maldecido entra en Estado Agonizante o es curado, el T\u00F3tem se extingue.",
     "Image": "images/perks/maleficioenfrentaralaoscuridad.webp"
   },
   {
     "Id": 90,
     "Name": "Soberbia",
     "CharacterId": 30,
-    "Description": "Cuando un Sobreviviente te aturde, sufre Vulnerabilidad durante un tiempo. Esta perk tiene un tiempo de recuperación antes de poder activarse nuevamente.",
+    "Description": "Cuando un Sobreviviente te aturde, sufre Vulnerabilidad durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos. Cooldown: {YELLOW}20{RESET} segundos.",
     "Image": "images/perks/soberbia.webp"
   },
-
   {
     "Id": 91,
-    "Name": "Aprovechamiento de la Debilidad",
+    "Name": "Hora de la Cacer\u00EDa",
     "CharacterId": 31,
-    "Description": "Cuando un Generador alcanza el progreso necesario, se activa durante un tiempo. Al derribar una Tarima con tu Dron, obtienes Celeridad temporalmente.",
-    "Image": "images/perks/aprovechamientodeladebilidad.webp"
+    "Description": "Mientras persigues a la Obsesi\u00F3n, cada vez que rompes una Tarima, Pared Rompible o da\u00F1as un Generador, ganas {YELLOW}7{RESET}% de {BLUE}Celeridad{RESET} por {GREEN}8{RESET}/{CYAN}9{RESET}/{PURPLE}10{RESET} segundos\n\u003Cbr\u003E\u003Cbr\u003E\nCuando da\u00F1es al Sobreviviente con mayor tiempo de persecuci\u00F3n, se convierte en la Obsesi\u00F3n.",
+    "Image": "images/perks/horadelacaceria.webp"
   },
   {
     "Id": 92,
-    "Name": "Juego de Alianzas",
+    "Name": "Influencia",
     "CharacterId": 31,
-    "Description": "Cuando un Generador alcanza un determinado progreso mientras lo reparas, su Aura se revela. Después de permanecer junto a él durante un tiempo, el Generador queda bloqueado temporalmente.",
-    "Image": "images/perks/juegodealianzas.webp"
+    "Description": "Cuando un Sobreviviente es descolgado o se descuelga solo, se cura un {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET}% m\u00E1s lento por {YELLOW}60{RESET} segundos.",
+    "Image": "images/perks/influencia.webp"
   },
   {
     "Id": 93,
-    "Name": "Giro de Tuerca",
+    "Name": "\u00A1PLAF!",
     "CharacterId": 31,
-    "Description": "Cuando un Sobreviviente resulta herido por un ataque básico, todos los demás Sobrevivientes heridos sufren Hemorragia y no pueden recuperar completamente su salud mientras permanezcan heridos.",
-    "Image": "images/perks/girodetuerca.webp"
+    "Description": "Al comienzo de la partida, obtienes {YELLOW}3{RESET} fichas, hasta un m\u00E1ximo de {YELLOW}3{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando cuelgas a un Sobreviviente, ganas {YELLOW}1{RESET} ficha.\n\u003Cbr\u003E\u003Cbr\u003E\nSi rompes una Tarima o Pared Rompible, gastas {YELLOW}1{RESET} ficha. Al hacerlo, todos los Sobrevivientes en un radio de {YELLOW}36{RESET} metros gritar\u00E1n y podr\u00E1s ver sus Auras por {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET} segundos.",
+    "Image": "images/perks/plaf.webp"
   },
-
   {
     "Id": 94,
-    "Name": "Genética Forzada",
+    "Name": "L\u00EDmites Gen\u00E9ticos",
     "CharacterId": 32,
-    "Description": "Después de que un Sobreviviente realice una reparación dentro del alcance de un Generador afectado, obtiene Agotamiento durante unos segundos.",
-    "Image": "images/perks/geneticaforzada.webp"
+    "Description": "Cuando un Sobreviviente recibe da\u00F1o, sufre Agotamiento por {GREEN}6{RESET}/{CYAN}7{RESET}/{PURPLE}8{RESET} segundos.",
+    "Image": "images/perks/limitesgeneticos.webp"
   },
   {
     "Id": 95,
-    "Name": "Aprendizaje Automático",
+    "Name": "Aprendizaje Automatizado",
     "CharacterId": 32,
-    "Description": "Después de dañar un Generador, se convierte en el Generador Objeto. Cuando otro Generador pierde su progreso, obtienes Indetectable y Celeridad durante un tiempo.",
-    "Image": "images/perks/aprendizajeautomatico.webp"
+    "Description": "Despu\u00E9s de da\u00F1ar un Generador, lo Comprometes.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando ese generador es reparado por los Sobrevivientes:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EObtienes {YELLOW}8{RESET}% de {BLUE}Celeridad{RESET} por {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EObtienes Indetectable por  {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\nSolo puedes Comprometer un Generador a la vez.",
+    "Image": "images/perks/aprendizajeautomatizado.webp"
   },
   {
     "Id": 96,
-    "Name": "Eliminación Forzada",
+    "Name": "Duda Forzada",
     "CharacterId": 32,
-    "Description": "Cuando un Sobreviviente es rescatado de un Gancho, todos los demás Sobrevivientes que estén cerca del Gancho sufren Ceguera y no pueden ver las Auras durante un tiempo.",
-    "Image": "images/perks/eliminacionforzada.webp"
+    "Description": "Cuando dejas a un Sobreviviente en Estado Agonizante, los otros Sobrevivientes en un radio de {YELLOW}16{RESET} metros sufren un {YELLOW}20{RESET}% de Entorpecimiento por {YELLOW}10{RESET} segundos. Cooldown: {GREEN}40{RESET}/{CYAN}35{RESET}/{PURPLE}30{RESET} segundos.",
+    "Image": "images/perks/dudaforzada.webp"
   },
-
   {
     "Id": 97,
     "Name": "Arma Definitiva",
     "CharacterId": 33,
-    "Description": "Al abrir un Casillero, todos los Sobrevivientes dentro de tu Radio de Terror gritan y revelan su posición. Además, sufren Ceguera durante un tiempo.",
+    "Description": "Cuando buscas en una Taquilla, los Sobrevivientes en un radio de {YELLOW}40{RESET} metros:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESufren Ceguera por {YELLOW}30{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EGritan.\u003C/li\u003E\n\u003C/ul\u003E\nCooldown: {GREEN}55{RESET}/{CYAN}50{RESET}/{PURPLE}45{RESET} segundos.",
     "Image": "images/perks/armadefinitiva.webp"
   },
   {
     "Id": 98,
-    "Name": "Instinto Alienígena",
+    "Name": "Instinto Alien\u00EDgena",
     "CharacterId": 33,
-    "Description": "Cuando se completa un Generador, se revela el Aura del Sobreviviente más alejado de ti. Ese Sobreviviente sufre Inconsciencia durante un tiempo.",
+    "Description": "Cuando cuelgas a un Sobreviviente, el Sobreviviente que este m\u00E1s lejos y herido:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ESufre Inconsciencia por {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EVes su Aura por {YELLOW}8{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
     "Image": "images/perks/instintoalienigena.webp"
   },
   {
     "Id": 99,
-    "Name": "Oscuridad Latente",
+    "Name": "Brutalidad Veloz",
     "CharacterId": 33,
-    "Description": "Cuando un Generador está a punto de completarse, su Aura se revela. Después de completarse, los Sobrevivientes que estén cerca de él sufren Ceguera durante un tiempo.",
-    "Image": "images/perks/oscuridadlatente.webp"
+    "Description": "Cuando da\u00F1es a un Sobreviviente con un Ataque B\u00E1sico, ganas {YELLOW}5{RESET}% de {BLUE}Celeridad{RESET} por {GREEN}8{RESET}/{CYAN}9{RESET}/{PURPLE}10{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras persigas a un Sobreviviente, no puedes ganar Sed de Sangre.",
+    "Image": "images/perks/brutalidadveloz.webp"
   },
-
   {
     "Id": 100,
-    "Name": "Dos de los Mismos",
+    "Name": "Maleficio: Yo Tambi\u00E9n Puedo Jugar",
     "CharacterId": 34,
-    "Description": "Cuando un Sobreviviente completa una acción cooperativa contigo o con otro Sobreviviente, obtiene un efecto beneficioso durante un tiempo.",
-    "Image": "images/perks/dosdelosmismos.webp"
+    "Description": "Mientras este Maleficio est\u00E9 apagado, cada vez que un Sobreviviente te ciegue o aturda {GREEN}4{RESET}/{CYAN}3{RESET}/{PURPLE}2{RESET} veces, se enciende un T\u00F3tem apagado.\n\u003Cbr\u003E\u003Cbr\u003E\nSiempre que un Sobreviviente que no est\u00E9s cargando te ciegue o aturda, queda cegado durante {YELLOW}1,5{RESET} segundos.",
+    "Image": "images/perks/maleficioyotambienpuedojugar.webp"
   },
   {
     "Id": 101,
-    "Name": "Amigos hasta el Final",
+    "Name": "Amigos hasta el Fin",
     "CharacterId": 34,
-    "Description": "Cuando enganchas a un Sobreviviente que no es tu Obsesión, la Obsesión queda expuesta y su Aura se revela. Cuando enganchas a la Obsesión, otro Sobreviviente se convierte en tu nueva Obsesión.",
-    "Image": "images/perks/amigoshastaelfinal.webp"
+    "Description": "Cuando cuelgas a un Sobreviviente que no es la Obsesi\u00F3n:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ELa Obsesi\u00F3n sufre Expuesto por {YELLOW}20{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EVes el Aura de la Obsesi\u00F3n por {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\nCuando cuelgas a la Obsesi\u00F3n, otro Sobreviviente:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EGritar\u00E1 y recibir\u00E1s una Notificaci\u00F3n.\u003C/li\u003E\n\u003Cli\u003ESe convierte en la Obsesi\u00F3n.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/amigoshastaelfin.webp"
   },
   {
     "Id": 102,
-    "Name": "Batería Incluida",
+    "Name": "Bater\u00EDas Incluidas",
     "CharacterId": 34,
-    "Description": "Cuando se completa un Generador, obtienes Celeridad mientras permanezcas cerca de ese Generador.",
-    "Image": "images/perks/bateriaincluida.webp"
+    "Description": "Mientras est\u00E9s en un radio de {YELLOW}16{RESET} metros de un Generador completado, Obtienes {YELLOW}5{RESET}% de {BLUE}Celeridad{RESET}. El efecto termina {GREEN}1{RESET}/{CYAN}3{RESET}/{PURPLE}5{RESET} segundos despu\u00E9s de salir del rango.",
+    "Image": "images/perks/bateriasincluidas.webp"
   },
-
   {
     "Id": 103,
-    "Name": "Desconocimiento",
+    "Name": "Desatado",
     "CharacterId": 35,
-    "Description": "Los Sobrevivientes que interactúan con un Generador afectado sufren un efecto que dificulta la reparación. Cuando el Generador pierde progreso, el efecto puede aplicarse nuevamente.",
-    "Image": "images/perks/desconocimiento.webp"
+    "Description": "Cuando un Sobreviviente es herido, durante los pr\u00F3ximos {GREEN}24{RESET}/{CYAN}27{RESET}/{PURPLE}30{RESET} segundos, al saltar una Ventana, obtienes {YELLOW}7{RESET}% de {BLUE}Celeridad{RESET} por {YELLOW}10{RESET} segundos.",
+    "Image": "images/perks/desatado.webp"
   },
   {
     "Id": 104,
-    "Name": "Inquietud",
+    "Name": "Imprevisto",
     "CharacterId": 35,
-    "Description": "Cuando un Sobreviviente resulta herido, los demás Sobrevivientes cercanos pueden sufrir Agotamiento y quedar afectados por una penalización temporal.",
-    "Image": "images/perks/inquietud.webp"
+    "Description": "Cuando da\u00F1es un Generador:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ETu Radio de Terror se queda en ese Generador por {GREEN}22{RESET}/{CYAN}26{RESET}/{PURPLE}30{RESET} segundos y su radio es de {YELLOW}32{RESET} metros.\u003C/li\u003E\n\u003Cli\u003EObtienes Indetectable durante ese tiempo.\u003C/li\u003E\n\u003C/ul\u003E\nCooldown: {YELLOW}30{RESET} segundos.",
+    "Image": "images/perks/imprevisto.webp"
   },
   {
     "Id": 105,
-    "Name": "Sin Salida",
+    "Name": "Inacabado",
     "CharacterId": 35,
-    "Description": "Cada vez que enganchas por primera vez a un Sobreviviente, obtienes una ficha. Cuando se abre una Puerta de Salida, las fichas bloquean temporalmente las palancas de las Puertas.",
-    "Image": "images/perks/sinsalida.webp"
+    "Description": "Cuando un Sobreviviente falla una Prueba de Habilidad, ganas {YELLOW}3{RESET} fichas, hasta un m\u00E1ximo de {GREEN}18{RESET}/{CYAN}24{RESET}/{PURPLE}30{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que da\u00F1es un Generador, gasta todas las fichas. Por cada ficha gastada:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EPierde {YELLOW}1{RESET}% de progreso.\u003C/li\u003E\n\u003Cli\u003ESe bloquea por {YELLOW}1{RESET} segundo.\u003C/li\u003E\n\u003C/ul\u003E\nCuando se desbloquea ese Generador, empieza a revertirse. Cooldown: {YELLOW}60{RESET} segundos.",
+    "Image": "images/perks/inacabado.webp"
   },
-
   {
     "Id": 106,
-    "Name": "Armonización de Tejido",
+    "Name": "Armonizaci\u00F3n de Tejido",
     "CharacterId": 36,
-    "Description": "Cuando un Objeto de un Sobreviviente se agota por primera vez, cae al suelo. Las Auras de los Objetos y de los Sobrevivientes cercanos se revelan, y quien recoja el Objeto queda afectado por Inconsciencia durante un tiempo.",
-    "Image": "images/perks/armonizaciondetejido.webp"
+    "Description": "La primera vez que se agota cada objeto, este se suelta.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras un Sobreviviente se encuentre a {YELLOW}12{RESET} metros de un objeto soltado:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EVes su aura.\u003C/li\u003E\n\u003Cli\u003EVe el aura del objeto.\u003C/li\u003E\n\u003C/ul\u003E\nSiempre que un Sobreviviente recoja un objeto, sufre Inconsciencia durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos.",
+    "Image": "images/perks/arominzaciondetejido.webp"
   },
   {
     "Id": 107,
-    "Name": "Toque Lánguido",
+    "Name": "Toque L\u00E1nguido",
     "CharacterId": 36,
-    "Description": "Cuando un Sobreviviente dentro de tu alcance asusta a un Cuervo, sufre Agotamiento durante unos segundos. La perk tiene un breve tiempo de recuperación.",
+    "Description": "Cuando un Sobreviviente en un radio de {YELLOW}36{RESET} metros cerca tuyo asusta a un Cuervo, sufre Agotamiento durante {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} segundos. Cooldown: {YELLOW}5{RESET} segundos.",
     "Image": "images/perks/toquelanguido.webp"
   },
   {
     "Id": 108,
     "Name": "Arrogancia Oscura",
     "CharacterId": 36,
-    "Description": "Aumenta permanentemente tu velocidad al saltar, pero también aumenta la duración de los efectos que te ciegan y de los aturdimientos causados por Tarimas.",
+    "Description": "Aumenta tu velocidad para saltar Ventanas en un {GREEN}15{RESET}/{CYAN}20{RESET}/{PURPLE}25{RESET}%\n\u003Cbr\u003E\u003Cbr\u003E\nCuando te aturdan con una Tarima o cieguen, la duraci\u00F3n del aturdimiento dura {YELLOW}15{RESET}% m\u00E1s.",
     "Image": "images/perks/arroganciaoscura.webp"
   },
-
   {
     "Id": 109,
     "Name": "Maleficio: Destino Miserable",
     "CharacterId": 37,
-    "Description": "Después de completar un Generador, un Tótem se convierte en un Tótem de Maleficio que afecta a la Obsesión. La velocidad de reparación de la Obsesión se reduce y puede percibir el Aura del Tótem cuando se encuentra cerca.",
+    "Description": "Despu\u00E9s de completar un Generador, se enciende un T\u00F3tem.\n\u003Cbr\u003E\u003Cbr\u003E\nLa Obsesi\u00F3n:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ERepara un {GREEN}27{RESET}/{CYAN}30{RESET}/{PURPLE}33{RESET}% m\u00E1s lento.\u003C/li\u003E\n\u003Cli\u003EVe el Aura del T\u00F3tem en un radio de {YELLOW}12{RESET} metros.\u003C/li\u003E\n\u003C/ul\u003E",
     "Image": "images/perks/maleficiodestinomiserable.webp"
   },
   {
     "Id": 110,
     "Name": "Codicia Humana",
     "CharacterId": 37,
-    "Description": "Puedes patear Cofres abiertos para cerrarlos y puedes percibir las Auras de los Cofres. También puedes percibir las Auras de los Sobrevivientes que se encuentren cerca de los Cofres.",
+    "Description": "Cuando un Sobreviviente se acerca a un Cofre cerrado en un radio de {YELLOW}8{RESET} metros, ves su Aura por {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nPuedes bloquear Cofres abiertos. Cooldown: {YELLOW}10{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nVes el Aura de los Cofres bloqueados.",
     "Image": "images/perks/codiciahumana.webp"
   },
   {
     "Id": 111,
-    "Name": "Dominación",
+    "Name": "Dominaci\u00F3n",
     "CharacterId": 37,
-    "Description": "Cuando un Generador alcanza determinados hitos de progreso, varios Generadores quedan bloqueados temporalmente. Sus Auras se revelan mientras permanecen bloqueados.",
+    "Description": "La primera vez que cada Cofre se esta abriendo o cada T\u00F3tem se esta purificando o bendiciendo por un Sobreviviente, se bloquea por {GREEN}8{RESET}/{CYAN}12{RESET}/{PURPLE}16{RESET} segundos.",
     "Image": "images/perks/dominacion.webp"
   },
-
   {
     "Id": 112,
-    "Name": "Trueno Sísmico",
+    "Name": "Trueno S\u00EDsmico",
     "CharacterId": 38,
-    "Description": "Después de caer desde una determinada altura, obtienes un aumento temporal del alcance de tu Ataque de Embestida. La perk tiene un breve tiempo de recuperación.",
-    "Image": "images/perks/truenosis mico.webp"
+    "Description": "Cada vez que caigas de por lo menos {YELLOW}1.25{RESET} metros, tus embestidas son un {YELLOW}75{RESET}% m\u00E1s largas durante {GREEN}15{RESET}/{CYAN}20{RESET}/{PURPLE}25{RESET} segundos. Tiempo de recuperaci\u00F3n: {YELLOW}5{RESET} segundos.",
+    "Image": "images/perks/truenosismico.webp"
   },
   {
     "Id": 113,
-    "Name": "Gancho Torturador: Brújula Irregular",
+    "Name": "Gancho Torturador: Br\u00FAjula Irregular",
     "CharacterId": 38,
-    "Description": "Al comienzo de la Partida, varios Ganchos se convierten en Ganchos Torturadores. Después de enganchar a un Sobreviviente en uno de ellos, el Generador con mayor progreso revela su Aura durante unos segundos.",
+    "Description": "Al inicio de la Partida, 4 ganchos aleatorios se convierten en Ganchos Torturadores.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que se descuelga a un o una Sobreviviente, el Gancho se convierte en uno Torturador\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que cuelgues a un o una Sobreviviente de un gancho torturador, durante {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} segundos ves el Aura del Generador con mayor progreso.",
     "Image": "images/perks/ganchotorturadorbrujulairregular.webp"
   },
   {
     "Id": 114,
     "Name": "Sin Piedad",
     "CharacterId": 38,
-    "Description": "Cuando un Sobreviviente alcanza un determinado progreso de curación, comienza a enfrentarse a Pruebas de Habilidad consecutivas. Fallar o interrumpir la curación provoca que sufra Desesperanza durante un tiempo.",
+    "Description": "Mientras se autocuran, cada vez que un o una Sobreviviente alcanza un {YELLOW}75{RESET}% de progreso, recibe Pruebas de Habilidad Especiales. Si pierde alguna de estas o deja de curarse, sufre el efecto {ORANGE}Desesperanza{RESET} durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos.",
     "Image": "images/perks/sinpiedad.webp"
   },
-
   {
     "Id": 115,
     "Name": "Maleficio: Pura Miseria",
     "CharacterId": 39,
-    "Description": "Después de herir a suficientes Sobrevivientes con Ataques Básicos, un Tótem Apagado se convierte en un Tótem de Maleficio. Los Sobrevivientes heridos por Ataques Básicos sufren Entorpecimiento durante un tiempo.",
+    "Description": "Despu\u00E9s de infligir da\u00F1o a Sobrevivientes con Ataques B\u00E1sico {YELLOW}8{RESET} veces, se enciende un T\u00F3tem apagado.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que da\u00F1as a un o una Sobreviviente con un Ataque B\u00E1sico, sufre {YELLOW}5{RESET}% del efecto {ORANGE}Entorpecimiento{RESET} durante {GREEN}10{RESET}/{CYAN}12.5{RESET}/{PURPLE}15{RESET} segundos.",
     "Image": "images/perks/maleficiopuramiseria.webp"
   },
   {
     "Id": 116,
     "Name": "Unidos por Siempre",
     "CharacterId": 39,
-    "Description": "Cada vez que un Sobreviviente recibe daño, obtienes una ficha. Al alcanzar suficientes fichas, los efectos de la perk se activan y aumentan las velocidades de determinadas acciones relacionadas con cargar y enganchar Sobrevivientes.",
-    "Image": "images/perks/unidospor siempre.webp"
+    "Description": "Cada vez que un o una Sobreviviente recibe da\u00F1o, obtienes {YELLOW}1{RESET} ficha, hasta un m\u00E1ximo de {GREEN}6{RESET}/{CYAN}7{RESET}/{PURPLE}8{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPor cada ficha:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ECuelgas Sobrevivientes un {YELLOW}4{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ELevantas y dejas caer Sobrevivientes un {YELLOW}4{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/unidosporsiempre.webp"
   },
   {
     "Id": 117,
     "Name": "Nadie es Libre",
     "CharacterId": 39,
-    "Description": "Después de completar varios Generadores, la perk se activa. Cuando un Sobreviviente interactúa con una Tarima o Ventana, estas pueden quedar bloqueadas temporalmente para todos los Sobrevivientes.",
+    "Description": "La primera vez que cuelgas a un Sobreviviente, ganas {YELLOW}1{RESET} ficha.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando se completan todos los Generadores, por cada ficha:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003ELas Tarimas en posici\u00F3n vertical se bloquean durante {GREEN}12{RESET}/{CYAN}14{RESET}/{PURPLE}16{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ELas ventanas se bloquean por {GREEN}12{RESET}/{CYAN}14{RESET}/{PURPLE}16{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
     "Image": "images/perks/nadieeslibre.webp"
   },
-
   {
     "Id": 118,
     "Name": "Pedido de Ayuda",
     "CharacterId": 40,
-    "Description": "Cuando un Sobreviviente está realizando una acción que puede generar una notificación de ruido, puedes recibir información sobre su ubicación bajo determinadas condiciones.",
+    "Description": "Cuando un Sobreviviente est\u00E1 realizando una acci\u00F3n que puede generar una notificaci\u00F3n de ruido, puedes recibir informaci\u00F3n sobre su ubicaci\u00F3n bajo determinadas condiciones.",
     "Image": "images/perks/pedidodeayuda.webp"
   },
   {
     "Id": 119,
     "Name": "Miedo Fantasmal",
     "CharacterId": 40,
-    "Description": "Después de que un Sobreviviente ciegue al Asesino, el Asesino sufre Ceguera durante un tiempo. Además, esta perk permite encontrar una Linterna básica en un Cofre una vez por Partida.",
+    "Description": "Despu\u00E9s de que un Sobreviviente ciegue al Asesino, el Asesino sufre Ceguera durante un tiempo. Adem\u00E1s, esta perk permite encontrar una Linterna b\u00E1sica en un Cofre una vez por Partida.",
     "Image": "images/perks/miedofantasmal.webp"
   },
   {
     "Id": 120,
     "Name": "Caos",
     "CharacterId": 40,
-    "Description": "Cuando se cumplen determinadas condiciones, las Ventanas y las Tarimas en posición vertical pueden quedar bloqueadas temporalmente para los Sobrevivientes.",
+    "Description": "Cuando se cumplen determinadas condiciones, las Ventanas y las Tarimas en posici\u00F3n vertical pueden quedar bloqueadas temporalmente para los Sobrevivientes.",
     "Image": "images/perks/caos.webp"
   },
   {
     "Id": 121,
     "Name": "Voracidad",
     "CharacterId": 41,
-    "Description": "Cada vez que cuelgas por primera vez a un Sobreviviente, obtienes una ficha, hasta un máximo de 4. Al alcanzar 4 fichas, todos los Sobrevivientes gritan y sufren Vulnerabilidad durante un tiempo.",
+    "Description": "Cada vez que cuelgas por primera vez a un Sobreviviente, obtienes una ficha, hasta un m\u00E1ximo de 4. Al alcanzar 4 fichas, todos los Sobrevivientes gritan y sufren Vulnerabilidad durante un tiempo.",
     "Image": "images/perks/voracidad.webp"
   },
   {
     "Id": 122,
     "Name": "Ojo Errante",
     "CharacterId": 41,
-    "Description": "Cuando comienzas una persecución, revela durante unos segundos las Auras de los demás Sobrevivientes heridos que se encuentren cerca de ti. Tiene un tiempo de recuperación.",
+    "Description": "Cuando comienzas una persecuci\u00F3n, revela durante unos segundos las Auras de los dem\u00E1s Sobrevivientes heridos que se encuentren cerca de ti. Tiene un tiempo de recuperaci\u00F3n.",
     "Image": "images/perks/ojoerrante.webp"
   },
   {
     "Id": 123,
-    "Name": "Maleficio: Obertura de la Perdición",
+    "Name": "Maleficio: Obertura de la Perdici\u00F3n",
     "CharacterId": 41,
-    "Description": "Un Tótem de Maleficio maldice el Generador más lejano. Cuando un Sobreviviente lo repara durante varios segundos, tu Radio de Terror se transfiere al Generador y obtienes Indetectable durante un tiempo.",
+    "Description": "Un T\u00F3tem de Maleficio maldice el Generador m\u00E1s lejano. Cuando un Sobreviviente lo repara durante varios segundos, tu Radio de Terror se transfiere al Generador y obtienes Indetectable durante un tiempo.",
     "Image": "images/perks/maleficiooberturadelaperdicion.webp"
   },
-
   {
     "Id": 124,
     "Name": "Retrocede el Tiempo",
     "CharacterId": 42,
-    "Description": "Después de colgar a un Sobreviviente, puedes activar esta perk durante un tiempo para hacer explotar un Generador objetivo cercano, reducir su progreso y hacer que comience a retroceder.",
+    "Description": "Despu\u00E9s de colgar a un Sobreviviente, puedes activar esta perk durante un tiempo para hacer explotar un Generador objetivo cercano, reducir su progreso y hacer que comience a retroceder.",
     "Image": "images/perks/retrocedeeltiempo.webp"
   },
   {
     "Id": 125,
     "Name": "Proyecto Secreto",
     "CharacterId": 42,
-    "Description": "Cuando un Tótem es bendecido o purificado, bloquea un Generador durante un tiempo. Cada vez que se bloquea uno o más Generadores, obtienes Indetectable durante un período.",
+    "Description": "Cuando un T\u00F3tem es bendecido o purificado, bloquea un Generador durante un tiempo. Cada vez que se bloquea uno o m\u00E1s Generadores, obtienes Indetectable durante un per\u00EDodo.",
     "Image": "images/perks/proyectosecreto.webp"
   },
   {
     "Id": 126,
     "Name": "Maleficio: Mente Colmena",
     "CharacterId": 42,
-    "Description": "Después de colgar por primera vez a un Sobreviviente, un Tótem Apagado se convierte en un Tótem de Maleficio. Cuando se completan cuatro Generadores, los Generadores restantes explotan, pierden progreso y comienzan a retroceder.",
-    "Image": "images/perks/maleficiom entecolmena.webp"
+    "Description": "Despu\u00E9s de colgar por primera vez a un Sobreviviente, un T\u00F3tem Apagado se convierte en un T\u00F3tem de Maleficio. Cuando se completan cuatro Generadores, los Generadores restantes explotan, pierden progreso y comienzan a retroceder.",
+    "Image": "images/perks/maleficiomentecolmena.webp"
   },
-
   {
     "Id": 127,
     "Name": "Maleficio: Terror Hasta la Muerte",
     "CharacterId": 43,
-    "Description": "Después de colgar a tres Sobrevivientes diferentes, se activa este Maleficio. Cuando rompes una Tarima durante una persecución, los Sobrevivientes cercanos gritan y sufren Entorpecimiento durante unos segundos.",
-    "Image": "images/perks/maleficioterrorhastal amuerte.webp"
+    "Description": "Despu\u00E9s de colgar a tres Sobrevivientes diferentes, se activa este Maleficio. Cuando rompes una Tarima durante una persecuci\u00F3n, los Sobrevivientes cercanos gritan y sufren Entorpecimiento durante unos segundos.",
+    "Image": "images/perks/maleficioterrorhastalamuerte.webp"
   },
   {
     "Id": 128,
     "Name": "Sombra Silenciosa",
     "CharacterId": 43,
     "Description": "Cada vez que cuelgas a un Sobreviviente, obtienes Indetectable durante unos segundos. Cuando se activan las Puertas de Salida, obtienes Indetectable durante el resto de la Partida.",
-    "Image": "images/perks/sombras ilenciosa.webp"
+    "Image": "images/perks/sombrasilenciosa.webp"
   },
   {
     "Id": 129,
     "Name": "Matanza",
     "CharacterId": 43,
-    "Description": "Cada vez que rompes una Tarima o una Pared Rompible, obtienes una ficha, hasta un máximo de 13. Cuando te ciegan o aturden con una Tarima, obtienes Celeridad en función de tus fichas.",
+    "Description": "Cada vez que rompes una Tarima o una Pared Rompible, obtienes una ficha, hasta un m\u00E1ximo de 13. Cuando te ciegan o aturden con una Tarima, obtienes Celeridad en funci\u00F3n de tus fichas.",
     "Image": "images/perks/matanza.webp"
   },
-
   {
     "Id": 130,
     "Name": "Maleficio: Bajo el Yugo",
     "CharacterId": 44,
-    "Description": "Cuando un Sobreviviente obtiene un Estado de Gancho, un Tótem Apagado aleatorio se convierte en un Tótem de Maleficio. Limita la Celeridad de los Sobrevivientes y revela la ubicación de aquellos que obtienen Celeridad cerca de ti.",
+    "Description": "Cuando un Sobreviviente obtiene un Estado de Gancho, un T\u00F3tem Apagado aleatorio se convierte en un T\u00F3tem de Maleficio. Limita la Celeridad de los Sobrevivientes y revela la ubicaci\u00F3n de aquellos que obtienen Celeridad cerca de ti.",
     "Image": "images/perks/maleficiobajoelyugo.webp"
   },
   {
     "Id": 131,
     "Name": "Testigo Celestial",
     "CharacterId": 44,
-    "Description": "Cuando dañas un Generador, la perk se activa y permite detectar información sobre los Sobrevivientes que interactúan con Generadores. Tiene un tiempo de recuperación.",
+    "Description": "Cuando da\u00F1as un Generador, la perk se activa y permite detectar informaci\u00F3n sobre los Sobrevivientes que interact\u00FAan con Generadores. Tiene un tiempo de recuperaci\u00F3n.",
     "Image": "images/perks/testigocelestial.webp"
   },
   {
     "Id": 132,
-    "Name": "Devastación",
+    "Name": "Devastaci\u00F3n",
     "CharacterId": 44,
     "Description": "Cuando se cumplen determinadas condiciones durante la Partida, obtienes un aumento temporal de velocidad y puedes aplicar efectos negativos a los Sobrevivientes que se encuentren en tu zona de influencia.",
     "Image": "images/perks/devastacion.webp"
   },
   {
-  "Id": 133,
-  "Name": "Acechador de Ciervos",
-  "CharacterId": null,
-  "Description": "Permite percibir Auras. Revela el aura de los Supervivientes en estado agonizante y proporciona información adicional sobre su ubicación.",
-  "Image": "images/perks/acechadordeciervos.webp"
+    "Id": 133,
+    "Name": "Acechador de Ciervos",
+    "CharacterId": null,
+    "Description": "Permite percibir Auras. Revela el aura de los Supervivientes en estado agonizante y proporciona informaci\u00F3n adicional sobre su ubicaci\u00F3n.",
+    "Image": "images/perks/acechadordeciervos.webp"
   },
   {
-  "Id": 134,
-  "Name": "Apretón de Hierro",
-  "CharacterId": null,
-  "Description": "Sujetas con tanta fuerza a los Supervivientes que su posibilidad de liberarse es casi nula. Reduce el efecto del forcejeo y aumenta el tiempo que tardan en escapar de tu agarre.",
-  "Image": "images/perks/apretondehierro.webp"
+    "Id": 134,
+    "Name": "Apret\u00F3n de Hierro",
+    "CharacterId": null,
+    "Description": "Sujetas con tanta fuerza a los Supervivientes que su posibilidad de liberarse es casi nula. Reduce el efecto del forcejeo y aumenta el tiempo que tardan en escapar de tu agarre.",
+    "Image": "images/perks/apretondehierro.webp"
   },
   {
-  "Id": 135,
-  "Name": "Carnicero Chapucero",
-  "CharacterId": null,
-  "Description": "Tus ataques básicos provocan Hemorragia y Destrozado, dificultando la curación de los Supervivientes.",
-  "Image": "images/perks/carnicerochapucero.webp"
+    "Id": 135,
+    "Name": "Carnicero Chapucero",
+    "CharacterId": null,
+    "Description": "Tus ataques b\u00E1sicos provocan Hemorragia y Destrozado, dificultando la curaci\u00F3n de los Supervivientes.",
+    "Image": "images/perks/carnicerochapucero.webp"
   },
   {
-  "Id": 136,
-  "Name": "Desasosiego",
-  "CharacterId": null,
-  "Description": "Tu aura de escalofrío alcanza distancias sobrenaturales. Aumenta permanentemente tu Radio de Terror.",
-  "Image": "images/perks/desasosiego.webp"
+    "Id": 136,
+    "Name": "Desasosiego",
+    "CharacterId": null,
+    "Description": "Tu Radio de Terror aumenta un {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET}%.",
+    "Image": "images/perks/desasosiego.webp"
   },
   {
-  "Id": 137,
-  "Name": "Esperanza Rota",
-  "CharacterId": null,
-  "Description": "Cuando sofocas un Tótem de Bendición, este se destruye. Después puedes percibir las Auras de los Supervivientes cercanos al tótem destruido.",
-  "Image": "images/peranza rota.webp"
+    "Id": 137,
+    "Name": "Esperanza Rota",
+    "CharacterId": null,
+    "Description": "Cuando sofocas un T\u00F3tem de Bendici\u00F3n, este se destruye. Despu\u00E9s puedes percibir las Auras de los Supervivientes cercanos al t\u00F3tem destruido.",
+    "Image": "images/perks/esperanzarota.webp"
   },
   {
-  "Id": 138,
-  "Name": "Espías de las Sombras",
-  "CharacterId": null,
-  "Description": "Los cuervos que te rodean pueden alertarte cuando un Superviviente se aproxima demasiado a ellos.",
-  "Image": "images/perks/espiasdelassombras.webp"
+    "Id": 138,
+    "Name": "Esp\u00EDas de las Sombras",
+    "CharacterId": null,
+    "Description": "Los cuervos que te rodean pueden alertarte cuando un Superviviente se aproxima demasiado a ellos.",
+    "Image": "images/perks/espiasdelassombras.webp"
   },
   {
-  "Id": 139,
-  "Name": "Insidia",
-  "CharacterId": null,
-  "Description": "Te permite usar el sigilo. Si permaneces inmóvil durante un breve periodo de tiempo, obtienes el efecto de estado Indetectable hasta que te muevas o realices una acción.",
-  "Image": "images/perks/insidia.webp"
+    "Id": 139,
+    "Name": "Insidia",
+    "CharacterId": null,
+    "Description": "Te permite usar el sigilo. Si permaneces inm\u00F3vil durante un breve periodo de tiempo, obtienes el efecto de estado Indetectable hasta que te muevas o realices una acci\u00F3n.",
+    "Image": "images/perks/insidia.webp"
   },
   {
-  "Id": 140,
-  "Name": "Maleficio: La Emoción de la Caza",
-  "CharacterId": null,
-  "Description": "Comienza la partida con un distintivo por cada Tótem. Cada distintivo reduce la velocidad de Bendición y Purificación de los Supervivientes.",
-  "Image": "images/perks/maleficiolaemociondelacaza.webp"
+    "Id": 140,
+    "Name": "Maleficio: La Emoci\u00F3n de la Caza",
+    "CharacterId": null,
+    "Description": "Comienza la partida con un distintivo por cada T\u00F3tem. Cada distintivo reduce la velocidad de Bendici\u00F3n y Purificaci\u00F3n de los Supervivientes.",
+    "Image": "images/perks/maleficiolaemociondelacaza.webp"
   },
   {
-  "Id": 141,
-  "Name": "Maleficio: Nadie Escapa de la Muerte",
-  "CharacterId": null,
-  "Description": "Cuando se abren las Puertas de Salida, se activa sobre un Tótem Apagado. Otorga Celeridad al Asesino y aplica Vulnerabilidad a los Supervivientes.",
-  "Image": "images/perks/maleficionadieescapadelamuerte.webp"
+    "Id": 141,
+    "Name": "Maleficio: Nadie Escapa de la Muerte",
+    "CharacterId": null,
+    "Description": "Cuando se abren las Puertas de Salida, se activa sobre un T\u00F3tem Apagado. Otorga Celeridad al Asesino y aplica Vulnerabilidad a los Supervivientes.",
+    "Image": "images/perks/maleficionadieescapadelamuerte.webp"
   },
   {
-  "Id": 142,
-  "Name": "Monstruoso Santuario",
-  "CharacterId": null,
-  "Description": "Aumenta la velocidad a la que los Supervivientes pierden progreso mientras están en la fase de lucha en el Sótano y mejora la eficiencia de los Ganchos del Sótano.",
-  "Image": "images/perks/monstruososantuario.webp"
+    "Id": 142,
+    "Name": "Gancho Torturador: Santuario Monstruoso",
+    "CharacterId": null,
+    "Description": "Aumenta la velocidad a la que los Supervivientes pierden progreso mientras est\u00E1n en la fase de lucha en el S\u00F3tano y mejora la eficiencia de los Ganchos del S\u00F3tano.",
+    "Image": "images/perks/ganchotorturadorsantuariomonstruoso.webp"
   },
   {
-  "Id": 143,
-  "Name": "Murmullos",
-  "CharacterId": null,
-  "Description": "Percibes de manera rudimentaria la voz del Ente. Escuchas susurros cuando un Superviviente se encuentra dentro de un determinado radio alrededor de ti.",
-  "Image": "images/perks/murmullos.webp"
+    "Id": 143,
+    "Name": "Murmullos",
+    "CharacterId": null,
+    "Description": "Percibes de manera rudimentaria la voz del Ente. Escuchas susurros cuando un Superviviente se encuentra dentro de un determinado radio alrededor de ti.",
+    "Image": "images/perks/murmullos.webp"
   },
   {
-  "Id": 144,
-  "Name": "Murmullo Amargo",
-  "CharacterId": null,
-  "Description": "Cada vez que se completa un Generador, puedes ver las Auras de los Supervivientes cercanos a él. Cuando se completa el último Generador, revela las Auras de todos los Supervivientes.",
-  "Image": "images/perks/murmulloamargo.webp"
+    "Id": 144,
+    "Name": "Murmullo Amargo",
+    "CharacterId": null,
+    "Description": "Cada vez que se completa un Generador, puedes ver las Auras de los Supervivientes cercanos a \u00E9l. Cuando se completa el \u00FAltimo Generador, revela las Auras de todos los Supervivientes.",
+    "Image": "images/perks/murmulloamargo.webp"
   },
   {
-  "Id": 145,
-  "Name": "Que Sigan Esperando",
-  "CharacterId": null,
-  "Description": "Golpear a Supervivientes que no sean la Obsesión acumula distintivos que reducen el tiempo de recuperación de tus ataques básicos. Golpear a la Obsesión hace perder distintivos.",
-  "Image": "images/perks/quesiganesperando.webp"
+    "Id": 145,
+    "Name": "Que Sigan Esperando",
+    "CharacterId": null,
+    "Description": "Golpear a Supervivientes que no sean la Obsesi\u00F3n acumula distintivos que reducen el tiempo de recuperaci\u00F3n de tus ataques b\u00E1sicos. Golpear a la Obsesi\u00F3n hace perder distintivos.",
+    "Image": "images/perks/quesiganesperando.webp"
   },
   {
-  "Id": 146,
-  "Name": "Sin Restricciones",
-  "CharacterId": null,
-  "Description": "Los generadores que están siendo reparados sufren una penalización de velocidad cuando un Superviviente es enganchado, dificultando que el equipo avance rápidamente.",
-  "Image": "images/perks/sinrestricciones.webp"
+    "Id": 146,
+    "Name": "Sin Restricciones",
+    "CharacterId": null,
+    "Description": "Los generadores que est\u00E1n siendo reparados sufren una penalizaci\u00F3n de velocidad cuando un Superviviente es enganchado, dificultando que el equipo avance r\u00E1pidamente.",
+    "Image": "images/perks/sinrestricciones.webp"
   },
   {
-  "Id": 147,
-  "Name": "Susurros",
-  "CharacterId": null,
-  "Description": "Percibes la presencia de Supervivientes cercanos mediante los susurros del Ente.",
-  "Image": "images/perks/susurros.webp"
+    "Id": 147,
+    "Name": "Maleficio: El Buf\u00F3n de la Fortuna",
+    "CharacterId": null,
+    "Description": "Percibes la presencia de Supervivientes cercanos mediante los susurros del Ente.",
+    "Image": "images/perks/susurros.webp"
   },
   {
-  "Id": 148,
-  "Name": "Gancho Torturador: Heridas Supurantes",
-  "CharacterId": null,
-  "Description": "Convierte varios ganchos del entorno en Ganchos Torturadores. Los Supervivientes desenganchados de ellos sufren Hemorragia y Destrozado y reciben una penalización a sus velocidades de reparación y curación después de recuperarse.",
-  "Image": "images/perks/ganchotorturadorheridassupurantes.webp"
+    "Id": 148,
+    "Name": "Gancho Torturador: Heridas Supurantes",
+    "CharacterId": null,
+    "Description": "",
+    "Image": "images/perks/ganchotorturadorheridassupurantes.webp"
   },
   {
-  "Id": 149,
-  "Name": "Sacrifica a los Débiles",
-  "CharacterId": null,
-  "Description": "Cada vez que golpeas a un Superviviente que no es la Obsesión, acumulas poder. Cuando la Obsesión cambia, pierdes parte de ese poder.",
-  "Image": "images/perks/sacrificaalosdebiles.webp"
+    "Id": 149,
+    "Name": "Sacrifica a los D\u00E9biles",
+    "CharacterId": null,
+    "Description": "perk gratis de myers",
+    "Image": "images/perks/luzqueagoniza.webp"
   },
   {
-  "Id": 150,
-  "Name": "Mira Cómo Corren",
-  "CharacterId": null,
-  "Description": "Observar a la Obsesión mientras realiza determinadas acciones permite acumular distintivos que aumentan temporalmente tu velocidad de movimiento.",
-  "Image": "images/perks/miracomocorren.webp"
+    "Id": 150,
+    "Name": "Mira C\u00F3mo Corren",
+    "CharacterId": null,
+    "Description": "Observar a la Obsesi\u00F3n mientras realiza determinadas acciones permite acumular distintivos que aumentan temporalmente tu velocidad de movimiento.",
+    "Image": "images/perks/miracomocorren.webp"
   },
   {
-  "Id": 151,
-  "Name": "Hasta Terminar con el Último",
-  "CharacterId": null,
-  "Description": "A medida que mueren los Supervivientes, acumulas distintivos que dificultan que el Asesino perciba tu Aura. Cuando eres el último Superviviente, obtienes grandes bonificaciones de velocidad.",
-  "Image": "images/perks/hastaterminarconelultimo.webp"
+    "Id": 151,
+    "Name": "Hasta Terminar con el \u00DAltimo",
+    "CharacterId": null,
+    "Description": "A medida que mueren los Supervivientes, acumulas distintivos que dificultan que el Asesino perciba tu Aura. Cuando eres el \u00FAltimo Superviviente, obtienes grandes bonificaciones de velocidad.",
+    "Image": "images/perks/hastaterminarconelultimo.webp"
   },
   {
-  "Id": 154,
-  "Name": "Callejón sin Salida",
-  "CharacterId": null,
-  "Description": "Cuando se cumplen determinadas condiciones al final de la partida, bloquea temporalmente las Puertas de Salida para dificultar que los Supervivientes escapen.",
-  "Image": "images/perks/callejonsinsalida.webp"
+    "Id": 154,
+    "Name": "Callej\u00F3n sin Salida",
+    "CharacterId": null,
+    "Description": "",
+    "Image": "images/perks/callejonsinsalida.webp"
   }
-
 ]
-

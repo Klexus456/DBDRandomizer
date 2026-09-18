@@ -1,5 +1,7 @@
 COLORES DE TEXTO
 <span style=\"color: #ac3ee3;\">36 </span> = violeta
 <span style=\"color: #e7cda2;\">36 </span> = gris claro (quotes)
-e8c252 amarillo addons
-ff8800 naranja addons
+e8c252 amarillo
+ff8800 naranja
+199b1e verde
+2f9cd6 celeste

@@ -13,9 +13,9 @@
 
     <header class="randomizer-header">
 
-        <h1>DBD 2v8 RANDOMIZER</h1>
+        <h1>RANDOMIZADOR</h1>
 
-        <p>Randomizador de Dead by Daylight 2v8</p>
+        <p>Modo 2v8</p>
 
     </header>
 
@@ -40,7 +40,7 @@
                 class="mode-button survivor @(selectedMode == "Survivor" ? "active" : "")"
                 @onclick="SelectSurvivor">
 
-                SURVIVOR
+                SOBREVIVIENTE
 
             </button>
 
@@ -49,7 +49,7 @@
                 class="mode-button killer @(selectedMode == "Killer" ? "active" : "")"
                 @onclick="SelectKiller">
 
-                KILLER
+                ASESINO
 
             </button>
 
@@ -233,7 +233,7 @@
 
     private TwoV8Result? result;
 
-    private string selectedMode = "Survivor";
+    private string selectedMode = "";
 
 
     protected override async Task OnInitializedAsync()
@@ -298,7 +298,7 @@
         );
 
 
-        Randomize();
+
     }
 
 

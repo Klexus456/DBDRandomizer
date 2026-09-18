@@ -1,27 +1,29 @@
 [
   {
-    "id": 1,
-    "name": "Cabeza Trapper Outfit 1",
-    "characterId": 1,
-    "outfitId": 10,
-    "part": "Head",
-    "image": "images/skins/1.png"
+    "Id": 1,
+    "Name": "Evan",
+    "CharacterId": 1,
+    "OutfitId": 10,
+    "Part": "Head",
+    "Image": "images/cosmetics/killers/trampero/Evan.webp",
+    "IsSeparable": true
   },
   {
-    "id": 2,
-    "name": "Torso Trapper Outfit 1",
-    "characterId": 1,
-    "outfitId": 10,
-    "part": "Torso",
-    "image": "images/skins/2.png"
+    "Id": 2,
+    "Name": "Rubber and Hooks",
+    "CharacterId": 1,
+    "OutfitId": 10,
+    "Part": "Torso",
+    "Image": "images/cosmetics/killers/trampero/Rubber and Hooks.webp",
+    "IsSeparable": true
   },
   {
-    "id": 3,
-    "name": "Arma Trapper Outfit 1",
-    "characterId": 1,
-    "outfitId": 10,
-    "part": "Weapon",
-    "image": "images/skins/3.png"
+    "Id": 3,
+    "Name": "Cleaver",
+    "CharacterId": 1,
+    "OutfitId": 10,
+    "Part": "Weapon",
+    "Image": "images/cosmetics/killers/trampero/Cleaver.webp",
+    "IsSeparable": true
   }
-
 ]

@@ -10,7 +10,7 @@
     "Id": 2,
     "Name": "Demuestra lo que Vales",
     "CharacterId": 1,
-    "Description": "Aumenta la velocidad de Reparaci\u00F3n acumulable de 6/8/10 % por cada otro Sobreviviente en un radio de 4 metros de tu ubicaci\u00F3n, hasta un m\u00E1ximo de 18/24/30 %. Demuestra lo que Vales extiende su efecto a todos los Sobrevivientes dentro de ese alcance. Los Sobrevivientes solo pueden recibir un efecto de Demuestra lo que Vales a la vez. \u0022\u00A1Mu\u00E9strame lo que puedes hacer!\u0022 \u2014 Dwight Fairfield",
+    "Description": "Aumenta la velocidad de Reparaci\u00F3n acumulable de {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} % por cada otro Sobreviviente en un radio de 4 metros de tu ubicaci\u00F3n, hasta un m\u00E1ximo de 18/24/30 %. Demuestra lo que Vales extiende su efecto a todos los Sobrevivientes dentro de ese alcance. Los Sobrevivientes solo pueden recibir un efecto de Demuestra lo que Vales a la vez. \u0022\u00A1Mu\u00E9strame lo que puedes hacer!\u0022 \u2014 Dwight Fairfield",
     "Image": "images/perks/provethyself.webp"
   },
   {
@@ -88,7 +88,7 @@
     "Name": "Ca\u00EDda Equilibrada",
     "CharacterId": 5,
     "Description": "\u0022Tu agilidad y reflejos felinos son inigualables.\u0022 Mientras caes de cierta altura, te beneficias de los siguientes efectos: Suprime todos los sonidos asociados a la ca\u00EDda y el aterrizaje. Reduce la duraci\u00F3n del Tambaleo por ca\u00EDdas en un 75 %. Otorga un Efecto de Estado Celeridad durante un breve per\u00EDodo. No se puede usar Ca\u00EDda Equilibrada mientras est\u00E1s Agotado. Ca\u00EDda Equilibrada causa el Efecto de Estado Agotado durante 60/50/40 segundos. \u0022He saltado desde lugares m\u00E1s altos.\u0022 \u2014 Nea Karlsson",
-    "Image": "images/perks/caidae quilibrada.webp"
+    "Image": "images/perks/caidaequilibrada.webp"
   },
   {
     "Id": 14,
@@ -249,7 +249,7 @@
     "Name": "Bajo Vigilancia",
     "CharacterId": 12,
     "Description": "Estar cerca del Asesino te llena de determinaci\u00F3n. Por cada 15 segundos que pases dentro del Radio de Terror del Asesino sin que te est\u00E9 persiguiendo, Bajo Vigilancia gana 1 Distintivo, hasta un m\u00E1ximo de 2/3/4 Distintivos. Cuando Bajo Vigilancia tenga al menos 1 Distintivo, Pruebas de Habilidad Superadas consume 1 Distintivo y se considerar\u00E1 como una Prueba de Habilidad Excelente, otorg\u00E1ndole una bonificaci\u00F3n de progreso adicional de un \u002B1 % en Reparaciones. Las Pruebas de Habilidad Excelentes no consumen ning\u00FAn Distintivo.",
-    "Image": "images/perks/bajovigilancia.webp"
+    "Image": "images/perks/bajovigilacia.webp"
   },
   {
     "Id": 37,
@@ -354,7 +354,7 @@
     "Name": "El Temple del Hombre",
     "CharacterId": 17,
     "Description": "Despu\u00E9s de recibir el tercer Golpe Protector, se activa El Temple del Hombre. Mientras est\u00E1s herido, eres invulnerable a cualquier da\u00F1o que te hubiera dejado agonizante. La pr\u00F3xima vez que recuperes completamente tu salud, tu Aura se revela al Asesino si est\u00E1s a m\u00E1s de 12/14/16 metros de \u00E9l.",
-    "Image": "images/perks/eltemplodelhombre.webp"
+    "Image": "images/perks/eltempledelhombre.webp"
   },
   {
     "Id": 52,
@@ -382,7 +382,7 @@
     "Name": "Ni\u00F1ero",
     "CharacterId": 19,
     "Description": "Cuando descuelgas a otro Sobreviviente, sus Marcas de Ara\u00F1azos y Charcos de Sangre quedan suprimidos durante 4/5/6 segundos. Tambi\u00E9n obtienes un aumento del 8 % de Celeridad durante 10 segundos.",
-    "Image": "images/perks/ninero.webp"
+    "Image": "images/perks/niniero.webp"
   },
   {
     "Id": 56,
@@ -480,7 +480,7 @@
     "Name": "Dise\u00F1ado para Durar",
     "CharacterId": 23,
     "Description": "Mientras te escondes dentro de un Casillero durante 12/10/8 segundos con un Objeto con cargas agotadas en la mano, recarga el Objeto. La primera vez lo recarga al 99 %, la segunda al 66 % y la tercera al 33 %. Se desactiva despu\u00E9s de la tercera vez.",
-    "Image": "images/perks/disenadopar durar.webp"
+    "Image": "images/perks/diseniadoparadurar.webp"
   },
   {
     "Id": 70,
@@ -494,7 +494,7 @@
     "Name": "Enga\u00F1o",
     "CharacterId": 24,
     "Description": "Interactuar con un Casillero mientras presionas el bot\u00F3n de Carrera hace que no entres en \u00E9l, sino que abras y cierres sus puertas para fingir que un Sobreviviente entr\u00F3. Tambi\u00E9n activa una Notificaci\u00F3n de Ruido Fuerte en el Casillero y suprime tus Marcas de Ara\u00F1azos y Charcos de Sangre durante 3 segundos. Tiene un tiempo de recuperaci\u00F3n de 25/20/15 segundos.",
-    "Image": "images/perks/engano.webp"
+    "Image": "images/perks/enganio.webp"
   },
   {
     "Id": 72,
@@ -578,7 +578,7 @@
     "Name": "Bendici\u00F3n: C\u00EDrculo de Curaci\u00F3n",
     "CharacterId": 28,
     "Description": "Una Bendici\u00F3n que ofrece consuelo en medio del terror. Mant\u00E9n presionado el bot\u00F3n de Habilidad Activa en un T\u00F3tem Apagado o de Maldici\u00F3n para bendecirlo y crear un T\u00F3tem de Bendici\u00F3n. Todos los Sobrevivientes a menos de 24 metros se benefician de sus efectos. Aumenta la velocidad de curaci\u00F3n en un 50/75/100 % adicional cuando no usas un Botiqu\u00EDn y revela el Aura de los Sobrevivientes heridos.",
-    "Image": "images/perks/bendicioncirculodecuracion.webp"
+    "Image": "images/perks/bendicioncirculodelacuracion.webp"
   },
   {
     "Id": 87,
@@ -725,7 +725,7 @@
     "Name": "Trabajo en Equipo: El Poder de Dos",
     "CharacterId": 35,
     "Description": "Cuesta mantener tu ritmo, pero eso no detiene a los dem\u00E1s de intentarlo. Cuando terminas de curar a otro Sobreviviente, Trabajo en Equipo: El Poder de Dos se activa. Tanto t\u00FA como el Sobreviviente curado obten\u00E9is un 5 % de Celeridad mientras permanezc\u00E1is a menos de 8/12/16 metros uno del otro. El efecto se mantiene durante 4 segundos despu\u00E9s de salir del radio.",
-    "Image": "images/perks/trabajoenequipopoderdedos.webp"
+    "Image": "images/perks/trabajoenequipoelpoderdedos.webp"
   },
   {
     "Id": 108,
@@ -788,7 +788,7 @@
     "Name": "Compa\u00F1ero de Escena",
     "CharacterId": 38,
     "Description": "Sabes que el p\u00FAblico siempre quiere ver m\u00E1s. Cuando est\u00E1s dentro del Radio de Terror del Asesino, Compa\u00F1ero de Escena se activa. Cada vez que miras al Asesino, gritas y ves su Aura durante 3/4/5 segundos. Existe una peque\u00F1a posibilidad de que vuelvas a gritar, revelando nuevamente su Aura.",
-    "Image": "images/perks/companerodeescena.webp"
+    "Image": "images/perks/companierodeescena.webp"
   },
   {
     "Id": 117,
@@ -844,7 +844,7 @@
     "Name": "Invocaci\u00F3n: Ara\u00F1as Tejedoras",
     "CharacterId": 41,
     "Description": "Cuando llegas al S\u00F3tano cerca del c\u00EDrculo, puedes comenzar una Invocaci\u00F3n que tarda 60 segundos en completarse. Durante la Invocaci\u00F3n, los dem\u00E1s Sobrevivientes pueden unirse y acelerar el proceso. Al completarla, reduce permanentemente las cargas necesarias para reparar todos los Generadores en 8/9/10 y entras en el Estado Herido, sufriendo Desesperanza hasta el final de la Partida.",
-    "Image": "images/perks/invocacionaranastejedoras.webp"
+    "Image": "images/perks/invocacionaraniastejedoras.webp"
   },
   {
     "Id": 125,
@@ -949,7 +949,7 @@
     "Name": "No Hagas Da\u00F1o",
     "CharacterId": 46,
     "Description": "Al curar a otro Sobreviviente, por cada Estado de Gancho que tenga, aumenta tu velocidad de Curaci\u00F3n Altruista en un 30/40/50 %, hasta un m\u00E1ximo de 60/80/100 %. Tambi\u00E9n aumenta la bonificaci\u00F3n de Progreso de las Pruebas de Habilidad Excelentes de Curaci\u00F3n en un 3 % por Estado de Gancho, hasta un m\u00E1ximo de 6 %.",
-    "Image": "images/perks/nohagasdano.webp"
+    "Image": "images/perks/nohagasdanio.webp"
   },
   {
     "Id": 140,
@@ -984,7 +984,7 @@
     "Name": "Trabajo en Equipo: Entereza",
     "CharacterId": 47,
     "Description": "Mientras est\u00E1s herido, cada vez que otro Sobreviviente dentro de un radio de 24 metros ciega al Asesino o lo aturde con una Tarima, se activa Trabajo en Equipo: Entereza. Suprime tus Gru\u00F1idos de Dolor, Charcos de Sangre y Marcas de Ara\u00F1azos durante 20/25/30 segundos.",
-    "Image": "images/perks/trabajoenequipoenterereza.webp"
+    "Image": "images/perks/trabajoenequipoentereza.webp"
   },
   {
     "Id": 145,
@@ -1019,7 +1019,7 @@
     "Name": "\u00A1Uno-Dos-Tres-Cuatro!",
     "CharacterId": 49,
     "Description": "Mientras est\u00E1s de pie e inm\u00F3vil, presiona el bot\u00F3n de Habilidad Activa para iniciar un Concierto de hasta 15 segundos. Los Sobrevivientes dentro de un radio de 16 metros reciben varias Pruebas de Habilidad. Despu\u00E9s de completar exitosamente el Concierto, los Sobrevivientes potenciados obtienen un aumento de la probabilidad de recibir Pruebas de Habilidad durante 90 segundos. Tiene un tiempo de recuperaci\u00F3n de 110/100/90 segundos.",
-    "Image": "images/perks/unodostrescuatro.webp"
+    "Image": "images/perks/unodostrecuatro.webp"
   },
   {
     "Id": 150,
@@ -1117,7 +1117,7 @@
     "Name": "Cosechas lo que Siembras",
     "CharacterId": 54,
     "Description": "Cada vez que completas un Generador, obtienes un Distintivo. Cada vez que terminas de reparar un Generador, por cada Distintivo que tenga esta ventaja, obtienes un 5 % de Celeridad durante 2 segundos y un 10/15/20 % de progreso de curaci\u00F3n.",
-    "Image": "images/perks/cosechasloquesiembras.webp"
+    "Image": "images/perks/frutosdetuesfuerzo.webp"
   },
   {
     "Id": 164,
@@ -1131,105 +1131,104 @@
     "Name": "Bendici\u00F3n: Determinaci\u00F3n",
     "CharacterId": 54,
     "Description": "Mant\u00E9n presionado el bot\u00F3n de Habilidad Activa en un T\u00F3tem Apagado o de Maldici\u00F3n para bendecirlo y crear un T\u00F3tem de Bendici\u00F3n. Todos los Sobrevivientes a menos de 24 metros escuchan suaves campanadas. Los Generadores dentro del alcance de la Bendici\u00F3n se revierten un 50 % m\u00E1s lento y los Sobrevivientes los reparan un 8/9/10 % m\u00E1s r\u00E1pido. Los Sobrevivientes solo pueden recibir un efecto de Bendici\u00F3n: Determinaci\u00F3n a la vez.",
-    "Image": "images/perks/bendiciondeterminacion.webp"
+    "Image": "images/perks/bendiciondecision.webp"
   },
   {
-  "Id": 166,
-  "Name": "Carne Resbaladiza",
-  "CharacterId": null,
-  "Description": "Has desarrollado una forma eficiente de liberarte de los ganchos. Aumenta el número de intentos para liberarte del gancho y tu probabilidad de escapar.",
-  "Image": "images/perks/carneresbaladiza.webp"
+    "Id": 166,
+    "Name": "Carne Resbaladiza",
+    "CharacterId": null,
+    "Description": "Has desarrollado una forma eficiente de liberarte de los ganchos. Aumenta el n\u00FAmero de intentos para liberarte del gancho y tu probabilidad de escapar.",
+    "Image": "images/perks/carneresbaladiza.webp"
   },
   {
-  "Id": 167,
-  "Name": "Caza Menor",
-  "CharacterId": null,
-  "Description": "Tienes la capacidad natural de detectar el peligro. Recibes una advertencia sonora cuando miras hacia los tótems cercanos y obtienes información adicional a medida que se limpian o purifican tótems.",
-  "Image": "images/perks/cazamenor.webp"
+    "Id": 167,
+    "Name": "Caza Menor",
+    "CharacterId": null,
+    "Description": "Tienes la capacidad natural de detectar el peligro. Recibes una advertencia sonora cuando miras hacia los t\u00F3tems cercanos y obtienes informaci\u00F3n adicional a medida que se limpian o purifican t\u00F3tems.",
+    "Image": "images/perks/cazamenor.webp"
   },
   {
-  "Id": 168,
-  "Name": "De Pies Ligeros",
-  "CharacterId": null,
-  "Description": "Corres con agilidad y gracia, lo que dificulta que el Asesino siga tu rastro. Reduce la duración de tus marcas de arañazos y hace que aparezcan de forma menos consistente.",
-  "Image": "images/perks/depiesligeros.webp"
+    "Id": 168,
+    "Name": "De Pies Ligeros",
+    "CharacterId": null,
+    "Description": "Corres con agilidad y gracia, lo que dificulta que el Asesino siga tu rastro. Reduce la duraci\u00F3n de tus marcas de ara\u00F1azos y hace que aparezcan de forma menos consistente.",
+    "Image": "images/perks/depiesligeros.webp"
   },
   {
-  "Id": 169,
-  "Name": "Déjà Vu",
-  "CharacterId": null,
-  "Description": "Te revela las auras de tres generadores próximos entre sí y aumenta tu velocidad de reparación en esos generadores.",
-  "Image": "images/perks/dejavu.webp"
+    "Id": 169,
+    "Name": "D\u00E9j\u00E0 Vu",
+    "CharacterId": null,
+    "Description": "Te revela las auras de tres generadores pr\u00F3ximos entre s\u00ED y aumenta tu velocidad de reparaci\u00F3n en esos generadores.",
+    "Image": "images/perks/dejavu.webp"
   },
   {
-  "Id": 170,
-  "Name": "Escalofríos",
-  "CharacterId": null,
-  "Description": "Cuando el Asesino está cerca y te mira directamente, recibes una advertencia y aumentas temporalmente tu velocidad de acción en varias acciones.",
-  "Image": "images/perks/escalofrios.webp"
+    "Id": 170,
+    "Name": "Escalofr\u00EDos",
+    "CharacterId": null,
+    "Description": "Cuando el Asesino est\u00E1 cerca y te mira directamente, recibes una advertencia y aumentas temporalmente tu velocidad de acci\u00F3n en varias acciones.",
+    "Image": "images/perks/escalofrios.webp"
   },
   {
-  "Id": 171,
-  "Name": "Esperanza",
-  "CharacterId": null,
-  "Description": "Una vez que se abren las puertas de salida, obtienes un efecto de Celeridad durante el resto de la partida.",
-  "Image": "images/perks/esperanza.webp"
+    "Id": 171,
+    "Name": "Esperanza",
+    "CharacterId": null,
+    "Description": "Una vez que se abren las puertas de salida, obtienes un efecto de Celeridad durante el resto de la partida.",
+    "Image": "images/perks/esperanza.webp"
   },
   {
-  "Id": 172,
-  "Name": "Esto No Puede Estar Pasando",
-  "CharacterId": null,
-  "Description": "Cuando estás herido, aumenta el tamaño de las zonas de éxito para superar Pruebas de Habilidad Excelentes al curar y reparar.",
-  "Image": "images/perks/estonopuedeestarpasando.webp"
+    "Id": 172,
+    "Name": "Esto No Puede Estar Pasando",
+    "CharacterId": null,
+    "Description": "Cuando est\u00E1s herido, aumenta el tama\u00F1o de las zonas de \u00E9xito para superar Pruebas de Habilidad Excelentes al curar y reparar.",
+    "Image": "images/perks/estonopuedeestarpasando.webp"
   },
   {
-  "Id": 173,
-  "Name": "Familia",
-  "CharacterId": null,
-  "Description": "Mientras estás en un gancho, puedes revelar auras de otros personajes y permitir que otros Supervivientes obtengan información sobre las posiciones de sus compañeros y del Asesino.",
-  "Image": "images/perks/familia.webp"
+    "Id": 173,
+    "Name": "Familia",
+    "CharacterId": null,
+    "Description": "Mientras est\u00E1s en un gancho, puedes revelar auras de otros personajes y permitir que otros Supervivientes obtengan informaci\u00F3n sobre las posiciones de sus compa\u00F1eros y del Asesino.",
+    "Image": "images/perks/familia.webp"
   },
   {
-  "Id": 174,
-  "Name": "Instinto de Saqueador",
-  "CharacterId": null,
-  "Description": "Revela las auras de los cofres y de los objetos cercanos, además de aumentar tus posibilidades de encontrar objetos de mayor rareza en los cofres.",
-  "Image": "images/perks/instintodesaqueador.webp"
+    "Id": 174,
+    "Name": "Instinto de Saqueador",
+    "CharacterId": null,
+    "Description": "Revela las auras de los cofres y de los objetos cercanos, adem\u00E1s de aumentar tus posibilidades de encontrar objetos de mayor rareza en los cofres.",
+    "Image": "images/perks/institodesaqueador.webp"
   },
   {
-  "Id": 175,
-  "Name": "Nadie Se Queda Atrás",
-  "CharacterId": null,
-  "Description": "Cuando se abren las puertas de salida, aumenta considerablemente tu velocidad para curar y descolgar a otros Supervivientes. También revela las auras de los demás Supervivientes.",
-  "Image": "images/perks/nadiesequedaatras.webp"
+    "Id": 175,
+    "Name": "Nadie Se Queda Atr\u00E1s",
+    "CharacterId": null,
+    "Description": "Cuando se abren las puertas de salida, aumenta considerablemente tu velocidad para curar y descolgar a otros Supervivientes. Tambi\u00E9n revela las auras de los dem\u00E1s Supervivientes.",
+    "Image": "images/perks/nadiesequedaatras.webp"
   },
   {
-  "Id": 176,
-  "Name": "Percepción Oscura",
-  "CharacterId": null,
-  "Description": "Cada vez que se completa un generador, se activa la perk y revela el aura del Asesino cuando entra en un área determinada a tu alrededor.",
-  "Image": "images/perks/percepcionoscura.webp"
+    "Id": 176,
+    "Name": "Percepci\u00F3n Oscura",
+    "CharacterId": null,
+    "Description": "Cada vez que se completa un generador, se activa la perk y revela el aura del Asesino cuando entra en un \u00E1rea determinada a tu alrededor.",
+    "Image": "images/perks/percepcionoscura.webp"
   },
   {
-  "Id": 177,
-  "Name": "Premonición",
-  "CharacterId": null,
-  "Description": "Recibes una advertencia sonora cuando miras en dirección al Asesino dentro de un área determinada.",
-  "Image": "images/perks/premonicion.webp"
+    "Id": 177,
+    "Name": "Premonici\u00F3n",
+    "CharacterId": null,
+    "Description": "Recibes una advertencia sonora cuando miras en direcci\u00F3n al Asesino dentro de un \u00E1rea determinada.",
+    "Image": "images/perks/premonicion.webp"
   },
   {
-  "Id": 178,
-  "Name": "Resiliencia",
-  "CharacterId": null,
-  "Description": "Cuando estás herido, aumenta tu velocidad de acción para reparar, curar, sabotear, descolgar, saltar, bendecir o purificar tótems, abrir puertas de salida y abrir cofres.",
-  "Image": "images/perks/resiliencia.webp"
+    "Id": 178,
+    "Name": "Resiliencia",
+    "CharacterId": null,
+    "Description": "Cuando est\u00E1s herido, aumenta tu velocidad de acci\u00F3n para reparar, curar, sabotear, descolgar, saltar, bendecir o purificar t\u00F3tems, abrir puertas de salida y abrir cofres.",
+    "Image": "images/perks/resiliencia.webp"
   },
   {
-  "Id": 179,
-  "Name": "Sobreviviremos",
-  "CharacterId": null,
-  "Description": "Cuando descolgas a otro Superviviente, aumenta considerablemente tu velocidad de curación altruista durante un tiempo limitado.",
-  "Image": "images/perks/sobreviviremos.webp"
+    "Id": 179,
+    "Name": "Sobreviviremos",
+    "CharacterId": null,
+    "Description": "Cuando descolgas a otro Superviviente, aumenta considerablemente tu velocidad de curaci\u00F3n altruista durante un tiempo limitado.",
+    "Image": "images/perks/sobreviviremos.webp"
   }
-
 ]

@@ -18,3 +18,7 @@ Thumbs.db
 
 # Proyecto local de pruebas
 DBDRandomizerLocal/
+
+# Página de diagnóstico
+DBDRandomizerWeb/Pages/Diagnostics.razor
+DBDRandomizerWeb/Pages/Diagnostics.razor.css

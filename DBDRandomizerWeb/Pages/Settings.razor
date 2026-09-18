@@ -32,7 +32,7 @@ else
     <details class="settings-section">
         <summary class="settings-section-summary">
             <div>
-                <h2>Skin Randomization</h2>
+                <h2>Modo de Skins</h2>
                 <p>
                     Elige cómo se randomizarán las skins.
                 </p>
@@ -109,7 +109,7 @@ else
 
             <div>
 
-                <h2>Empty Slots</h2>
+                <h2>Slots vacios</h2>
 
                 <p>
                     Configura la probabilidad de que un elemento salga vacío.
@@ -118,6 +118,10 @@ else
             </div>
 
         </summary>
+
+        <p>
+            Esto configura la chance de que cada elemento propio este vacio. Afecta a ambos Sobreviviente y Asesino.
+        </p>
 
         <div class="settings-section-content">
 
@@ -186,7 +190,7 @@ else
                 <div class="empty-slot-setting">
 
                     <label for="addon-empty-chance">
-                        Add-ons vacíos
+                        Addons vacíos
                     </label>
 
                     <div class="empty-slot-control">
@@ -216,7 +220,7 @@ else
                 <div class="empty-slot-setting">
 
                     <label for="offering-empty-chance">
-                        Offering vacío
+                        Ofrenda vacía
                     </label>
 
                     <div class="empty-slot-control">
@@ -258,7 +262,7 @@ else
 
             <summary class="settings-section-summary">
                 <div>
-                    <h2>Survivors</h2>
+                    <h2>Sobrevivientes</h2>
                     <p>
                         @EnabledSurvivorsCount de @survivors.Count habilitados
                     </p>
@@ -336,7 +340,7 @@ else
 
             <summary class="settings-section-summary">
                 <div>
-                    <h2>Killers</h2>
+                    <h2>Asesinos</h2>
                     <p>
                         @EnabledKillersCount de @killers.Count habilitados
                     </p>
@@ -411,10 +415,10 @@ else
             <summary class="settings-section-summary">
 
                 <div>
-                    <h2>Survivor Skins</h2>
+                    <h2>Skins de Sobreviviente</h2>
 
                     <p>
-                        Configura qué skins pueden utilizarse.
+                        Configura qué skins pueden utilizarse. (wip)
                     </p>
                 </div>
 
@@ -607,10 +611,10 @@ else
             <summary class="settings-section-summary">
 
                 <div>
-                    <h2>Killer Skins</h2>
+                    <h2>Skins de Asesino</h2>
 
                     <p>
-                        Configura qué skins pueden utilizarse.
+                        Configura qué skins pueden utilizarse. (wip)
                     </p>
                 </div>
 
@@ -805,7 +809,7 @@ else
 
                 <div>
 
-                    <h2>Survivor Perks</h2>
+                    <h2>Perks de Sobreviviente</h2>
 
                     <p>
                         @EnabledSurvivorPerksCount de @survivorPerks.Count habilitadas
@@ -898,7 +902,7 @@ else
                                 }
 
                                 <p>
-                                    @((MarkupString)perk.Description)
+                                    @RenderDescription(perk.Description)
                                 </p>
 
                             </div>
@@ -918,7 +922,7 @@ else
 
                 <div>
 
-                    <h2>Killer Perks</h2>
+                    <h2>Perks de Asesino</h2>
 
                     <p>
                         @EnabledKillerPerksCount de @killerPerks.Count habilitadas
@@ -1013,7 +1017,7 @@ else
                                 }
 
                                 <p>
-                                    @((MarkupString)perk.Description)
+                                    @RenderDescription(perk.Description)
                                 </p>
 
                             </div>
@@ -1037,7 +1041,7 @@ else
 
                 <div>
 
-                    <h2>Survivor Add-ons</h2>
+                    <h2>Addons de Sobreviviente</h2>
 
                     <p>
                         @EnabledSurvivorAddonsCount de @SurvivorAddons.Count() habilitados
@@ -1135,7 +1139,7 @@ else
                                                 </span>
 
                                                 <p>
-                                                    @((MarkupString)addon.Description)
+                                                    @RenderDescription(addon.Description)
                                                 </p>
 
                                             </div>
@@ -1165,7 +1169,7 @@ else
 
                 <div>
 
-                    <h2>Killer Add-ons</h2>
+                    <h2>Accesorios de Asesino</h2>
 
                     <p>
                         @EnabledKillerAddonsCount de @KillerAddons.Count() habilitados
@@ -1263,7 +1267,7 @@ else
                                                 </span>
 
                                                 <p>
-                                                    @((MarkupString)addon.Description)
+                                                    @RenderDescription(addon.Description)
                                                 </p>
 
                                             </div>
@@ -1289,7 +1293,7 @@ else
 
                 <div>
 
-                    <h2>Items</h2>
+                    <h2>Items de Sobreviviente</h2>
 
                     <p>
                         @EnabledItemsCount de @items.Count habilitados
@@ -1370,7 +1374,7 @@ else
                                 </span>
 
                                 <p>
-                                    @((MarkupString)item.Description)
+                                    @RenderDescription(item.Description)
                                 </p>
 
                             </div>
@@ -1394,7 +1398,7 @@ else
 
                 <div>
 
-                    <h2>Offerings</h2>
+                    <h2>Ofrendas</h2>
 
                     <p>
                         @EnabledOfferingsCount de @offerings.Count habilitados
@@ -1476,7 +1480,7 @@ else
                                 </span>
 
                                 <p>
-                                    @((MarkupString)offering.Description)
+                                    @RenderDescription(offering.Description)
                                 </p>
 
                             </div>
@@ -1491,35 +1495,7 @@ else
 
         </details>
 
-        @if (validationErrors.Count > 0)
-        {
-            <div class="settings-validation-errors">
-
-                <h3>CONFIGURACIÓN INVÁLIDA</h3>
-
-                <p>
-                    No se pueden guardar los cambios porque
-                    el randomizador no podría funcionar correctamente.
-                </p>
-
-                <ul>
-                    @foreach (string error in validationErrors)
-                    {
-                        <li>@error</li>
-                    }
-                </ul>
-
-            </div>
-        }
-
         <div class="settings-save-container">
-
-            @if (configSavedSuccessfully)
-            {
-                <div class="settings-save-success">
-                    ✓ CONFIGURACIÓN GUARDADA CORRECTAMENTE
-                </div>
-            }
 
             <button
                 class="settings-save-button"
@@ -1531,12 +1507,108 @@ else
 
         </div>
 
+        @if (showResultModal)
+        {
+            <div class="modal-overlay" @onclick="CloseResultModal">
+
+                <div
+                    class="modal-box @(configSavedSuccessfully ? "modal-success" : "modal-error")"
+                    @onclick:stopPropagation="true">
+
+                    <button
+                        class="modal-close"
+                        title="Cerrar"
+                        @onclick="CloseResultModal">
+                        ✕
+                    </button>
+
+                    @if (configSavedSuccessfully)
+                    {
+                        <div class="modal-icon modal-icon-success">✓</div>
+
+                        <h3>CONFIGURACIÓN GUARDADA</h3>
+
+                        <p>
+                            Los cambios se guardaron correctamente.
+                        </p>
+                    }
+                    else
+                    {
+                        <div class="modal-icon modal-icon-error">✕</div>
+
+                        <h3>CONFIGURACIÓN INVÁLIDA</h3>
+
+                        <p>
+                            No se pueden guardar los cambios porque
+                            el randomizador no podría funcionar correctamente.
+                        </p>
+
+                        <ul>
+                            @foreach (string error in validationErrors)
+                            {
+                                <li>@error</li>
+                            }
+                        </ul>
+                    }
+
+                    <button
+                        class="modal-action-button"
+                        @onclick="CloseResultModal">
+
+                        ENTENDIDO
+
+                    </button>
+
+                </div>
+
+            </div>
+        }
+
     </div>
 }
 
 
 @code
 {
+
+
+    private static readonly Dictionary<string, string> DescriptionColors = new()
+    {
+        ["{YELLOW}"] = "#e8c252",
+        ["{ORANGE}"] = "#ff8800",
+        ["{BLUE}"] = "#4da997",
+        ["{GREEN}"] = "#199b1e",
+        ["{CYAN}"] = "#2f9cd6",
+        ["{PURPLE}"] = "#ac3ee3",
+        ["{CITATION}"] = "#e7cda2"
+    };
+
+    private MarkupString RenderDescription(string? description)
+    {
+        if (string.IsNullOrWhiteSpace(description))
+        {
+            return new MarkupString("");
+        }
+
+        string result = description;
+
+        foreach (var color in DescriptionColors)
+        {
+            result = result.Replace(
+                color.Key,
+                $"<span style=\"color:{color.Value};\">"
+            );
+        }
+
+        result = result.Replace(
+            "{RESET}",
+            "</span>"
+        );
+
+        return new MarkupString(result);
+    }
+
+
     [Inject]
     private LocalStorageService LocalStorage { get; set; } = default!;
 
@@ -1565,6 +1637,7 @@ else
     private string killerSearch = "";
     private List<string> validationErrors = new();
     private bool configSavedSuccessfully = false;
+    private bool showResultModal = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -2482,6 +2555,8 @@ else
 
         ValidateConfig();
 
+        showResultModal = true;
+
         if (validationErrors.Count > 0)
         {
             return;
@@ -2490,6 +2565,11 @@ else
         await LocalStorage.SaveConfig(config);
 
         configSavedSuccessfully = true;
+    }
+
+    private void CloseResultModal()
+    {
+        showResultModal = false;
     }
 
 /* 

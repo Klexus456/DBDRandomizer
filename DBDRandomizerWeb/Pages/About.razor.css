@@ -1,0 +1,54 @@
+.about-page {
+    width: 100%;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 60px 45px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 700px;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(24, 24, 24, 0.9),
+            rgba(13, 13, 13, 0.9)
+        );
+
+    border: 1px solid rgba(155, 48, 48, 0.20);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.5);
+}
+
+.about-container h1 {
+    margin: 0 0 20px;
+
+    color: #eeeeee;
+
+    font-size: 24px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+.about-container p {
+    margin: 0;
+
+    color: #bbbbbb;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}

@@ -416,5 +416,16 @@
     "Description": "Modifica Vampiric Shift, mejorando las transformaciones y las habilidades de sus diferentes formas.",
     "Image": "images/2v8/killers/dracula.webp",
     "Slot": 1
+  },
+  {
+    "Id": 39,
+    "Role": "Killer",
+    "ClassId": null,
+    "CharacterId": 33,
+    "Type": "Innate",
+    "Name": "Habilidad Innata del xenomorfo",
+    "Description": "cambia algo, no se porque el dbd no me corre en la i5 xdd",
+    "Image": "images/2v8/killers/xenomorfo.png",
+    "Slot": 1
   }
 ]

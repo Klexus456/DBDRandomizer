@@ -4,6 +4,7 @@
 
 .dbd-sidebar {
     position: fixed;
+
     top: 0;
     left: 0;
 
@@ -18,51 +19,108 @@
     background:
         linear-gradient(
             180deg,
-            rgba(18, 18, 18, 0.98) 0%,
-            rgba(12, 12, 12, 0.98) 100%
+            rgba(7, 7, 7, 0.94) 0%,
+            rgba(10, 10, 10, 0.86) 55%,
+            rgba(5, 5, 5, 0.96) 100%
         );
 
-    border-right: 1px solid #292929;
+    border-right: 1px solid rgba(255, 255, 255, 0.11);
 
     box-shadow:
-        8px 0 30px rgba(0, 0, 0, 0.45);
+        10px 0 40px rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(10px);
 
     z-index: 1000;
 }
 
 
 /* =========================================================
-   LOGO
+   DETALLE ROJO LATERAL
+   ========================================================= */
+
+.dbd-sidebar::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: -1px;
+
+    width: 1px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(155, 48, 48, 0.30) 35%,
+            rgba(155, 48, 48, 0.15) 65%,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   LOGO / CABECERA
    ========================================================= */
 
 .dbd-sidebar-header {
-    padding: 30px 20px;
-    border-bottom: 1px solid #292929;
+    position: relative;
+
+    padding: 30px 24px 27px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.dbd-sidebar-header::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -1px;
+    left: 24px;
+
+    width: 38px;
+    height: 2px;
+
+    background: #9b3030;
+
+    box-shadow:
+        0 0 10px rgba(155, 48, 48, 0.45);
 }
 
 .dbd-logo {
     display: flex;
+
     flex-direction: column;
 
     text-decoration: none;
+
     color: #eeeeee;
 }
 
 .dbd-logo-main {
     font-size: 32px;
     font-weight: 900;
-    letter-spacing: 5px;
+
+    letter-spacing: 6px;
+
     line-height: 1;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .dbd-logo-sub {
-    margin-top: 6px;
+    margin-top: 7px;
 
     color: #777777;
 
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 3px;
+    font-size: 8px;
+    font-weight: 900;
+
+    letter-spacing: 4px;
 }
 
 
@@ -72,28 +130,40 @@
 
 .dbd-nav {
     display: flex;
+
     flex-direction: column;
 
-    padding: 25px 15px;
+    padding: 28px 15px;
 }
 
 .dbd-nav-section-title {
     margin: 0 10px 12px;
 
-    color: #666666;
+    color: #606060;
 
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 2px;
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
 }
 
 
 /* =========================================================
-   BOTONES / LINKS
+   LINKS
+   =========================================================
+   El fondo de cada botón usa "nav-item-base.png" (una franja
+   pintada, sin la línea roja) estirada a todo el tamaño del
+   botón. El estado activo cambia a "nav-item-active.png", que
+   ya trae la línea roja quemada en el borde izquierdo, así que
+   el pseudo-elemento ::before que antes dibujaba esa línea deja
+   de ser necesario en ese estado.
    ========================================================= */
 
 ::deep .dbd-nav-item {
+    position: relative;
+
     display: flex;
+
     align-items: center;
 
     width: 100%;
@@ -102,29 +172,58 @@
     box-sizing: border-box;
 
     padding: 0 12px;
-    margin-bottom: 6px;
 
-    border: 1px solid #2d2d2d;
+    margin-bottom: 5px;
 
-    background: #181818;
+    border: 1px solid transparent;
 
-    color: #aaaaaa;
+    background-color: rgba(20, 20, 20, 0.35);
+    background-image: url("/images/nav-item-base.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+
+    color: #999999;
 
     text-decoration: none;
 
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 800;
 
-    letter-spacing: 0.5px;
+    letter-spacing: 0.7px;
 
     cursor: pointer;
 
     transition:
-        background 0.15s ease,
-        color 0.15s ease,
-        border-color 0.15s ease,
-        box-shadow 0.15s ease,
-        transform 0.15s ease;
+        background-color 0.18s ease,
+        filter 0.18s ease,
+        color 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+/* =========================================================
+   BARRA LATERAL (estado inactivo)
+   ========================================================= */
+
+::deep .dbd-nav-item::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 2px;
+    height: 100%;
+
+    background: transparent;
+
+    transition:
+        background 0.18s ease,
+        box-shadow 0.18s ease;
 }
 
 
@@ -133,21 +232,16 @@
    ========================================================= */
 
 ::deep .dbd-nav-item:hover {
-    background:
-        linear-gradient(
-            90deg,
-            #303030,
-            #242424
-        );
+    filter: brightness(1.35) saturate(1.1);
 
-    border-color: #555555;
+    border-color: rgba(255, 255, 255, 0.12);
 
     color: #ffffff;
 
     text-decoration: none;
 
     box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.35);
+        0 5px 15px rgba(0, 0, 0, 0.30);
 
     transform: translateX(3px);
 }
@@ -158,22 +252,24 @@
    ========================================================= */
 
 ::deep .dbd-nav-item.active {
-    background:
-        linear-gradient(
-            90deg,
-            #292929,
-            #1b1b1b
-        );
+    background-color: transparent;
+    background-image: url("/images/nav-item-active.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 
-    border-color: #555555;
+    border-color: rgba(155, 48, 48, 0.28);
 
-    color: #ffffff;
+    color: #eeeeee;
 
     text-decoration: none;
 
     box-shadow:
-        inset 3px 0 0 #9b3030,
-        0 3px 10px rgba(0, 0, 0, 0.25);
+        0 5px 18px rgba(0, 0, 0, 0.30);
+}
+
+::deep .dbd-nav-item.active::before {
+    /* La línea roja ya viene pintada en nav-item-active.png */
+    display: none;
 }
 
 
@@ -182,20 +278,16 @@
    ========================================================= */
 
 ::deep .dbd-nav-item.active:hover {
-    background:
-        linear-gradient(
-            90deg,
-            #353535,
-            #242424
-        );
+    filter: brightness(1.2);
 
-    border-color: #666666;
+    border-color: rgba(182, 58, 58, 0.40);
 
     color: #ffffff;
 
     box-shadow:
-        inset 3px 0 0 #b63a3a,
-        0 4px 14px rgba(0, 0, 0, 0.4);
+        0 6px 20px rgba(0, 0, 0, 0.40);
+
+    transform: translateX(3px);
 }
 
 
@@ -209,10 +301,25 @@
     margin-right: 8px;
 
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
-    font-size: 18px;
+    font-size: 17px;
+
+    filter:
+        grayscale(0.20);
+
+    transition:
+        transform 0.18s ease,
+        filter 0.18s ease;
+}
+
+::deep .dbd-nav-item:hover .dbd-nav-icon {
+    transform: scale(1.08);
+
+    filter:
+        grayscale(0);
 }
 
 ::deep .dbd-nav-text {
@@ -227,12 +334,12 @@
 .dbd-sidebar-footer {
     margin-top: auto;
 
-    padding: 20px;
+    padding: 20px 22px 24px;
 
-    color: #555555;
+    color: #444444;
 
-    font-size: 9px;
-    font-weight: 800;
+    font-size: 8px;
+    font-weight: 900;
 
     letter-spacing: 2px;
 
@@ -242,11 +349,13 @@
 .dbd-sidebar-footer small {
     display: block;
 
-    margin-top: 5px;
+    margin-top: 6px;
 
-    color: #444444;
+    color: #3d3d3d;
 
-    font-size: 8px;
+    font-size: 7px;
+
+    letter-spacing: 3px;
 }
 
 .dbd-footer-line {
@@ -259,7 +368,7 @@
         linear-gradient(
             90deg,
             transparent,
-            #3a3a3a,
+            rgba(255, 255, 255, 0.16),
             transparent
         );
 }
@@ -279,13 +388,22 @@
         padding: 25px 10px;
     }
 
+    .dbd-sidebar-header::after {
+        left: 50%;
+
+        width: 24px;
+
+        transform: translateX(-50%);
+    }
+
     .dbd-logo {
         align-items: center;
     }
 
     .dbd-logo-main {
         font-size: 22px;
-        letter-spacing: 2px;
+
+        letter-spacing: 3px;
     }
 
     .dbd-logo-sub {
@@ -308,6 +426,10 @@
         min-height: 48px;
     }
 
+    ::deep .dbd-nav-item::before {
+        width: 2px;
+    }
+
     ::deep .dbd-nav-icon {
         margin: 0;
     }
@@ -319,4 +441,80 @@
     .dbd-sidebar-footer {
         display: none;
     }
+}
+
+/* =========================================================
+   FOOTER - LINK ABOUT
+   ========================================================= */
+
+::deep .dbd-footer-link {
+    display: block;
+
+    color: #3d3d3d;
+
+    font-size: 7px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        color 0.18s ease;
+}
+
+::deep .dbd-footer-link:hover {
+    color: #999999;
+
+    text-decoration: none;
+}
+
+::deep .dbd-footer-link.active {
+    color: #c14a4a;
+}
+
+::deep .dbd-nav-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 20px;
+
+    margin-right: 8px;
+
+    background: rgba(155, 48, 48, 0.15);
+
+    border: 1px solid rgba(155, 48, 48, 0.35);
+
+    color: #c9a0a0;
+
+    font-size: 8px;
+    font-weight: 900;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease;
+}
+
+::deep .dbd-nav-item:hover .dbd-nav-badge {
+    background: rgba(196, 61, 61, 0.25);
+
+    border-color: rgba(196, 61, 61, 0.55);
+
+    color: #ffffff;
+}
+
+::deep .dbd-nav-item.active .dbd-nav-badge {
+    background: rgba(196, 61, 61, 0.30);
+
+    border-color: rgba(196, 61, 61, 0.65);
+
+    color: #ffffff;
 }

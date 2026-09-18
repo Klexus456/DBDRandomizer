@@ -16,7 +16,7 @@
 
             <strong>@Name</strong>
 
-            <p>@((MarkupString)Description)</p>
+            <p>@RenderDescription(Description)</p>
 
         </div>
     }
@@ -36,4 +36,40 @@
 
     [Parameter]
     public int ImageSize { get; set; } = 110;
+
+    private static readonly Dictionary<string, string> DescriptionColors = new()
+    {
+        ["{YELLOW}"] = "#e8c252",
+        ["{ORANGE}"] = "#ff8800",
+        ["{GREEN}"] = "#199b1e",
+        ["{CYAN}"] = "#2f9cd6",
+        ["{PURPLE}"] = "#ac3ee3",
+        ["{CITATION}"] = "#e7cda2"
+    };
+
+    private MarkupString RenderDescription(string? description)
+    {
+        if (string.IsNullOrWhiteSpace(description))
+        {
+            return new MarkupString("");
+        }
+
+        string result = description;
+
+        foreach (var color in DescriptionColors)
+        {
+            result = result.Replace(
+                color.Key,
+                $"<span style=\"color:{color.Value};\">"
+            );
+        }
+
+        result = result.Replace(
+            "{RESET}",
+            "</span>"
+        );
+
+        return new MarkupString(result);
+    }
 }
+

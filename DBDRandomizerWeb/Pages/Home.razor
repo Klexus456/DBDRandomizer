@@ -9,8 +9,8 @@
 <div class="randomizer-page">
 
     <header class="randomizer-header">
-        <h1>DBD RANDOMIZER</h1>
-        <p>Randomizador de Dead by Daylight</p>
+        <h1>RANDOMIZADOR</h1>
+        <p>Modo 1v4</p>
     </header>
 
     @if (randomizer == null)
@@ -25,12 +25,12 @@
 
             <button class="mode-button survivor @(survivorResult != null ? "active" : "")"
                     @onclick="RandomizarSurvivor">
-                SURVIVOR
+                SOBREVIVIENTE
             </button>
 
             <button class="mode-button killer @(killerResult != null ? "active" : "")"
                     @onclick="RandomizarKiller">
-                KILLER
+                ASESINO
             </button>
 
         </div>
@@ -186,7 +186,10 @@
 
                     <section class="result-section">
 
-                        <h3>ADDONS</h3>
+                        <div class="section-header">
+                            <h3>ADDONS</h3>
+                            <br />
+                        </div>
 
                         <div class="addon-container">
 
@@ -388,7 +391,10 @@
 
                 <section class="result-section">
 
-                    <h3>ADDONS</h3>
+                    <div class="section-header">
+                        <h3>ADDONS</h3>
+                        <br />
+                    </div>
 
                     <div class="addon-container">
 
@@ -483,6 +489,40 @@
     private RandomizerResult? survivorResult;
 
     private RandomizerResult? killerResult;
+
+private static readonly Dictionary<string, string> DescriptionColors = new()
+{
+    ["{YELLOW}"] = "#e8c252",
+    ["{ORANGE}"] = "#ff8800",
+    ["{BLUE}"] = "#4da997",
+    ["{GREEN}"] = "#199b1e",
+    ["{CYAN}"] = "#2f9cd6",
+    ["{PURPLE}"] = "#ac3ee3",
+    ["{CITATION}"] = "#e7cda2"
+};
+
+    private MarkupString RenderDescription(string? description)
+    {
+        if (string.IsNullOrWhiteSpace(description))
+            return new MarkupString("");
+
+        string result = description;
+
+        foreach (var color in DescriptionColors)
+        {
+            result = result.Replace(
+                color.Key,
+                $"<span style=\"color:{color.Value};\">"
+            );
+        }
+
+        result = result.Replace(
+            "{RESET}",
+            "</span>"
+        );
+
+        return new MarkupString(result);
+    }
 
     protected override async Task OnInitializedAsync()
     {

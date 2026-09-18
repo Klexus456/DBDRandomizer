@@ -47,7 +47,7 @@
             rgba(0, 0, 0, 0.40) 72%,
             rgba(0, 0, 0, 0.90) 100%
         ),
-        url("/images/background.jpg");
+        url("/DBDRandomizer/images/background.jpg");
 
     background-position: center center;
     background-size: cover;
@@ -358,7 +358,7 @@
     border-color: transparent;
     border-width: 130px 0 110px 0;
 
-    border-image-source: url("/images/container-frayed.png");
+    border-image-source: url("/DBDRandomizer/images/container-frayed.png");
     border-image-slice: 130 0 110 0 fill;
     border-image-width: 130px 0 110px 0;
     border-image-repeat: stretch;
@@ -422,7 +422,7 @@
 
     inset: 0;
 
-    background-image: url("/images/panel-sheen.png");
+    background-image: url("/DBDRandomizer/images/panel-sheen.png");
     background-size: cover;
     background-position: center;
 

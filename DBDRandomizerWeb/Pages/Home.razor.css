@@ -47,7 +47,7 @@
             rgba(0, 0, 0, 0.40) 72%,
             rgba(0, 0, 0, 0.90) 100%
         ),
-        url("/images/background.jpg");
+        url("DBDRandomizerWeb/images/background.jpg");
 
     background-position: center center;
     background-size: cover;

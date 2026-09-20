@@ -5,7 +5,7 @@
     "CharacterId": 1,
     "OutfitId": 10,
     "Part": "Head",
-    "Image": "images/cosmetics/killers/trampero/Evan.webp",
+    "Image": "images/cosmetics/killers/trapper/base and prestige/Evan.webp",
     "IsSeparable": true
   },
   {
@@ -14,7 +14,7 @@
     "CharacterId": 1,
     "OutfitId": 10,
     "Part": "Torso",
-    "Image": "images/cosmetics/killers/trampero/Rubber and Hooks.webp",
+    "Image": "images/cosmetics/killers/trapper/base and prestige/Rubber and Hooks.webp",
     "IsSeparable": true
   },
   {
@@ -23,7 +23,7 @@
     "CharacterId": 1,
     "OutfitId": 10,
     "Part": "Weapon",
-    "Image": "images/cosmetics/killers/trampero/Cleaver.webp",
+    "Image": "images/cosmetics/killers/trapper/base and prestige/Cleaver.webp",
     "IsSeparable": true
   }
 ]

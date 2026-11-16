@@ -3,28 +3,28 @@
     "Id": 1,
     "Name": "V\u00EDnculo",
     "CharacterId": 1,
-    "Description": "Desbloquea la capacidad de percibir Auras: Se te revelan las Auras de los Sobrevivientes en un radio de 20/28/36 metros. \u0022Tenemos que trabajar como un equipo. \u00A1Necesito que sobrevivan para poder sobrevivir yo!\u0022 \u2014 Dwight Fairfield",
+    "Description": "Ves el aura de los dem\u00E1s sobrevivientes en un radio de {GREEN}20{RESET}/{CYAN}28{RESET}/{PURPLE}36{RESET} metros.",
     "Image": "images/perks/bond.webp"
   },
   {
     "Id": 2,
     "Name": "Demuestra lo que Vales",
     "CharacterId": 1,
-    "Description": "Aumenta la velocidad de Reparaci\u00F3n acumulable de {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} % por cada otro Sobreviviente en un radio de 4 metros de tu ubicaci\u00F3n, hasta un m\u00E1ximo de 18/24/30 %. Demuestra lo que Vales extiende su efecto a todos los Sobrevivientes dentro de ese alcance. Los Sobrevivientes solo pueden recibir un efecto de Demuestra lo que Vales a la vez. \u0022\u00A1Mu\u00E9strame lo que puedes hacer!\u0022 \u2014 Dwight Fairfield",
+    "Description": "Por cada sobreviviente a {YELLOW}4{RESET} metros o menos de ti, todos los dem\u00E1s sobrevivientes reparan un {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET}% m\u00E1s r\u00E1pido.",
     "Image": "images/perks/provethyself.webp"
   },
   {
     "Id": 3,
     "Name": "L\u00EDder",
     "CharacterId": 1,
-    "Description": "\u0022Logras organizar un equipo para que se coordine con mayor eficacia.\u0022 Todos los otros Sobrevivientes en un radio de 10 metros de tu ubicaci\u00F3n se benefician de los siguientes efectos: Aumenta sus velocidades de Acci\u00F3n para Curaci\u00F3n, Apertura de Salidas, Sabotaje, Rescate, Purificaci\u00F3n y Desbloqueo de Cofres en un 20/25/30 %. Este efecto se mantiene durante 15 segundos despu\u00E9s de dejar el \u00C1rea de Efecto. Los Sobrevivientes solo pueden recibir un efecto de L\u00EDder a la vez.",
+    "Description": "Al estar a {YELLOW}10{RESET} metros de ti, los dem\u00E1s sobrevivientes:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EPurifican t\u00F3tems un {GREEN}18{RESET}/{CYAN}24{RESET}/{PURPLE}30{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ESe curan un {GREEN}18{RESET}/{CYAN}24{RESET}/{PURPLE}30{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EAbren la puerta de salida un {GREEN}18{RESET}/{CYAN}24{RESET}/{PURPLE}30{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ESabotean ganchos un {GREEN}18{RESET}/{CYAN}24{RESET}/{PURPLE}30{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EDescuelgan sobrevivientes un {GREEN}18{RESET}/{CYAN}24{RESET}/{PURPLE}30{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EDesbloquea cofres un {GREEN}18{RESET}/{CYAN}24{RESET}/{PURPLE}30{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003C/ul\u003E\nEsto termina {ORANGE}20{RESET} segundos despu\u00E9s de que salen del alcance.",
     "Image": "images/perks/leader.webp"
   },
   {
     "Id": 4,
     "Name": "Velocidad Silenciosa",
     "CharacterId": 2,
-    "Description": "No haces tanto ruido como los dem\u00E1s cuando saltas sobre obst\u00E1culos o te ocultas en los Casilleros a toda velocidad. Suprime tanto la Notificaci\u00F3n de Ruido Fuerte y los efectos de sonido para las acciones de salto en Ventanas, Tarimas, o de entrada o salida r\u00E1pida de los Casilleros. Velocidad Silenciosa tiene un tiempo de recuperaci\u00F3n de 25/20/15 segundos.",
+    "Description": "Te escondes en casilleros y saltas sin hacer ruidos. No alertar\u00E1s al asesino. Tiempo de recuperaci\u00F3n: {GREEN}25{RESET}/{CYAN}20{RESET}/{PURPLE}15{RESET} segundos.",
     "Image": "images/perks/velocidadsilenciosa.webp"
   },
   {

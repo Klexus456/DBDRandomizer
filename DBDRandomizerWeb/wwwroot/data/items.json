@@ -3,7 +3,7 @@
     "Id": 1,
     "Name": "Linterna",
     "Rarity": "Uncommon",
-    "Description": "",
+    "Description": "Presiona el bot\u00F3n de Usar Objeto para encender la Linterna hasta {YELLOW}8 segundos{RESET}.",
     "Image": "images/items/linterna.webp",
     "AddonGroupId": 1
   },
@@ -11,7 +11,7 @@
     "Id": 2,
     "Name": "Linterna de Aniversario",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Una linterna festiva que hace estallar confeti al cegar al Asesino.",
+    "Description": "Presiona el bot\u00F3n para Usar Objeto para encender la Linterna hasta {YELLOW}8 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nExplota con confetti una vez que ciegas al Asesino.",
     "Image": "images/items/linternadeaniversario.webp",
     "AddonGroupId": 1
   },
@@ -19,7 +19,7 @@
     "Id": 3,
     "Name": "Linterna del Banquete",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Una linterna festiva del Banquete Negro. Puede utilizarse para cegar al Asesino durante un m\u00E1ximo de 8 segundos.",
+    "Description": "Presiona el bot\u00F3n para Usar Objeto para prender la Linterna por hasta {YELLOW}8 segundos{RESET}.",
     "Image": "images/items/linternadelbanquete.webp",
     "AddonGroupId": 1
   },
@@ -27,7 +27,7 @@
     "Id": 4,
     "Name": "Linterna deportiva",
     "Rarity": "Rare",
-    "Description": "Una linterna muy port\u00E1til con un buen agarre. Tiene una precisi\u00F3n de apuntado aumentada un 20% y una velocidad de consumo reducida un 11%.",
+    "Description": "Presiona el bot\u00F3n para Usar Objeto para encender la Linterna hasta {YELLOW}8 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la precisi\u00F3n del haz de la Linterna en un {YELLOW}20%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nReduce el consumo de energ\u00EDa de la Linterna en un {YELLOW}11%{RESET}.",
     "Image": "images/items/linternadeportiva.webp",
     "AddonGroupId": 1
   },
@@ -35,7 +35,7 @@
     "Id": 5,
     "Name": "Linterna multiusos",
     "Rarity": "VeryRare",
-    "Description": "Una linterna resistente y pesada con una gran potencia. Tiene un brillo aumentado un 30%, una duraci\u00F3n de Ceguera aumentada un 15% y una precisi\u00F3n de apuntado reducida un 20%.",
+    "Description": "Presiona el bot\u00F3n para Usar Objeto para encender la Linterna hasta {YELLOW}12 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta el brillo del haz de la linterna en un {YELLOW}30%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la duraci\u00F3n de la ceguera en un {YELLOW}15%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nReduce la precisi\u00F3n del haz de la linterna en un {ORANGE}20%{RESET}.",
     "Image": "images/items/linternamultiusos.webp",
     "AddonGroupId": 1
   },
@@ -43,23 +43,23 @@
     "Id": 6,
     "Name": "Linterna de Mascarada",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Una linterna festiva de la Mascarada. Puede utilizarse para iluminar el camino y cegar al Asesino durante un m\u00E1ximo de 8 segundos.",
+    "Description": "Presiona el bot\u00F3n para Usar Objeto para encender la Linterna hasta {YELLOW}8 segundos{RESET}.",
     "Image": "images/items/linternademascarada.webp",
     "AddonGroupId": 1
   },
   {
     "Id": 7,
-    "Name": "Will O\u0027 Wisp",
+    "Name": "Fuego Fatuo",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Una linterna equipada con una lente especial que a\u00F1ade un tono anaranjado al haz y un peque\u00F1o fantasma a la luz.",
+    "Description": "Presiona el bot\u00F3n para Usar Objeto para encender la Linterna hasta {YELLOW}8 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta considerablemente la aparici\u00F3n de fantasmas amistosos en tu vida.",
     "Image": "images/items/fuegofatuo.webp",
     "AddonGroupId": 1
   },
   {
     "Id": 8,
-    "Name": "Botiquin de primeros auxilios de acampada",
+    "Name": "Botiqu\u00EDn de Primeros Auxilios de Acampada",
     "Rarity": "Common",
-    "Description": "",
+    "Description": "Aumenta la velocidad de Curaci\u00F3n Altruista en un {YELLOW}35%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nDesbloquea la acci\u00F3n de Autocuraci\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003EReduce la velocidad al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003Cli\u003EReduce la Eficiencia al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nTiene una capacidad de {YELLOW}24 cargas{RESET}.",
     "Image": "images/items/botiquindeprimerosauxiliosdeacampada.webp",
     "AddonGroupId": 2
   },
@@ -67,7 +67,7 @@
     "Id": 9,
     "Name": "Botiqu\u00EDn de Aniversario",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Un botiqu\u00EDn festivo que hace estallar confeti al curar completamente a un Superviviente. Aumenta un 40% la velocidad de curaci\u00F3n altruista, pero reduce un 33% la velocidad de autocuraci\u00F3n y la eficiencia del objeto.",
+    "Description": "Aumenta el confeti en un {YELLOW}100%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de Curaci\u00F3n Altruista en un {YELLOW}40%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nDesbloquea la acci\u00F3n de Autocuraci\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003EReduce la velocidad al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003Cli\u003EReduce la Eficiencia al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nTiene una capacidad de {YELLOW}24 cargas{RESET}.",
     "Image": "images/items/botiquindeaniversario.webp",
     "AddonGroupId": 2
   },
@@ -75,7 +75,7 @@
     "Id": 10,
     "Name": "Botiqu\u00EDn del Banquete",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Un botiqu\u00EDn festivo del Banquete Negro. Aumenta un 40% la velocidad de curaci\u00F3n altruista, pero reduce un 33% la velocidad de autocuraci\u00F3n y la eficiencia del objeto.",
+    "Description": "Aumenta la velocidad de Curaci\u00F3n Altruista en un {YELLOW}40%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nDesbloquea la acci\u00F3n de Autocuraci\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003EReduce la velocidad al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003Cli\u003EReduce la Eficiencia al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nTiene una capacidad de {YELLOW}24 cargas{RESET}.",
     "Image": "images/items/botiquindelbanquete.webp",
     "AddonGroupId": 2
   },
@@ -83,7 +83,7 @@
     "Id": 11,
     "Name": "Lonchera de Halloween",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Una lonchera de pl\u00E1stico decorada con pegatinas fosforescentes de Halloween. Aumenta considerablemente tu visibilidad y permite curar a otros Supervivientes.",
+    "Description": "Aumenta la velocidad de Curaci\u00F3n Altruista en un {YELLOW}40%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nDesbloquea la acci\u00F3n de Autocuraci\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003EReduce la velocidad al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003Cli\u003EReduce la Eficiencia al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nTiene una capacidad de {YELLOW}24 cargas{RESET}.",
     "Image": "images/items/loncheradehalloween.webp",
     "AddonGroupId": 2
   },
@@ -91,7 +91,7 @@
     "Id": 12,
     "Name": "Botiqu\u00EDn de emergencia",
     "Rarity": "Rare",
-    "Description": "Un botiqu\u00EDn resistente y bien organizado equipado con suministros de emergencia en buen estado.",
+    "Description": "Aumenta la velocidad de Curaci\u00F3n Altruista en un {YELLOW}45%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nDesbloquea la acci\u00F3n de Autocuraci\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003EReduce la velocidad al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003Cli\u003EReduce la Eficiencia al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nTiene una capacidad de {YELLOW}24 cargas{RESET}.",
     "Image": "images/items/botiquindeemergencia.webp",
     "AddonGroupId": 2
   },
@@ -99,7 +99,7 @@
     "Id": 13,
     "Name": "Botiqu\u00EDn de Mascarada",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Un botiqu\u00EDn festivo que hace estallar confeti al curar completamente a un Superviviente. Aumenta un 40% la velocidad de curaci\u00F3n altruista, pero reduce un 33% la velocidad de autocuraci\u00F3n y la eficiencia del objeto.",
+    "Description": "Aumenta el confeti en un {YELLOW}100%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de Curaci\u00F3n Altruista en un {YELLOW}40%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nDesbloquea la acci\u00F3n de Autocuraci\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003EReduce la velocidad al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003Cli\u003EReduce la Eficiencia al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nTiene una capacidad de {YELLOW}24 cargas{RESET}.",
     "Image": "images/items/botiquindemascarada.webp",
     "AddonGroupId": 2
   },
@@ -107,7 +107,7 @@
     "Id": 14,
     "Name": "Botiqu\u00EDn de guardabosques",
     "Rarity": "VeryRare",
-    "Description": "Una gran caja met\u00E1lica que contiene suministros m\u00E9dicos destinados a rescates de emergencia en lugares aislados.",
+    "Description": "Aumenta la velocidad de Curaci\u00F3n Altruista en un {YELLOW}50%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nDesbloquea la acci\u00F3n de Autocuraci\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003EReduce la velocidad al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003Cli\u003EReduce la Eficiencia al Curarte en un {ORANGE}33%{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nTiene una capacidad de {YELLOW}24 cargas{RESET}.",
     "Image": "images/items/botiquindeguardabosques.webp",
     "AddonGroupId": 2
   },
@@ -115,7 +115,7 @@
     "Id": 15,
     "Name": "Herramientas desgastadas",
     "Rarity": "Common",
-    "Description": "",
+    "Description": "{YELLOW}16 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de reparaci\u00F3n en un {YELLOW}50%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nReduce el tama\u00F1o de las \u00E1reas de \u00E9xito en Pruebas de habilidad en un {ORANGE}10%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPermite usar sabotaje",
     "Image": "images/items/herramientasdesgastadas.webp",
     "AddonGroupId": 3
   },
@@ -123,7 +123,7 @@
     "Id": 16,
     "Name": "Caja de herramientas de Aniversario",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Una caja de herramientas festiva con 32 cargas. Aumenta un 50% la velocidad de reparaci\u00F3n, permite sabotear Ganchos y aumenta un 50% la velocidad de sabotaje. Hace estallar un fuego artificial al agotarse.",
+    "Description": "{YELLOW}32 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de reparaci\u00F3n en un {YELLOW}50%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPermite usar sabotaje\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de sabotaje en un {YELLOW}50%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAl agotarse las cargas, detona fuegos artificiales.",
     "Image": "images/items/cajadeherramientasdeaniversario.webp",
     "AddonGroupId": 3
   },
@@ -131,7 +131,7 @@
     "Id": 17,
     "Name": "Caja de herramientas del Banquete",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Una caja de herramientas festiva del Banquete Negro con 32 cargas. Aumenta un 50% la velocidad de reparaci\u00F3n, permite sabotear Ganchos y aumenta un 50% la velocidad de sabotaje.",
+    "Description": "{YELLOW}32 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de reparaci\u00F3n en un {YELLOW}50%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPermite usar sabotaje\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de sabotaje en un {YELLOW}50%{RESET}.",
     "Image": "images/items/cajadeherramientasdelbanquete.webp",
     "AddonGroupId": 3
   },
@@ -139,7 +139,7 @@
     "Id": 18,
     "Name": "Caja de herramientas de Alex",
     "Rarity": "VeryRare",
-    "Description": "Una caja met\u00E1lica que contiene principalmente sierras y tenazas de distintos tama\u00F1os. Tiene 18 cargas y aumenta un 10% la velocidad de reparaci\u00F3n.",
+    "Description": "{YELLOW}18 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de reparaci\u00F3n en un {YELLOW}10%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPermite usar sabotaje\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de sabotaje en un {YELLOW}100%{RESET}.",
     "Image": "images/items/cajadeherramientasdealex.webp",
     "AddonGroupId": 3
   },
@@ -147,7 +147,7 @@
     "Id": 19,
     "Name": "Caja de herramientas espaciosa",
     "Rarity": "Rare",
-    "Description": "Una caja de herramientas con 32 cargas. Aumenta un 50% la velocidad de reparaci\u00F3n, permite sabotear Ganchos y aumenta un 50% la velocidad de sabotaje.",
+    "Description": "{YELLOW}32 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de reparaci\u00F3n en un {YELLOW}50%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPermite usar sabotaje\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de sabotaje en un {YELLOW}50%{RESET}.",
     "Image": "images/items/cajadeherramientasespaciosa.webp",
     "AddonGroupId": 3
   },
@@ -155,7 +155,7 @@
     "Id": 20,
     "Name": "Caja de herramientas festiva",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Una caja de herramientas repleta de fuegos artificiales. Tiene 32 cargas, aumenta un 50% la velocidad de reparaci\u00F3n, permite sabotear Ganchos y aumenta un 50% la velocidad de sabotaje.",
+    "Description": "{YELLOW}32 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de reparaci\u00F3n en un {YELLOW}50%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPermite usar sabotaje\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de sabotaje en un {YELLOW}50%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nSuperar una prueba de habilidad detona un peque\u00F1o racimo de petardos, fallarla detona fuegos artificiales.",
     "Image": "images/items/cajadeherramientasfestiva.webp",
     "AddonGroupId": 3
   },
@@ -163,7 +163,7 @@
     "Id": 21,
     "Name": "Caja de herramientas de ingenieria",
     "Rarity": "VeryRare",
-    "Description": "Una caja de herramientas especializada que permite reparar y sabotear con mayor eficacia.",
+    "Description": "{YELLOW}16 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de reparaci\u00F3n en un {YELLOW}100%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPermite usar sabotaje\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de sabotaje en un {YELLOW}10%{RESET}.",
     "Image": "images/items/cajadeherramientasdeingenieria.webp",
     "AddonGroupId": 3
   },
@@ -171,7 +171,7 @@
     "Id": 22,
     "Name": "Caja de herramientas de Mascarada",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Una caja de herramientas festiva con 32 cargas. Aumenta un 50% la velocidad de reparaci\u00F3n, permite sabotear Ganchos y aumenta un 50% la velocidad de sabotaje. Hace estallar un fuego artificial al agotarse.",
+    "Description": "{YELLOW}32 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de reparaci\u00F3n en un {YELLOW}50%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPermite usar sabotaje\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de sabotaje en un {YELLOW}50%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAl agotarse, detona fuegos artificiales.",
     "Image": "images/items/cajadeherramientasdemascarada.webp",
     "AddonGroupId": 3
   },
@@ -179,15 +179,15 @@
     "Id": 23,
     "Name": "Caja de herramientas de mec\u00E1nica",
     "Rarity": "Rare",
-    "Description": "Una caja met\u00E1lica con herramientas mec\u00E1nicas especializadas. Tiene 16 cargas, aumenta un 75% la velocidad de reparaci\u00F3n y permite sabotear Ganchos con un aumento del 25% en la velocidad de sabotaje.",
+    "Description": "{YELLOW}16 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de reparaci\u00F3n en un {YELLOW}75%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPermite usar sabotaje\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de sabotaje en un {YELLOW}25%{RESET}.",
     "Image": "images/items/cajadeherramientasdemecanica.webp",
     "AddonGroupId": 3
   },
   {
     "Id": 24,
-    "Name": "Caja de herramientas",
+    "Name": "Caja de Herramientas",
     "Rarity": "Uncommon",
-    "Description": "Una caja met\u00E1lica que contiene un conjunto de herramientas b\u00E1sicas. Tiene 20 cargas y permite reparar y sabotear elementos mec\u00E1nicos.",
+    "Description": "{YELLOW}20 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de reparaci\u00F3n en un {YELLOW}50%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPermite usar sabotaje\n\u003Cbr\u003E\u003Cbr\u003E\nAumenta la velocidad de sabotaje en un {YELLOW}15%{RESET}.",
     "Image": "images/items/cajadeherramientas.webp",
     "AddonGroupId": 3
   },
@@ -195,7 +195,7 @@
     "Id": 25,
     "Name": "Llave rota",
     "Rarity": "Common",
-    "Description": "Una llave rota que ya no puede abrir la Escotilla, pero que puede utilizarse para leer Auras.",
+    "Description": "Presiona el bot\u00F3n para Usar Objeto para activar la habilidad Canalizaci\u00F3n Mental en hasta {YELLOW}10 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\n\nCanalizaci\u00F3n Mental revela varias Auras, dependiendo de los Accesorios con los que equipaste la Llave",
     "Image": "images/items/llaverota.webp",
     "AddonGroupId": 4
   },
@@ -203,7 +203,7 @@
     "Id": 26,
     "Name": "Llave deslustrada",
     "Rarity": "Uncommon",
-    "Description": "Una llave gastada capaz de revelar Auras cercanas y abrir la Escotilla cuando est\u00E1 disponible.",
+    "Description": "Presiona el bot\u00F3n para Usar Objeto para activar la habilidad Canalizaci\u00F3n Mental en hasta {YELLOW}5 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCanalizaci\u00F3n Mental revela varias Auras, dependiendo de los Accesorios con los que equipaste la Llave\n\u003Cbr\u003E\u003Cbr\u003E\nPresiona el bot\u00F3n para Usar Objeto mientras te paras sobre la Trampilla cerrada para abrirla.\n\u003Cbr\u003E\u003Cbr\u003E\nEsta acci\u00F3n consume la Llave y solo est\u00E1 disponible si no est\u00E1 agotada.",
     "Image": "images/items/llavedeslustrada.webp",
     "AddonGroupId": 4
   },
@@ -211,7 +211,7 @@
     "Id": 27,
     "Name": "Llave esqueleto",
     "Rarity": "Rare",
-    "Description": "Una llave extremadamente vers\u00E1til capaz de revelar Auras y abrir la Escotilla cuando est\u00E1 disponible.",
+    "Description": "Presiona el bot\u00F3n para Usar Objeto para activar la habilidad Canalizaci\u00F3n Mental en hasta {YELLOW}30 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCanalizaci\u00F3n Mental revela varias Auras, dependiendo de los Accesorios con los que equipaste la Llave\n\u003Cbr\u003E\u003Cbr\u003E\nPresiona el bot\u00F3n para Usar Objeto mientras te paras sobre la Trampilla cerrada para abrirla.\n\u003Cbr\u003E\u003Cbr\u003E\nEsta acci\u00F3n consume la Llave y solo est\u00E1 disponible si no est\u00E1 agotada.",
     "Image": "images/items/llaveesqueleto.webp",
     "AddonGroupId": 4
   },
@@ -219,7 +219,7 @@
     "Id": 28,
     "Name": "Mapa con anotaciones",
     "Rarity": "Rare",
-    "Description": "Un mapa que puede utilizarse para revelar durante un tiempo las Auras de elementos del entorno cercanos, incluyendo Pal\u00E9s y Ventanas.",
+    "Description": "Empieza la partida con {YELLOW}6 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPresiona el bot\u00F3n de Usar objeto para canalizar el mapa:\n\u003Cul\u003E\n\u003Cli\u003ELas auras de las Tarimas y ventanas se revelan en un radio de {YELLOW}40 metros{RESET} de tu ubicaci\u00F3n por {YELLOW}14 segundos{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nMientras canalizas el mapa, presiona el Bot\u00F3n de acci\u00F3n secundaria en cualquier momento antes de que el temporizador termine para obtener el siguiente efecto adicional:\n\u003Cul\u003E\n\u003Cli\u003ECrea un haz de luz en tu ubicaci\u00F3n actual que dura {YELLOW}16 segundos{RESET}\u003C/li\u003E\n\u003Cli\u003ELas auras de todos los generadores en un radio de {YELLOW}32 metros{RESET} se revela para todos los sobrevivientes \u003C/li\u003E\n\u003C/ul\u003E\nEl mapa consume {ORANGE}1 carga{RESET} por uso.",
     "Image": "images/items/mapaconanotaciones.webp",
     "AddonGroupId": 5
   },
@@ -227,7 +227,7 @@
     "Id": 29,
     "Name": "Mapa de sentido de la sangre",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Un fragmento de pergamino manchado de sangre que permite revelar las Auras de Supervivientes heridos, Pal\u00E9s y Ventanas cercanos mientras se utiliza.",
+    "Description": "Empieza la partida con {YELLOW}8 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPresiona el bot\u00F3n de Usar objeto para canalizar el mapa:\n\u003Cul\u003E\n\u003Cli\u003ELas auras de las Tarimas y ventanas se revelan en un radio de {YELLOW}48 metros{RESET} de tu ubicaci\u00F3n por {YELLOW}14 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003EHace aparecer charcos de sangre debajo tuyo mientras lo usas.\u003C/li\u003E\n\u003C/ul\u003E\nMientras canalizas el mapa, presiona el Bot\u00F3n de acci\u00F3n secundaria en cualquier momento antes de que el temporizador termine para obtener el siguiente efecto adicional:\n\u003Cul\u003E\n\u003Cli\u003ECrea un haz de luz en tu ubicaci\u00F3n actual que dura {YELLOW}16 segundos{RESET}\u003C/li\u003E\n\u003Cli\u003ELas auras de todos los generadores en un radio de {YELLOW}32 metros{RESET} se revela para todos los sobrevivientes \u003C/li\u003E\n\u003C/ul\u003E\nEl mapa consume {ORANGE}1 carga{RESET} por uso.",
     "Image": "images/items/mapadesentidodelasangre.webp",
     "AddonGroupId": 5
   },
@@ -235,7 +235,7 @@
     "Id": 30,
     "Name": "Mapa cr\u00EDptico",
     "Rarity": "Common",
-    "Description": "Un mapa cuyas indicaciones parecen no tener sentido. Puede utilizarse para revelar las Auras de elementos del entorno cercanos.",
+    "Description": "Empieza la partida con {YELLOW}4 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPresiona el bot\u00F3n de Usar objeto para canalizar el mapa:\n\u003Cul\u003E\n\u003Cli\u003ELas auras de las Tarimas y ventanas se revelan en un radio de {YELLOW}24 metros{RESET} de tu ubicaci\u00F3n por {YELLOW}10 segundos{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nMientras canalizas el mapa, presiona el Bot\u00F3n de acci\u00F3n secundaria en cualquier momento antes de que el temporizador termine para obtener el siguiente efecto adicional:\n\u003Cul\u003E\n\u003Cli\u003ECrea un haz de luz en tu ubicaci\u00F3n actual que dura {YELLOW}16 segundos{RESET}\u003C/li\u003E\n\u003Cli\u003ELas auras de todos los generadores en un radio de {YELLOW}32 metros{RESET} se revela para todos los sobrevivientes \u003C/li\u003E\n\u003C/ul\u003E\nEl mapa consume {ORANGE}1 carga{RESET} por uso.",
     "Image": "images/items/mapacriptico.webp",
     "AddonGroupId": 5
   },
@@ -243,7 +243,7 @@
     "Id": 31,
     "Name": "Mapa garabateado",
     "Rarity": "Uncommon",
-    "Description": "Un mapa cubierto de anotaciones que puede utilizarse para revelar las Auras de elementos del entorno cercanos.",
+    "Description": "Empieza la partida con {YELLOW}5 cargas{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPresiona el bot\u00F3n de Usar objeto para canalizar el mapa:\n\u003Cul\u003E\n\u003Cli\u003ELas auras de las Tarimas y ventanas se revelan en un radio de {YELLOW}32 metros{RESET} de tu ubicaci\u00F3n por {YELLOW}12 segundos{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nMientras canalizas el mapa, presiona el Bot\u00F3n de acci\u00F3n secundaria en cualquier momento antes de que el temporizador termine para obtener el siguiente efecto adicional:\n\u003Cul\u003E\n\u003Cli\u003ECrea un haz de luz en tu ubicaci\u00F3n actual que dura {YELLOW}16 segundos{RESET}\u003C/li\u003E\n\u003Cli\u003ELas auras de todos los generadores en un radio de {YELLOW}32 metros{RESET} se revela para todos los sobrevivientes \u003C/li\u003E\n\u003C/ul\u003E\nEl mapa consume {ORANGE}1 carga{RESET} por uso.",
     "Image": "images/items/mapagarabateado.webp",
     "AddonGroupId": 5
   },
@@ -251,7 +251,7 @@
     "Id": 32,
     "Name": "Petardo chino",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Un peque\u00F1o dispositivo explosivo envuelto en papel grueso. Puede utilizarse como distracci\u00F3n o para cegar y aturdir brevemente al Asesino.",
+    "Description": "Presiona el bot\u00F3n de Usar Objeto para detonar el petardo.\n\u003Cbr\u003E\u003Cbr\u003E\nAl detonar, produce fuertes estallidos y fogonazos de luz, temporalmente cegando y ensordeciendo a los Jugadores cercanos.\n\u003Cbr\u003E\u003Cbr\u003E\nEl petardo se consume al usarlo.",
     "Image": "images/items/petardochino.webp",
     "AddonGroupId": null
   },
@@ -259,7 +259,7 @@
     "Id": 33,
     "Name": "Petardo invernal",
     "Rarity": "UltraRare",
-    "Description": "[EVENTO] Un peque\u00F1o adorno de mesa altamente explosivo. Puede utilizarse como distracci\u00F3n o para cegar y aturdir brevemente al Asesino.",
+    "Description": "Presiona el bot\u00F3n de Usar Objeto para detonar el petardo.\n\u003Cbr\u003E\u003Cbr\u003E\nAl detonar, produce fuertes estallidos y fogonazos de luz, temporalmente cegando y ensordeciendo a los Jugadores cercanos.\n\u003Cbr\u003E\u003Cbr\u003E\nEl petardo se consume al usarlo.",
     "Image": "images/items/petardoinvernal.webp",
     "AddonGroupId": null
   },
@@ -267,7 +267,7 @@
     "Id": 34,
     "Name": "Vial de Niebla de Aprendiz",
     "Rarity": "Common",
-    "Description": "Comienza la Partida con 4 cargas. Al utilizarlo, libera una Nube de Niebla que se expande hasta 8 metros, dura 8 segundos y oculta las Auras y las Marcas de Ara\u00F1azos dentro de su \u00E1rea.",
+    "Description": "Inicia la Partida con {YELLOW}4{RESET} Cargas.\n\u003Cbr\u003E\u003Cbr\u003E\nPresiona el bot\u00F3n para Usar Objeto para lanzar una Nube de Niebla concentrada:\n\u003Cul\u003E\n\u003Cli\u003EExpande a un tama\u00F1o m\u00E1ximo de {YELLOW}8 metros{RESET} en {YELLOW}2 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003EDura por {YELLOW}8 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003EOscurece la visibilidad y los ruidos dentro de su \u00C1rea de Efecto:\n\u003Cul\u003E\n\u003Cli\u003ETiene una opacidad de {YELLOW}33%{RESET}.\u003C/li\u003E\n\u003Cli\u003ESuprime Auras y Marcas de Ara\u00F1azos.\u003C/li\u003E\n\u003C/ul\u003E\n\u003C/ul\u003E\nEl Vial de niebla toma {YELLOW}70 segundos{RESET} en recargarse despu\u00E9s del uso.",
     "Image": "images/items/vialdeniebladeaprendiz.webp",
     "AddonGroupId": 6
   },
@@ -275,7 +275,7 @@
     "Id": 35,
     "Name": "Vial de Niebla de Artesano",
     "Rarity": "Uncommon",
-    "Description": "Comienza la Partida con 4 cargas. Al utilizarlo, libera una Nube de Niebla que se expande hasta 8 metros, dura 10 segundos y oculta las Auras y las Marcas de Ara\u00F1azos dentro de su \u00E1rea.",
+    "Description": "Inicia la Partida con {YELLOW}4{RESET} Cargas.\n\u003Cbr\u003E\u003Cbr\u003E\nPresiona el bot\u00F3n para Usar Objeto para lanzar una Nube de Niebla concentrada:\n\u003Cul\u003E\n\u003Cli\u003EExpande a un tama\u00F1o m\u00E1ximo de {YELLOW}8 metros{RESET} en {YELLOW}1.5 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003EDura por {YELLOW}10 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003EOscurece la visibilidad y los ruidos dentro de su \u00C1rea de Efecto:\n\u003Cul\u003E\n\u003Cli\u003ETiene una opacidad de {YELLOW}33%{RESET}.\u003C/li\u003E\n\u003Cli\u003ESuprime Auras y Marcas de Ara\u00F1azos.\u003C/li\u003E\n\u003C/ul\u003E\n\u003C/ul\u003E\nEl Vial de niebla toma {YELLOW}65 segundos{RESET} en recargarse despu\u00E9s del uso.",
     "Image": "images/items/vialdeniebladeartesano.webp",
     "AddonGroupId": 6
   },
@@ -283,7 +283,7 @@
     "Id": 36,
     "Name": "Vial de Niebla de Vigo",
     "Rarity": "Rare",
-    "Description": "Comienza la Partida con 4 cargas. Libera una Nube de Niebla que se expande hasta 8 metros, dura 12 segundos y oculta las Auras y las Marcas de Ara\u00F1azos dentro de su \u00E1rea.",
+    "Description": "Inicia la Partida con {YELLOW}4{RESET} Cargas.\n\u003Cbr\u003E\u003Cbr\u003E\nPresiona el bot\u00F3n para Usar Objeto para lanzar una Nube de Niebla concentrada:\n\u003Cul\u003E\n\u003Cli\u003EExpande a un tama\u00F1o m\u00E1ximo de {YELLOW}8 metros{RESET} en {YELLOW}1.2 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003EDura por {YELLOW}12 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003EOscurece la visibilidad y los ruidos dentro de su \u00C1rea de Efecto:\n\u003Cul\u003E\n\u003Cli\u003ETiene una opacidad de {YELLOW}33%{RESET}.\u003C/li\u003E\n\u003Cli\u003ESuprime Auras y Marcas de Ara\u00F1azos.\u003C/li\u003E\n\u003C/ul\u003E\n\u003C/ul\u003E\nEl Vial de niebla toma {YELLOW}60 segundos{RESET} en recargarse despu\u00E9s del uso.",
     "Image": "images/items/vialdeniebladevigo.webp",
     "AddonGroupId": 6
   }

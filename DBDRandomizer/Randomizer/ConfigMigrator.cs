@@ -43,6 +43,45 @@ public static class ConfigMigrator
         return true;
     }
 
+    /// <summary>
+    /// Quita de las listas "Disabled" los IDs que ya no existen en los datos
+    /// (por ejemplo, registros eliminados con la herramienta de diagnóstico).
+    /// Devuelve true si la configuración fue modificada.
+    /// </summary>
+    public static bool PruneUnknownIds(
+        RandomizerConfig config,
+        List<Survivor> survivors,
+        List<Killer> killers,
+        List<SkinPiece> survivorSkins,
+        List<SkinPiece> killerSkins,
+        List<Perk> survivorPerks,
+        List<Perk> killerPerks,
+        List<Item> items,
+        List<Addon> addons,
+        List<Offering> offerings)
+    {
+        bool changed = false;
+
+        changed |= Prune(config.DisabledSurvivors, survivors.Select(x => x.Id));
+        changed |= Prune(config.DisabledKillers, killers.Select(x => x.Id));
+        changed |= Prune(config.DisabledSurvivorSkins, survivorSkins.Select(x => x.Id));
+        changed |= Prune(config.DisabledKillerSkins, killerSkins.Select(x => x.Id));
+        changed |= Prune(config.DisabledSurvivorPerks, survivorPerks.Select(x => x.Id));
+        changed |= Prune(config.DisabledKillerPerks, killerPerks.Select(x => x.Id));
+        changed |= Prune(config.DisabledItems, items.Select(x => x.Id));
+        changed |= Prune(config.DisabledAddons, addons.Select(x => x.Id));
+        changed |= Prune(config.DisabledOfferings, offerings.Select(x => x.Id));
+
+        return changed;
+    }
+
+    private static bool Prune(List<int> ids, IEnumerable<int> existingIds)
+    {
+        HashSet<int> valid = existingIds.ToHashSet();
+
+        return ids.RemoveAll(id => !valid.Contains(id)) > 0;
+    }
+
     private static void DisablePerksOfCharacters(
         List<Perk> perks,
         List<int> disabledCharacterIds,

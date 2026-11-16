@@ -1678,6 +1678,21 @@ else
         // Solo se modifica en memoria: se persiste al guardar.
         ConfigMigrator.Migrate(config, survivorPerks, killerPerks);
 
+        // Descarta IDs de la configuración guardada que ya no existen en los
+        // datos (registros eliminados), para que no bloqueen la validación.
+        ConfigMigrator.PruneUnknownIds(
+            config,
+            survivors,
+            killers,
+            survivorSkins,
+            killerSkins,
+            survivorPerks,
+            killerPerks,
+            items,
+            addons,
+            offerings
+        );
+
     }
 
     private static string NormalizeSearch(string text)

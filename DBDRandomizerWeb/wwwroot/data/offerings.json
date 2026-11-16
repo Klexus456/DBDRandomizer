@@ -200,14 +200,6 @@
     "Role": "Killer"
   },
   {
-    "Id": 27,
-    "Name": "Lazo Polvoriento",
-    "Description": "Aumenta las probabilidades de ser enviado a un mapa del Reino de \u003Cspan style=\u0022color: #e8c252;\u0022\u003ELa Hacienda de la Muerte\u003C/span\u003E.",
-    "Rarity": "Rare",
-    "Image": "images/offerings/Dusty Noose.webp",
-    "Role": "Both"
-  },
-  {
     "Id": 29,
     "Name": "Torta de Escape",
     "Description": "Otorga un \u003Cspan style=\u0022color: #e8c252;\u0022\u003E\u002B100% \u003C/span\u003E de Puntos de Sangre adicionales en todas las Categor\u00EDas de Puntuaci\u00F3n.",

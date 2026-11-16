@@ -3,6 +3,17 @@ namespace DBDRandomizer.Models;
 public class RandomizerConfig
 {
     // =========================
+    // VERSIÓN DE LA CONFIGURACIÓN
+    // =========================
+
+    // 0 = configuración anterior: las perks de un personaje
+    //     deshabilitado se excluían automáticamente en el motor.
+    // 1 = las perks son independientes: su estado se guarda
+    //     explícitamente en DisabledSurvivorPerks / DisabledKillerPerks.
+    public int ConfigVersion { get; set; } = 0;
+
+
+    // =========================
     // PERSONAJES DESHABILITADOS
     // =========================
 

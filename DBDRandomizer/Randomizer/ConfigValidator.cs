@@ -293,13 +293,7 @@ public class ConfigValidator
     {
         int availablePerks = _survivorPerks
             .Count(perk =>
-                !_config.DisabledSurvivorPerks.Contains(perk.Id) &&
-                (
-                    perk.CharacterId == null ||
-                    !_config.DisabledSurvivors.Contains(
-                        perk.CharacterId.Value
-                    )
-                ));
+                !_config.DisabledSurvivorPerks.Contains(perk.Id));
 
         if (availablePerks < 4)
         {
@@ -319,13 +313,7 @@ public class ConfigValidator
     {
         int availablePerks = _killerPerks
             .Count(perk =>
-                !_config.DisabledKillerPerks.Contains(perk.Id) &&
-                (
-                    perk.CharacterId == null ||
-                    !_config.DisabledKillers.Contains(
-                        perk.CharacterId.Value
-                    )
-                ));
+                !_config.DisabledKillerPerks.Contains(perk.Id));
 
         if (availablePerks < 4)
         {

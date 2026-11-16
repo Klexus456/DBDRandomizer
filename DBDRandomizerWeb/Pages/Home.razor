@@ -569,6 +569,14 @@ private static readonly Dictionary<string, string> DescriptionColors = new()
         var killerPerks =
             await loader.LoadKillerPerks();
 
+        // Actualiza configuraciones guardadas con el formato anterior
+        // (las perks de personajes deshabilitados pasan a estar
+        // deshabilitadas de forma explícita).
+        if (ConfigMigrator.Migrate(config, survivorPerks, killerPerks))
+        {
+            await LocalStorage.SaveConfig(config);
+        }
+
         var items =
             await loader.LoadItems();
 

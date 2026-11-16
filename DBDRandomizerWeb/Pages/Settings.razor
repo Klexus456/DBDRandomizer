@@ -1671,7 +1671,12 @@ else
         if (savedConfig != null)
         {
             config = savedConfig;
-        }   
+        }
+
+        // Cubre el caso de entrar directo a /settings con una
+        // configuración guardada con el formato anterior.
+        // Solo se modifica en memoria: se persiste al guardar.
+        ConfigMigrator.Migrate(config, survivorPerks, killerPerks);
 
     }
 
@@ -1709,10 +1714,14 @@ else
         if (config.DisabledSurvivors.Contains(id))
         {
             config.DisabledSurvivors.Remove(id);
+            SetCharacterPerksEnabled(
+                survivorPerks, config.DisabledSurvivorPerks, id, true);
         }
         else
         {
             config.DisabledSurvivors.Add(id);
+            SetCharacterPerksEnabled(
+                survivorPerks, config.DisabledSurvivorPerks, id, false);
         }
 
     }
@@ -1721,6 +1730,12 @@ else
     private void EnableAllSurvivors()
     {
         config.DisabledSurvivors.Clear();
+
+        foreach (Survivor survivor in survivors)
+        {
+            SetCharacterPerksEnabled(
+                survivorPerks, config.DisabledSurvivorPerks, survivor.Id, true);
+        }
     }
 
 
@@ -1729,6 +1744,42 @@ else
         config.DisabledSurvivors = survivors
             .Select(survivor => survivor.Id)
             .ToList();
+
+        foreach (Survivor survivor in survivors)
+        {
+            SetCharacterPerksEnabled(
+                survivorPerks, config.DisabledSurvivorPerks, survivor.Id, false);
+        }
+    }
+
+
+    // Habilita o deshabilita todas las perks que pertenecen a un personaje.
+    // Las perks sin personaje (CharacterId == null) no se tocan.
+    // El estado de cada perk sigue siendo editable por separado en la
+    // sección de perks (por ejemplo, una perk comprada en el Santuario
+    // de un personaje que no se tiene).
+    private static void SetCharacterPerksEnabled(
+        List<Perk> perks,
+        List<int> disabledPerkIds,
+        int characterId,
+        bool enabled)
+    {
+        foreach (Perk perk in perks)
+        {
+            if (perk.CharacterId != characterId)
+            {
+                continue;
+            }
+
+            if (enabled)
+            {
+                disabledPerkIds.Remove(perk.Id);
+            }
+            else if (!disabledPerkIds.Contains(perk.Id))
+            {
+                disabledPerkIds.Add(perk.Id);
+            }
+        }
     }
 
 
@@ -1752,10 +1803,14 @@ else
         if (config.DisabledKillers.Contains(id))
         {
             config.DisabledKillers.Remove(id);
+            SetCharacterPerksEnabled(
+                killerPerks, config.DisabledKillerPerks, id, true);
         }
         else
         {
             config.DisabledKillers.Add(id);
+            SetCharacterPerksEnabled(
+                killerPerks, config.DisabledKillerPerks, id, false);
         }
     }
 
@@ -1763,6 +1818,12 @@ else
     private void EnableAllKillers()
     {
         config.DisabledKillers.Clear();
+
+        foreach (Killer killer in killers)
+        {
+            SetCharacterPerksEnabled(
+                killerPerks, config.DisabledKillerPerks, killer.Id, true);
+        }
     }
 
 
@@ -1771,6 +1832,12 @@ else
         config.DisabledKillers = killers
             .Select(killer => killer.Id)
             .ToList();
+
+        foreach (Killer killer in killers)
+        {
+            SetCharacterPerksEnabled(
+                killerPerks, config.DisabledKillerPerks, killer.Id, false);
+        }
     }
 
 

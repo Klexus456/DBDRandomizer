@@ -188,13 +188,7 @@ public class RandomizerEngine
     {
         List<Perk> availablePerks = _survivorPerks
             .Where(perk =>
-                !_config.DisabledSurvivorPerks.Contains(perk.Id) &&
-                (
-                    perk.CharacterId == null ||
-                    !_config.DisabledSurvivors.Contains(
-                        perk.CharacterId.Value
-                    )
-                ))
+                !_config.DisabledSurvivorPerks.Contains(perk.Id))
             .ToList();
 
         if (availablePerks.Count < amount)
@@ -228,12 +222,6 @@ public class RandomizerEngine
         List<Perk> availablePerks = _survivorPerks
             .Where(perk =>
                 !_config.DisabledSurvivorPerks.Contains(perk.Id) &&
-                (
-                    perk.CharacterId == null ||
-                    !_config.DisabledSurvivors.Contains(
-                        perk.CharacterId.Value
-                    )
-                ) &&
                 !excludedPerkIds.Contains(perk.Id))
             .ToList();
 
@@ -690,13 +678,7 @@ public class RandomizerEngine
     {
         List<Perk> availablePerks = _killerPerks
             .Where(perk =>
-                !_config.DisabledKillerPerks.Contains(perk.Id) &&
-                (
-                    perk.CharacterId == null ||
-                    !_config.DisabledKillers.Contains(
-                        perk.CharacterId.Value
-                    )
-                ))
+                !_config.DisabledKillerPerks.Contains(perk.Id))
             .ToList();
 
         if (availablePerks.Count < amount)
@@ -730,12 +712,6 @@ public class RandomizerEngine
         List<Perk> availablePerks = _killerPerks
             .Where(perk =>
                 !_config.DisabledKillerPerks.Contains(perk.Id) &&
-                (
-                    perk.CharacterId == null ||
-                    !_config.DisabledKillers.Contains(
-                        perk.CharacterId.Value
-                    )
-                ) &&
                 !excludedPerkIds.Contains(perk.Id))
             .ToList();
 

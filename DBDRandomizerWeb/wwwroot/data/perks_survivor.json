@@ -1230,5 +1230,26 @@
     "CharacterId": null,
     "Description": "Cada vez que descuelgas a un o una sobreviviente, durante {GREEN}70{RESET}/{CYAN}80{RESET}/{PURPLE}90{RESET} segundos, curas a otros sobrevivientes un {YELLOW}100%{RESET} m\u00E1s r\u00E1pido.",
     "Image": "images/perks/sobreviviremos.webp"
+  },
+  {
+    "Id": 180,
+    "Name": "El Mejor Regalo del Mundo",
+    "CharacterId": null,
+    "Description": "El Mejor Regalo del Mundo empieza la Partida con {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET} Distintivos.\n\u003Cbr\u003E\u003Cbr\u003E\nLa primera vez que sueltas un Objeto de cada tipo, gastas {ORANGE}1{RESET} Distintivo para que el Ente consuma el objeto soltado y obtienes un efecto seg\u00FAn el Objeto:\n\u003Cul\u003E\n\u003Cli\u003E{YELLOW}Linternas{RESET}: aturdir al Asesino hace que quede cegado durante {YELLOW}2 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003E{YELLOW}Viales de Niebla{RESET}: saltar r\u00E1pido hace que tus Marcas de Ara\u00F1azos desaparezcan un {YELLOW}50%{RESET} m\u00E1s r\u00E1pido durante {YELLOW}5 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003E{YELLOW}Llaves{RESET}: puedes registrar cada Cofre una vez.\u003C/li\u003E\n\u003Cli\u003E{YELLOW}Mapas{RESET}: las auras que ves con duraci\u00F3n duran {YELLOW}1 segundo{RESET} m\u00E1s.\u003C/li\u003E\n\u003Cli\u003E{YELLOW}Botiquines{RESET}: curar a un Sobreviviente hace que obtengas progreso de curaci\u00F3n a una velocidad del {YELLOW}25%{RESET}.\u003C/li\u003E\n\u003Cli\u003E{YELLOW}Cajas de Herramientas{RESET}: ves las auras de los {YELLOW}3{RESET} Generadores m\u00E1s cercanos.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Image": "images/perks/El Mejor Regalo del Mundo.webp"
+  },
+  {
+    "Id": 181,
+    "Name": "Furia de la Valquiria",
+    "CharacterId": null,
+    "Description": "Furia de la Valquiria se activa despu\u00E9s de que te hayan perseguido durante {GREEN}40{RESET}/{CYAN}35{RESET}/{PURPLE}30{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nLa pr\u00F3xima vez que aturdas al Asesino con una Tarima, el aturdimiento dura un {YELLOW}75%{RESET} m\u00E1s.\n\u003Cbr\u003E\u003Cbr\u003E\nDespu\u00E9s, Furia de la Valquiria se desactiva.",
+    "Image": "images/perks/Furia de la Valquiria.webp"
+  },
+  {
+    "Id": 182,
+    "Name": "Trauma Compartido",
+    "CharacterId": null,
+    "Description": "Recibir un golpe de protecci\u00F3n hace que t\u00FA y todos los Sobrevivientes que est\u00E9n a menos de {YELLOW}12 metros{RESET} se recuperen de {ORANGE}Agotado{RESET} mientras corren durante {GREEN}30{RESET}/{CYAN}35{RESET}/{PURPLE}40{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nTambi\u00E9n ves las auras de los Sobrevivientes que sufren {ORANGE}Agotamiento{RESET} a menos de {YELLOW}32 metros{RESET}.",
+    "Image": "images/perks/Trauma Compartido.webp"
   }
 ]

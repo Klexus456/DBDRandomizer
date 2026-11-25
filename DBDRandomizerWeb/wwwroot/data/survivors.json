@@ -268,5 +268,10 @@
     "Id": 54,
     "Name": "Aurora Stardotter",
     "Image": "images/survivors/aurorastardotter.webp"
+  },
+  {
+    "Id": 55,
+    "Name": "Sienna Shaw",
+    "Image": "images/survivors/Sienna Shaw.webp"
   }
 ]

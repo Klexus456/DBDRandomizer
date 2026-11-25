@@ -218,5 +218,10 @@
     "Id": 44,
     "Name": "El Juicio",
     "Image": "images/killers/juicio.webp"
+  },
+  {
+    "Id": 45,
+    "Name": "El Aterrador",
+    "Image": "images/killers/Terrifier.webp"
   }
 ]

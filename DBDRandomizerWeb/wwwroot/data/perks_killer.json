@@ -171,7 +171,7 @@
     "Id": 25,
     "Name": "Noqueo",
     "CharacterId": 9,
-    "Description": "Cuando un Sobreviviente deja caer una Tarima, si se aleja {YELLOW}10 metros{RESET} de ella durante los siguientes {YELLOW}6{RESET} segundos, sufren un {YELLOW}20%{RESET} de {ORANGE}Entorpecimiento{RESET} durante {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nEste efecto termina antes si se rompe la Tarima.",
+    "Description": "Cuando un Sobreviviente deja caer una Tarima, si se aleja {YELLOW}10 metros{RESET} de ella durante los siguientes {YELLOW}6{RESET} segundos, sufren un {YELLOW}20%{RESET} de {ORANGE}Entorpecimiento{RESET} durante {GREEN}2{RESET}/{CYAN}3{RESET}/{PURPLE}4{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nEste efecto termina antes si se rompe la Tarima.",
     "Image": "images/perks/noqueo.webp"
   },
   {
@@ -801,7 +801,7 @@
     "Id": 115,
     "Name": "Maleficio: Pura Miseria",
     "CharacterId": 39,
-    "Description": "Despu\u00E9s de infligir da\u00F1o a Sobrevivientes con Ataques B\u00E1sico {YELLOW}4{RESET} veces, se enciende un T\u00F3tem apagado.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que da\u00F1as a un Superviviente con un ataque b\u00E1sico:\n\u003Cul\u003E\n\u003Cli\u003EObtiene un {YELLOW}5%{RESET} de {ORANGE}Entorpecimiento{RESET} durante {GREEN}10{RESET}/{CYAN}12.5{RESET}/{PURPLE}15{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ERealiza vaults un {YELLOW}10%{RESET} m\u00E1s lento durante {GREEN}10{RESET}/{CYAN}12.5{RESET}/{PURPLE}15{RESET} segundos{RESET}.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Description": "Despu\u00E9s de infligir da\u00F1o a Sobrevivientes con Ataques B\u00E1sicos {YELLOW}4{RESET} veces, se enciende un T\u00F3tem apagado.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que da\u00F1as a un Superviviente con un ataque b\u00E1sico:\n\u003Cul\u003E\n\u003Cli\u003EObtiene un {YELLOW}5%{RESET} de {ORANGE}Entorpecimiento{RESET} durante {GREEN}10{RESET}/{CYAN}12.5{RESET}/{PURPLE}15{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ERealiza vaults un {YELLOW}10%{RESET} m\u00E1s lento durante {GREEN}10{RESET}/{CYAN}12.5{RESET}/{PURPLE}15{RESET} segundos{RESET}.\u003C/li\u003E\n\u003C/ul\u003E",
     "Image": "images/perks/maleficiopuramiseria.webp"
   },
   {
@@ -927,7 +927,7 @@
     "Id": 133,
     "Name": "Acechador de Ciervos",
     "CharacterId": null,
-    "Description": "Cada {GREEN}40{RESET}/{CYAN}35{RESET}/{PURPLE}30{RESET} segundos, se muestra tu aura al o a la sobreviviente con el menor tiempo de persecuci\u00F3n durante {YELLOW}3 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras un o una sobreviviente ve tu aura, t\u00FA ves la suya.",
+    "Description": "Cada {GREEN}40{RESET}/{CYAN}35{RESET}/{PURPLE}30{RESET} segundos, se muestra tu aura al o a la sobreviviente con el menor tiempo de persecuci\u00F3n durante {YELLOW}4 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras un o una sobreviviente ve tu aura, t\u00FA ves la suya.",
     "Image": "images/perks/acechadordeciervos.webp"
   },
   {
@@ -948,35 +948,35 @@
     "Id": 136,
     "Name": "Desasosiego",
     "CharacterId": null,
-    "Description": "Tu Radio de Terror aumenta un {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET}%.",
+    "Description": "Los Supervivientes dentro de tu Radio de Terror reparan un {GREEN}6{RESET}/{CYAN}7{RESET}/{PURPLE}8{RESET}% m\u00E1s lento.\n\u003Cbr\u003E\u003Cbr\u003E\nTu Radio de Terror aumenta un {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET}%.",
     "Image": "images/perks/desasosiego.webp"
   },
   {
     "Id": 137,
     "Name": "Esperanza Rota",
     "CharacterId": null,
-    "Description": "Cada vez que sofoques un t\u00F3tem de bendici\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003EVes el aura de todos los sobrevivientes a su alcance durante {YELLOW}8 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003EEste se destruye.\u003C/li\u003E\n\u003C/ul\u003E",
+    "Description": "Cada vez que apagas un T\u00F3tem de Bendici\u00F3n, este se destruye.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que un T\u00F3tem es bendecido, limpiado o destruido:\n\u003Cul\u003E\n\u003Cli\u003ELos T\u00F3tems Apagados quedan bloqueados durante {GREEN}16{RESET}/{CYAN}18{RESET}/{PURPLE}20{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ELos T\u00F3tems de Maleficio quedan bloqueados durante {GREEN}16{RESET}/{CYAN}18{RESET}/{PURPLE}20{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EVes las Auras de los T\u00F3tems de Bendici\u00F3n durante {GREEN}16{RESET}/{CYAN}18{RESET}/{PURPLE}20{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
     "Image": "images/perks/esperanzarota.webp"
   },
   {
     "Id": 138,
     "Name": "Esp\u00EDas de las Sombras",
     "CharacterId": null,
-    "Description": "Cada vez que un o una sobreviviente asuste a un cuervo a {GREEN}36{RESET}/{CYAN}38{RESET}/{PURPLE}40{RESET} metros de distancia de ti, recibes una alerta. Tiempo de recuperaci\u00F3n: {YELLOW}5 segundos{RESET}.",
+    "Description": "Cada vez que un o una sobreviviente asuste a un cuervo a {GREEN}36{RESET}/{CYAN}38{RESET}/{PURPLE}40{RESET} metros de distancia de ti, recibes una alerta. Tiempo de recuperaci\u00F3n: {YELLOW}3 segundos{RESET}.",
     "Image": "images/perks/espiasdelassombras.webp"
   },
   {
     "Id": 139,
     "Name": "Insidia",
     "CharacterId": null,
-    "Description": "Tras permanecer inm\u00F3vil durante {YELLOW}1{RESET} segundo, obtienes el efecto {BLUE}Indetectable{RESET} hasta que act\u00FAas.",
+    "Description": "Tras permanecer inm\u00F3vil durante {YELLOW}2{RESET} segundos, obtienes el efecto {BLUE}Indetectable{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que realizas una acci\u00F3n, este efecto termina despu\u00E9s de {GREEN}6{RESET}/{CYAN}7{RESET}/{PURPLE}8{RESET} segundos.",
     "Image": "images/perks/insidia.webp"
   },
   {
     "Id": 140,
     "Name": "Maleficio: La Emoci\u00F3n de la Caza",
     "CharacterId": null,
-    "Description": "Al inicio de la partida, se enciende un t\u00F3tem apagado.\n\u003Cbr\u003E\u003Cbr\u003E\nPor cada t\u00F3tem apagado y de maleficio que quede, tienes {YELLOW}1{RESET} distintivo.\n\u003Cbr\u003E\u003Cbr\u003E\nPor cada distintivo, los sobrevivientes bendicen y purifican t\u00F3tems un {YELLOW}10%{RESET} m\u00E1s lento.",
+    "Description": "La primera vez que cuelgas a un Superviviente, un T\u00F3tem Apagado se enciende.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando cuelgas a un Superviviente, bloquea todos los T\u00F3tems de Maleficio durante {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET} segundos por cada T\u00F3tem de Maleficio encendido.",
     "Image": "images/perks/maleficiolaemociondelacaza.webp"
   },
   {
@@ -990,21 +990,21 @@
     "Id": 142,
     "Name": "Gancho Torturador: Santuario Monstruoso",
     "CharacterId": null,
-    "Description": "Al inicio de la partida:\n\u003Cul\u003E\n\u003Cli\u003E{YELLOW}4{RESET} ganchos aleatorios se convierten en ganchos torturadores.\u003C/li\u003E\n\u003Cli\u003ELos ganchos del s\u00F3tano se convierten en ganchos torturadores.\u003C/li\u003E\n\u003C/ul\u003E\nAl estar a {YELLOW}24 metros{RESET} por lo menos de un o una sobreviviente en un gancho torturador, se sacrifica un {YELLOW}20%{RESET} m\u00E1s r\u00E1pido.",
+    "Description": "Al inicio de la partida:\n\u003Cul\u003E\n\u003Cli\u003E{YELLOW}4{RESET} ganchos aleatorios se convierten en ganchos torturadores.\u003C/li\u003E\n\u003Cli\u003ELos ganchos del s\u00F3tano se convierten en ganchos torturadores.\u003C/li\u003E\n\u003C/ul\u003E\nMientras est\u00E9s al menos a {YELLOW}24 metros{RESET} de un Superviviente en un gancho torturador, los Generadores que no est\u00E9n siendo reparados retroceden a una velocidad del {GREEN}150{RESET}/{CYAN}175{RESET}/{PURPLE}200{RESET}%.",
     "Image": "images/perks/ganchotorturadorsantuariomonstruoso.webp"
   },
   {
     "Id": 143,
     "Name": "Murmullos",
     "CharacterId": null,
-    "Description": "Al estar a {GREEN}24{RESET}/{CYAN}28{RESET}/{PURPLE}32{RESET} metros o menos de un o una sobreviviente, oyes susurros de forma aleatoria.",
+    "Description": "Al estar a {GREEN}28{RESET}/{CYAN}26{RESET}/{PURPLE}24{RESET} metros o menos de un o una sobreviviente, oyes susurros de forma aleatoria.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras est\u00E9s fuera de {GREEN}28{RESET}/{CYAN}26{RESET}/{PURPLE}24{RESET} metros de un Superviviente, obtienes un {YELLOW}5%{RESET} de {BLUE}Celeridad{RESET}.",
     "Image": "images/perks/murmullos.webp"
   },
   {
     "Id": 144,
     "Name": "Murmullo Amargo",
     "CharacterId": null,
-    "Description": "Cada vez que se complete un generador, ves el aura de los sobrevivientes en un radio de {YELLOW}16 metros{RESET} de este durante {YELLOW}5 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando se completen todos los generadores, ves el aura de todos los sobrevivientes durante {YELLOW}10 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando se completan todos los Generadores, ves las Auras de todos los Supervivientes durante {GREEN}16{RESET}/{CYAN}18{RESET}/{PURPLE}20{RESET} segundos.",
+    "Description": "Cada vez que se complete un generador, ves el aura de los sobrevivientes en un radio de {YELLOW}20 metros{RESET} de este durante {YELLOW}10 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando se completan todos los Generadores, ves las Auras de todos los Supervivientes durante {GREEN}16{RESET}/{CYAN}18{RESET}/{PURPLE}20{RESET} segundos.",
     "Image": "images/perks/murmulloamargo.webp"
   },
   {
@@ -1053,7 +1053,28 @@
     "Id": 155,
     "Name": "Implacable",
     "CharacterId": null,
-    "Description": "Cada vez que falles un ataque b\u00E1sico, tu tiempo de recuperaci\u00F3n se reduce en un {GREEN}30{RESET}/{CYAN}35{RESET}/{PURPLE}40{RESET}%.",
+    "Description": "El tiempo de recuperaci\u00F3n de tus ataques b\u00E1sicos fallidos es un {GREEN}30{RESET}/{CYAN}35{RESET}/{PURPLE}40{RESET}% m\u00E1s corto.\n\u003Cbr\u003E\u003Cbr\u003E\nEl tiempo de recuperaci\u00F3n de tus ataques b\u00E1sicos exitosos es un {YELLOW}10%{RESET} m\u00E1s corto.",
     "Image": "images/perks/implacable.webp"
+  },
+  {
+    "Id": 156,
+    "Name": "Hazmerre\u00EDr",
+    "CharacterId": null,
+    "Description": "Los Sobrevivientes que est\u00E9n a menos de {YELLOW}12 metros{RESET} de un Generador completado sufren:\n\u003Cul\u003E\n\u003Cli\u003E{ORANGE}Agotado{RESET}.\u003C/li\u003E\n\u003Cli\u003E{ORANGE}Inconsciencia{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nEstos efectos permanecen durante {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nTambi\u00E9n ves las auras de los Generadores completados.",
+    "Image": "images/perks/Hazmerre\u00EDr.webp"
+  },
+  {
+    "Id": 157,
+    "Name": "Nada de Jueguitos",
+    "CharacterId": null,
+    "Description": "Da\u00F1ar un Generador otorga un {YELLOW}10%{RESET} de {BLUE}Celeridad{RESET} durante {YELLOW}10 segundos{RESET} y provoca un efecto aleatorio:\n\u003Cul\u003E\n\u003Cli\u003EMantienes la {BLUE}Celeridad{RESET} durante {YELLOW}5 segundos{RESET} m\u00E1s.\u003C/li\u003E\n\u003Cli\u003EQuedas aturdido durante {ORANGE}2 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003EEl Generador queda bloqueado durante {YELLOW}30 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003E\u00A1El Generador escupe confeti! Pero no pasa nada m\u00E1s.\u003C/li\u003E\n\u003C/ul\u003E\nEl mismo efecto no puede repetirse dos veces seguidas.\n\u003Cbr\u003E\u003Cbr\u003E\nDespu\u00E9s, esta ventaja tiene un tiempo de recuperaci\u00F3n de {GREEN}60{RESET}/{CYAN}50{RESET}/{PURPLE}40{RESET} segundos.",
+    "Image": "images/perks/Nada de Jueguitos.webp"
+  },
+  {
+    "Id": 158,
+    "Name": "Racha Asesina",
+    "CharacterId": null,
+    "Description": "Cuando todos los Sobrevivientes han alcanzado la segunda fase de gancho y todos los Generadores se han completado, puedes matar a los Sobrevivientes.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras matas a un Sobreviviente, el Ente bloquea las Palancas de las Puertas de Salida y siguen bloqueadas durante {GREEN}12{RESET}/{CYAN}18{RESET}/{PURPLE}20{RESET} segundos despu\u00E9s.",
+    "Image": "images/perks/Racha Asesina.webp"
   }
 ]

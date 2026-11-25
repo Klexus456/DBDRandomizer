@@ -9338,5 +9338,205 @@
     "Rarity": "Uncommon",
     "Image": "images/killer_addons/badajodehueso.png",
     "Description": "Los sobrevivientes ya no podr\u00E1n distinguir a qu\u00E9 distancia ni en qu\u00E9 direcci\u00F3n se encuentra la Campana gimiente."
+  },
+  {
+    "Id": 955,
+    "Name": "Botella de Cloro",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Common",
+    "Image": "images/killer_addons/Botella de Cloro.webp",
+    "Description": "Reduce la velocidad de disminuci\u00F3n de la Tortura en un {YELLOW}15%{RESET}."
+  },
+  {
+    "Id": 956,
+    "Name": "Celular de Mike",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Common",
+    "Image": "images/killer_addons/Celular de Mike.webp",
+    "Description": "Golpear con un Juguete un Generador que no se est\u00E9 revirtiendo hace que pierda un {YELLOW}5%{RESET} de progreso y empiece a revertirse."
+  },
+  {
+    "Id": 957,
+    "Name": "Coraz\u00F3n Ennegrecido",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Common",
+    "Image": "images/killer_addons/Coraz\u00F3n Ennegrecido.webp",
+    "Description": "Despu\u00E9s de Provocar a un Sobreviviente, derribar a un Sobreviviente con un Juguete otorga a ese Juguete {YELLOW}1 punto{RESET} adicional de Letalidad."
+  },
+  {
+    "Id": 958,
+    "Name": "Cuero Cabelludo de Allie",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Common",
+    "Image": "images/killer_addons/Cuero Cabelludo de Allie.webp",
+    "Description": "Una vez por Partida, derribar con un ataque b\u00E1sico a un Sobreviviente Torturado le aplica Aterrado."
+  },
+  {
+    "Id": 959,
+    "Name": "Alas Quemadas",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Uncommon",
+    "Image": "images/killer_addons/Alas Quemadas.webp",
+    "Description": "Aumenta la duraci\u00F3n de las llamas en {YELLOW}5 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando aplicas Tortura, la siguiente b\u00FAsqueda en la Bolsa de Juguetes contendr\u00E1 con seguridad el Lanzallamas"
+  },
+  {
+    "Id": 960,
+    "Name": "Bala Ensangrentada",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Uncommon",
+    "Image": "images/killer_addons/Bala Ensangrentada.webp",
+    "Description": "Disparar a un Sobreviviente a m\u00E1s de {YELLOW}16 metros{RESET} de distancia otorga un {YELLOW}10%{RESET} de {BLUE}Celeridad{RESET} durante {YELLOW}10 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando aplicas Tortura, la siguiente b\u00FAsqueda en la Bolsa de Juguetes contendr\u00E1 con seguridad la Pistola."
+  },
+  {
+    "Id": 961,
+    "Name": "Carne de Sienna",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Uncommon",
+    "Image": "images/killer_addons/Carne de Sienna.webp",
+    "Description": "Aumenta el alcance del Mangual en un {YELLOW}20%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando aplicas Tortura, la siguiente b\u00FAsqueda en la Bolsa de Juguetes contendr\u00E1 con seguridad el Mangual."
+  },
+  {
+    "Id": 962,
+    "Name": "P\u00FAstula de Brooke",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Uncommon",
+    "Image": "images/killer_addons/P\u00FAstula de Brooke.webp",
+    "Description": "Aumenta el tama\u00F1o del Charco de \u00C1cido hasta un {YELLOW}100%{RESET} seg\u00FAn la distancia que cae el \u00C1cido, y alcanza el m\u00E1ximo tras caer {YELLOW}6 metros{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando aplicas Tortura, la siguiente b\u00FAsqueda en la Bolsa de Juguetes contendr\u00E1 con seguridad la Botella de \u00C1cido."
+  },
+  {
+    "Id": 963,
+    "Name": "Triciclo Brillante",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Uncommon",
+    "Image": "images/killer_addons/Triciclo Brillante.webp",
+    "Description": "Cuando la Corneta de Bicicleta detecta a m\u00E1s de 1 Sobreviviente, revela a los dem\u00E1s Sobrevivientes que no ha detectado durante {YELLOW}8 segundos{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando aplicas Tortura, la siguiente b\u00FAsqueda en la Bolsa de Juguetes contendr\u00E1 con seguridad la Corneta de Bicicleta."
+  },
+  {
+    "Id": 964,
+    "Name": "Cr\u00E1neo Lleno de Dulces",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Rare",
+    "Image": "images/killer_addons/Cr\u00E1neo Lleno de Dulces.webp",
+    "Description": "Detectar a un Sobreviviente con la Corneta de Bicicleta restablece el tiempo de recuperaci\u00F3n de la Bolsa de Juguetes."
+  },
+  {
+    "Id": 965,
+    "Name": "Emily",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Rare",
+    "Image": "images/killer_addons/Emily.webp",
+    "Description": "Los Juguetes disponibles en la Bolsa de Juguetes aparecen en un {YELLOW}orden fijo{RESET}:\n\u003Cul\u003E\n\u003Cli\u003ECorneta de Bicicleta.\u003C/li\u003E\n\u003Cli\u003EPistola.\u003C/li\u003E\n\u003Cli\u003ELanzallamas.\u003C/li\u003E\n\u003Cli\u003EMangual.\u003C/li\u003E\n\u003Cli\u003EBotella de \u00C1cido.\u003C/li\u003E\n\u003C/ul\u003E"
+  },
+  {
+    "Id": 966,
+    "Name": "Ojo de Victoria",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Rare",
+    "Image": "images/killer_addons/Ojo de Victoria.webp",
+    "Description": "Golpear a un Sobreviviente con la Botella de \u00C1cido o con el Lanzallamas revela su aura durante {YELLOW}5 segundos{RESET}."
+  },
+  {
+    "Id": 967,
+    "Name": "Sal de Thornton",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Rare",
+    "Image": "images/killer_addons/Sal de Thornton.webp",
+    "Description": "Los Sobrevivientes Torturados sufren {ORANGE}Destrozado{RESET} y {ORANGE}Hemorragia{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nEstos efectos permanecen durante {YELLOW}40 segundos{RESET} despu\u00E9s de que desaparece la Tortura."
+  },
+  {
+    "Id": 968,
+    "Name": "Zarig\u00FCeya Muerta",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "Rare",
+    "Image": "images/killer_addons/Zarig\u00FCeya Muerta.webp",
+    "Description": "Golpear a un Sobreviviente con la Pistola o con el Mangual revela la ubicaci\u00F3n de todos los dem\u00E1s Sobrevivientes que est\u00E9n a menos de {YELLOW}24 metros{RESET} durante {YELLOW}3 segundos{RESET}."
+  },
+  {
+    "Id": 969,
+    "Name": "Art Crispies",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "VeryRare",
+    "Image": "images/killer_addons/Art Crispies.webp",
+    "Description": "Cuando Torturas a un Sobreviviente, ambos obtienen entre un {YELLOW}5%{RESET} y un {YELLOW}15%{RESET} de {BLUE}Celeridad{RESET} durante {YELLOW}5 segundos{RESET}."
+  },
+  {
+    "Id": 970,
+    "Name": "Cr\u00E1neo de Jonathan",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "VeryRare",
+    "Image": "images/killer_addons/Cr\u00E1neo de Jonathan.webp",
+    "Description": "Da\u00F1ar o Torturar a un Sobreviviente con un Juguete otorga {YELLOW}1 Distintivo{RESET}, hasta un m\u00E1ximo de {YELLOW}5{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nProvocar manualmente consume todos los Distintivos y, si se ha consumido al menos {ORANGE}1 Distintivo{RESET}, revela el aura de todos los Sobrevivientes que est\u00E9n a menos de {YELLOW}10 metros{RESET} m\u00E1s {YELLOW}5 metros{RESET} por Distintivo durante {YELLOW}6 segundos{RESET}."
+  },
+  {
+    "Id": 971,
+    "Name": "Regalo Explosivo",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "VeryRare",
+    "Image": "images/killer_addons/Regalo Explosivo.webp",
+    "Description": "Por cada Juguete con la Letalidad al m\u00E1ximo, tu Radio de Terror se reduce un {YELLOW}12%{RESET}."
+  },
+  {
+    "Id": 972,
+    "Name": "Wacky Jacks",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "VeryRare",
+    "Image": "images/killer_addons/Wacky Jacks.webp",
+    "Description": "Reduce los puntos m\u00E1ximos posibles de Letalidad en {YELLOW}1 punto{RESET} hasta {YELLOW}5 puntos{RESET}."
+  },
+  {
+    "Id": 973,
+    "Name": "Cinta Plateada",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "UltraRare",
+    "Image": "images/killer_addons/Cinta Plateada.webp",
+    "Description": "Equiparte un Juguete en los {YELLOW}0.5 segundos{RESET} siguientes a abrir la Bolsa de Juguetes reduce su tiempo de recuperaci\u00F3n en {YELLOW}4 segundos{RESET}."
+  },
+  {
+    "Id": 974,
+    "Name": "El Noveno C\u00EDrculo",
+    "CharacterId": 45,
+    "ItemId": null,
+    "AddonGroupId": null,
+    "Rarity": "UltraRare",
+    "Image": "images/killer_addons/El Noveno C\u00EDrculo.webp",
+    "Description": "Provocar a un Sobreviviente por primera vez otorga {YELLOW}1 Distintivo{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando las Puertas de Salida reciben energ\u00EDa y El Noveno C\u00EDrculo tiene {YELLOW}4 Distintivos{RESET}, el tiempo de recuperaci\u00F3n de la Bolsa de Juguetes se reduce a {YELLOW}1 segundo{RESET}."
   }
 ]

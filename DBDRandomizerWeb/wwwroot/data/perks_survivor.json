@@ -4,1252 +4,1431 @@
     "Name": "V\u00EDnculo",
     "CharacterId": 1,
     "Description": "Ves el aura de los dem\u00E1s sobrevivientes en un radio de {GREEN}20{RESET}/{CYAN}28{RESET}/{PURPLE}36{RESET} metros.",
-    "Image": "images/perks/bond.webp"
+    "Image": "images/perks/bond.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 2,
     "Name": "Demuestra lo que Vales",
     "CharacterId": 1,
     "Description": "Por cada sobreviviente a {YELLOW}4{RESET} metros o menos de ti, todos los dem\u00E1s sobrevivientes reparan un {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET}% m\u00E1s r\u00E1pido.",
-    "Image": "images/perks/provethyself.webp"
+    "Image": "images/perks/provethyself.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 3,
     "Name": "L\u00EDder",
     "CharacterId": 1,
     "Description": "Al estar a {YELLOW}10{RESET} metros de ti, los dem\u00E1s sobrevivientes:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EPurifican t\u00F3tems un {GREEN}18{RESET}/{CYAN}24{RESET}/{PURPLE}30{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ESe curan un {GREEN}18{RESET}/{CYAN}24{RESET}/{PURPLE}30{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EAbren la puerta de salida un {GREEN}18{RESET}/{CYAN}24{RESET}/{PURPLE}30{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ESabotean ganchos un {GREEN}18{RESET}/{CYAN}24{RESET}/{PURPLE}30{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EDescuelgan sobrevivientes un {GREEN}18{RESET}/{CYAN}24{RESET}/{PURPLE}30{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EDesbloquea cofres un {GREEN}18{RESET}/{CYAN}24{RESET}/{PURPLE}30{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003C/ul\u003E\nEsto termina {YELLOW}20{RESET} segundos despu\u00E9s de que salen del alcance.",
-    "Image": "images/perks/leader.webp"
+    "Image": "images/perks/leader.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 4,
     "Name": "Velocidad Silenciosa",
     "CharacterId": 2,
     "Description": "Te escondes en casilleros y saltas sin hacer ruidos. No alertar\u00E1s al asesino. Tiempo de recuperaci\u00F3n: {GREEN}25{RESET}/{CYAN}20{RESET}/{PURPLE}15{RESET} segundos.",
-    "Image": "images/perks/velocidadsilenciosa.webp"
+    "Image": "images/perks/velocidadsilenciosa.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 5,
     "Name": "Esprint",
     "CharacterId": 2,
     "Description": "Cada vez que comienzas a correr:\n\u003Cul\u003E\n\u003Cli\u003EObtienes un {YELLOW}50%{RESET} de {BLUE}Celeridad{RESET} durante {YELLOW}2{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Agotado{RESET} durante {GREEN}60{RESET}/{CYAN}50{RESET}/{PURPLE}40{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/esprint.webp"
+    "Image": "images/perks/esprint.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 6,
     "Name": "Adrenalina",
     "CharacterId": 2,
     "Description": "Cuando se completan todos los generadores, si te derribaron o tienes heridas, te curas al instante. Luego, ignorando el efecto {ORANGE}Agotado{RESET}:\n\u003Cul\u003E\n\u003Cli\u003EObtienes un {YELLOW}50%{RESET} de {BLUE}Celeridad{RESET} durante {YELLOW}4{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Agotado{RESET} durante {GREEN}60{RESET}/{CYAN}50{RESET}/{PURPLE}40{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/adrenalina.webp"
+    "Image": "images/perks/adrenalina.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 7,
     "Name": "Empat\u00EDa",
     "CharacterId": 3,
     "Description": "En un radio de {GREEN}64{RESET}/{CYAN}96{RESET}/{PURPLE}128{RESET} metros, ves el aura de los sobrevivientes heridos.",
-    "Image": "images/perks/empatia.webp"
+    "Image": "images/perks/empatia.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 8,
     "Name": "Conocimientos de Bot\u00E1nica",
     "CharacterId": 3,
     "Description": "Te curas un {GREEN}30{RESET}/{CYAN}40{RESET}/{PURPLE}50{RESET}% m\u00E1s r\u00E1pido.",
-    "Image": "images/perks/conocimientosdebotanica.webp"
+    "Image": "images/perks/conocimientosdebotanica.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 9,
     "Name": "Autocuraci\u00F3n",
     "CharacterId": 3,
     "Description": "Puedes curarte por tu cuenta, pero un {GREEN}75{RESET}/{CYAN}70{RESET}/{PURPLE}65{RESET}% m\u00E1s lento.",
-    "Image": "images/perks/autocuracion.webp"
+    "Image": "images/perks/autocuracion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 10,
     "Name": "Voluntad de Hierro",
     "CharacterId": 4,
     "Description": "Reduce los sonidos de dolor causados por las heridas en un 50/75/100 %. Voluntad de Hierro no se puede utilizar mientras est\u00E1s Agotado.",
-    "Image": "images/perks/voluntaddehierro.webp"
+    "Image": "images/perks/voluntaddehierro.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 11,
     "Name": "Esp\u00EDritu Calmado",
     "CharacterId": 4,
     "Description": "No asustas a los cuervos ni gritas.\n\u003Cbr\u003E\u003Cbr\u003E\nBendices y purificas t\u00F3tems, y desbloqueas cofres, en silencio y un {GREEN}8{RESET}/{CYAN}9{RESET}/{PURPLE}10{RESET}% m\u00E1s r\u00E1pido.",
-    "Image": "images/perks/espiritucalmado.webp"
+    "Image": "images/perks/espiritucalmado.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 12,
     "Name": "Sabotear",
     "CharacterId": 4,
     "Description": "En un radio de {YELLOW}56{RESET} metros de donde el asesino carg\u00F3 a otro u otra sobreviviente, ves el aura de los ganchos y de los ganchos torturadores.\n\u003Cbr\u003E\u003Cbr\u003E\nPuedes sabotear ganchos. Tiempo de recuperaci\u00F3n: {GREEN}70{RESET}/{CYAN}65{RESET}/{PURPLE}60{RESET} segundos.",
-    "Image": "images/perks/sabotear.webp"
+    "Image": "images/perks/sabotear.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 13,
     "Name": "Ca\u00EDda Equilibrada",
     "CharacterId": 5,
     "Description": "Cada vez que caes de por lo menos {YELLOW}1.25{RESET} metros:\n\u003Cul\u003E\n\u003Cli\u003EObtienes un {YELLOW}50%{RESET} de {BLUE}Celeridad{RESET} durante {YELLOW}3{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ESufres {ORANGE}Agotado{RESET} durante {GREEN}60{RESET}/{CYAN}50{RESET}/{PURPLE}40{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ELa duraci\u00F3n de tu tambaleo se reduce en un {YELLOW}75%{RESET}.\u003C/li\u003E\n\u003Cli\u003ETus gru\u00F1idos de dolor por la ca\u00EDda son un {YELLOW}100%{RESET} m\u00E1s silenciosos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/caidaequilibrada.webp"
+    "Image": "images/perks/caidaequilibrada.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 14,
     "Name": "Evasi\u00F3n Urbana",
     "CharacterId": 5,
     "Description": "Mientras est\u00E1s en cuclillas, obtienes un {GREEN}90{RESET}/{CYAN}95{RESET}/{PURPLE}100{RESET}% de {BLUE}Celeridad{RESET}.",
-    "Image": "images/perks/evasionurbana.webp"
+    "Image": "images/perks/evasionurbana.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 15,
     "Name": "De La Calle",
     "CharacterId": 5,
     "Description": "La primera vez que consumes las cargas de un objeto, ves el aura del asesino durante {YELLOW}8{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que tomas un objeto de un cofre, tiene un {GREEN}60{RESET}/{CYAN}70{RESET}/{PURPLE}80{RESET}% adicional de cargas.",
-    "Image": "images/perks/delacalle.webp"
+    "Image": "images/perks/delacalle.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 16,
     "Name": "Solo Quedo Yo",
     "CharacterId": 6,
     "Description": "Cada vez que asesinan o sacrifican a otro u otra sobreviviente, obtienes {YELLOW}1{RESET} distintivo.\n\u003Cbr\u003E\u003Cbr\u003E\nPor cada distintivo, el asesino no puede ver tu aura en un radio de {GREEN}20{RESET}/{CYAN}22{RESET}/{PURPLE}24{RESET} metros.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando eres el \u00FAltimo o la \u00FAltima sobreviviente:\n\u003Cul\u003E\n\u003Cli\u003EReparas un {YELLOW}75%{RESET} m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EAbres las puertas de salida y la trampilla un {YELLOW}50%{RESET} m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003C/ul\u003E\nAl inicio de la partida, tienes m\u00E1s probabilidades de convertirte en la obsesi\u00F3n.",
-    "Image": "images/perks/soloquedoyo.webp"
+    "Image": "images/perks/soloquedoyo.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 17,
     "Name": "Objeto de Obsesi\u00F3n",
     "CharacterId": 6,
     "Description": "Mientras eres la obsesi\u00F3n, cada {YELLOW}30{RESET} segundos, el asesino ve tu aura durante {YELLOW}4{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras el asesino vea tu aura:\n\u003Cul\u003E\n\u003Cli\u003EVes su aura.\u003C/li\u003E\n\u003Cli\u003EBendices y purificas t\u00F3tems un {GREEN}8{RESET}/{CYAN}9{RESET}/{PURPLE}10{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ETe curas un {GREEN}8{RESET}/{CYAN}9{RESET}/{PURPLE}10{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EReparas un {GREEN}8{RESET}/{CYAN}9{RESET}/{PURPLE}10{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003C/ul\u003E\nAl inicio de la partida, tienes m\u00E1s probabilidades de convertirte en la obsesi\u00F3n.",
-    "Image": "images/perks/objetodeobsesion.webp"
+    "Image": "images/perks/objetodeobsesion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 18,
     "Name": "Golpe Decisivo",
     "CharacterId": 6,
     "Description": "Despu\u00E9s de que te descuelguen o te descuelgues por tu cuenta, se activa {BLUE}Golpe Decisivo{RESET} durante {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos:\n\u003Cul\u003E\n\u003Cli\u003ECuando te atrape el asesino, supera una prueba de habilidad para apu\u00F1alarlo y escapar de sus garras.\u003C/li\u003E\n\u003Cli\u003EAturde al asesino durante {YELLOW}4{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ETe conviertes en la nueva obsesi\u00F3n.\u003C/li\u003E\n\u003C/ul\u003E\n{BLUE}Golpe Decisivo{RESET} se desactiva cuando se abren las puertas de salida.\n\u003Cbr\u003E\u003Cbr\u003E\n{BLUE}Golpe Decisivo{RESET} se desactiva por el resto de la partida una vez que lo usas.\n\u003Cbr\u003E\u003Cbr\u003E\n{BLUE}Golpe Decisivo{RESET} se desactiva por el resto de la partida cuando realizas una acci\u00F3n destacada.\n\u003Cbr\u003E\u003Cbr\u003E\nAl inicio de la partida, tienes m\u00E1s probabilidades de convertirte en la obsesi\u00F3n.",
-    "Image": "images/perks/golpedecisivo.webp"
+    "Image": "images/perks/golpedecisivo.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 19,
     "Name": "A Mano Descubierta",
     "CharacterId": 7,
     "Description": "Todos los sobrevivientes pueden ver auras que est\u00E1n a {GREEN}8{RESET}/{CYAN}12{RESET}/{PURPLE}16{RESET} metros de distancia.",
-    "Image": "images/perks/amanodescubierta.webp"
+    "Image": "images/perks/amanodescubierta.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 20,
     "Name": "Subir las Apuestas",
     "CharacterId": 7,
     "Description": "Por cada sobreviviente con vida, todos los sobrevivientes obtienen un {GREEN}1{RESET}/{CYAN}2{RESET}/{PURPLE}3{RESET}% de suerte.\n\u003Cbr\u003E\u003Cbr\u003E\nTodos los sobrevivientes pueden intentar descolgarse.",
-    "Image": "images/perks/subirlasapuestas.webp"
+    "Image": "images/perks/subirlasapuestas.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 21,
     "Name": "As en la Manga",
     "CharacterId": 7,
     "Description": "Cada vez que tomes un objeto de un cofre, tendr\u00E1:\n\u003Cul\u003E\n\u003Cli\u003EUn accesorio visceral o de rareza menor.\u003C/li\u003E\n\u003Cli\u003EHay un {GREEN}50{RESET}/{CYAN}75{RESET}/{PURPLE}100{RESET}% de probabilidad de que lleve consigo un accesorio poco com\u00FAn o de rareza menor.\u003C/li\u003E\n\u003C/ul\u003E\nAl escapar, conservas los accesorios.",
-    "Image": "images/perks/asenlamanga.webp"
+    "Image": "images/perks/asenlamanga.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 22,
     "Name": "Abandonado a tu Suerte",
     "CharacterId": 8,
     "Description": "Cada vez que te cuelgan o completas un generador, obtienes {YELLOW}1{RESET} distintivo, hasta un m\u00E1ximo de {YELLOW}6{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPor cada distintivo, los dem\u00E1s sobrevivientes abren las puertas de salida un {YELLOW}10%{RESET} m\u00E1s r\u00E1pido.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando eres el \u00FAltimo o la \u00FAltima sobreviviente, si tienes al menos {YELLOW}3{RESET} distintivos:\n\u003Cul\u003E\n\u003Cli\u003EPuedes abrir la trampilla.\u003C/li\u003E\n\u003Cli\u003EPor cada distintivo, el asesino no puede ver tu aura durante {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/abandonadoatusuerte.webp"
+    "Image": "images/perks/abandonadoatusuerte.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 23,
     "Name": "Tiempo Prestado",
     "CharacterId": 8,
     "Description": "Cada vez que descuelgas a un o una sobreviviente:\n\u003Cul\u003E\n\u003Cli\u003EConserva su {BLUE}Resistencia{RESET} tras abandonar un gancho durante {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} segundos m\u00E1s.\u003C/li\u003E\n\u003Cli\u003EConserva su {BLUE}Celeridad{RESET} tras abandonar un gancho durante {YELLOW}10{RESET} segundos m\u00E1s.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/tiempoprestado.webp"
+    "Image": "images/perks/tiempoprestado.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 24,
     "Name": "Inquebrantable",
     "CharacterId": 8,
     "Description": "Una vez por partida, luego de que el asesino te derribe, puedes recuperarte por completo.\n\u003Cbr\u003E\u003Cbr\u003E\nSi est\u00E1s en el suelo, te recuperas un {GREEN}25{RESET}/{CYAN}30{RESET}/{PURPLE}35{RESET}% m\u00E1s r\u00E1pido.",
-    "Image": "images/perks/inquebrantable.webp"
+    "Image": "images/perks/inquebrantable.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 25,
     "Name": "Pericia T\u00E9cnica",
     "CharacterId": 9,
     "Description": "Al reparar un generador:\n\u003Cul\u003E\n\u003Cli\u003EEl alcance de los ruidos de reparaci\u00F3n del generador se reduce en {YELLOW}16{RESET} metros.\u003C/li\u003E\n\u003Cli\u003ECada vez que fallas una prueba de habilidad b\u00E1sica, el generador no explota, pero pierde un {GREEN}4{RESET}/{CYAN}3{RESET}/{PURPLE}2{RESET}% adicional de progreso.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/periciatecnica.webp"
+    "Image": "images/perks/periciatecnica.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 26,
     "Name": "Agilidad",
     "CharacterId": 9,
     "Description": "Cada vez que saltas a velocidad media o r\u00E1pida:\n\u003Cul\u003E\n\u003Cli\u003EObtienes un {YELLOW}50%{RESET} de {BLUE}Celeridad{RESET} durante {YELLOW}3{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Agotado{RESET} durante {GREEN}60{RESET}/{CYAN}50{RESET}/{PURPLE}40{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/agilidad.webp"
+    "Image": "images/perks/agilidad.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 27,
     "Name": "Alerta",
     "CharacterId": 9,
     "Description": "Cada vez que un asesino rompa una tarima o una pared rompible, o da\u00F1e un generador:\n\u003Cul\u003E\n\u003Cli\u003EEscuchas una notificaci\u00F3n de sonido.\u003C/li\u003E\n\u003Cli\u003EVes su aura durante {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/alerta.webp"
+    "Image": "images/perks/alerta.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 28,
     "Name": "Vamos a Vivir para Siempre",
     "CharacterId": 10,
     "Description": "Curas sobrevivientes derribados un {YELLOW}100%{RESET} m\u00E1s r\u00E1pido.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que terminas de curar a un o una sobreviviente ca\u00EDdo/a, obtiene {BLUE}Resistencia{RESET} durante {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} segundos. Tiempo de recuperaci\u00F3n: {YELLOW}30{RESET} segundos.",
-    "Image": "images/perks/vamosavivirparasiempre.webp"
+    "Image": "images/perks/vamosavivirparasiempre.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 29,
     "Name": "Fajador",
     "CharacterId": 10,
     "Description": "Cada vez que te descuelgan, al tener heridas y estar corriendo, usa el bot\u00F3n de Habilidad Activa 1:\n\u003Cul\u003E\n\u003Cli\u003EObtienes {BLUE}Resistencia{RESET} durante {YELLOW}0.5{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Agotado{RESET} durante {GREEN}60{RESET}/{CYAN}50{RESET}/{PURPLE}40{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/fajador.webp"
+    "Image": "images/perks/fajador.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 30,
     "Name": "Me Da Igual",
     "CharacterId": 10,
     "Description": "Al inicio de la partida, te hieren. Luego:\n\u003Cul\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Desesperanza{RESET}.\u003C/li\u003E\n\u003Cli\u003ETus gru\u00F1idos de dolor son un {YELLOW}100%{RESET} m\u00E1s silenciosos.\u003C/li\u003E\n\u003Cli\u003ENo dejas charcos de sangre.\u003C/li\u003E\n\u003Cli\u003ETe recuperas un {GREEN}15{RESET}/{CYAN}20{RESET}/{PURPLE}25{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EPuedes recuperarte por completo.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/medaigual.webp"
+    "Image": "images/perks/medaigual.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 31,
     "Name": "\u00A1Despierta!",
     "CharacterId": 11,
     "Description": "Cuando se completan todos los generadores:\n\u003Cul\u003E\n\u003Cli\u003EVes el aura de los interruptores de las puertas de salida.\u003C/li\u003E\n\u003Cli\u003EAl abrir una puerta de salida, los dem\u00E1s sobrevivientes ven tu aura.\u003C/li\u003E\n\u003Cli\u003EAbres las puertas de salida un {GREEN}8{RESET}/{CYAN}9{RESET}/{PURPLE}10{RESET}% m\u00E1s r\u00E1pido, y un {YELLOW}20%{RESET} adicional m\u00E1s r\u00E1pido por cada otro u otra sobreviviente que siga con vida.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/despierta.webp"
+    "Image": "images/perks/despierta.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 32,
     "Name": "Farmacia",
     "CharacterId": 11,
     "Description": "Cada vez que desbloqueas un cofre, este contiene un botiqu\u00EDn raro.\n\u003Cbr\u003E\u003Cbr\u003E\nDesbloqueas y registras cofres un {GREEN}75{RESET}/{CYAN}100{RESET}/{PURPLE}125{RESET}% m\u00E1s r\u00E1pido.\n\u003Cbr\u003E\u003Cbr\u003E\nPuedes registrar cada cofre {YELLOW}1{RESET} vez.\n\u003Cbr\u003E\u003Cbr\u003E\nLa distancia a la que el asesino puede o\u00EDr los ruidos que haces al desbloquear el cofre se reduce en {YELLOW}12{RESET} metros.",
-    "Image": "images/perks/farmacia.webp"
+    "Image": "images/perks/farmacia.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 33,
     "Name": "Vigilia",
     "CharacterId": 11,
     "Description": "Todos los sobrevivientes en un radio de {YELLOW}16{RESET} metros de ti pierden el efecto {ORANGE}Agotado{RESET} un {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET}% m\u00E1s r\u00E1pido.\n\u003Cbr\u003E\u003Cbr\u003E\nEsto termina {YELLOW}15{RESET} segundos despu\u00E9s de salir del alcance.",
-    "Image": "images/perks/vigilia.webp"
+    "Image": "images/perks/vigilia.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 34,
     "Name": "Tenacidad",
     "CharacterId": 12,
     "Description": "Cuando te derriban:\n\u003Cul\u003E\n\u003Cli\u003EObtienes un {GREEN}30{RESET}/{CYAN}40{RESET}/{PURPLE}50{RESET}% de {BLUE}Celeridad{RESET}.\u003C/li\u003E\n\u003Cli\u003EPuedes arrastrarte y recuperarte al mismo tiempo.\u003C/li\u003E\n\u003Cli\u003ETus gru\u00F1idos de dolor son un {YELLOW}75%{RESET} m\u00E1s silenciosos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/tenacidad.webp"
+    "Image": "images/perks/tenacidad.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 35,
     "Name": "Corazonada",
     "CharacterId": 12,
     "Description": "Cada vez que se complete un generador, durante {YELLOW}20{RESET} segundos, en un radio de {GREEN}32{RESET}/{CYAN}48{RESET}/{PURPLE}64{RESET} metros de ti:\n\u003Cul\u003E\n\u003Cli\u003EVes el aura de los cofres.\u003C/li\u003E\n\u003Cli\u003EVes el aura de los generadores.\u003C/li\u003E\n\u003Cli\u003EVes el aura de los t\u00F3tems.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/corazonada.webp"
+    "Image": "images/perks/corazonada.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 36,
     "Name": "Bajo Vigilancia",
     "CharacterId": 12,
     "Description": "Tras esconderte durante {YELLOW}15{RESET} segundos a {YELLOW}24{RESET} metros o menos del asesino, mientras est\u00E9s dentro de su radio de terror, obtienes {YELLOW}1{RESET} distintivo, hasta un m\u00E1ximo de {GREEN}2{RESET}/{CYAN}3{RESET}/{PURPLE}4{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras tengas al menos {YELLOW}1{RESET} distintivo, las pruebas de habilidad b\u00E1sicas se reemplazan por pruebas de habilidad especiales.\n\n\u003Cul\u003E\n\u003Cli\u003ELas pruebas de habilidad especiales otorgan un {YELLOW}4%{RESET} adicional de progreso.\u003C/li\u003E\n\u003Cli\u003ECada vez que logras o fallas una prueba de habilidad especial, gastas {YELLOW}1{RESET} distintivo.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/bajovigilacia.webp"
+    "Image": "images/perks/bajovigilacia.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 37,
     "Name": "Baila Conmigo",
     "CharacterId": 13,
     "Description": "Cada vez que sales a toda velocidad de un casillero o realizas un salto de velocidad media o r\u00E1pida, no dejas marcas de ara\u00F1azos durante {YELLOW}5{RESET} segundos. Tiempo de recuperaci\u00F3n: {GREEN}20{RESET}/{CYAN}20{RESET}/{PURPLE}15{RESET} segundos.",
-    "Image": "images/perks/bailaconmigo.webp"
+    "Image": "images/perks/bailaconmigo.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 38,
     "Name": "Oportunidades",
     "CharacterId": 13,
     "Description": "En un radio de {YELLOW}24{RESET} metros de ti, ves el aura de las ventanas.\n\u003Cbr\u003E\u003Cbr\u003E\nSaltas ventanas un {YELLOW}10%{RESET} m\u00E1s r\u00E1pido.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que saltas una ventana, el tiempo de recuperaci\u00F3n es de: {GREEN}40{RESET}/{CYAN}35{RESET}/{PURPLE}30{RESET} segundos.",
-    "Image": "images/perks/oportunidades.webp"
+    "Image": "images/perks/oportunidades.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 39,
     "Name": "Arrebato",
     "CharacterId": 13,
     "Description": "Mientras te carga el asesino:\n\u003Cul\u003E\n\u003Cli\u003ECada vez que el asesino caiga de por lo menos {YELLOW}1.25{RESET} metros de altura, obtienes un {YELLOW}33%{RESET} de tu progreso de forcejeo actual.\u003C/li\u003E\n\u003Cli\u003EForcejeas con un {GREEN}60{RESET}/{CYAN}70{RESET}/{PURPLE}80{RESET}% m\u00E1s de fuerza.\u003C/li\u003E\n\u003Cli\u003EAl estar en un radio de {YELLOW}16{RESET} metros, el asesino no puede ver el aura de los ganchos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/arrebato.webp"
+    "Image": "images/perks/arrebato.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 40,
     "Name": "Distracci\u00F3n",
     "CharacterId": 14,
     "Description": "Tras esconderte durante {GREEN}30{RESET}/{CYAN}25{RESET}/{PURPLE}20{RESET} segundos en el radio de terror del asesino, al estar en cuclillas e inm\u00F3vil, usa el bot\u00F3n de Habilidad Activa 1 para lanzar una piedra a {YELLOW}20{RESET} metros de distancia:\n\u003Cul\u003E\n\u003Cli\u003EEl asesino recibir\u00E1 una alerta.\u003C/li\u003E\n\u003Cli\u003ELa piedra deja marcas de ara\u00F1azos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/distraccion.webp"
+    "Image": "images/perks/distraccion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 41,
     "Name": "Liberaci\u00F3n",
     "CharacterId": 14,
     "Description": "Una vez por partida, al descolgar a otro u otra sobreviviente de forma segura, puedes descolgarte por tu cuenta. Cuando lo haces de esta forma, sufres el efecto {ORANGE}Desesperanza{RESET} durante {GREEN}160{RESET}/{CYAN}140{RESET}/{PURPLE}120{RESET} segundos.",
-    "Image": "images/perks/liberacion.webp"
+    "Image": "images/perks/liberacion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 42,
     "Name": "Autodidacta",
     "CharacterId": 14,
     "Description": "Inicias la partida con {YELLOW}0{RESET} distintivos, hasta un m\u00E1ximo de {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET}, y tus pruebas de habilidad b\u00E1sicas de curaci\u00F3n exitosas otorgan un {ORANGE}15%{RESET} menos de progreso.\n\u003Cbr\u003E\u003Cbr\u003E\nAl curarte sin un botiqu\u00EDn:\n\u003Cul\u003E\n\u003Cli\u003ECada vez que logras una prueba de habilidad b\u00E1sica, obtienes {YELLOW}1{RESET} distintivo.\u003C/li\u003E\n\u003Cli\u003ECada vez que logras una prueba de habilidad b\u00E1sica, por cada distintivo, obtienes un {YELLOW}15%{RESET} m\u00E1s de progreso.\u003C/li\u003E\n\u003Cli\u003ENo puedes obtener pruebas de habilidad excelentes.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/autodidacta.webp"
+    "Image": "images/perks/autodidacta.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 43,
     "Name": "Ruptura",
     "CharacterId": 15,
     "Description": "Cada vez que te descuelgan:\n\u003Cul\u003E\n\u003Cli\u003EEl gancho se rompe, y luego se repara tras {YELLOW}180{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EVes el aura del asesino durante {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/ruptura.webp"
+    "Image": "images/perks/ruptura.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 44,
     "Name": "Postratamiento",
     "CharacterId": 15,
     "Description": "T\u00FA y hasta {GREEN}1{RESET}/{CYAN}2{RESET}/{PURPLE}3{RESET} sobrevivientes ven sus auras entre s\u00ED cuando t\u00FA:\n\u003Cul\u003E\n\u003Cli\u003ELos descuelgas o ellos te descuelgan.\u003C/li\u003E\n\u003Cli\u003ELos curas o ellos te curan.\u003C/li\u003E\n\u003C/ul\u003E\nEste efecto dura hasta que te cuelgan.",
-    "Image": "images/perks/postratamiento.webp"
+    "Image": "images/perks/postratamiento.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 45,
     "Name": "Distorsi\u00F3n",
     "CharacterId": 15,
     "Description": "Al inicio de la partida, luego de que hayan perseguido durante {YELLOW}15{RESET} segundos, obtienes {YELLOW}1{RESET} distintivo, hasta un m\u00E1ximo de {YELLOW}2{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras no te derriben, cuando el asesino intente ver tu aura, gasta {YELLOW}1{RESET} distintivo. Luego, durante los siguientes {GREEN}8{RESET}/{CYAN}10{RESET}/{PURPLE}12{RESET} segundos:\n\u003Cul\u003E\n\u003Cli\u003EEl asesino no podr\u00E1 ver tu aura.\u003C/li\u003E\n\u003Cli\u003ENo dejas marcas de ara\u00F1azos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/distorsion.webp"
+    "Image": "images/perks/distorsion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 46,
     "Name": "Solidaridad",
     "CharacterId": 16,
     "Description": "Mientras tienes heridas y curas a otro u otra sobreviviente, tambi\u00E9n obtienes progreso de curaci\u00F3n a un {GREEN}65{RESET}/{CYAN}70{RESET}/{PURPLE}75{RESET}% de velocidad.",
-    "Image": "images/perks/solidaridad.webp"
+    "Image": "images/perks/solidaridad.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 47,
     "Name": "Serenidad",
     "CharacterId": 16,
     "Description": "La primera vez que empiezas a reparar cada generador, ves el aura del asesino durante {YELLOW}8{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que se complete un generador, no dejas marcas de ara\u00F1azos durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos.",
-    "Image": "images/perks/serenidad.webp"
+    "Image": "images/perks/serenidad.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 48,
     "Name": "De Frente",
     "CharacterId": 16,
     "Description": "Tras esconderte en un casillero durante {YELLOW}3{RESET} segundos, sal a toda velocidad para aturdir al asesino durante {YELLOW}3{RESET} segundos si est\u00E1 en un radio de {YELLOW}2.5{RESET} metros. Luego, quedar\u00E1s {ORANGE}Agotado{RESET} durante {GREEN}60{RESET}/{CYAN}50{RESET}/{PURPLE}40{RESET} segundos.",
-    "Image": "images/perks/defrente.webp"
+    "Image": "images/perks/defrente.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 49,
     "Name": "Nos Vemos",
     "CharacterId": 17,
     "Description": "Si est\u00E1s en el suelo, cada vez que el asesino te cargue, se a\u00F1ade un {YELLOW}50%{RESET} de tu progreso de recuperaci\u00F3n al progreso de forcejeo, hasta un m\u00E1ximo de un {GREEN}40{RESET}/{CYAN}45{RESET}/{PURPLE}50{RESET}%.",
-    "Image": "images/perks/nosvemos.webp"
+    "Image": "images/perks/nosvemos.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 50,
     "Name": "Suj\u00E9tate",
     "CharacterId": 17,
     "Description": "Al curar a un o una sobreviviente derribado/a, ambos ven el aura del asesino.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando termines de curar a un o una sobreviviente derribado/a o se recupere por completo:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EEl o la sobreviviente obtiene un {YELLOW}50%{RESET} de {BLUE}Celeridad{RESET} durante {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EEl o la sobreviviente no deja marcas de ara\u00F1azos durante {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/sujetate.webp"
+    "Image": "images/perks/sujetate.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 51,
     "Name": "El Temple del Hombre",
     "CharacterId": 17,
     "Description": "Despu\u00E9s de recibir {YELLOW}3{RESET} golpes protectores, al tener heridas y hasta caer al piso, la pr\u00F3xima vez que el asesino te derribe, ya no recibir\u00E1s da\u00F1o.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando te curas, mientras est\u00E9s a, por lo menos, {GREEN}12{RESET}/{CYAN}14{RESET}/{PURPLE}16{RESET} metros del asesino, este ve tu aura.\n\u003Cbr\u003E\u003Cbr\u003E\nAl inicio de la partida, aumentan tus probabilidades de convertirte en la obsesi\u00F3n.",
-    "Image": "images/perks/eltempledelhombre.webp"
+    "Image": "images/perks/eltempledelhombre.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 52,
     "Name": "Mejor Juntos",
     "CharacterId": 18,
     "Description": "Mientras reparas un generador:\n\u003Cul\u003E\n\u003Cli\u003EOtros sobrevivientes ven el aura de dicho generador.\u003C/li\u003E\n\u003Cli\u003ECada vez que el asesino derriba a un o una sobreviviente, ves el aura de los dem\u00E1s sobrevivientes durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/mejorjuntos.webp"
+    "Image": "images/perks/mejorjuntos.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 53,
     "Name": "Fijaci\u00F3n",
     "CharacterId": 18,
     "Description": "Al caminar, obtienes un {GREEN}10{RESET}/{CYAN}15{RESET}/{PURPLE}20{RESET}% de {BLUE}Celeridad{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nVes tus propias marcas de ara\u00F1azos.",
-    "Image": "images/perks/fijacion.webp"
+    "Image": "images/perks/fijacion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 54,
     "Name": "Fuerza Interior",
     "CharacterId": 18,
     "Description": "Cada vez que purificas un t\u00F3tem, al tener heridas y no sufrir {ORANGE}Desesperanza{RESET}, tras esconderte en un casillero durante {GREEN}10{RESET}/{CYAN}9{RESET}/{PURPLE}8{RESET} s, recobras la salud al instante.",
-    "Image": "images/perks/fuerzainterior.webp"
+    "Image": "images/perks/fuerzainterior.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 55,
     "Name": "Ni\u00F1ero",
     "CharacterId": 19,
     "Description": "Cada vez que descuelgas a un o una sobreviviente:\n\u003Cul\u003E\n\u003Cli\u003EObtiene un {YELLOW}10%{RESET} de {BLUE}Celeridad{RESET} durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ENo deja charcos de sangre durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ENo deja marcas de ara\u00F1azos durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EVes el aura del asesino durante {YELLOW}8{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/niniero.webp"
+    "Image": "images/perks/niniero.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 56,
     "Name": "Camarader\u00EDa",
     "CharacterId": 19,
     "Description": "Mientras batallas con un gancho y hay otro u otra sobreviviente a {YELLOW}16{RESET} metros de distancia, el temporizador se detiene durante {GREEN}26{RESET}/{CYAN}30{RESET}/{PURPLE}34{RESET} segundos.",
-    "Image": "images/perks/camaraderia.webp"
+    "Image": "images/perks/camaraderia.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 57,
     "Name": "Segundo Aliento",
     "CharacterId": 19,
     "Description": "Luego de curar a un o una sobreviviente {YELLOW}1{RESET}, si no tienes el efecto {ORANGE}Desesperanza{RESET}, cuando te descuelgan sufres {ORANGE}Desesperanza{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nLuego de {GREEN}28{RESET}/{CYAN}24{RESET}/{PURPLE}20{RESET} segundos, si no te derriban, te curas de forma instant\u00E1nea.",
-    "Image": "images/perks/segundoaliento.webp"
+    "Image": "images/perks/segundoaliento.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 58,
     "Name": "Golpe de Suerte",
     "CharacterId": 20,
     "Description": "Al tener heridas, durante un m\u00E1ximo de {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos:\n\u003Cul\u003E\n\u003Cli\u003ENo dejas charcos de sangre.\u003C/li\u003E\n\u003Cli\u003ENo dejas marcas de ara\u00F1azos.\u003C/li\u003E\n\u003C/ul\u003E\nPor cada segundo que pases curando a otro u otra sobreviviente, recarga la duraci\u00F3n {YELLOW}1{RESET} segundos.",
-    "Image": "images/perks/golpedesuerte.webp"
+    "Image": "images/perks/golpedesuerte.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 59,
     "Name": "Por Cualquier Medio",
     "CharacterId": 20,
     "Description": "Al estar al lado de una tarima derribada, usa el bot\u00F3n de Habilidad Activa 1 durante {GREEN}5{RESET}/{CYAN}4{RESET}/{PURPLE}3{RESET} segundos para restablecerla.\n\u003Cbr\u003E\u003Cbr\u003E\nVes el aura de las tarimas derribadas.",
-    "Image": "images/perks/porcualquiermedio.webp"
+    "Image": "images/perks/porcualquiermedio.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 60,
     "Name": "Fuga",
     "CharacterId": 20,
     "Description": "Al estar en un radio de {YELLOW}5{RESET} metros de una persona a la que est\u00E1n cargando:\n\u003Cul\u003E\n\u003Cli\u003EObtienes un {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET}% de {BLUE}Celeridad{RESET}.\u003C/li\u003E\n\u003Cli\u003EEl o la sobreviviente a cuestas forcejea un {YELLOW}25%{RESET} m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/fuga.webp"
+    "Image": "images/perks/fuga.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 61,
     "Name": "Extraoficialmente",
     "CharacterId": 21,
     "Description": "Hasta que se completen todos los generadores, cuando no est\u00E9s en un gancho, durante los siguientes {GREEN}30{RESET}/{CYAN}35{RESET}/{PURPLE}40{RESET} segundos:\n\u003Cul\u003E\n\u003Cli\u003EObtienes {BLUE}Resistencia{RESET}.\u003C/li\u003E\n\u003Cli\u003ETus gru\u00F1idos de dolor son un {YELLOW}100%{RESET} m\u00E1s silenciosos.\u003C/li\u003E\n\u003Cli\u003EEl asesino no puede ver tu aura.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/extraoficialmente.webp"
+    "Image": "images/perks/extraoficialmente.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 62,
     "Name": "Arenque Rojo",
     "CharacterId": 21,
     "Description": "Despu\u00E9s de reparar un generador durante al menos {YELLOW}1{RESET} segundos, ves su aura.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando te escondes en un casillero, el asesino recibe una alerta hacia el generador. Tiempo de recuperaci\u00F3n: {GREEN}25{RESET}/{CYAN}20{RESET}/{PURPLE}15{RESET} segundos.",
-    "Image": "images/perks/arenquerojo.webp"
+    "Image": "images/perks/arenquerojo.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 63,
     "Name": "Por la Gente",
     "CharacterId": 21,
     "Description": "Al no tener heridas y curar a otro u otra sobreviviente sin botiqu\u00EDn, usa el bot\u00F3n de Habilidad Activa 1 para curarlo o curarla de forma instant\u00E1nea:\n\u003Cul\u003E\n\u003Cli\u003ERecibes da\u00F1o.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Desesperanza{RESET} durante {GREEN}80{RESET}/{CYAN}70{RESET}/{PURPLE}60{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ETe conviertes en la obsesi\u00F3n.\u003C/li\u003E\n\u003C/ul\u003E\nAl inicio de la partida, tienes menos probabilidades de convertirte en la obsesi\u00F3n.",
-    "Image": "images/perks/porlagente.webp"
+    "Image": "images/perks/porlagente.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 64,
     "Name": "Defensa del Alma",
     "CharacterId": 22,
     "Description": "Al tener un maleficio, puedes recuperarte por completo.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que te recuperas por completo, obtienes {BLUE}Resistencia{RESET} durante {GREEN}4{RESET}/{CYAN}6{RESET}/{PURPLE}8{RESET} segundos. Tiempo de recuperaci\u00F3n: {YELLOW}30{RESET} segundos.",
-    "Image": "images/perks/defensadelalma.webp"
+    "Image": "images/perks/defensadelalma.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 65,
     "Name": "Pacto de Sangre",
     "CharacterId": 22,
     "Description": "Mientras no eres la obsesi\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003EMientras t\u00FA o la obsesi\u00F3n tengan heridas, ven su aura mutuamente.\u003C/li\u003E\n\u003Cli\u003ECuando terminas de curar a la obsesi\u00F3n o \u00E9l o ella termina de curarte, al estar a una distancia de {YELLOW}16{RESET} metros o menos, ambos reciben un {GREEN}5{RESET}/{CYAN}6{RESET}/{PURPLE}7{RESET}% de {BLUE}Celeridad{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nMientras eres la obsesi\u00F3n, si te cuelgan, otro u otra sobreviviente se convierte en la obsesi\u00F3n.\n\u003Cbr\u003E\u003Cbr\u003E\nAl inicio de la partida, tienes menos probabilidades de convertirte en la obsesi\u00F3n.",
-    "Image": "images/perks/pactodesangre.webp"
+    "Image": "images/perks/pactodesangre.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 66,
     "Name": "Alianza Reprimida",
     "CharacterId": 22,
     "Description": "Despu\u00E9s de reparar los generadores durante {GREEN}40{RESET}/{CYAN}35{RESET}/{PURPLE}30{RESET} segundos, al hacerlo por tu cuenta, usa el bot\u00F3n de Habilidad Activa 1 para bloquear ese generador durante {YELLOW}15{RESET} segundos.",
-    "Image": "images/perks/alianzareprimida.webp"
+    "Image": "images/perks/alianzareprimida.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 67,
     "Name": "Visionario",
     "CharacterId": 23,
     "Description": "En un radio de {YELLOW}32{RESET} metros de ti, ves el aura de los generadores.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que se complete un generador, el tiempo de recuperaci\u00F3n es de: {GREEN}20{RESET}/{CYAN}18{RESET}/{PURPLE}16{RESET} segundos.",
-    "Image": "images/perks/visionario.webp"
+    "Image": "images/perks/visionario.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 68,
     "Name": "Medidas Desesperadas",
     "CharacterId": 23,
     "Description": "Por cada sobreviviente herido/a, derribado/a o colgado/a:\n\u003Cul\u003E\n\u003Cli\u003ETe curas un {GREEN}16{RESET}/{CYAN}18{RESET}/{PURPLE}20{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ETe descuelgas un {GREEN}16{RESET}/{CYAN}18{RESET}/{PURPLE}20{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/medidasdesesperadas.webp"
+    "Image": "images/perks/medidasdesesperadas.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 69,
     "Name": "Dise\u00F1ado para Durar",
     "CharacterId": 23,
     "Description": "Al llevar un objeto consumido, luego de esconderte en un casillero durante {GREEN}12{RESET}/{CYAN}10{RESET}/{PURPLE}8{RESET} segundos, se recarga hasta un {YELLOW}99%{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que recargues un objeto de esta forma, sus cargas se reducen en un {YELLOW}33%{RESET}.",
-    "Image": "images/perks/diseniadoparadurar.webp"
+    "Image": "images/perks/diseniadoparadurar.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 70,
     "Name": "Detallista",
     "CharacterId": 24,
     "Description": "Al inicio de la partida, obtienes {YELLOW}4{RESET} distintivos.\n\u003Cbr\u003E\u003Cbr\u003E\nGasta {YELLOW}1{RESET} distintivo para hurgar en un cofre vac\u00EDo, hasta {YELLOW}2{RESET} veces por cofre.\n\u003Cbr\u003E\u003Cbr\u003E\nHurgas cofres un {GREEN}40{RESET}/{CYAN}60{RESET}/{PURPLE}80{RESET}% m\u00E1s r\u00E1pido.",
-    "Image": "images/perks/detallista.webp"
+    "Image": "images/perks/detallista.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 71,
     "Name": "Enga\u00F1o",
     "CharacterId": 24,
     "Description": "Cada vez que intentas entrar a toda velocidad a un casillero:\n\u003Cul\u003E\n\u003Cli\u003ENo entras al casillero.\u003C/li\u003E\n\u003Cli\u003EEl asesino recibe una alerta.\u003C/li\u003E\n\u003Cli\u003ENo dejas charcos de sangre durante {YELLOW}5{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ENo dejas marcas de ara\u00F1azos durante {YELLOW}5{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\nTiempo de recuperaci\u00F3n: {GREEN}25{RESET}/{CYAN}20{RESET}/{PURPLE}15{RESET} segundos.",
-    "Image": "images/perks/enganio.webp"
+    "Image": "images/perks/enganio.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 72,
     "Name": "Lucha de Poderes",
     "CharacterId": 24,
     "Description": "Cuando te cargue el asesino, tengas por lo menos un {GREEN}25{RESET}/{CYAN}20{RESET}/{PURPLE}15{RESET}% de forcejeo y est\u00E9s al lado de una tarima en posici\u00F3n vertical, puedes derribarla para aturdir al asesino.\n\u003Cbr\u003E\u003Cbr\u003E\nSi te derribaron, ves el aura de las tarimas en posici\u00F3n vertical.",
-    "Image": "images/perks/luchadepoderes.webp"
+    "Image": "images/perks/luchadepoderes.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 73,
     "Name": "Contramedida",
     "CharacterId": 26,
     "Description": "Al inicio de la partida, obtienes {YELLOW}1{RESET} distintivo.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que purifiques un t\u00F3tem, obtienes {YELLOW}1{RESET} distintivo. Luego, ves el aura del t\u00F3tem m\u00E1s lejano durante {GREEN}10{RESET}/{CYAN}12{RESET}/{PURPLE}14{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nPor cada distintivo, purificas t\u00F3tems un {YELLOW}25%{RESET} m\u00E1s r\u00E1pido.\n",
-    "Image": "images/perks/contramedida.webp"
+    "Image": "images/perks/contramedida.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 74,
     "Name": "Resurgimiento",
     "CharacterId": 26,
     "Description": "Cada vez que te descuelguen, obtienes un {GREEN}50{RESET}/{CYAN}60{RESET}/{PURPLE}70{RESET}% de progreso de curaci\u00F3n.",
-    "Image": "images/perks/resurgimiento.webp"
+    "Image": "images/perks/resurgimiento.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 75,
     "Name": "Mina Cegadora",
     "CharacterId": 26,
     "Description": "Tras reparar un {YELLOW}40%{RESET} de los generadores, al estar al lado de un generador, usa F para colocar una trampa que dure {GREEN}100{RESET}/{CYAN}110{RESET}/{PURPLE}120{RESET} segundos. Todos los sobrevivientes ven el aura de ese generador durante ese per\u00EDodo.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando el asesino da\u00F1e ese generador, la trampa explota. Entonces:\n\u003Cbr\u003E\u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003EQuedar\u00E1 aturdido durante {YELLOW}4{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ETodos los que est\u00E9n cerca y miren la detonaci\u00F3n ser\u00E1n cegados.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/minacegadora.webp"
+    "Image": "images/perks/minacegadora.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 76,
     "Name": "V\u00EDa R\u00E1pida",
     "CharacterId": 25,
     "Description": "Cada vez que descuelgas a otro u otra sobreviviente, obtienes {YELLOW}1{RESET} distintivo, hasta un m\u00E1ximo de {GREEN}1{RESET}/{CYAN}2{RESET}/{PURPLE}3{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras reparas, cada vez que logres una prueba de habilidad excelente, gasta todos los distintivos. Por cada distintivo que gastes, el generador obtiene un {YELLOW}5%{RESET} de progreso permanente.",
-    "Image": "images/perks/viarapida.webp"
+    "Image": "images/perks/viarapida.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 77,
     "Name": "\u00C9xito Arrollador",
     "CharacterId": 25,
     "Description": "Cada vez que aturdes al asesino con una tarima:\n\u003Cul\u003E\n\u003Cli\u003EObtienes un {YELLOW}50%{RESET} de {BLUE}Celeridad{RESET} durante {YELLOW}4{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Agotado{RESET} durante {GREEN}30{RESET}/{CYAN}25{RESET}/{PURPLE}20{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/exitoarrollador.webp"
+    "Image": "images/perks/exitoarrollador.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 78,
     "Name": "Autoconservaci\u00F3n",
     "CharacterId": 25,
     "Description": "Cada vez que cuelgan a otro u otra sobreviviente, sufres el efecto {BLUE}Elusi\u00F3n{RESET} durante {GREEN}13{RESET}/{CYAN}14{RESET}/{PURPLE}15{RESET} segundos.",
-    "Image": "images/perks/autoconservacion.webp"
+    "Image": "images/perks/autoconservacion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 82,
     "Name": "Aguante el Dolor",
     "CharacterId": 27,
     "Description": "Mientras te curas, t\u00FA y los sobrevivientes curados no hacen ruido ni emiten gru\u00F1idos de dolor.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando pierdas una prueba de habilidad b\u00E1sica:\n\u003Cul\u003E\n\u003Cli\u003ESolo pierdes un {GREEN}3{RESET}/{CYAN}2{RESET}/{PURPLE}1{RESET}% del progreso.\u003C/li\u003E\n\u003Cli\u003EEl asesino no recibe la alerta.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/aguanteeldolor.webp"
+    "Image": "images/perks/aguanteeldolor.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 83,
     "Name": "Granada Aturdidora",
     "CharacterId": 27,
     "Description": "Tras reparar un {GREEN}50{RESET}/{CYAN}45{RESET}/{PURPLE}40{RESET}% de los generadores, mientras te escondes en un casillero, usa el bot\u00F3n de Habilidad Activa 1 para fabricar una granada aturdidora.\n\u003Cbr\u003E\u003Cbr\u003E\nAl usar la granada aturdidora:\n\u003Cul\u003E\n\u003Cli\u003ECegar\u00E1 a todos los que est\u00E9n cerca y miren la detonaci\u00F3n.\u003C/li\u003E\n\u003Cli\u003EAlertar\u00E1 al asesino.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/granadaaturdidora.webp"
+    "Image": "images/perks/granadaaturdidora.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 84,
     "Name": "Esp\u00EDritu de Novato",
     "CharacterId": 27,
     "Description": "Tras alcanzar {GREEN}5{RESET}/{CYAN}4{RESET}/{PURPLE}3{RESET} pruebas de habilidad de reparaci\u00F3n b\u00E1sica, mientras se revierte un generador, ves su aura.",
-    "Image": "images/perks/espiritudenovato.webp"
+    "Image": "images/perks/espiritudenovato.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 85,
     "Name": "Clarividencia",
     "CharacterId": 28,
     "Description": "Cada vez que bendigas o purifiques un t\u00F3tem, mientras no tengas alg\u00FAn objeto, usa M2 para, hasta por {GREEN}10{RESET}/{CYAN}11{RESET}/{PURPLE}12{RESET} segundos y al estar en un radio de {YELLOW}64{RESET} metros:\n\u003Cul\u003E\n\u003Cli\u003EVer el aura de cofres.\u003C/li\u003E\n\u003Cli\u003EVer el aura de los interruptores de las puertas de salida.\u003C/li\u003E\n\u003Cli\u003EVer el aura de los generadores.\u003C/li\u003E\n\u003Cli\u003EVer el aura de la trampilla.\u003C/li\u003E\n\u003Cli\u003EVer el aura de los ganchos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/clarividencia.webp"
+    "Image": "images/perks/clarividencia.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 86,
     "Name": "Bendici\u00F3n: C\u00EDrculo de Curaci\u00F3n",
     "CharacterId": 28,
     "Description": "Al estar al lado de un t\u00F3tem, usa el bot\u00F3n de Habilidad Activa 1 para bendecirlo, lo que crea un t\u00F3tem de bendici\u00F3n \u00FAnico que combina todas las bendiciones.\n\u003Cbr\u003E\u003Cbr\u003E\nLos sobrevivientes que est\u00E9n en el radio de la bendici\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003EMientras se curan sin un botiqu\u00EDn, curan a los dem\u00E1s un {GREEN}50{RESET}/{CYAN}75{RESET}/{PURPLE}100{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EAl estar heridos, los dem\u00E1s sobrevivientes ven sus auras.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/bendicioncirculodelacuracion.webp"
+    "Image": "images/perks/bendicioncirculodelacuracion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 87,
     "Name": "Bendici\u00F3n: Paso Sombr\u00EDo",
     "CharacterId": 28,
     "Description": "Al estar al lado de un t\u00F3tem, usa el bot\u00F3n de Habilidad Activa 1 para bendecirlo, lo que crea un t\u00F3tem de bendici\u00F3n \u00FAnico que combina todas las bendiciones. Los sobrevivientes que est\u00E9n en el radio de la bendici\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003ENo dejan marcas de ara\u00F1azos.\u003C/li\u003E\n\u003Cli\u003EEl asesino no puede ver su aura.\u003C/li\u003E\n\u003C/ul\u003E\nAl salir del alcance, esto termina despu\u00E9s de {GREEN}2{RESET}/{CYAN}3{RESET}/{PURPLE}4{RESET} segundos.",
-    "Image": "images/perks/bendicionpasosombrio.webp"
+    "Image": "images/perks/bendicionpasosombrio.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 88,
     "Name": "Superar",
     "CharacterId": 29,
     "Description": "Cada vez que recibes da\u00F1o:\n\u003Cul\u003E\n\u003Cli\u003EMantienes tu mejora de velocidad durante {YELLOW}2{RESET} segundos adicionales.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Agotado{RESET} durante {GREEN}60{RESET}/{CYAN}50{RESET}/{PURPLE}40{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/superar.webp"
+    "Image": "images/perks/superar.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 89,
     "Name": "Correcci\u00F3n",
     "CharacterId": 29,
     "Description": "Al inicio de la partida, obtienes {GREEN}1{RESET}/{CYAN}2{RESET}/{PURPLE}3{RESET} distintivos, hasta un m\u00E1ximo de {YELLOW}5{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que logras una prueba de habilidad b\u00E1sica excelente, obtienes {YELLOW}1{RESET} distintivo.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando otro u otra sobreviviente falle una prueba de habilidad b\u00E1sica, gasta {YELLOW}1{RESET} distintivo:\n\u003Cul\u003E\n\u003Cli\u003ELa prueba de habilidad fallida se convierte en una prueba de habilidad buena.\u003C/li\u003E\n\u003Cli\u003EVes el aura del o la sobreviviente durante {YELLOW}6{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/correccion.webp"
+    "Image": "images/perks/correccion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 90,
     "Name": "Bendici\u00F3n: Exponencial",
     "CharacterId": 29,
     "Description": "Al estar al lado de un t\u00F3tem, usa E para bendecirlo, lo que crea un t\u00F3tem de bendici\u00F3n \u00FAnico que combina todas las bendiciones.\n\u003Cbr\u003E\u003Cbr\u003E\nLos sobrevivientes derribados que est\u00E9n en el radio de la bendici\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003ESe recuperan un {GREEN}90{RESET}/{CYAN}95{RESET}/{PURPLE}100{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EPueden recuperarse por completo.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/bendicionexponencial.webp"
+    "Image": "images/perks/bendicionexponencial.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 91,
     "Name": "Consejos de Pap\u00E1",
     "CharacterId": 30,
     "Description": "Cada vez que aturdas al asesino, durante {GREEN}5{RESET}/{CYAN}6{RESET}/{PURPLE}7{RESET} segundos:\n\u003Cul\u003E\n\u003Cli\u003ENo emites gru\u00F1idos de dolor.\u003C/li\u003E\n\u003Cli\u003ENo dejas charcos de sangre.\u003C/li\u003E\n\u003Cli\u003ENo dejas marcas de ara\u00F1azos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/consejosdepapa.webp"
+    "Image": "images/perks/consejosdepapa.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 92,
     "Name": "Conexi\u00F3n Emp\u00E1tica",
     "CharacterId": 30,
     "Description": "Curas a otros sobrevivientes un {GREEN}30{RESET}/{CYAN}35{RESET}/{PURPLE}40{RESET}% m\u00E1s r\u00E1pido.\n\u003Cbr\u003E\u003Cbr\u003E\nLos sobrevivientes heridos ven tu aura.",
-    "Image": "images/perks/conexionempatica.webp"
+    "Image": "images/perks/conexionempatica.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 93,
     "Name": "Bendici\u00F3n: Teor\u00EDa Oscura",
     "CharacterId": 30,
     "Description": "Al estar al lado de un t\u00F3tem, usa el bot\u00F3n de Habilidad Activa 1 para bendecirlo, lo que crea un t\u00F3tem de bendici\u00F3n \u00FAnico que combina todas las bendiciones.\n\u003Cbr\u003E\u003Cbr\u003E\nLos sobrevivientes que est\u00E9n en el radio de la bendici\u00F3n obtienen un {YELLOW}3%{RESET} de {BLUE}Celeridad{RESET}. Al salir del alcance, esto termina despu\u00E9s de {GREEN}2{RESET}/{CYAN}3{RESET}/{PURPLE}4{RESET} segundos.\n",
-    "Image": "images/perks/bendicionteoriaoscura.webp"
+    "Image": "images/perks/bendicionteoriaoscura.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 94,
     "Name": "Enfoque Interno",
     "CharacterId": 31,
     "Description": "Cada vez que el asesino inflija da\u00F1o a otro u otra sobreviviente, ves el aura del asesino durante {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nVes las marcas de ara\u00F1azos de otros sobrevivientes.",
-    "Image": "images/perks/enfoqueinterno.webp"
+    "Image": "images/perks/enfoqueinterno.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 95,
     "Name": "Manifiesto Residual",
     "CharacterId": 31,
     "Description": "Cada vez que ciegas al asesino, este sufre el efecto {ORANGE}Ceguera{RESET} durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nPuedes hurgar cofres {YELLOW}1{RESET} vez. La primera vez que hurgues dentro de un cofre, este contendr\u00E1 una linterna poco com\u00FAn.",
-    "Image": "images/perks/manifiestoresidual.webp"
+    "Image": "images/perks/manifiestoresidual.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 96,
     "Name": "Demasiado Entusiasta",
     "CharacterId": 31,
     "Description": "Cada vez que bendices o purificas un t\u00F3tem, hasta que recibes da\u00F1o, reparas hasta un {GREEN}8{RESET}/{CYAN}9{RESET}/{PURPLE}10{RESET}% m\u00E1s r\u00E1pido. Si ese t\u00F3tem era un t\u00F3tem de maleficio, el efecto se duplica.",
-    "Image": "images/perks/demasiadoentusiasta.webp"
+    "Image": "images/perks/demasiadoentusiasta.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 97,
     "Name": "Sistema de Espionaje",
     "CharacterId": 32,
     "Description": "Tras reparar un {YELLOW}40%{RESET} de los generadores, al estar al lado de un generador, usa F para instalar una trampa que dure {GREEN}100{RESET}/{CYAN}110{RESET}/{PURPLE}120{RESET} segundos, o hasta que el asesino da\u00F1e ese generador. Todos los sobrevivientes ven el aura de ese generador durante ese per\u00EDodo.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras el asesino est\u00E9 a {YELLOW}14{RESET} metros de dicho generador, todos los sobrevivientes ven el aura del asesino.",
-    "Image": "images/perks/sistemadeespionaje.webp"
+    "Image": "images/perks/sistemadeespionaje.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 98,
     "Name": "Curaci\u00F3n Reactiva",
     "CharacterId": 32,
     "Description": "Al tener heridas, cada vez que otro u otra sobreviviente a {YELLOW}32{RESET} metros de ti reciba da\u00F1o, obtienes un {GREEN}40{RESET}/{CYAN}45{RESET}/{PURPLE}50{RESET}% de progreso de curaci\u00F3n faltante.",
-    "Image": "images/perks/curacionreactiva.webp"
+    "Image": "images/perks/curacionreactiva.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 99,
     "Name": "Perfil Bajo",
     "CharacterId": 32,
     "Description": "Cuando el resto de los sobrevivientes est\u00E9n derribados o colgados, durante {GREEN}70{RESET}/{CYAN}80{RESET}/{PURPLE}90{RESET} segundos:\n\u003Cul\u003E\n\u003Cli\u003ENo emites gru\u00F1idos de dolor.\u003C/li\u003E\n\u003Cli\u003ENo dejas charcos de sangre.\u003C/li\u003E\n\u003Cli\u003ENo dejas marcas de ara\u00F1azos.\u003C/li\u003E\n\u003C/ul\u003E\n",
-    "Image": "images/perks/perfilbajo.webp"
+    "Image": "images/perks/perfilbajo.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 100,
     "Name": "Mejor que Nuevo",
     "CharacterId": 33,
     "Description": "Cuando terminas de curar a otro u otra sobreviviente, hasta que recibe da\u00F1o:\n\u003Cul\u003E\n\u003Cli\u003EBendice y purifica t\u00F3tems un {GREEN}40{RESET}/{CYAN}45{RESET}/{PURPLE}50{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ECura un {GREEN}40{RESET}/{CYAN}45{RESET}/{PURPLE}50{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EDesbloquea cofres un {GREEN}40{RESET}/{CYAN}45{RESET}/{PURPLE}50{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/mejorquenuevo.webp"
+    "Image": "images/perks/mejorquenuevo.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 101,
     "Name": "Consuelo",
     "CharacterId": 33,
     "Description": "Una vez por estado de gancho, al estar a {YELLOW}6{RESET} metros de un o una sobreviviente en el gancho, usa F para detener el progreso de sacrificio durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos.",
-    "Image": "images/perks/consuelo.webp"
+    "Image": "images/perks/consuelo.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 102,
     "Name": "Hiperconcentraci\u00F3n",
     "CharacterId": 33,
     "Description": "Cada vez que alcances una prueba de habilidad b\u00E1sica excelente, obtienes {YELLOW}1{RESET} distintivo, hasta un m\u00E1ximo de {YELLOW}6{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPor cada distintivo, las pruebas de habilidad b\u00E1sicas:\n\u003Cul\u003E\n\u003Cli\u003EAparecen un {YELLOW}4%{RESET} m\u00E1s seguido.\u003C/li\u003E\n\u003Cli\u003EGiran un {YELLOW}4%{RESET} m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ECada vez que alcances una prueba de habilidad b\u00E1sica excelente, otorgan un {GREEN}10{RESET}/{CYAN}20{RESET}/{PURPLE}30{RESET}% m\u00E1s de progreso.\u003C/li\u003E\n\u003C/ul\u003E\nCada vez que falles una prueba de habilidad b\u00E1sica, logres una prueba de habilidad buena o dejes de curar o reparar, perder\u00E1s todos los distintivos.",
-    "Image": "images/perks/hiperconcentracion.webp"
+    "Image": "images/perks/hiperconcentracion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 103,
     "Name": "Energ\u00EDa Potencial",
     "CharacterId": 34,
     "Description": "Al reparar, usa el bot\u00F3n de Habilidad Activa 2 para obtener distintivos en vez de progreso, hasta un m\u00E1ximo de {GREEN}10{RESET}/{CYAN}15{RESET}/{PURPLE}20{RESET} distintivos.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras tengas por lo menos {YELLOW}1{RESET} distintivo, puedes usar el bot\u00F3n de Habilidad Activa 2 para gastarlos todos y obtener un {YELLOW}1%{RESET} de progreso por cada distintivo gastado.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que recibas da\u00F1o, perder\u00E1s todos los distintivos.",
-    "Image": "images/perks/energiapotencial.webp"
+    "Image": "images/perks/energiapotencial.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 104,
     "Name": "Conocimiento de la Niebla",
     "CharacterId": 34,
     "Description": "Al reparar, cada vez que logres una prueba de habilidad b\u00E1sica excelente, ves el aura del asesino durante {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET} segundos.",
-    "Image": "images/perks/conocimientodelaniebla.webp"
+    "Image": "images/perks/conocimientodelaniebla.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 105,
     "Name": "T\u00E1ctica R\u00E1pida",
     "CharacterId": 34,
     "Description": "Mientras te persigue el asesino:\n\u003Cul\u003E\n\u003Cli\u003EVes el aura de los dem\u00E1s sobrevivientes.\u003C/li\u003E\n\u003Cli\u003ELos dem\u00E1s sobrevivientes reparan un {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003C/ul\u003E\nCada vez que recibas da\u00F1o, el tiempo de recuperaci\u00F3n es de: {YELLOW}40{RESET} segundos.",
-    "Image": "images/perks/tacticarapida.webp"
+    "Image": "images/perks/tacticarapida.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 106,
     "Name": "Competencia Amistosa",
     "CharacterId": 35,
     "Description": "Cada vez que termines de reparar un generador con al menos {YELLOW}1{RESET} sobreviviente m\u00E1s, los que ya terminaron de repararlo lo har\u00E1n un {YELLOW}10%{RESET} m\u00E1s r\u00E1pido durante {GREEN}80{RESET}/{CYAN}85{RESET}/{PURPLE}90{RESET} segundos.\n",
-    "Image": "images/perks/competenciaamistosa.webp"
+    "Image": "images/perks/competenciaamistosa.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 107,
     "Name": "Trabajo en Equipo: El Poder de Dos",
     "CharacterId": 35,
     "Description": "Cada vez que termines de curar a otro u otra sobreviviente, al estar a {GREEN}8{RESET}/{CYAN}12{RESET}/{PURPLE}16{RESET} metros entre s\u00ED, ambos obtienen un {YELLOW}5%{RESET} de {BLUE}Celeridad{RESET}. Cuando cualquiera de ustedes salga del alcance, esto termina {YELLOW}4{RESET} segundos despu\u00E9s.",
-    "Image": "images/perks/trabajoenequipoelpoderdedos.webp"
+    "Image": "images/perks/trabajoenequipoelpoderdedos.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 108,
     "Name": "Su\u00E9ltate",
     "CharacterId": 35,
     "Description": "Mientras te persigue el asesino, cada vez que saltas a velocidad media o r\u00E1pida:\n\u003Cul\u003E\n\u003Cli\u003ETus saltos a velocidad media o r\u00E1pida son silenciosos hasta por {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EDurante ese tiempo, los saltos a velocidad media o r\u00E1pida restablecen el temporizador.\u003C/li\u003E\n\u003C/ul\u003E\nTiempo de recuperaci\u00F3n: {YELLOW}45{RESET} segundos.",
-    "Image": "images/perks/sueltate.webp"
+    "Image": "images/perks/sueltate.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 109,
     "Name": "Impulso Sangriento",
     "CharacterId": 36,
     "Description": "Hasta que se completen todos los generadores, cuando no est\u00E9s en un gancho, durante los siguientes {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos, mientras est\u00E9s {ORANGE}Agotado{RESET}, usa el bot\u00F3n de Habilidad Activa 1 para eliminar el efecto {ORANGE}Agotado{RESET} de inmediato.\n\u003Cbr\u003E\u003Cbr\u003E\nSe desactiva con las acciones destacadas.",
-    "Image": "images/perks/impulsosangriento.webp"
+    "Image": "images/perks/impulsosangriento.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 110,
     "Name": "Trabajo en Equipo: Sigilo Colectivo",
     "CharacterId": 36,
     "Description": "Cada vez que otro u otra sobreviviente termine de curarte, al estar a {GREEN}8{RESET}/{CYAN}12{RESET}/{PURPLE}16{RESET} metros entre s\u00ED, no dejan marcas de ara\u00F1azos. Cuando cualquiera de ustedes salga del alcance, esto termina {YELLOW}4{RESET} segundos despu\u00E9s.",
-    "Image": "images/perks/trabajoenequiposigilocolectivo.webp"
+    "Image": "images/perks/trabajoenequiposigilocolectivo.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 111,
     "Name": "Personaje Secundario",
     "CharacterId": 36,
     "Description": "Cada vez que el asesino carga a otro u otra sobreviviente, durante los siguientes {YELLOW}10{RESET} segundos, al empezar a correr:\n\u003Cul\u003E\n\u003Cli\u003EObtienes un {YELLOW}50%{RESET} de {BLUE}Celeridad{RESET} durante {YELLOW}5{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Agotado{RESET} durante {GREEN}30{RESET}/{CYAN}25{RESET}/{PURPLE}20{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/personajesecundario.webp"
+    "Image": "images/perks/personajesecundario.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 112,
     "Name": "Solucionador de Problemas",
     "CharacterId": 37,
     "Description": "Mientras te persigue el asesino:\n\u003Cul\u003E\n\u003Cli\u003EVes el aura del generador con el mayor progreso de reparaci\u00F3n.\u003C/li\u003E\n\u003Cli\u003ECada vez que dejes caer una tarima, ves el aura del asesino durante {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\nCuando el asesino deja de perseguirte, esto termina despu\u00E9s de {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} segundos.",
-    "Image": "images/perks/solucionadordeproblemas.webp"
+    "Image": "images/perks/solucionadordeproblemas.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 113,
     "Name": "Nacido para Esto",
     "CharacterId": 37,
     "Description": "Si tienes heridas, cada vez que termines de curar a otro u otra sobreviviente, obtienes el efecto {BLUE}Resistencia{RESET} durante {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nSi est\u00E1s corriendo y tienes {ORANGE}Herida profunda{RESET}, recibes un {GREEN}1{RESET}/{CYAN}2{RESET}/{PURPLE}3{RESET}% de {BLUE}Celeridad{RESET}.",
-    "Image": "images/perks/nacidoparaesto.webp"
+    "Image": "images/perks/nacidoparaesto.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 114,
     "Name": "Chatarrero",
     "CharacterId": 37,
     "Description": "Si est\u00E1s reparando mientras tu caja de herramientas est\u00E1 vac\u00EDa, cada vez que logres una prueba de habilidad b\u00E1sica excelente, obtienes {YELLOW}1{RESET} distintivo.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando tengas {YELLOW}5{RESET} distintivos, g\u00E1stalos todos:\n\u003Cul\u003E\n\u003Cli\u003ETu caja de herramientas se recargar\u00E1 al instante.\u003C/li\u003E\n\u003Cli\u003ETus reparaciones ser\u00E1n un {YELLOW}50%{RESET} m\u00E1s lentas durante {GREEN}40{RESET}/{CYAN}35{RESET}/{PURPLE}30{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\nPuedes hurgar cofres {YELLOW}1{RESET} vez. La primera vez que hurgas en un cofre, este contendr\u00E1 una caja de herramientas poco com\u00FAn.",
-    "Image": "images/perks/chatarrero.webp"
+    "Image": "images/perks/chatarrero.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 115,
     "Name": "Dramaturgia",
     "CharacterId": 38,
     "Description": "Cuando no tengas heridas y est\u00E9s corriendo, usa el bot\u00F3n de Habilidad Activa 1:\n\u003Cul\u003E\n\u003Cli\u003EObtienes un {YELLOW}25%{RESET} de {BLUE}Celeridad{RESET} durante {YELLOW}2{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Agotado{RESET} durante {GREEN}60{RESET}/{CYAN}50{RESET}/{PURPLE}40{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\nLuego, algo de lo siguiente sucede de forma aleatoria:\n\u003Cul\u003E\n\u003Cli\u003EObtienes un {YELLOW}25%{RESET} de {BLUE}Celeridad{RESET} durante {YELLOW}2{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Expuesto{RESET} durante {YELLOW}12{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EObtienes un objeto raro aleatorio con accesorios aleatorios.\u003C/li\u003E\n\u003Cli\u003EGritas, pero no pasa nada.\u003C/li\u003E\n\u003C/ul\u003E\nEl mismo efecto no puede suceder dos veces seguidas.",
-    "Image": "images/perks/dramaturgia.webp"
+    "Image": "images/perks/dramaturgia.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 116,
     "Name": "Compa\u00F1ero de Escena",
     "CharacterId": 38,
     "Description": "Mientras est\u00E1s en el radio de terror del asesino, cada vez que lo miras:\n\u003Cul\u003E\n\u003Cli\u003EGritas, luego ves el aura del asesino durante {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003EHay un {YELLOW}50%{RESET} de probabilidad de que vuelvas a gritar. Si lo haces, ves el aura del asesino durante {YELLOW}2{RESET} segundos m\u00E1s.\u003C/li\u003E\n\u003C/ul\u003E\nTiempo de recuperaci\u00F3n: {YELLOW}40{RESET} segundos.",
-    "Image": "images/perks/companierodeescena.webp"
+    "Image": "images/perks/companierodeescena.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 117,
     "Name": "Giro Argumental",
     "CharacterId": 38,
     "Description": "Al tener heridas, estar en cuclillas e inm\u00F3vil, usa el bot\u00F3n de Habilidad Activa 2 para acostarte en el suelo sin hacer ruido.\n\u003Cbr\u003E\u003Cbr\u003E\nAl estar en esta posici\u00F3n, una vez por partida:\n\u003Cul\u003E\n\u003Cli\u003ENo emites gru\u00F1idos de dolor.\u003C/li\u003E\n\u003Cli\u003ENo dejas charcos de sangre.\u003C/li\u003E\n\u003Cli\u003ETe recuperas un {YELLOW}25%{RESET} m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EPuedes recuperarte por completo.\u003C/li\u003E\n\u003C/ul\u003E\nCada vez que te recuperas de esta forma:\n\u003Cul\u003E\n\u003Cli\u003EObtienes un {YELLOW}50%{RESET} de {BLUE}Celeridad{RESET} durante {GREEN}2{RESET}/{CYAN}3{RESET}/{PURPLE}4{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ETe curas al instante.\u003C/li\u003E\n\u003C/ul\u003E\nEsta habilidad puede volver a activarse una vez que se completan todos los generadores.",
-    "Image": "images/perks/giroargumental.webp"
+    "Image": "images/perks/giroargumental.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 118,
     "Name": "Trampa Qu\u00EDmica",
     "CharacterId": 39,
     "Description": "Tras reparar un {YELLOW}20%{RESET} de los generadores, al estar al lado de una tarima derribada, usa F para instalar una trampa que dure {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos. Todos los sobrevivientes ven el aura de esa tarima durante ese per\u00EDodo.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando el asesino rompa la tarima, la trampa explota y obtiene un {YELLOW}50%{RESET} de {ORANGE}Entorpecimiento{RESET} durante {YELLOW}4{RESET} segundos.",
-    "Image": "images/perks/trampaquimica.webp"
+    "Image": "images/perks/trampaquimica.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 119,
     "Name": "\u00C1gil",
     "CharacterId": 39,
     "Description": "Cuando no tengas heridas y est\u00E9s corriendo, el asesino no escuchar\u00E1 tus pisadas.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando realizas una acci\u00F3n r\u00E1pida, el tiempo de recuperaci\u00F3n es de: {GREEN}14{RESET}/{CYAN}12{RESET}/{PURPLE}10{RESET} segundos.",
-    "Image": "images/perks/agil.webp"
+    "Image": "images/perks/agil.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 120,
     "Name": "Estrella de la Suerte",
     "CharacterId": 39,
     "Description": "Mientras te escondes en un casillero, no emites gru\u00F1idos de dolor.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que sales de un casillero, durante {YELLOW}30{RESET} segundos:\n\u003Cul\u003E\n\u003Cli\u003EVes el aura del generador m\u00E1s cercano.\u003C/li\u003E\n\u003Cli\u003EVes el aura de otros sobrevivientes.\u003C/li\u003E\n\u003Cli\u003ENo emites gru\u00F1idos de dolor.\u003C/li\u003E\n\u003Cli\u003ENo dejas charcos de sangre.\u003C/li\u003E\n\u003C/ul\u003E\nTiempo de recuperaci\u00F3n: {GREEN}35{RESET}/{CYAN}30{RESET}/{PURPLE}25{RESET} segundos.",
-    "Image": "images/perks/estrelladelasuerte.webp"
+    "Image": "images/perks/estrelladelasuerte.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 121,
     "Name": "Campe\u00F3n de la Luz",
     "CharacterId": 40,
     "Description": "Mientras usas la linterna, obtienes un {YELLOW}50%{RESET} de {BLUE}Celeridad{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que ciegas al asesino, obtiene un {YELLOW}20%{RESET} de {ORANGE}Entorpecimiento{RESET} durante {YELLOW}6{RESET} segundos. Tiempo de recuperaci\u00F3n: {GREEN}60{RESET}/{CYAN}50{RESET}/{PURPLE}40{RESET} segundos.",
-    "Image": "images/perks/campeondelaluz.webp"
+    "Image": "images/perks/campeondelaluz.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 122,
     "Name": "Bendici\u00F3n: Iluminaci\u00F3n",
     "CharacterId": 40,
     "Description": "Al estar al lado de un t\u00F3tem, usa E para bendecirlo, lo que crea un t\u00F3tem de bendici\u00F3n \u00FAnico que combina todas las bendiciones.\n\u003Cbr\u003E\u003Cbr\u003E\nLos sobrevivientes que est\u00E9n en el radio de la bendici\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003EVen el aura de los cofres.\u003C/li\u003E\n\u003Cli\u003EVen el aura de los generadores.\u003C/li\u003E\n\u003C/ul\u003E\nCuando tengas un t\u00F3tem de bendici\u00F3n, bendices un {GREEN}150{RESET}/{CYAN}175{RESET}/{PURPLE}200{RESET}% m\u00E1s r\u00E1pido.",
-    "Image": "images/perks/bendicioniluminacion.webp"
+    "Image": "images/perks/bendicioniluminacion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 123,
     "Name": "Fecha L\u00EDmite",
     "CharacterId": 40,
     "Description": "Al tener heridas, las pruebas de habilidad b\u00E1sica:\n\u003Cul\u003E\n\u003Cli\u003ETienen un {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET}% de mayor probabilidad de aparecer.\u003C/li\u003E\n\u003Cli\u003EAparecen en lugares aleatorios.\u003C/li\u003E\n\u003C/ul\u003E\nCada vez que falles una prueba de habilidad b\u00E1sica, pierdes un {YELLOW}50%{RESET} de progreso.",
-    "Image": "images/perks/fechalimite.webp"
+    "Image": "images/perks/fechalimite.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 124,
     "Name": "Invocaci\u00F3n: Ara\u00F1as Tejedoras",
     "CharacterId": 41,
     "Description": "Al estar en el s\u00F3tano al lado del c\u00EDrculo, usa el bot\u00F3n de Habilidad Activa 1 para invocar. Durante la invocaci\u00F3n, otros sobrevivientes pueden ver tu aura y unirse a la acci\u00F3n.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando se completa la invocaci\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003ETodos los generadores obtienen {GREEN}8{RESET}/{CYAN}9{RESET}/{PURPLE}10{RESET} cargas permanentes.\u003C/li\u003E\n\u003Cli\u003ERecibes heridas.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Desesperanza{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nCada invocaci\u00F3n puede completarse solo una vez por partida.",
-    "Image": "images/perks/invocacionaraniastejedoras.webp"
+    "Image": "images/perks/invocacionaraniastejedoras.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 125,
     "Name": "Fortaleza en las Sombras",
     "CharacterId": 41,
     "Description": "Al estar en el s\u00F3tano:\n\u003Cul\u003E\n\u003Cli\u003EPuedes curarte por tu cuenta, pero un {YELLOW}30%{RESET} m\u00E1s lento.\u003C/li\u003E\n\u003Cli\u003ECada vez que termines de curarte, ver\u00E1s el aura del asesino durante {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/fortalezaenlassombras.webp"
+    "Image": "images/perks/fortalezaenlassombras.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 126,
     "Name": "Malicia",
     "CharacterId": 41,
     "Description": "Al estar en el s\u00F3tano, puedes descolgarte por tu cuenta.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que te descuelgan, ves el aura del asesino durante {GREEN}16{RESET}/{CYAN}18{RESET}/{PURPLE}20{RESET} segundos.",
-    "Image": "images/perks/malicia.webp"
+    "Image": "images/perks/malicia.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 127,
     "Name": "Ilusi\u00F3n Reflejada",
     "CharacterId": 42,
     "Description": "Tras reparar un {YELLOW}20%{RESET} de los generadores, mientras est\u00E9s al lado de un cofre, de un interruptor de puerta de salida, de un generador o de un t\u00F3tem, usa el bot\u00F3n de Habilidad Activa 2 para crear una ilusi\u00F3n est\u00E1tica durante {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos.",
-    "Image": "images/perks/ilusionreflejada.webp"
+    "Image": "images/perks/ilusionreflejada.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 128,
     "Name": "Inspiraci\u00F3n B\u00E1rdica",
     "CharacterId": 42,
     "Description": "Mientras est\u00E9s inm\u00F3vil, usa el bot\u00F3n de Habilidad Activa 1 para avanzar, lo que potenciar\u00E1 a todos los sobrevivientes en un radio de {YELLOW}16{RESET} metros hasta por {YELLOW}15{RESET} segundos. Mientras est\u00E9s avanzando, los dem\u00E1s sobrevivientes ver\u00E1n tu aura. Lanza un d20:\n\u003Cul\u003E\n\u003Cli\u003E1 | Gritas, pero no pasa nada.\u003C/li\u003E\n\u003Cli\u003E2-10 | Las pruebas de habilidad b\u00E1sicas te dan un {YELLOW}1%{RESET} de progreso adicional.\u003C/li\u003E\n\u003Cli\u003E11-19 | Las pruebas de habilidad b\u00E1sicas te dan un {YELLOW}2%{RESET} de progreso adicional.\u003C/li\u003E\n\u003Cli\u003E20 | Las pruebas de habilidad b\u00E1sicas te dan un {YELLOW}3%{RESET} de progreso adicional.\u003C/li\u003E\n\u003C/ul\u003E\nSi completas tu jugada, este efecto termina luego de {YELLOW}90{RESET} segundos. Tiempo de recuperaci\u00F3n: {GREEN}110{RESET}/{CYAN}100{RESET}/{PURPLE}90{RESET} segundos.",
-    "Image": "images/perks/inspiracionbardica.webp"
+    "Image": "images/perks/inspiracionbardica.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 129,
     "Name": "Mirada Fija",
     "CharacterId": 42,
     "Description": "Tras permanecer inm\u00F3vil durante {GREEN}4{RESET}/{CYAN}3{RESET}/{PURPLE}2{RESET} segundos, en un radio de {YELLOW}24{RESET} metros, hasta que comienzas a moverte:\n\u003Cul\u003E\n\u003Cli\u003EVes el aura del asesino.\u003C/li\u003E\n\u003Cli\u003EVes el aura de los cofres.\u003C/li\u003E\n\u003Cli\u003EVes el aura de los generadores.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/miradafija.webp"
+    "Image": "images/perks/miradafija.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 130,
     "Name": "Elegancia",
     "CharacterId": 43,
     "Description": "Al no tener heridas, tus saltos r\u00E1pidos son un {YELLOW}20%{RESET} m\u00E1s veloces.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando saltas r\u00E1pido, el tiempo de recuperaci\u00F3n es de: {GREEN}40{RESET}/{CYAN}35{RESET}/{PURPLE}30{RESET} segundos.",
-    "Image": "images/perks/elegancia.webp"
+    "Image": "images/perks/elegancia.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 131,
     "Name": "Endurecida",
     "CharacterId": 43,
     "Description": "Tras bendecir o purificar un t\u00F3tem y desbloquear un cofre, en vez de gritar, ves el aura del asesino durante {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET} segundos.",
-    "Image": "images/perks/endurecida.webp"
+    "Image": "images/perks/endurecida.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 132,
     "Name": "Especialista",
     "CharacterId": 43,
     "Description": "Cada vez que hurgas o desbloqueas un cofre, obtienes {YELLOW}1{RESET} distintivo, hasta un m\u00E1ximo de {YELLOW}6{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras reparas un generador, cada vez que logres una prueba de habilidad excelente, gasta todos los distintivos. Por cada distintivo que gastes, el generador obtiene un {GREEN}2{RESET}/{CYAN}3{RESET}/{PURPLE}4{RESET}% de progreso permanente.",
-    "Image": "images/perks/especialista.webp"
+    "Image": "images/perks/especialista.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 133,
     "Name": "Exultaci\u00F3n",
     "CharacterId": 44,
     "Description": "Cada vez que aturdes al asesino con una tarima:\n\u003Cul\u003E\n\u003Cli\u003ELa rareza de tu objeto mejora al siguiente nivel, de ser posible.\u003C/li\u003E\n\u003Cli\u003ESi el objeto recibi\u00F3 una mejora, se recarga un {YELLOW}75%{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nTiempo de recuperaci\u00F3n: {GREEN}30{RESET}/{CYAN}25{RESET}/{PURPLE}20{RESET} segundos.",
-    "Image": "images/perks/exultacion.webp"
+    "Image": "images/perks/exultacion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 134,
     "Name": "Momento de Gloria",
     "CharacterId": 44,
     "Description": "Luego de hurgar o desbloquear {YELLOW}1{RESET} cofres, si no tienes el efecto {ORANGE}Desesperanza{RESET}, cuando te hieren, sufres {ORANGE}Desesperanza{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nDespu\u00E9s de {GREEN}80{RESET}/{CYAN}70{RESET}/{PURPLE}60{RESET} segundos, si no te derriban, te curas al instante.",
-    "Image": "images/perks/momentodegloria.webp"
+    "Image": "images/perks/momentodegloria.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 135,
     "Name": "Ojos de Belmont",
     "CharacterId": 44,
     "Description": "Cada vez que se completa un generador, ves el aura del asesino durante {GREEN}1{RESET}/{CYAN}2{RESET}/{PURPLE}3{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que ves el aura del asesino por un tiempo, su duraci\u00F3n aumenta en {YELLOW}2{RESET} segundos.",
-    "Image": "images/perks/ojosdebelmont.webp"
+    "Image": "images/perks/ojosdebelmont.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 136,
     "Name": "Invocaci\u00F3n: Cuervos Traicioneros",
     "CharacterId": 45,
     "Description": "Al estar en el s\u00F3tano al lado del c\u00EDrculo, usa el bot\u00F3n de Habilidad Activa 2 para invocar. Durante la invocaci\u00F3n, otros sobrevivientes pueden ver tu aura y unirse a la acci\u00F3n.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando se completa la invocaci\u00F3n:\n\u003Cul\u003E\n\u003Cli\u003ECada vez que el asesino asuste a un cuervo mientras un o una sobreviviente est\u00E9 en su radio de terror, todos los sobrevivientes ver\u00E1n el aura del asesino durante {GREEN}1{RESET}/{CYAN}1.5{RESET}/{PURPLE}2{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ESufres heridas.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Desesperanza{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nCada invocaci\u00F3n puede completarse solo una vez por partida.",
-    "Image": "images/perks/invocacioncuervostraicioneros.webp"
+    "Image": "images/perks/invocacioncuervostraicioneros.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 137,
     "Name": "Punto y Aparte",
     "CharacterId": 45,
     "Description": "Cuando termines de curar a un o una sobreviviente, mientras te cure alguien m\u00E1s, usa el bot\u00F3n de Habilidad Activa 1 para sufrir {ORANGE}Desesperanza{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nLuego de {GREEN}75{RESET}/{CYAN}60{RESET}/{PURPLE}45{RESET} segundos, si no te derriban, te curas al instante.",
-    "Image": "images/perks/puntoyaparte.webp"
+    "Image": "images/perks/puntoyaparte.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 138,
     "Name": "Cargar a Cuestas",
     "CharacterId": 45,
     "Description": "Una vez por partida, mientras no tengas {YELLOW}2{RESET} estados de gancho y est\u00E9s junto a otro u otra sobreviviente en el gancho, usa el bot\u00F3n de Habilidad Activa 2 para descolgarlo/a:\n\u003Cul\u003E\n\u003Cli\u003EPerder\u00E1 {YELLOW}1{RESET} estado de gancho.\u003C/li\u003E\n\u003Cli\u003EObtienes {YELLOW}1{RESET} estado de gancho.\u003C/li\u003E\n\u003Cli\u003EGritas.\u003C/li\u003E\n\u003Cli\u003EQuedas con heridas.\u003C/li\u003E\n\u003Cli\u003EPasas al estado {ORANGE}Herido{RESET}.\u003C/li\u003E\n\u003Cli\u003EPasas al estado {ORANGE}Roto{RESET} durante {GREEN}160{RESET}/{CYAN}140{RESET}/{PURPLE}120{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/cargaracuestas.webp"
+    "Image": "images/perks/cargaracuestas.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 139,
     "Name": "No Hagas Da\u00F1o",
     "CharacterId": 46,
     "Description": "Mientras curas a otro u otra sobreviviente, por cada estado de gancho que tenga:\n\u003Cul\u003E\n\u003Cli\u003ECuras un {GREEN}30{RESET}/{CYAN}35{RESET}/{PURPLE}40{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ECada vez que logras una prueba de habilidad b\u00E1sica excelente, obtienes un {YELLOW}3%{RESET} de progreso adicional.\u003C/li\u003E\n\u003Cli\u003ELa probabilidad de que aparezca una prueba de habilidad aumenta un {YELLOW}5%{RESET}.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/nohagasdanio.webp"
+    "Image": "images/perks/nohagasdanio.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 140,
     "Name": "El Deber de Cuidar",
     "CharacterId": 46,
     "Description": "Mientras no tengas heridas, cada vez que recibas un golpe protector, los dem\u00E1s sobrevivientes que est\u00E9n a {YELLOW}12{RESET} metros obtienen un {YELLOW}25%{RESET} de {BLUE}Celeridad{RESET} durante {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET} segundos.",
-    "Image": "images/perks/eldeberdecuidar.webp"
+    "Image": "images/perks/eldeberdecuidar.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 141,
     "Name": "Respuesta R\u00E1pida",
     "CharacterId": 46,
     "Description": "Cada vez que sales a toda velocidad de un casillero, obtienes {ORANGE}Agotado{RESET} durante {GREEN}30{RESET}/{CYAN}25{RESET}/{PURPLE}20{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que obtienes {ORANGE}Agotado{RESET}, ves el aura del asesino durante {YELLOW}2{RESET} segundos.",
-    "Image": "images/perks/respuestarapida.webp"
+    "Image": "images/perks/respuestarapida.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 142,
     "Name": "Ingenio Apocal\u00EDptico",
     "CharacterId": 47,
     "Description": "Despu\u00E9s de hurgar o desbloquear {YELLOW}1{RESET} cofres, mientras est\u00E9s al lado de una tarima rota, usa el bot\u00F3n de Habilidad Activa 1 durante {YELLOW}3{RESET} segundos para crear una tarima fr\u00E1gil.\n\u003Cbr\u003E\u003Cbr\u003E\nEn un radio de {GREEN}24{RESET}/{CYAN}28{RESET}/{PURPLE}32{RESET} metros, ver\u00E1s el aura de las tarimas rotas.",
-    "Image": "images/perks/ingenioapocaliptico.webp"
+    "Image": "images/perks/ingenioapocaliptico.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 143,
     "Name": "\u00A1Ven Por M\u00ED!",
     "CharacterId": 47,
     "Description": "Cada vez que descuelgas a un o una sobreviviente, mientras permaneces en cuclillas e inm\u00F3vil, usa el bot\u00F3n de Habilidad Activa 1 para que los sobrevivientes heridos y derribados que est\u00E9n en un radio de {YELLOW}24{RESET} metros:\n\u003Cul\u003E\n\u003Cli\u003ENo emitan gru\u00F1idos de dolor durante {GREEN}10{RESET}/{CYAN}12.5{RESET}/{PURPLE}15{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ENo dejen charcos de sangre durante {GREEN}10{RESET}/{CYAN}12.5{RESET}/{PURPLE}15{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ENo dejen marcas de ara\u00F1azos durante {GREEN}10{RESET}/{CYAN}12.5{RESET}/{PURPLE}15{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\nGritas. Luego, el asesino ver\u00E1 tu aura durante {YELLOW}5{RESET} segundos.",
-    "Image": "images/perks/venpormi.webp"
+    "Image": "images/perks/venpormi.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 144,
     "Name": "Trabajo en Equipo: Entereza",
     "CharacterId": 47,
     "Description": "Si tienes una herida, cada vez que otro u otra sobreviviente a {YELLOW}24{RESET} metros de ti ciegue o aturda con una tarima al asesino, durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos:\n\u003Cul\u003E\n\u003Cli\u003ENo emites gru\u00F1idos de dolor.\u003C/li\u003E\n\u003Cli\u003ENo dejas charcos de sangre.\u003C/li\u003E\n\u003Cli\u003ENo dejas marcas de ara\u00F1azos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/trabajoenequipoentereza.webp"
+    "Image": "images/perks/trabajoenequipoentereza.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 145,
     "Name": "Convicci\u00F3n",
     "CharacterId": 48,
     "Description": "Cuando termines de curar a {YELLOW}1{RESET} sobreviviente, mientras est\u00E1s en el suelo con al menos un {YELLOW}25%{RESET} de recuperaci\u00F3n, usa el bot\u00F3n de Habilidad Activa 1 para recuperarte al instante.\n\u003Cbr\u003E\u003Cbr\u003E\nSufres el efecto {ORANGE}Desesperanza{RESET}. Luego, tras {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos, vuelves al suelo de inmediato.",
-    "Image": "images/perks/conviccion.webp"
+    "Image": "images/perks/conviccion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 146,
     "Name": "\u00DAltimo Enfrentamiento",
     "CharacterId": 48,
     "Description": "Tras esconderte durante {GREEN}120{RESET}/{CYAN}105{RESET}/{PURPLE}90{RESET} segundos en el radio de terror del asesino, cuando realizas un salto de velocidad r\u00E1pida, una vez por partida, aturdes al asesino durante {YELLOW}3{RESET} segundos si est\u00E1 en un radio de {YELLOW}2.5{RESET} metros.",
-    "Image": "images/perks/ultimoenfrentamiento.webp"
+    "Image": "images/perks/ultimoenfrentamiento.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 147,
     "Name": "Trabajo en Equipo: Lanzamiento",
     "CharacterId": 48,
     "Description": "Cada vez que ciegas o aturdes con una tarima al asesino, durante {GREEN}6{RESET}/{CYAN}8{RESET}/{PURPLE}10{RESET} segundos, otros sobrevivientes heridos en un radio de {YELLOW}24{RESET} metros:\n\u003Cul\u003E\n\u003Cli\u003EObtienen {BLUE}Resistencia{RESET}.\u003C/li\u003E\n\u003Cli\u003EVen el aura del asesino.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/trabajoenequipolanzamiento.webp"
+    "Image": "images/perks/trabajoenequipolanzamiento.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 148,
     "Name": "Vida Itinerante",
     "CharacterId": 49,
     "Description": "Al tener heridas y estar reparando un generador:\n\u003Cul\u003E\n\u003Cli\u003ECada vez que logres una prueba de habilidad b\u00E1sica excelente, obtienes {YELLOW}1{RESET} distintivo.\u003C/li\u003E\n\u003Cli\u003ECada vez que falles una prueba de habilidad b\u00E1sica, pierdes {YELLOW}1{RESET} distintivo.\u003C/li\u003E\n\u003C/ul\u003E\nCuando tengas {GREEN}6{RESET}/{CYAN}5{RESET}/{PURPLE}4{RESET} distintivos, puedes curarte a ti mismo/a. G\u00E1stalos todos para curarte un {YELLOW}10%{RESET} m\u00E1s r\u00E1pido.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando dejas de curarte, este efecto termina despu\u00E9s de {YELLOW}4{RESET} segundos.",
-    "Image": "images/perks/vidaitinerante.webp"
+    "Image": "images/perks/vidaitinerante.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 149,
     "Name": "\u00A1Uno-Dos-Tres-Cuatro!",
     "CharacterId": 49,
     "Description": "Al permanecer inm\u00F3vil, usa el bot\u00F3n de Habilidad Activa 2 para tocar, lo que potenciar\u00E1 a todos los sobrevivientes en un radio de {YELLOW}16{RESET} metros por hasta {YELLOW}15{RESET} segundos. Mientras est\u00E9s tocando, los dem\u00E1s sobrevivientes ver\u00E1n tu aura. Obtienes pruebas de habilidad especiales durante ese tiempo: mientras curas o reparas, las pruebas de habilidad b\u00E1sicas tienen un {YELLOW}20%{RESET} m\u00E1s de probabilidad de aparecer.\n\u003Cbr\u003E\u003Cbr\u003E\nSi completas la actuaci\u00F3n, el efecto termina luego de {YELLOW}90{RESET} segundos. Tiempo de recuperaci\u00F3n: {GREEN}110{RESET}/{CYAN}100{RESET}/{PURPLE}90{RESET} segundos.",
-    "Image": "images/perks/unodostrecuatro.webp"
+    "Image": "images/perks/unodostrecuatro.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 150,
     "Name": "Notas Fantasma",
     "CharacterId": 49,
     "Description": "Mientras sufras el efecto {ORANGE}Agotado{RESET}, tus marcas de ara\u00F1azos desaparecen un {YELLOW}50%{RESET} m\u00E1s r\u00E1pido.\n\u003Cbr\u003E\u003Cbr\u003E\nPierdes el efecto {ORANGE}Agotado{RESET} un {GREEN}5{RESET}/{CYAN}7.5{RESET}/{PURPLE}10{RESET}% m\u00E1s r\u00E1pido.",
-    "Image": "images/perks/notasfantasma.webp"
+    "Image": "images/perks/notasfantasma.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 151,
     "Name": "Bada, Bada, Bum",
     "CharacterId": 50,
     "Description": "Tras reparar un {YELLOW}20%{RESET} de los generadores, al estar al lado de una ventana, usa el bot\u00F3n de Habilidad Activa 2 para instalar una trampa que dure {GREEN}40{RESET}/{CYAN}50{RESET}/{PURPLE}60{RESET} segundos. Todos los sobrevivientes ven el aura de esa ventana durante ese per\u00EDodo.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando el asesino salte por esa ventana, la trampa explota y obtiene un {YELLOW}50%{RESET} de {ORANGE}Entorpecimiento{RESET} durante {YELLOW}6{RESET} segundos.",
-    "Image": "images/perks/badabadabum.webp"
+    "Image": "images/perks/badabadabum.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 152,
     "Name": "Cambio de Planes",
     "CharacterId": 50,
     "Description": "Al inicio de la partida, obtienes {YELLOW}2{RESET} distintivos.\n\u003Cbr\u003E\u003Cbr\u003E\nAl esconderte dentro de un casillero y tener una caja de herramientas que no pertenece al evento, usa el bot\u00F3n de Habilidad Activa 2 y gasta {YELLOW}1{RESET} distintivo para transformar tu caja de herramientas y tus accesorios en un botiqu\u00EDn de la misma rareza con un {GREEN}80{RESET}/{CYAN}90{RESET}/{PURPLE}100{RESET}% de cargas y accesorios aleatorios de la misma rareza.",
-    "Image": "images/perks/cambiodeplanes.webp"
+    "Image": "images/perks/cambiodeplanes.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 153,
     "Name": "Trabajo en Equipo: Circuito Completo",
     "CharacterId": 50,
     "Description": "Por cada sobreviviente que repare un generador contigo, el tama\u00F1o de las zonas de las pruebas de habilidad b\u00E1sicas buenas aumenta en un {GREEN}15{RESET}/{CYAN}20{RESET}/{PURPLE}25{RESET}%.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras est\u00E9s reparando un generador con, por lo menos, otro u otra sobreviviente, lo har\u00E1s un {YELLOW}5%{RESET} m\u00E1s r\u00E1pido.",
-    "Image": "images/perks/trabajoenequipocircuitocompleto.webp"
+    "Image": "images/perks/trabajoenequipocircuitocompleto.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 154,
     "Name": "Percepci\u00F3n Extrasensorial",
     "CharacterId": 51,
     "Description": "Tras agacharte durante {YELLOW}4{RESET} segundos:\n\u003Cul\u003E\n\u003Cli\u003EVes auras en un radio que se expande hasta {YELLOW}44{RESET} metros.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {BLUE}Elusi\u00F3n{RESET}.\u003C/li\u003E\n\u003Cli\u003ESufres el efecto {ORANGE}Inconsciencia{RESET}.\u003C/li\u003E\n\u003C/ul\u003E\nCuando vuelves a ponerte de pie, o luego de {YELLOW}11{RESET} segundos, el tiempo de recuperaci\u00F3n es de {GREEN}60{RESET}/{CYAN}50{RESET}/{PURPLE}40{RESET} segundos.",
-    "Image": "images/perks/percepcionextrasensorial.webp"
+    "Image": "images/perks/percepcionextrasensorial.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 155,
     "Name": "Te Vemos",
     "CharacterId": 51,
     "Description": "Cada vez que el asesino ve tu aura, obtienes {YELLOW}1{RESET} distintivo. Tiempo de recuperaci\u00F3n: {YELLOW}10{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nCuando alcanzas el m\u00E1ximo de {YELLOW}4{RESET} distintivos, g\u00E1stalos todos. Luego, todos los sobrevivientes ver\u00E1n el aura del asesino durante {GREEN}10{RESET}/{CYAN}12.5{RESET}/{PURPLE}15{RESET} segundos.",
-    "Image": "images/perks/tevemos.webp"
+    "Image": "images/perks/tevemos.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 156,
     "Name": "Trabajo en Equipo: Tono Gentil",
     "CharacterId": 51,
     "Description": "Por cada sobreviviente que repare un generador contigo, el alcance de los ruidos de reparaci\u00F3n del generador se reduce en un {GREEN}15{RESET}/{CYAN}20{RESET}/{PURPLE}25{RESET}%.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras est\u00E9s reparando un generador con, por lo menos, otro u otra sobreviviente, lo har\u00E1s un {YELLOW}5%{RESET} m\u00E1s r\u00E1pido.",
-    "Image": "images/perks/trabajoenequipotonogentil.webp"
+    "Image": "images/perks/trabajoenequipotonogentil.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 157,
     "Name": "Estado de Flujo",
     "CharacterId": 52,
     "Description": "Cada vez que se completa un generador, obtienes {YELLOW}1{RESET} distintivo, hasta un m\u00E1ximo de {YELLOW}5{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nPor cada distintivo:\n\u003Cul\u003E\n\u003Cli\u003EBendices y purificas t\u00F3tems un {GREEN}13{RESET}/{CYAN}14{RESET}/{PURPLE}15{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ETe curas un {GREEN}13{RESET}/{CYAN}14{RESET}/{PURPLE}15{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EDescuelgas a sobrevivientes un {GREEN}13{RESET}/{CYAN}14{RESET}/{PURPLE}15{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/estadodeflujo.webp"
+    "Image": "images/perks/estadodeflujo.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 158,
     "Name": "Un Lugar Para Nosotros",
     "CharacterId": 52,
     "Description": "Al curar a otro u otra sobreviviente, ambos sufren el efecto {BLUE}Elusi\u00F3n{RESET}.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que termines de curar a la obsesi\u00F3n, ambos sufren el efecto {BLUE}Elusi\u00F3n{RESET} durante {GREEN}20{RESET}/{CYAN}25{RESET}/{PURPLE}30{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nAl inicio de la partida, tienes menos probabilidades de convertirte en la obsesi\u00F3n.",
-    "Image": "images/perks/unlugarparanosotros.webp"
+    "Image": "images/perks/unlugarparanosotros.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 159,
     "Name": "Cinco Movimientos Adelante",
     "CharacterId": 52,
     "Description": "Mientras est\u00E9s en el radio de terror del asesino o este te est\u00E9 persiguiendo:\n\u003Cul\u003E\n\u003Cli\u003EVes el aura de las {YELLOW}5{RESET} tarimas m\u00E1s cercanas.\u003C/li\u003E\n\u003Cli\u003EDespu\u00E9s de dejar caer una tarima, empiezas a moverte un {YELLOW}50%{RESET} antes.\u003C/li\u003E\n\u003Cli\u003ECada vez que dejas caer una tarima, el tiempo de recuperaci\u00F3n es de: {GREEN}40{RESET}/{CYAN}35{RESET}/{PURPLE}30{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/cincomovimientosadelante.webp"
+    "Image": "images/perks/cincomovimientosadelante.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 160,
     "Name": "M\u00E1xima Velocidad",
     "CharacterId": 53,
     "Description": "Cada vez que realizas un salto r\u00E1pido sobre una tarima:\n\u003Cul\u003E\n\u003Cli\u003EObtienes un {GREEN}10{RESET}/{CYAN}12.5{RESET}/{PURPLE}15{RESET}% de {BLUE}Celeridad{RESET} durante {YELLOW}3{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ELa tarima se restablece, se bloquea durante {YELLOW}60{RESET} segundos y todos los sobrevivientes ven su aura durante ese lapso.\u003C/li\u003E\n\u003C/ul\u003E\nTiempo de recuperaci\u00F3n: {YELLOW}60{RESET} segundos.",
-    "Image": "images/perks/maximavelocidad.webp"
+    "Image": "images/perks/maximavelocidad.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 161,
     "Name": "Echar una Mano",
     "CharacterId": 53,
     "Description": "Cada vez que bendices o purificas {YELLOW}1{RESET} t\u00F3tem(s), mientras curas a otro u otra sobreviviente, y solo una vez por sobreviviente, usa el bot\u00F3n de Habilidad Activa 2 para darle {GREEN}2{RESET}/{CYAN}3{RESET}/{PURPLE}4{RESET} carga(s) de curaci\u00F3n permanentes.",
-    "Image": "images/perks/echarunamano.webp"
+    "Image": "images/perks/echarunamano.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 162,
     "Name": "Interrogatorio",
     "CharacterId": 53,
     "Description": "Mientras est\u00E9s dentro del radio de terror del asesino y no te est\u00E9 persiguiendo, este deja marcas de luz que puedes ver durante {YELLOW}10{RESET} segundos. Si est\u00E1s en las marcas de luz del asesino, obtienes el efecto {BLUE}Elusi\u00F3n{RESET}. Esto termina despu\u00E9s de {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET} segundos.",
-    "Image": "images/perks/interrogatorio.webp"
+    "Image": "images/perks/interrogatorio.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 163,
     "Name": "Cosechas lo que Siembras",
     "CharacterId": 54,
     "Description": "Cada vez que se completa un generador, obtienes {YELLOW}1{RESET} distintivo.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que terminas de reparar un generador, por cada distintivo obtienes un {YELLOW}5%{RESET} de {BLUE}Celeridad{RESET} durante {YELLOW}2{RESET} segundos y un {GREEN}10{RESET}/{CYAN}15{RESET}/{PURPLE}20{RESET}% de progreso de curaci\u00F3n.",
-    "Image": "images/perks/frutosdetuesfuerzo.webp"
+    "Image": "images/perks/frutosdetuesfuerzo.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 164,
     "Name": "Grito de Salvaci\u00F3n",
     "CharacterId": 54,
     "Description": "Cada vez que el asesino inicia una persecuci\u00F3n contigo, ves el aura de los dem\u00E1s sobrevivientes durante {GREEN}1{RESET}/{CYAN}2{RESET}/{PURPLE}3{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nLos sobrevivientes que no est\u00E1n siendo perseguidos ven tu aura y la del asesino durante {YELLOW}5{RESET} segundos.",
-    "Image": "images/perks/gritodesalvacion.webp"
+    "Image": "images/perks/gritodesalvacion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 165,
     "Name": "Bendici\u00F3n: Determinaci\u00F3n",
     "CharacterId": 54,
     "Description": "Al estar al lado de un t\u00F3tem, usa el bot\u00F3n de Habilidad Activa 1 para bendecirlo, lo que crea un t\u00F3tem de bendici\u00F3n \u00FAnico que combina todas las bendiciones.\n\u003Cbr\u003E\u003Cbr\u003E\nLos generadores dentro del alcance del t\u00F3tem:\n\u003Cul\u003E\n\u003Cli\u003ERetroceden un {YELLOW}50%{RESET} m\u00E1s lento.\u003C/li\u003E\n\u003Cli\u003ESe reparan un {GREEN}8{RESET}/{CYAN}9{RESET}/{PURPLE}10{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003C/ul\u003E\nLos sobrevivientes que est\u00E9n en el radio de la bendici\u00F3n ven el aura de los generadores afectados.",
-    "Image": "images/perks/bendiciondecision.webp"
+    "Image": "images/perks/bendiciondecision.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 166,
     "Name": "Carne Resbaladiza",
     "CharacterId": null,
     "Description": "Otros sobrevivientes te descuelgan un {GREEN}90{RESET}/{CYAN}95{RESET}/{PURPLE}100{RESET}% m\u00E1s r\u00E1pido.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que te descuelgan, obtienes un {YELLOW}5%{RESET} adicional de {BLUE}Celeridad{RESET}.",
-    "Image": "images/perks/carneresbaladiza.webp"
+    "Image": "images/perks/carneresbaladiza.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 167,
     "Name": "Caza Menor",
     "CharacterId": null,
     "Description": "En un radio de {GREEN}10{RESET}/{CYAN}11{RESET}/{PURPLE}12{RESET} metros de un t\u00F3tem, ves su aura.",
-    "Image": "images/perks/cazamenor.webp"
+    "Image": "images/perks/cazamenor.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 168,
     "Name": "De Pies Ligeros",
     "CharacterId": null,
     "Description": "La duraci\u00F3n de tus marcas de rasgu\u00F1os se reduce en {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nLa probabilidad de que aparezcan marcas de rasgu\u00F1os se reduce un {YELLOW}60%{RESET}, haciendo que su separaci\u00F3n sea irregular.",
-    "Image": "images/perks/depiesligeros.webp"
+    "Image": "images/perks/depiesligeros.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 169,
     "Name": "D\u00E9j\u00E0 Vu",
     "CharacterId": null,
     "Description": "Ves el aura de los {YELLOW}3{RESET} generadores que est\u00E9n m\u00E1s cerca entre s\u00ED.\n\u003Cbr\u003E\u003Cbr\u003E\nReparas esos generadores un {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET}% m\u00E1s r\u00E1pido.",
-    "Image": "images/perks/dejavu.webp"
+    "Image": "images/perks/dejavu.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 170,
     "Name": "Escalofr\u00EDos",
     "CharacterId": null,
     "Description": "Cada vez que el asesino te mira a {YELLOW}40{RESET} metros o menos:\n\u003Cul\u003E\n\u003Cli\u003ERecibes una notificaci\u00F3n.\u003C/li\u003E\n\u003Cli\u003ENo puedes gritar durante {YELLOW}12{RESET} segundos.\u003C/li\u003E\n\u003Cli\u003ESaltas ventanas un {YELLOW}10%{RESET} m\u00E1s r\u00E1pido durante {YELLOW}12{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\nTiempo de recuperaci\u00F3n: {GREEN}40{RESET}/{CYAN}35{RESET}/{PURPLE}30{RESET} segundos.",
-    "Image": "images/perks/escalofrios.webp"
+    "Image": "images/perks/escalofrios.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 171,
     "Name": "Esperanza",
     "CharacterId": null,
     "Description": "Cuando se completan todos los generadores, obtienes un {GREEN}3{RESET}/{CYAN}4{RESET}/{PURPLE}5{RESET}% de {BLUE}Celeridad{RESET} durante el resto de la partida.",
-    "Image": "images/perks/esperanza.webp"
+    "Image": "images/perks/esperanza.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 172,
     "Name": "Esto No Puede Estar Pasando",
     "CharacterId": null,
     "Description": "Las zonas buenas de las pruebas de habilidad b\u00E1sicas son un {GREEN}150{RESET}/{CYAN}175{RESET}/{PURPLE}200{RESET}% m\u00E1s grandes.",
-    "Image": "images/perks/estonopuedeestarpasando.webp"
+    "Image": "images/perks/estonopuedeestarpasando.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 173,
     "Name": "Familia",
     "CharacterId": null,
     "Description": "Mientras est\u00E1s colgado/a, todos los sobrevivientes ven el aura de los dem\u00E1s. Mientras el asesino est\u00E9 a {GREEN}14{RESET}/{CYAN}15{RESET}/{PURPLE}16{RESET} metros o menos, todos los sobrevivientes ven su aura.\n\u003Cbr\u003E\u003Cbr\u003E\nMientras otro u otra sobreviviente est\u00E9 colgado/a, ves el aura de los dem\u00E1s sobrevivientes. Mientras el asesino est\u00E9 a {GREEN}14{RESET}/{CYAN}15{RESET}/{PURPLE}16{RESET} metros o menos del o de la sobreviviente colgado/a, ves su aura.",
-    "Image": "images/perks/familia.webp"
+    "Image": "images/perks/familia.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 174,
     "Name": "Instinto de Saqueador",
     "CharacterId": null,
     "Description": "Ves el aura de los cofres y los objetos.\n\u003Cbr\u003E\u003Cbr\u003E\nDesbloqueas cofres un {GREEN}150{RESET}/{CYAN}175{RESET}/{PURPLE}200{RESET}% m\u00E1s r\u00E1pido.\n\u003Cbr\u003E\u003Cbr\u003E\nCada vez que desbloqueas un cofre, tienes un {YELLOW}50%{RESET} m\u00E1s de probabilidades de encontrar un objeto de mayor rareza.",
-    "Image": "images/perks/institodesaqueador.webp"
+    "Image": "images/perks/institodesaqueador.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 175,
     "Name": "Nadie Se Queda Atr\u00E1s",
     "CharacterId": null,
     "Description": "Cuando se completan todos los generadores:\n\u003Cul\u003E\n\u003Cli\u003ETe curas un {GREEN}80{RESET}/{CYAN}90{RESET}/{PURPLE}100{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EDescuelgas a otros sobrevivientes un {GREEN}80{RESET}/{CYAN}90{RESET}/{PURPLE}100{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ECada vez que descuelgas a un o una sobreviviente, obtiene un {YELLOW}10%{RESET} adicional de {BLUE}Celeridad{RESET}.\u003C/li\u003E\n\u003Cli\u003EVes el aura de los dem\u00E1s sobrevivientes.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/nadiesequedaatras.webp"
+    "Image": "images/perks/nadiesequedaatras.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 176,
     "Name": "Sentido Oscuro",
     "CharacterId": null,
     "Description": "Cada vez que se completa un generador, cuando el asesino se acerque a {YELLOW}20{RESET} metros o menos de ti, durante {GREEN}13{RESET}/{CYAN}14{RESET}/{PURPLE}15{RESET} segundos:\n\u003Cul\u003E\n\u003Cli\u003EVes el aura de las tarimas y las ventanas en un radio de {YELLOW}32{RESET} metros.\u003C/li\u003E\n\u003Cli\u003EVes el aura de los dem\u00E1s sobrevivientes.\u003C/li\u003E\n\u003Cli\u003EVes el aura del asesino.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/percepcionoscura.webp"
+    "Image": "images/perks/percepcionoscura.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 177,
     "Name": "Premonici\u00F3n",
     "CharacterId": null,
     "Description": "Mientras el asesino no te est\u00E9 persiguiendo, cada vez que mires en direcci\u00F3n al asesino a {YELLOW}32{RESET} metros o menos:\n\u003Cul\u003E\n\u003Cli\u003ERecibes una notificaci\u00F3n.\u003C/li\u003E\n\u003Cli\u003EVes su aura durante {YELLOW}3{RESET} segundos.\u003C/li\u003E\n\u003C/ul\u003E\nTiempo de recuperaci\u00F3n: {GREEN}55{RESET}/{CYAN}50{RESET}/{PURPLE}45{RESET} segundos.",
-    "Image": "images/perks/premonicion.webp"
+    "Image": "images/perks/premonicion.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 178,
     "Name": "Resiliencia",
     "CharacterId": null,
     "Description": "Mientras tienes heridas:\n\u003Cul\u003E\n\u003Cli\u003EBendices y purificas t\u00F3tems un {GREEN}7{RESET}/{CYAN}8{RESET}/{PURPLE}9{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ETe curas un {GREEN}7{RESET}/{CYAN}8{RESET}/{PURPLE}9{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EAbres las puertas de salida un {GREEN}7{RESET}/{CYAN}8{RESET}/{PURPLE}9{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EReparas un {GREEN}7{RESET}/{CYAN}8{RESET}/{PURPLE}9{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ESabotea ganchos un {GREEN}7{RESET}/{CYAN}8{RESET}/{PURPLE}9{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EDescuelgas a sobrevivientes un {GREEN}7{RESET}/{CYAN}8{RESET}/{PURPLE}9{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003EDesbloqueas cofres un {GREEN}7{RESET}/{CYAN}8{RESET}/{PURPLE}9{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003Cli\u003ESaltas ventanas un {GREEN}7{RESET}/{CYAN}8{RESET}/{PURPLE}9{RESET}% m\u00E1s r\u00E1pido.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/resiliencia.webp"
+    "Image": "images/perks/resiliencia.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 179,
     "Name": "Sobreviviremos",
     "CharacterId": null,
     "Description": "Cada vez que descuelgas a un o una sobreviviente, durante {GREEN}70{RESET}/{CYAN}80{RESET}/{PURPLE}90{RESET} segundos, curas a otros sobrevivientes un {YELLOW}100%{RESET} m\u00E1s r\u00E1pido.",
-    "Image": "images/perks/sobreviviremos.webp"
+    "Image": "images/perks/sobreviviremos.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 180,
     "Name": "El Mejor Regalo del Mundo",
-    "CharacterId": null,
+    "CharacterId": 55,
     "Description": "El Mejor Regalo del Mundo empieza la Partida con {GREEN}4{RESET}/{CYAN}5{RESET}/{PURPLE}6{RESET} Distintivos.\n\u003Cbr\u003E\u003Cbr\u003E\nLa primera vez que sueltas un Objeto de cada tipo, gastas {ORANGE}1{RESET} Distintivo para que el Ente consuma el objeto soltado y obtienes un efecto seg\u00FAn el Objeto:\n\u003Cul\u003E\n\u003Cli\u003E{YELLOW}Linternas{RESET}: aturdir al Asesino hace que quede cegado durante {YELLOW}2 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003E{YELLOW}Viales de Niebla{RESET}: saltar r\u00E1pido hace que tus Marcas de Ara\u00F1azos desaparezcan un {YELLOW}50%{RESET} m\u00E1s r\u00E1pido durante {YELLOW}5 segundos{RESET}.\u003C/li\u003E\n\u003Cli\u003E{YELLOW}Llaves{RESET}: puedes registrar cada Cofre una vez.\u003C/li\u003E\n\u003Cli\u003E{YELLOW}Mapas{RESET}: las auras que ves con duraci\u00F3n duran {YELLOW}1 segundo{RESET} m\u00E1s.\u003C/li\u003E\n\u003Cli\u003E{YELLOW}Botiquines{RESET}: curar a un Sobreviviente hace que obtengas progreso de curaci\u00F3n a una velocidad del {YELLOW}25%{RESET}.\u003C/li\u003E\n\u003Cli\u003E{YELLOW}Cajas de Herramientas{RESET}: ves las auras de los {YELLOW}3{RESET} Generadores m\u00E1s cercanos.\u003C/li\u003E\n\u003C/ul\u003E",
-    "Image": "images/perks/El Mejor Regalo del Mundo.webp"
+    "Image": "images/perks/El Mejor Regalo del Mundo.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 181,
     "Name": "Furia de la Valquiria",
-    "CharacterId": null,
+    "CharacterId": 55,
     "Description": "Furia de la Valquiria se activa despu\u00E9s de que te hayan perseguido durante {GREEN}40{RESET}/{CYAN}35{RESET}/{PURPLE}30{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nLa pr\u00F3xima vez que aturdas al Asesino con una Tarima, el aturdimiento dura un {YELLOW}75%{RESET} m\u00E1s.\n\u003Cbr\u003E\u003Cbr\u003E\nDespu\u00E9s, Furia de la Valquiria se desactiva.",
-    "Image": "images/perks/Furia de la Valquiria.webp"
+    "Image": "images/perks/Furia de la Valquiria.webp",
+    "LicensedPerkId": null
   },
   {
     "Id": 182,
     "Name": "Trauma Compartido",
-    "CharacterId": null,
+    "CharacterId": 55,
     "Description": "Recibir un golpe de protecci\u00F3n hace que t\u00FA y todos los Sobrevivientes que est\u00E9n a menos de {YELLOW}12 metros{RESET} se recuperen de {ORANGE}Agotado{RESET} mientras corren durante {GREEN}30{RESET}/{CYAN}35{RESET}/{PURPLE}40{RESET} segundos.\n\u003Cbr\u003E\u003Cbr\u003E\nTambi\u00E9n ves las auras de los Sobrevivientes que sufren {ORANGE}Agotamiento{RESET} a menos de {YELLOW}32 metros{RESET}.",
-    "Image": "images/perks/Trauma Compartido.webp"
+    "Image": "images/perks/Trauma Compartido.webp",
+    "LicensedPerkId": null
   }
 ]

@@ -490,39 +490,8 @@
 
     private RandomizerResult? killerResult;
 
-private static readonly Dictionary<string, string> DescriptionColors = new()
-{
-    ["{YELLOW}"] = "#e8c252",
-    ["{ORANGE}"] = "#ff8800",
-    ["{BLUE}"] = "#4da997",
-    ["{GREEN}"] = "#199b1e",
-    ["{CYAN}"] = "#2f9cd6",
-    ["{PURPLE}"] = "#ac3ee3",
-    ["{CITATION}"] = "#e7cda2"
-};
-
-    private MarkupString RenderDescription(string? description)
-    {
-        if (string.IsNullOrWhiteSpace(description))
-            return new MarkupString("");
-
-        string result = description;
-
-        foreach (var color in DescriptionColors)
-        {
-            result = result.Replace(
-                color.Key,
-                $"<span style=\"color:{color.Value};\">"
-            );
-        }
-
-        result = result.Replace(
-            "{RESET}",
-            "</span>"
-        );
-
-        return new MarkupString(result);
-    }
+    // (Se eliminó el mapa de colores y RenderDescription: eran código muerto,
+    // Home dibuja las descripciones a través de ItemTooltip.)
 
     protected override async Task OnInitializedAsync()
     {
@@ -572,7 +541,15 @@ private static readonly Dictionary<string, string> DescriptionColors = new()
         // Actualiza configuraciones guardadas con el formato anterior
         // (las perks de personajes deshabilitados pasan a estar
         // deshabilitadas de forma explícita).
-        if (ConfigMigrator.Migrate(config, survivorPerks, killerPerks))
+        bool migrated =
+            ConfigMigrator.Migrate(config, survivorPerks, killerPerks);
+
+        // Perks licenciadas que ahora tienen versión general: nunca deben
+        // estar habilitadas las dos a la vez (corre en cada carga).
+        bool linkedFixed =
+            ConfigMigrator.NormalizeLinkedPerks(config, survivorPerks, killerPerks);
+
+        if (migrated || linkedFixed)
         {
             await LocalStorage.SaveConfig(config);
         }

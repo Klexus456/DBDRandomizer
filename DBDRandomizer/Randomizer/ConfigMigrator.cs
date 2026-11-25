@@ -44,6 +44,27 @@ public static class ConfigMigrator
     }
 
     /// <summary>
+    /// Garantiza que una perk licenciada y su versión general no estén
+    /// habilitadas a la vez. A diferencia de Migrate, NO depende de la
+    /// versión de la config: se ejecuta en cada carga, así cubre también
+    /// perks generales agregadas más adelante a los datos.
+    /// Devuelve true si la configuración fue modificada.
+    /// </summary>
+    public static bool NormalizeLinkedPerks(
+        RandomizerConfig config,
+        List<Perk> survivorPerks,
+        List<Perk> killerPerks)
+    {
+        bool survivorChanged =
+            PerkLinks.Normalize(survivorPerks, config.DisabledSurvivorPerks);
+
+        bool killerChanged =
+            PerkLinks.Normalize(killerPerks, config.DisabledKillerPerks);
+
+        return survivorChanged || killerChanged;
+    }
+
+    /// <summary>
     /// Quita de las listas "Disabled" los IDs que ya no existen en los datos
     /// (por ejemplo, registros eliminados con la herramienta de diagnóstico).
     /// Devuelve true si la configuración fue modificada.

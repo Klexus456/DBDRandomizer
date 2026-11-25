@@ -1572,41 +1572,9 @@ else
 {
 
 
-    private static readonly Dictionary<string, string> DescriptionColors = new()
-    {
-        ["{YELLOW}"] = "#e8c252",
-        ["{ORANGE}"] = "#ff8800",
-        ["{BLUE}"] = "#4da997",
-        ["{GREEN}"] = "#199b1e",
-        ["{CYAN}"] = "#2f9cd6",
-        ["{PURPLE}"] = "#ac3ee3",
-        ["{CITATION}"] = "#e7cda2"
-    };
-
-    private MarkupString RenderDescription(string? description)
-    {
-        if (string.IsNullOrWhiteSpace(description))
-        {
-            return new MarkupString("");
-        }
-
-        string result = description;
-
-        foreach (var color in DescriptionColors)
-        {
-            result = result.Replace(
-                color.Key,
-                $"<span style=\"color:{color.Value};\">"
-            );
-        }
-
-        result = result.Replace(
-            "{RESET}",
-            "</span>"
-        );
-
-        return new MarkupString(result);
-    }
+    // Los colores viven en DescriptionFormatter (única fuente de verdad).
+    private static MarkupString RenderDescription(string? description)
+        => DescriptionFormatter.Render(description);
 
 
     [Inject]
@@ -1692,6 +1660,10 @@ else
             addons,
             offerings
         );
+
+        // Evita tener a la vez una perk licenciada y su versión general.
+        // Solo en memoria: se persiste al guardar.
+        ConfigMigrator.NormalizeLinkedPerks(config, survivorPerks, killerPerks);
 
     }
 
@@ -1788,7 +1760,14 @@ else
 
             if (enabled)
             {
-                disabledPerkIds.Remove(perk.Id);
+                // Si el usuario tiene habilitada la versión general (o la
+                // licenciada) de esta perk, no la resucitamos al volver a
+                // habilitar el personaje: son excluyentes.
+                if (!PerkLinks.HasEnabledCounterpart(
+                        perks, disabledPerkIds, perk.Id))
+                {
+                    disabledPerkIds.Remove(perk.Id);
+                }
             }
             else if (!disabledPerkIds.Contains(perk.Id))
             {
@@ -2135,19 +2114,16 @@ else
 
     private void ToggleSurvivorPerk(int id)
     {
-        if (config.DisabledSurvivorPerks.Contains(id))
-        {
-            config.DisabledSurvivorPerks.Remove(id);
-        }
-        else
-        {
-            config.DisabledSurvivorPerks.Add(id);
-        }
+        // Al habilitar una perk licenciada/general se deshabilita su par.
+        PerkLinks.Toggle(survivorPerks, config.DisabledSurvivorPerks, id);
     }
 
     private void EnableAllSurvivorPerks()
     {
         config.DisabledSurvivorPerks.Clear();
+
+        // Si hay pares licenciada/general, queda habilitada solo una de cada par.
+        PerkLinks.Normalize(survivorPerks, config.DisabledSurvivorPerks);
     }
 
     private void DisableAllSurvivorPerks()
@@ -2172,19 +2148,16 @@ else
 
     private void ToggleKillerPerk(int id)
     {
-        if (config.DisabledKillerPerks.Contains(id))
-        {
-            config.DisabledKillerPerks.Remove(id);
-        }
-        else
-        {
-            config.DisabledKillerPerks.Add(id);
-        }
+        // Al habilitar una perk licenciada/general se deshabilita su par.
+        PerkLinks.Toggle(killerPerks, config.DisabledKillerPerks, id);
     }
 
     private void EnableAllKillerPerks()
     {
         config.DisabledKillerPerks.Clear();
+
+        // Si hay pares licenciada/general, queda habilitada solo una de cada par.
+        PerkLinks.Normalize(killerPerks, config.DisabledKillerPerks);
     }
 
     private void DisableAllKillerPerks()
@@ -2384,8 +2357,11 @@ else
             return Enumerable.Empty<Addon>();
         }
 
+        // Orden por rareza: de Common a UltraRare. OrderBy es estable, así que
+        // dentro de cada rareza se mantiene el orden original de los datos.
         IEnumerable<Addon> result = SurvivorAddons
-            .Where(addon => addon.AddonGroupId == item.AddonGroupId);
+            .Where(addon => addon.AddonGroupId == item.AddonGroupId)
+            .OrderBy(addon => addon.Rarity);
 
         string search = NormalizeSearch(survivorAddonSearch);
 
@@ -2438,8 +2414,10 @@ else
 
     private IEnumerable<Addon> GetVisibleKillerAddons(int killerId)
     {
+        // Orden por rareza: de Common a UltraRare (orden estable).
         IEnumerable<Addon> result = KillerAddons
-            .Where(addon => addon.CharacterId == killerId);
+            .Where(addon => addon.CharacterId == killerId)
+            .OrderBy(addon => addon.Rarity);
 
         string search = NormalizeSearch(killerAddonSearch);
 
